@@ -257,6 +257,12 @@ kbd {
   font-size: clamp(7rem, 42vmin, 13rem);
   line-height: 1;
   font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Combinations like きゃ are two characters wide */
+.big-char.two {
+  font-size: clamp(5rem, 30vmin, 10rem);
 }
 
 .flip-hint {
@@ -331,9 +337,12 @@ kbd {
   gap: 12px;
 }
 
+/* The word stays on one line: long words (コンピューター) get a smaller font.
+   --chars is set from JavaScript; ~140px is the card padding + play button. */
 .word-kana {
-  font-size: clamp(1.8rem, 9vw, 2.5rem);
+  font-size: max(1.25rem, min(2.5rem, calc((100vw - 140px) / var(--chars, 4))));
   line-height: 1.3;
+  white-space: nowrap;
 }
 
 .word-kana mark {

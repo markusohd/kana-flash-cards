@@ -29,6 +29,22 @@ EXPECTED_COUNTS = {
 REQUIRED_FIELDS = ["id", "char", "script", "stage", "row", "romaji", "word", "audio"]
 REQUIRED_WORD_FIELDS = ["kana", "romaji", "en"]
 
+# Hiragana and katakana sit 0x60 apart in Unicode (あ U+3042, ア U+30A2).
+KANA_OFFSET = 0x60
+
+
+def other_script(text):
+    """Swap hiragana <-> katakana, e.g. 'ヲ' -> 'を', 'みょ' -> 'ミョ'."""
+    out = []
+    for ch in text:
+        code = ord(ch)
+        if 0x3041 <= code <= 0x3096:
+            code += KANA_OFFSET
+        elif 0x30A1 <= code <= 0x30F6:
+            code -= KANA_OFFSET
+        out.append(chr(code))
+    return "".join(out)
+
 
 def main():
     check_audio = "--no-audio" not in sys.argv
@@ -52,8 +68,11 @@ def main():
             if not word.get(field):
                 errors.append(f"{label}: word is missing '{field}'")
         # The sample word must contain the character so it can be highlighted.
-        if card.get("char") and word.get("kana") and card["char"] not in word["kana"]:
-            errors.append(f"{label}: word '{word['kana']}' does not contain '{card['char']}'")
+        # For very rare kana (e.g. katakana ヲ) the word may use the other script's
+        # version instead (を); those cards are listed in REVIEW.md.
+        char, kana = card.get("char"), word.get("kana")
+        if char and kana and char not in kana and other_script(char) not in kana:
+            errors.append(f"{label}: word '{kana}' does not contain '{char}'")
         if card.get("script") not in ("hiragana", "katakana"):
             errors.append(f"{label}: unknown script '{card.get('script')}'")
 
@@ -101,4 +120,5 @@ def main():
 
 
 if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")  # so kana print correctly in the Windows console
     main()

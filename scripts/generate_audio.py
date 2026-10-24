@@ -16,6 +16,7 @@ Output: mono mp3, silence trimmed, volume normalized, small (target < 30 KB).
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -46,13 +47,28 @@ SAMPLE_ITEMS = [
     ("word-eki", "えき"),
 ]
 
-# Single characters the voice model misreads on their own. は and へ are read
-# as grammar particles ("wa", "e"), so speak the katakana instead, which sounds
-# the same ("ha", "he").
-SPEAK_INSTEAD = {
-    "は": "ハ",
-    "へ": "ヘ",
+# Texts the text-to-phoneme step gets wrong, with the correct phonemes written
+# out by hand (same symbols Kokoro uses for the cards it reads correctly).
+PHONEMES_INSTEAD = {
+    # Read as grammar particles ("wa", "e") when on their own
+    "は": "ha",
+    "へ": "he",
+    # Combinations split into two beats (e.g. みょ read as "mi-yo")
+    "にゅ": "ɲɨ",
+    "ひゃ": "ça", "ひゅ": "çɨ", "ひょ": "ço",
+    "みゃ": "mʲa", "みゅ": "mʲɨ", "みょ": "mʲo", "ミョ": "mʲo",
+    "りゃ": "ɾʲa", "りゅ": "ɾʲɨ", "りょ": "ɾʲo", "リョ": "ɾʲo",
+    "ぎょ": "ɡʲo", "ギョ": "ɡʲo",
+    "びゃ": "bʲa", "びゅ": "bʲɨ", "びょ": "bʲo",
+    "ぴゃ": "pʲa", "ぴょ": "pʲo",
+    # Words with the same problem
+    "りゃく": "ɾʲakɯ",
+    "さんびゃく": "sambʲakɯ",
+    "はっぴゃく": "haʔpʲakɯ",
 }
+
+# A combination like みょ split in two shows up as "mʲijo" / "çija" / "ɲijɯ" (sometimes with a space).
+SPLIT_YOON = re.compile(r"[ʲçɲ]i ?j")
 
 
 # ---------- Audio clean-up ----------
@@ -100,16 +116,20 @@ def save_mp3(audio, path):
 # ---------- Speech ----------
 
 def synthesize(pipeline, text):
-    """Return (audio as float array, phonemes Kokoro used)."""
-    chunks, phonemes = [], []
-    for result in pipeline(text, voice=VOICE, speed=SPEED):
+    """Return (audio as float array, phonemes used)."""
+    # Japanese text -> phonemes (sound symbols), unless we have a hand-written fix.
+    phonemes = PHONEMES_INSTEAD.get(text) or pipeline.g2p(text)[0]
+    if SPLIT_YOON.search(phonemes):
+        print(f"  WARNING: {text} may be read as two beats [{phonemes}]; add it to PHONEMES_INSTEAD")
+
+    chunks = []
+    for result in pipeline.generate_from_tokens(phonemes, voice=VOICE, speed=SPEED):
         if result.audio is not None:
             chunks.append(result.audio.numpy())
-        phonemes.append(result.phonemes)
     if not chunks:
         raise RuntimeError(f"no audio produced for {text!r}")
     audio = np.concatenate(chunks).astype(np.float32)
-    return fade(normalize(trim_silence(audio))), " ".join(phonemes)
+    return fade(normalize(trim_silence(audio))), phonemes
 
 
 def make_file(pipeline, text, path, force):
@@ -142,8 +162,7 @@ def main():
 
     cards = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     for card in cards:
-        char_text = SPEAK_INSTEAD.get(card["char"], card["char"])
-        make_file(pipeline, char_text, ROOT / card["audio"]["char"], args.force)
+        make_file(pipeline, card["char"], ROOT / card["audio"]["char"], args.force)
         make_file(pipeline, card["word"]["kana"], ROOT / card["audio"]["word"], args.force)
 
 
