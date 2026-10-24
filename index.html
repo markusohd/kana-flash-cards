@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kana Flash Cards</title>
+  <meta name="description" content="Flash cards for learning hiragana and katakana, with audio.">
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12151c" media="(prefers-color-scheme: dark)">
+
+  <!-- Noto Sans JP; system Japanese fonts are listed as fallbacks in styles.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="title">Kana <span lang="ja">かな</span></h1>
+    <span class="counter" id="counter" aria-live="off"></span>
+    <button type="button" class="icon-btn" id="theme-toggle" aria-label="Switch to dark mode">
+      <span aria-hidden="true">◐</span>
+    </button>
+    <button type="button" class="icon-btn" id="help-open" aria-label="Keyboard shortcuts">
+      <span aria-hidden="true">?</span>
+    </button>
+  </header>
+
+  <main class="study">
+    <p class="load-error" id="load-error" hidden></p>
+
+    <!-- The flash card. Tap/click flips it; swipe left/right changes card. -->
+    <div class="card" id="card">
+      <div class="card-inner">
+
+        <!-- FRONT: the character only -->
+        <section class="face front" id="face-front" aria-label="Card front">
+          <span class="script-label" id="front-script"></span>
+          <span class="big-char" lang="ja" id="front-char"></span>
+          <span class="flip-hint">Tap to flip</span>
+        </section>
+
+        <!-- BACK: reading, sample word, tip -->
+        <section class="face back" id="face-back" aria-label="Card back" inert>
+          <div class="reading">
+            <span class="small-char" lang="ja" id="back-char"></span>
+            <span class="romaji" id="back-romaji"></span>
+            <button type="button" class="play-btn" id="play-char" aria-label="Play character sound">
+              <span aria-hidden="true">▶</span>
+            </button>
+          </div>
+
+          <div class="word">
+            <span class="section-label">Example</span>
+            <div class="word-row">
+              <div>
+                <div class="word-kana" lang="ja" id="word-kana"></div>
+                <div class="word-kanji" lang="ja" id="word-kanji"></div>
+              </div>
+              <button type="button" class="play-btn" id="play-word" aria-label="Play sample word">
+                <span aria-hidden="true">▶</span>
+              </button>
+            </div>
+            <div class="word-romaji" id="word-romaji"></div>
+            <div class="word-en" id="word-en"></div>
+          </div>
+
+          <p class="tip" id="tip"></p>
+
+          <!-- Version 2: stroke order animation will go here -->
+          <div class="stroke-order" id="stroke-order" hidden></div>
+
+          <p class="audio-note" id="audio-note" hidden>Audio isn't available on this device.</p>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Rating: only usable after the card is flipped -->
+    <div class="rating" id="rating" inert>
+      <button type="button" class="rate-btn learning" id="rate-learning">Still learning</button>
+      <button type="button" class="rate-btn known" id="rate-known">I know it</button>
+    </div>
+
+    <nav class="nav" aria-label="Card navigation">
+      <button type="button" class="nav-btn" id="prev" aria-label="Previous card">
+        <span aria-hidden="true">‹</span> Prev
+      </button>
+      <button type="button" class="nav-btn flip-btn" id="flip">Flip</button>
+      <button type="button" class="nav-btn" id="next" aria-label="Next card">
+        Next <span aria-hidden="true">›</span>
+      </button>
+    </nav>
+
+    <p class="shortcut-hint">Press <kbd>?</kbd> for keyboard shortcuts</p>
+  </main>
+
+  <!-- Screen reader announcements (flip state, card changes) -->
+  <p class="sr-only" id="announcer" aria-live="polite"></p>
+
+  <dialog class="help" id="help" aria-labelledby="help-title">
+    <h2 id="help-title">Keyboard shortcuts</h2>
+    <dl>
+      <dt><kbd>Space</kbd></dt><dd>Flip card</dd>
+      <dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Previous / next card</dd>
+      <dt><kbd>P</kbd></dt><dd>Play character</dd>
+      <dt><kbd>W</kbd></dt><dd>Play sample word</dd>
+      <dt><kbd>1</kbd></dt><dd>Still learning</dd>
+      <dt><kbd>2</kbd></dt><dd>I know it</dd>
+      <dt><kbd>?</kbd></dt><dd>Show / hide this help</dd>
+    </dl>
+    <form method="dialog">
+      <button type="submit" class="nav-btn">Close</button>
+    </form>
+  </dialog>
+</body>
+</html>

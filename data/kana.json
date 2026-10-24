@@ -1,0 +1,287 @@
+[
+  {
+    "id": "h-a", "char": "あ", "script": "hiragana", "stage": 1, "row": "a", "romaji": "a",
+    "tip": "Like the 'a' in Tagalog 'aso'.",
+    "word": { "kana": "あめ", "kanji": "雨", "romaji": "ame", "en": "rain" },
+    "audio": { "char": "audio/char/h-a.mp3", "word": "audio/word/h-a.mp3" }
+  },
+  {
+    "id": "h-i", "char": "い", "script": "hiragana", "stage": 1, "row": "a", "romaji": "i",
+    "tip": "Like the 'i' in Tagalog 'ilog'.",
+    "word": { "kana": "いぬ", "kanji": "犬", "romaji": "inu", "en": "dog" },
+    "audio": { "char": "audio/char/h-i.mp3", "word": "audio/word/h-i.mp3" }
+  },
+  {
+    "id": "h-u", "char": "う", "script": "hiragana", "stage": 1, "row": "a", "romaji": "u",
+    "tip": "Softer than Tagalog 'u': keep the lips relaxed, not rounded.",
+    "word": { "kana": "うみ", "kanji": "海", "romaji": "umi", "en": "sea" },
+    "audio": { "char": "audio/char/h-u.mp3", "word": "audio/word/h-u.mp3" }
+  },
+  {
+    "id": "h-e", "char": "え", "script": "hiragana", "stage": 1, "row": "a", "romaji": "e",
+    "tip": "Like the 'e' in Tagalog 'eroplano'.",
+    "word": { "kana": "えき", "kanji": "駅", "romaji": "eki", "en": "train station" },
+    "audio": { "char": "audio/char/h-e.mp3", "word": "audio/word/h-e.mp3" }
+  },
+  {
+    "id": "h-o", "char": "お", "script": "hiragana", "stage": 1, "row": "a", "romaji": "o",
+    "tip": "Like the 'o' in Tagalog 'oo' (yes).",
+    "word": { "kana": "おちゃ", "kanji": "お茶", "romaji": "ocha", "en": "tea (green tea)" },
+    "audio": { "char": "audio/char/h-o.mp3", "word": "audio/word/h-o.mp3" }
+  },
+
+  {
+    "id": "h-ka", "char": "か", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ka",
+    "tip": null,
+    "word": { "kana": "かさ", "kanji": "傘", "romaji": "kasa", "en": "umbrella" },
+    "audio": { "char": "audio/char/h-ka.mp3", "word": "audio/word/h-ka.mp3" }
+  },
+  {
+    "id": "h-ki", "char": "き", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ki",
+    "tip": null,
+    "word": { "kana": "きっぷ", "kanji": "切符", "romaji": "kippu", "en": "ticket" },
+    "audio": { "char": "audio/char/h-ki.mp3", "word": "audio/word/h-ki.mp3" }
+  },
+  {
+    "id": "h-ku", "char": "く", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ku",
+    "tip": null,
+    "word": { "kana": "くるま", "kanji": "車", "romaji": "kuruma", "en": "car" },
+    "audio": { "char": "audio/char/h-ku.mp3", "word": "audio/word/h-ku.mp3" }
+  },
+  {
+    "id": "h-ke", "char": "け", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ke",
+    "tip": null,
+    "word": { "kana": "けいたい", "kanji": "携帯", "romaji": "keitai", "en": "mobile phone" },
+    "audio": { "char": "audio/char/h-ke.mp3", "word": "audio/word/h-ke.mp3" }
+  },
+  {
+    "id": "h-ko", "char": "こ", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ko",
+    "tip": null,
+    "word": { "kana": "こども", "kanji": "子供", "romaji": "kodomo", "en": "child" },
+    "audio": { "char": "audio/char/h-ko.mp3", "word": "audio/word/h-ko.mp3" }
+  },
+
+  {
+    "id": "h-sa", "char": "さ", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "sa",
+    "tip": null,
+    "word": { "kana": "さくら", "kanji": "桜", "romaji": "sakura", "en": "cherry blossom" },
+    "audio": { "char": "audio/char/h-sa.mp3", "word": "audio/word/h-sa.mp3" }
+  },
+  {
+    "id": "h-shi", "char": "し", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "shi",
+    "tip": "Said 'shi' like English 'she', not 'si'.",
+    "word": { "kana": "しお", "kanji": "塩", "romaji": "shio", "en": "salt" },
+    "audio": { "char": "audio/char/h-shi.mp3", "word": "audio/word/h-shi.mp3" }
+  },
+  {
+    "id": "h-su", "char": "す", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "su",
+    "tip": "The 'u' is often very soft, so it can sound almost like just 's'.",
+    "word": { "kana": "すし", "kanji": "寿司", "romaji": "sushi", "en": "sushi" },
+    "audio": { "char": "audio/char/h-su.mp3", "word": "audio/word/h-su.mp3" }
+  },
+  {
+    "id": "h-se", "char": "せ", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "se",
+    "tip": null,
+    "word": { "kana": "せんせい", "kanji": "先生", "romaji": "sensei", "en": "teacher" },
+    "audio": { "char": "audio/char/h-se.mp3", "word": "audio/word/h-se.mp3" }
+  },
+  {
+    "id": "h-so", "char": "そ", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "so",
+    "tip": null,
+    "word": { "kana": "そら", "kanji": "空", "romaji": "sora", "en": "sky" },
+    "audio": { "char": "audio/char/h-so.mp3", "word": "audio/word/h-so.mp3" }
+  },
+
+  {
+    "id": "h-ta", "char": "た", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "ta",
+    "tip": null,
+    "word": { "kana": "たまご", "kanji": "卵", "romaji": "tamago", "en": "egg" },
+    "audio": { "char": "audio/char/h-ta.mp3", "word": "audio/word/h-ta.mp3" }
+  },
+  {
+    "id": "h-chi", "char": "ち", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "chi",
+    "tip": "Said 'chi' like the start of English 'cheese', not 'ti'.",
+    "word": { "kana": "ちず", "kanji": "地図", "romaji": "chizu", "en": "map" },
+    "audio": { "char": "audio/char/h-chi.mp3", "word": "audio/word/h-chi.mp3" }
+  },
+  {
+    "id": "h-tsu", "char": "つ", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "tsu",
+    "tip": "Starts with 'ts' as in English 'cats', then a soft 'u'. Not 'tu'.",
+    "word": { "kana": "つくえ", "kanji": "机", "romaji": "tsukue", "en": "desk" },
+    "audio": { "char": "audio/char/h-tsu.mp3", "word": "audio/word/h-tsu.mp3" }
+  },
+  {
+    "id": "h-te", "char": "て", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "te",
+    "tip": null,
+    "word": { "kana": "てら", "kanji": "寺", "romaji": "tera", "en": "temple (Buddhist)" },
+    "audio": { "char": "audio/char/h-te.mp3", "word": "audio/word/h-te.mp3" }
+  },
+  {
+    "id": "h-to", "char": "と", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "to",
+    "tip": null,
+    "word": { "kana": "とけい", "kanji": "時計", "romaji": "tokei", "en": "clock, watch" },
+    "audio": { "char": "audio/char/h-to.mp3", "word": "audio/word/h-to.mp3" }
+  },
+
+  {
+    "id": "h-na", "char": "な", "script": "hiragana", "stage": 1, "row": "na", "romaji": "na",
+    "tip": null,
+    "word": { "kana": "なつ", "kanji": "夏", "romaji": "natsu", "en": "summer" },
+    "audio": { "char": "audio/char/h-na.mp3", "word": "audio/word/h-na.mp3" }
+  },
+  {
+    "id": "h-ni", "char": "に", "script": "hiragana", "stage": 1, "row": "na", "romaji": "ni",
+    "tip": null,
+    "word": { "kana": "にく", "kanji": "肉", "romaji": "niku", "en": "meat" },
+    "audio": { "char": "audio/char/h-ni.mp3", "word": "audio/word/h-ni.mp3" }
+  },
+  {
+    "id": "h-nu", "char": "ぬ", "script": "hiragana", "stage": 1, "row": "na", "romaji": "nu",
+    "tip": null,
+    "word": { "kana": "ぬいぐるみ", "kanji": null, "romaji": "nuigurumi", "en": "stuffed toy" },
+    "audio": { "char": "audio/char/h-nu.mp3", "word": "audio/word/h-nu.mp3" }
+  },
+  {
+    "id": "h-ne", "char": "ね", "script": "hiragana", "stage": 1, "row": "na", "romaji": "ne",
+    "tip": null,
+    "word": { "kana": "ねこ", "kanji": "猫", "romaji": "neko", "en": "cat" },
+    "audio": { "char": "audio/char/h-ne.mp3", "word": "audio/word/h-ne.mp3" }
+  },
+  {
+    "id": "h-no", "char": "の", "script": "hiragana", "stage": 1, "row": "na", "romaji": "no",
+    "tip": null,
+    "word": { "kana": "のみもの", "kanji": "飲み物", "romaji": "nomimono", "en": "drink" },
+    "audio": { "char": "audio/char/h-no.mp3", "word": "audio/word/h-no.mp3" }
+  },
+
+  {
+    "id": "h-ha", "char": "は", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "ha",
+    "tip": "When は is used as a grammar particle it is read 'wa'.",
+    "word": { "kana": "はし", "kanji": "箸", "romaji": "hashi", "en": "chopsticks" },
+    "audio": { "char": "audio/char/h-ha.mp3", "word": "audio/word/h-ha.mp3" }
+  },
+  {
+    "id": "h-hi", "char": "ひ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "hi",
+    "tip": "A little breathier than English 'he'.",
+    "word": { "kana": "ひだり", "kanji": "左", "romaji": "hidari", "en": "left (direction)" },
+    "audio": { "char": "audio/char/h-hi.mp3", "word": "audio/word/h-hi.mp3" }
+  },
+  {
+    "id": "h-fu", "char": "ふ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "fu",
+    "tip": "Between 'f' and 'h': blow softly through the lips, teeth do not touch the lip.",
+    "word": { "kana": "ふね", "kanji": "船", "romaji": "fune", "en": "boat, ship" },
+    "audio": { "char": "audio/char/h-fu.mp3", "word": "audio/word/h-fu.mp3" }
+  },
+  {
+    "id": "h-he", "char": "へ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "he",
+    "tip": "When へ is used as a grammar particle ('to', a direction) it is read 'e'.",
+    "word": { "kana": "へや", "kanji": "部屋", "romaji": "heya", "en": "room" },
+    "audio": { "char": "audio/char/h-he.mp3", "word": "audio/word/h-he.mp3" }
+  },
+  {
+    "id": "h-ho", "char": "ほ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "ho",
+    "tip": null,
+    "word": { "kana": "ほん", "kanji": "本", "romaji": "hon", "en": "book" },
+    "audio": { "char": "audio/char/h-ho.mp3", "word": "audio/word/h-ho.mp3" }
+  },
+
+  {
+    "id": "h-ma", "char": "ま", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "ma",
+    "tip": null,
+    "word": { "kana": "まど", "kanji": "窓", "romaji": "mado", "en": "window" },
+    "audio": { "char": "audio/char/h-ma.mp3", "word": "audio/word/h-ma.mp3" }
+  },
+  {
+    "id": "h-mi", "char": "み", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "mi",
+    "tip": null,
+    "word": { "kana": "みず", "kanji": "水", "romaji": "mizu", "en": "water" },
+    "audio": { "char": "audio/char/h-mi.mp3", "word": "audio/word/h-mi.mp3" }
+  },
+  {
+    "id": "h-mu", "char": "む", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "mu",
+    "tip": null,
+    "word": { "kana": "むし", "kanji": "虫", "romaji": "mushi", "en": "insect, bug" },
+    "audio": { "char": "audio/char/h-mu.mp3", "word": "audio/word/h-mu.mp3" }
+  },
+  {
+    "id": "h-me", "char": "め", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "me",
+    "tip": null,
+    "word": { "kana": "めがね", "kanji": "眼鏡", "romaji": "megane", "en": "glasses (eyeglasses)" },
+    "audio": { "char": "audio/char/h-me.mp3", "word": "audio/word/h-me.mp3" }
+  },
+  {
+    "id": "h-mo", "char": "も", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "mo",
+    "tip": null,
+    "word": { "kana": "もも", "kanji": "桃", "romaji": "momo", "en": "peach" },
+    "audio": { "char": "audio/char/h-mo.mp3", "word": "audio/word/h-mo.mp3" }
+  },
+
+  {
+    "id": "h-ya", "char": "や", "script": "hiragana", "stage": 1, "row": "ya", "romaji": "ya",
+    "tip": null,
+    "word": { "kana": "やま", "kanji": "山", "romaji": "yama", "en": "mountain" },
+    "audio": { "char": "audio/char/h-ya.mp3", "word": "audio/word/h-ya.mp3" }
+  },
+  {
+    "id": "h-yu", "char": "ゆ", "script": "hiragana", "stage": 1, "row": "ya", "romaji": "yu",
+    "tip": null,
+    "word": { "kana": "ゆき", "kanji": "雪", "romaji": "yuki", "en": "snow" },
+    "audio": { "char": "audio/char/h-yu.mp3", "word": "audio/word/h-yu.mp3" }
+  },
+  {
+    "id": "h-yo", "char": "よ", "script": "hiragana", "stage": 1, "row": "ya", "romaji": "yo",
+    "tip": null,
+    "word": { "kana": "よる", "kanji": "夜", "romaji": "yoru", "en": "night" },
+    "audio": { "char": "audio/char/h-yo.mp3", "word": "audio/word/h-yo.mp3" }
+  },
+
+  {
+    "id": "h-ra", "char": "ら", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ra",
+    "tip": "Japanese 'r' is a light tap of the tongue, close to the Tagalog 'r' in 'araw'.",
+    "word": { "kana": "らいねん", "kanji": "来年", "romaji": "rainen", "en": "next year" },
+    "audio": { "char": "audio/char/h-ra.mp3", "word": "audio/word/h-ra.mp3" }
+  },
+  {
+    "id": "h-ri", "char": "り", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ri",
+    "tip": "Light tapped 'r', like Tagalog 'r'.",
+    "word": { "kana": "りんご", "kanji": "林檎", "romaji": "ringo", "en": "apple" },
+    "audio": { "char": "audio/char/h-ri.mp3", "word": "audio/word/h-ri.mp3" }
+  },
+  {
+    "id": "h-ru", "char": "る", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ru",
+    "tip": "Light tapped 'r', like Tagalog 'r'.",
+    "word": { "kana": "はる", "kanji": "春", "romaji": "haru", "en": "spring (season)" },
+    "audio": { "char": "audio/char/h-ru.mp3", "word": "audio/word/h-ru.mp3" }
+  },
+  {
+    "id": "h-re", "char": "れ", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "re",
+    "tip": "Light tapped 'r', like Tagalog 'r'.",
+    "word": { "kana": "れきし", "kanji": "歴史", "romaji": "rekishi", "en": "history" },
+    "audio": { "char": "audio/char/h-re.mp3", "word": "audio/word/h-re.mp3" }
+  },
+  {
+    "id": "h-ro", "char": "ろ", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ro",
+    "tip": "Light tapped 'r', like Tagalog 'r'.",
+    "word": { "kana": "ろく", "kanji": "六", "romaji": "roku", "en": "six" },
+    "audio": { "char": "audio/char/h-ro.mp3", "word": "audio/word/h-ro.mp3" }
+  },
+
+  {
+    "id": "h-wa", "char": "わ", "script": "hiragana", "stage": 1, "row": "wa", "romaji": "wa",
+    "tip": null,
+    "word": { "kana": "わたし", "kanji": "私", "romaji": "watashi", "en": "I, me" },
+    "audio": { "char": "audio/char/h-wa.mp3", "word": "audio/word/h-wa.mp3" }
+  },
+  {
+    "id": "h-wo", "char": "を", "script": "hiragana", "stage": 1, "row": "wa", "romaji": "o",
+    "tip": "Sounds the same as お (o); sometimes written 'wo'. Only used as a grammar particle that marks the object of a verb.",
+    "word": { "kana": "みずをのむ", "kanji": "水を飲む", "romaji": "mizu o nomu", "en": "to drink water" },
+    "audio": { "char": "audio/char/h-wo.mp3", "word": "audio/word/h-wo.mp3" }
+  },
+  {
+    "id": "h-n", "char": "ん", "script": "hiragana", "stage": 1, "row": "n", "romaji": "n",
+    "tip": "A nasal sound on its own beat. Before k or g it sounds like Tagalog 'ng'.",
+    "word": { "kana": "にほん", "kanji": "日本", "romaji": "Nihon", "en": "Japan" },
+    "audio": { "char": "audio/char/h-n.mp3", "word": "audio/word/h-n.mp3" }
+  }
+]

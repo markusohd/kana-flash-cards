@@ -1,0 +1,498 @@
+/* ==========================================================================
+   Kana Flash Cards — styles
+   Mobile first (360 px), then wider screens. Light and dark themes use the
+   color tokens below; the dark set is repeated for the system setting and
+   for the manual toggle (data-theme="dark").
+   ========================================================================== */
+
+:root {
+  --bg: #f6f3ec;          /* washi paper */
+  --card: #fffdf8;
+  --ink: #1f2430;
+  --muted: #5a6170;
+  --line: #e3ded3;
+  --accent: #2f4b7c;      /* indigo */
+  --accent-ink: #ffffff;
+  --mark-bg: #f6d9d3;     /* highlighted character in the sample word */
+  --mark-ink: #9b2c22;
+  --learning: #9b2c22;
+  --known: #2c6e49;
+  --shadow: 0 10px 30px rgba(31, 36, 48, 0.12);
+  /* Faint seigaiha (wave) pattern */
+  --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cg fill='none' stroke='%232f4b7c' stroke-opacity='.07'%3E%3Cpath d='M0 24a24 24 0 0 1 48 0M8 24a16 16 0 0 1 32 0M16 24a8 8 0 0 1 16 0M-24 12a24 24 0 0 1 48 0M24 12a24 24 0 0 1 48 0'/%3E%3C/g%3E%3C/svg%3E");
+
+  --font-jp: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic UI", "Yu Gothic", "Meiryo", "Noto Sans CJK JP", sans-serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, var(--font-jp);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12151c;
+    --card: #1d212b;
+    --ink: #ece8e0;
+    --muted: #a9afbd;
+    --line: #2e3442;
+    --accent: #9db7ea;
+    --accent-ink: #12151c;
+    --mark-bg: #4a2522;
+    --mark-ink: #ffb3a7;
+    --learning: #ff9e8f;
+    --known: #8fd6a8;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.045'%3E%3Cpath d='M0 24a24 24 0 0 1 48 0M8 24a16 16 0 0 1 32 0M16 24a8 8 0 0 1 16 0M-24 12a24 24 0 0 1 48 0M24 12a24 24 0 0 1 48 0'/%3E%3C/g%3E%3C/svg%3E");
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #12151c;
+  --card: #1d212b;
+  --ink: #ece8e0;
+  --muted: #a9afbd;
+  --line: #2e3442;
+  --accent: #9db7ea;
+  --accent-ink: #12151c;
+  --mark-bg: #4a2522;
+  --mark-ink: #ffb3a7;
+  --learning: #ff9e8f;
+  --known: #8fd6a8;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.045'%3E%3Cpath d='M0 24a24 24 0 0 1 48 0M8 24a16 16 0 0 1 32 0M16 24a8 8 0 0 1 16 0M-24 12a24 24 0 0 1 48 0M24 12a24 24 0 0 1 48 0'/%3E%3C/g%3E%3C/svg%3E");
+  color-scheme: dark;
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg) var(--wave);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  line-height: 1.5;
+  /* Respect iPhone notch and home bar */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+[lang="ja"] {
+  font-family: var(--font-jp);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+kbd {
+  font-family: var(--font-ui);
+  font-size: 0.85em;
+  padding: 0.1em 0.45em;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  background: var(--card);
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 0;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  margin-right: auto;
+}
+
+.title span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.counter {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.icon-btn:hover {
+  background: var(--line);
+}
+
+/* ---------- Study screen layout ---------- */
+
+.study {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 8px 16px 12px;
+  min-height: 0;
+}
+
+.load-error {
+  background: var(--mark-bg);
+  color: var(--mark-ink);
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin: 0;
+}
+
+/* ---------- The card (3D flip) ---------- */
+
+.card {
+  flex: 1;
+  min-height: 340px;
+  max-height: 600px;
+  perspective: 1200px;
+  cursor: pointer;
+  /* Let the browser handle vertical scrolling; we handle horizontal swipes */
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card-inner {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Used when moving to a new card, so it snaps to the front without spinning */
+.card.no-anim .card-inner {
+  transition: none;
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  padding: 20px;
+}
+
+/* Front */
+
+.front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.script-label {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.big-char {
+  font-size: clamp(7rem, 42vmin, 13rem);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.flip-hint {
+  position: absolute;
+  bottom: 16px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Back */
+
+.back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.reading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.small-char {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.romaji {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.play-btn {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 1.1rem;
+  /* Nudge the ▶ glyph so it looks optically centered */
+  padding-left: 4px;
+}
+
+.play-btn:hover {
+  filter: brightness(1.1);
+}
+
+.word {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.word-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.word-kana {
+  font-size: clamp(1.8rem, 9vw, 2.5rem);
+  line-height: 1.3;
+}
+
+.word-kana mark {
+  background: var(--mark-bg);
+  color: var(--mark-ink);
+  border-radius: 6px;
+  padding: 0 2px;
+}
+
+.word-kanji {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.word-romaji {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.word-en {
+  color: var(--muted);
+}
+
+.tip {
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95rem;
+}
+
+.audio-note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- Rating and navigation buttons ---------- */
+
+.rating,
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
+/* Rating buttons keep their space but are invisible until the card is flipped,
+   so the layout does not jump. */
+.rating[inert] {
+  visibility: hidden;
+}
+
+.rate-btn,
+.nav-btn {
+  flex: 1;
+  min-height: 48px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  font-weight: 600;
+}
+
+.rate-btn.learning {
+  color: var(--learning);
+  border-color: currentColor;
+}
+
+.rate-btn.known {
+  color: var(--known);
+  border-color: currentColor;
+}
+
+.nav-btn:hover,
+.rate-btn:hover {
+  background: color-mix(in srgb, var(--ink) 6%, var(--card));
+}
+
+.flip-btn {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+.flip-btn:hover {
+  background: var(--accent);
+  filter: brightness(1.1);
+}
+
+.shortcut-hint {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Touch-only devices have no keyboard: hide the shortcut hint and button */
+@media (hover: none) and (pointer: coarse) {
+  .shortcut-hint,
+  #help-open {
+    display: none;
+  }
+}
+
+/* ---------- Help dialog ---------- */
+
+.help {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  padding: 20px 24px;
+  max-width: min(360px, calc(100vw - 32px));
+}
+
+.help::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.help h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.help dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 16px;
+  margin: 0 0 16px;
+}
+
+.help dt {
+  text-align: right;
+}
+
+.help dd {
+  margin: 0;
+}
+
+.help .nav-btn {
+  width: 100%;
+}
+
+/* ---------- Wider screens ---------- */
+
+@media (min-width: 700px) {
+  .study {
+    padding-top: 24px;
+  }
+  .card {
+    max-height: 560px;
+  }
+}
+
+/* ---------- Reduced motion: no spinning flip ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .card-inner {
+    transition: none;
+  }
+}
