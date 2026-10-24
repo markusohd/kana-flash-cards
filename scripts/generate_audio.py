@@ -46,6 +46,14 @@ SAMPLE_ITEMS = [
     ("word-eki", "えき"),
 ]
 
+# Single characters the voice model misreads on their own. は and へ are read
+# as grammar particles ("wa", "e"), so speak the katakana instead, which sounds
+# the same ("ha", "he").
+SPEAK_INSTEAD = {
+    "は": "ハ",
+    "へ": "ヘ",
+}
+
 
 # ---------- Audio clean-up ----------
 
@@ -134,7 +142,8 @@ def main():
 
     cards = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     for card in cards:
-        make_file(pipeline, card["char"], ROOT / card["audio"]["char"], args.force)
+        char_text = SPEAK_INSTEAD.get(card["char"], card["char"])
+        make_file(pipeline, char_text, ROOT / card["audio"]["char"], args.force)
         make_file(pipeline, card["word"]["kana"], ROOT / card["audio"]["word"], args.force)
 
 
