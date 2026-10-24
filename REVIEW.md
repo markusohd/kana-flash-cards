@@ -58,6 +58,10 @@ Many combinations rarely start a common word, so some samples contain the sound 
 
 ## Audio
 
+- [ ] **Male voice**: `jm_kumo` is Kokoro's only Japanese male voice and its lowest-rated one
+      (grade C−, trained on only a few minutes of speech; the female `jf_alpha` is C+). Listen to a
+      few cards in Settings → Male voice and decide whether to keep the option.
+
 - [ ] **Hand-written phonemes**: the voice model's text reader split some combinations into two beats
       (for example みょ read as "mi-yo", さんびゃく as "san-bi-ya-ku"). These are now given the correct
       sounds by hand in `PHONEMES_INSTEAD` in `scripts/generate_audio.py`. Please listen to:

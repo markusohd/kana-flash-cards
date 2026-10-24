@@ -8,6 +8,18 @@ const SPEECH_RATE = 0.85;
 let japaneseVoice = null;
 let currentAudio = null;
 
+// Female files use the paths in kana.json (audio/char/...); male files mirror
+// them under audio/male/ (audio/male/char/...).
+let voiceFolder = "audio/";
+
+export function setVoice(voice) {
+  voiceFolder = voice === "male" ? "audio/male/" : "audio/";
+}
+
+function voicePath(url) {
+  return url.replace(/^audio\//, voiceFolder);
+}
+
 // Voices load asynchronously in some browsers, so look again when they change.
 function findJapaneseVoice() {
   const voices = window.speechSynthesis.getVoices();
@@ -45,7 +57,7 @@ function speak(text) {
 export async function play(url, text) {
   stop();
   try {
-    currentAudio = new Audio(url);
+    currentAudio = new Audio(voicePath(url));
     await currentAudio.play();
     return true;
   } catch {

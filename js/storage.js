@@ -37,5 +37,40 @@ export function rateCard(id, known) {
   const current = progress[id] ?? 0;
   progress[id] = known ? Math.min(current + 1, MAX_BOX) : 0;
   save("progress", progress);
+  markSeen(id);
   return progress[id];
+}
+
+// ---------- Cards seen (flipped at least once), stored as a list of ids ----------
+
+export function getSeen() {
+  return new Set(load("seen", []));
+}
+
+export function markSeen(id) {
+  const seen = getSeen();
+  if (!seen.has(id)) {
+    seen.add(id);
+    save("seen", [...seen]);
+  }
+}
+
+export function resetProgress() {
+  save("progress", {});
+  save("seen", []);
+}
+
+// ---------- Settings ----------
+
+export const DEFAULT_SETTINGS = {
+  voice: "female", // "female" or "male"
+  autoPlay: false, // play the character sound when a card is flipped
+};
+
+export function getSettings() {
+  return { ...DEFAULT_SETTINGS, ...load("settings", {}) };
+}
+
+export function saveSettings(settings) {
+  save("settings", settings);
 }

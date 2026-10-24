@@ -18,8 +18,11 @@
 </head>
 <body>
   <header class="topbar">
+    <button type="button" class="icon-btn" id="go-home" aria-label="Back to home" hidden>
+      <span aria-hidden="true">‹</span>
+    </button>
     <h1 class="title">Kana <span lang="ja">かな</span></h1>
-    <span class="counter" id="counter" aria-live="off"></span>
+    <span class="counter" id="counter" hidden></span>
     <button type="button" class="icon-btn" id="theme-toggle" aria-label="Switch to dark mode">
       <span aria-hidden="true">◐</span>
     </button>
@@ -28,9 +31,26 @@
     </button>
   </header>
 
-  <main class="study">
-    <p class="load-error" id="load-error" hidden></p>
+  <p class="load-error" id="load-error" hidden></p>
 
+  <!-- ================= HOME SCREEN ================= -->
+  <main class="home" id="home-screen">
+    <section class="panel" aria-labelledby="progress-title">
+      <h2 id="progress-title">Your progress</h2>
+      <!-- Filled by app.js: one row per script -->
+      <div class="progress-list" id="progress-list"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="deck-title">
+      <h2 id="deck-title">Studying</h2>
+      <p class="deck-summary" id="deck-summary"></p>
+      <button type="button" class="big-btn primary" id="start">Start</button>
+      <button type="button" class="big-btn" id="open-settings">Settings</button>
+    </section>
+  </main>
+
+  <!-- ================= STUDY SCREEN ================= -->
+  <main class="study" id="study-screen" hidden>
     <!-- The flash card. Tap/click flips it; swipe left/right changes card. -->
     <div class="card" id="card">
       <div class="card-inner">
@@ -100,6 +120,80 @@
   <!-- Screen reader announcements (flip state, card changes) -->
   <p class="sr-only" id="announcer" aria-live="polite"></p>
 
+  <!-- ================= SETTINGS ================= -->
+  <dialog class="sheet" id="settings" aria-labelledby="settings-title">
+    <form method="dialog" class="sheet-body">
+      <div class="sheet-head">
+        <h2 id="settings-title">Settings</h2>
+        <button type="submit" class="big-btn primary done-btn">Done</button>
+      </div>
+
+      <fieldset>
+        <legend>Script</legend>
+        <div class="choices">
+          <label class="chip"><input type="checkbox" name="script" value="hiragana"> Hiragana <span lang="ja">あ</span></label>
+          <label class="chip"><input type="checkbox" name="script" value="katakana"> Katakana <span lang="ja">ア</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Stages</legend>
+        <div class="choices">
+          <label class="chip"><input type="checkbox" name="stage" value="1"> 1 · Basic <span lang="ja">あ</span></label>
+          <label class="chip"><input type="checkbox" name="stage" value="2"> 2 · Voiced <span lang="ja">が</span></label>
+          <label class="chip"><input type="checkbox" name="stage" value="3"> 3 · Combinations <span lang="ja">きゃ</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Rows</legend>
+        <p class="hint">None selected = all rows.</p>
+        <!-- Filled by app.js from the data, for the chosen scripts and stages -->
+        <div class="choices rows" id="row-choices"></div>
+        <button type="button" class="link-btn" id="all-rows">Clear (use all rows)</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Order</legend>
+        <div class="choices">
+          <label class="chip"><input type="radio" name="order" value="chart"> Chart order</label>
+          <label class="chip"><input type="radio" name="order" value="shuffle"> Shuffled</label>
+        </div>
+        <label class="switch"><input type="checkbox" id="review-only"> Review only: cards marked “Still learning”</label>
+      </fieldset>
+
+      <p class="match-count" id="match-count" aria-live="polite"></p>
+
+      <fieldset>
+        <legend>Audio</legend>
+        <div class="choices">
+          <label class="chip"><input type="radio" name="voice" value="female"> Female voice</label>
+          <label class="chip"><input type="radio" name="voice" value="male"> Male voice</label>
+        </div>
+        <label class="switch"><input type="checkbox" id="auto-play"> Play the sound when a card is flipped</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Progress</legend>
+        <button type="button" class="big-btn danger" id="reset-progress">Reset progress</button>
+      </fieldset>
+
+      <section class="about" aria-labelledby="about-title">
+        <h3 id="about-title">About</h3>
+        <p>Flash cards for learning hiragana and katakana.</p>
+        <p>
+          Audio was generated with <a href="https://github.com/hexgrad/kokoro">Kokoro-82M</a>
+          (Apache License 2.0), voices <code>jf_alpha</code> (female) and <code>jm_kumo</code> (male),
+          which Kokoro lists as CC BY. Some Japanese voices were trained on text from the
+          <a href="https://github.com/koniwa/koniwa">koniwa</a> project.
+          See <a href="audio/LICENSE.md">audio/LICENSE.md</a>.
+        </p>
+        <p>Font: <a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP">Noto Sans JP</a> (SIL Open Font License).</p>
+      </section>
+    </form>
+  </dialog>
+
+  <!-- ================= KEYBOARD HELP ================= -->
   <dialog class="help" id="help" aria-labelledby="help-title">
     <h2 id="help-title">Keyboard shortcuts</h2>
     <dl>

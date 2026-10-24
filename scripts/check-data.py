@@ -95,12 +95,14 @@ def main():
         if key not in EXPECTED_COUNTS:
             errors.append(f"unexpected script/stage {key}")
 
-    # --- Audio files exist ---
+    # --- Audio files exist, for both voices ---
+    # Female files use the paths in kana.json; male files mirror them under audio/male/.
     if check_audio:
         for card in cards:
             for kind, path in (card.get("audio") or {}).items():
-                if not (ROOT / path).is_file():
-                    errors.append(f"{card.get('id')}: {kind} audio file not found: {path}")
+                for voice_path in (path, path.replace("audio/", "audio/male/", 1)):
+                    if not (ROOT / voice_path).is_file():
+                        errors.append(f"{card.get('id')}: {kind} audio file not found: {voice_path}")
     else:
         warnings.append("audio file check skipped (--no-audio)")
 
