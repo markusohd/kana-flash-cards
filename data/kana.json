@@ -3,6 +3,7 @@
     "id": "h-a", "char": "あ", "script": "hiragana", "stage": 1, "row": "a", "romaji": "a",
     "tip": "Like the 'a' in Tagalog 'aso'.",
     "word": { "kana": "あめ", "kanji": "雨", "romaji": "ame", "en": "rain" },
+    "sentence": { "kana": "あめが ふって います。", "kanji": "雨が降っています。", "romaji": "Ame ga futte imasu.", "en": "It is raining." },
     "soundsLike": {
       "fil": { "word": "aso", "part": "a", "en": "dog" },
       "en": { "word": "father", "part": "a" }
@@ -12,6 +13,7 @@
     "id": "h-i", "char": "い", "script": "hiragana", "stage": 1, "row": "a", "romaji": "i",
     "tip": "Like the 'i' in Tagalog 'ilog'.",
     "word": { "kana": "いぬ", "kanji": "犬", "romaji": "inu", "en": "dog" },
+    "sentence": { "kana": "いぬが すきです。", "kanji": "犬が好きです。", "romaji": "Inu ga suki desu.", "en": "I like dogs." },
     "soundsLike": {
       "fil": { "word": "isda", "part": "i", "en": "fish" },
       "en": { "word": "see", "part": "ee" }
@@ -21,6 +23,7 @@
     "id": "h-u", "char": "う", "script": "hiragana", "stage": 1, "row": "a", "romaji": "u",
     "tip": "Softer than Tagalog 'u': keep the lips relaxed, not rounded.",
     "word": { "kana": "うみ", "kanji": "海", "romaji": "umi", "en": "sea" },
+    "sentence": { "kana": "うみへ いきます。", "kanji": "海へ行きます。", "romaji": "Umi e ikimasu.", "en": "I'm going to the sea." },
     "soundsLike": {
       "fil": { "word": "ulo", "part": "u", "en": "head" },
       "en": { "word": "food", "part": "oo" }
@@ -30,6 +33,7 @@
     "id": "h-e", "char": "え", "script": "hiragana", "stage": 1, "row": "a", "romaji": "e",
     "tip": "Like the 'e' in Tagalog 'eroplano'.",
     "word": { "kana": "えき", "kanji": "駅", "romaji": "eki", "en": "train station" },
+    "sentence": { "kana": "えきは どこですか。", "kanji": "駅はどこですか。", "romaji": "Eki wa doko desu ka.", "en": "Where is the station?" },
     "soundsLike": {
       "fil": { "word": "eroplano", "part": "e", "en": "airplane" },
       "en": { "word": "egg", "part": "e" }
@@ -39,6 +43,7 @@
     "id": "h-o", "char": "お", "script": "hiragana", "stage": 1, "row": "a", "romaji": "o",
     "tip": "Like the 'o' in Tagalog 'oo' (yes).",
     "word": { "kana": "おちゃ", "kanji": "お茶", "romaji": "ocha", "en": "tea (green tea)" },
+    "sentence": { "kana": "おちゃを ください。", "kanji": "お茶をください。", "romaji": "Ocha o kudasai.", "en": "Tea, please." },
     "soundsLike": {
       "fil": { "word": "oras", "part": "o", "en": "time, hour" },
       "en": { "word": "go", "part": "o" }
@@ -49,6 +54,7 @@
     "id": "h-ka", "char": "か", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ka",
     "tip": null,
     "word": { "kana": "かさ", "kanji": "傘", "romaji": "kasa", "en": "umbrella" },
+    "sentence": { "kana": "かさを わすれました。", "kanji": "傘を忘れました。", "romaji": "Kasa o wasuremashita.", "en": "I forgot my umbrella." },
     "soundsLike": {
       "fil": { "word": "kain", "part": "ka", "en": "to eat" },
       "en": { "word": "car", "part": "ca" }
@@ -58,6 +64,7 @@
     "id": "h-ki", "char": "き", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ki",
     "tip": null,
     "word": { "kana": "きっぷ", "kanji": "切符", "romaji": "kippu", "en": "ticket" },
+    "sentence": { "kana": "きっぷを かいます。", "kanji": "切符を買います。", "romaji": "Kippu o kaimasu.", "en": "I'll buy a ticket." },
     "soundsLike": {
       "fil": { "word": "kilay", "part": "ki", "en": "eyebrow" },
       "en": { "word": "key", "part": "key" }
@@ -67,6 +74,7 @@
     "id": "h-ku", "char": "く", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ku",
     "tip": null,
     "word": { "kana": "くるま", "kanji": "車", "romaji": "kuruma", "en": "car" },
+    "sentence": { "kana": "くるまで いきます。", "kanji": "車で行きます。", "romaji": "Kuruma de ikimasu.", "en": "I'll go by car." },
     "soundsLike": {
       "fil": { "word": "kulay", "part": "ku", "en": "color" },
       "en": { "word": "cool", "part": "coo" }
@@ -76,6 +84,7 @@
     "id": "h-ke", "char": "け", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ke",
     "tip": null,
     "word": { "kana": "けいたい", "kanji": "携帯", "romaji": "keitai", "en": "mobile phone" },
+    "sentence": { "kana": "けいたいを なくしました。", "kanji": "携帯をなくしました。", "romaji": "Keitai o nakushimashita.", "en": "I lost my phone." },
     "soundsLike": {
       "fil": { "word": "keso", "part": "ke", "en": "cheese" },
       "en": { "word": "kept", "part": "ke" }
@@ -85,6 +94,7 @@
     "id": "h-ko", "char": "こ", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ko",
     "tip": null,
     "word": { "kana": "こども", "kanji": "子供", "romaji": "kodomo", "en": "child" },
+    "sentence": { "kana": "こどもが ふたり います。", "kanji": "子供が二人います。", "romaji": "Kodomo ga futari imasu.", "en": "I have two children." },
     "soundsLike": {
       "fil": { "word": "kotse", "part": "ko", "en": "car" },
       "en": { "word": "coat", "part": "co" }
@@ -95,6 +105,7 @@
     "id": "h-sa", "char": "さ", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "sa",
     "tip": null,
     "word": { "kana": "さくら", "kanji": "桜", "romaji": "sakura", "en": "cherry blossom" },
+    "sentence": { "kana": "さくらが きれいです。", "kanji": "桜がきれいです。", "romaji": "Sakura ga kirei desu.", "en": "The cherry blossoms are beautiful." },
     "soundsLike": {
       "fil": { "word": "saging", "part": "sa", "en": "banana" },
       "en": { "word": "salsa", "part": "sa" }
@@ -104,6 +115,7 @@
     "id": "h-shi", "char": "し", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "shi",
     "tip": "Said 'shi' like English 'she', not 'si'.",
     "word": { "kana": "しお", "kanji": "塩", "romaji": "shio", "en": "salt" },
+    "sentence": { "kana": "しおを すこし いれます。", "kanji": "塩を少し入れます。", "romaji": "Shio o sukoshi iremasu.", "en": "I add a little salt." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "she", "part": "she" }
@@ -113,6 +125,7 @@
     "id": "h-su", "char": "す", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "su",
     "tip": "The 'u' is often very soft, so it can sound almost like just 's'.",
     "word": { "kana": "すし", "kanji": "寿司", "romaji": "sushi", "en": "sushi" },
+    "sentence": { "kana": "すしが たべたいです。", "kanji": "寿司が食べたいです。", "romaji": "Sushi ga tabetai desu.", "en": "I want to eat sushi." },
     "soundsLike": {
       "fil": { "word": "susi", "part": "su", "en": "key" },
       "en": { "word": "soup", "part": "sou" }
@@ -122,6 +135,7 @@
     "id": "h-se", "char": "せ", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "se",
     "tip": null,
     "word": { "kana": "せんせい", "kanji": "先生", "romaji": "sensei", "en": "teacher" },
+    "sentence": { "kana": "せんせいは やさしいです。", "kanji": "先生は優しいです。", "romaji": "Sensei wa yasashii desu.", "en": "The teacher is kind." },
     "soundsLike": {
       "fil": { "word": "sepilyo", "part": "se", "en": "toothbrush" },
       "en": { "word": "set", "part": "se" }
@@ -131,6 +145,7 @@
     "id": "h-so", "char": "そ", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "so",
     "tip": null,
     "word": { "kana": "そら", "kanji": "空", "romaji": "sora", "en": "sky" },
+    "sentence": { "kana": "そらが あおいです。", "kanji": "空が青いです。", "romaji": "Sora ga aoi desu.", "en": "The sky is blue." },
     "soundsLike": {
       "fil": { "word": "sobre", "part": "so", "en": "envelope" },
       "en": { "word": "soap", "part": "so" }
@@ -141,6 +156,7 @@
     "id": "h-ta", "char": "た", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "ta",
     "tip": null,
     "word": { "kana": "たまご", "kanji": "卵", "romaji": "tamago", "en": "egg" },
+    "sentence": { "kana": "たまごを たべます。", "kanji": "卵を食べます。", "romaji": "Tamago o tabemasu.", "en": "I eat eggs." },
     "soundsLike": {
       "fil": { "word": "tao", "part": "ta", "en": "person" },
       "en": { "word": "taco", "part": "ta" }
@@ -150,6 +166,7 @@
     "id": "h-chi", "char": "ち", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "chi",
     "tip": "Said 'chi' like the start of English 'cheese', not 'ti'.",
     "word": { "kana": "ちず", "kanji": "地図", "romaji": "chizu", "en": "map" },
+    "sentence": { "kana": "ちずを みせて ください。", "kanji": "地図を見せてください。", "romaji": "Chizu o misete kudasai.", "en": "Please show me the map." },
     "soundsLike": {
       "fil": { "word": "tsinelas", "part": "tsi", "en": "slippers" },
       "en": { "word": "cheese", "part": "chee" }
@@ -159,6 +176,7 @@
     "id": "h-tsu", "char": "つ", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "tsu",
     "tip": "Starts with 'ts' as in English 'cats', then a soft 'u'. Not 'tu'.",
     "word": { "kana": "つくえ", "kanji": "机", "romaji": "tsukue", "en": "desk" },
+    "sentence": { "kana": "つくえの うえに ほんが あります。", "kanji": "机の上に本があります。", "romaji": "Tsukue no ue ni hon ga arimasu.", "en": "There is a book on the desk." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "tsunami", "part": "tsu" }
@@ -168,6 +186,7 @@
     "id": "h-te", "char": "て", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "te",
     "tip": null,
     "word": { "kana": "てら", "kanji": "寺", "romaji": "tera", "en": "temple (Buddhist)" },
+    "sentence": { "kana": "ふるい おてらを みました。", "kanji": "古いお寺を見ました。", "romaji": "Furui otera o mimashita.", "en": "I saw an old temple." },
     "soundsLike": {
       "fil": { "word": "tela", "part": "te", "en": "cloth" },
       "en": { "word": "ten", "part": "te" }
@@ -177,6 +196,7 @@
     "id": "h-to", "char": "と", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "to",
     "tip": null,
     "word": { "kana": "とけい", "kanji": "時計", "romaji": "tokei", "en": "clock, watch" },
+    "sentence": { "kana": "この とけいは いくらですか。", "kanji": "この時計はいくらですか。", "romaji": "Kono tokei wa ikura desu ka.", "en": "How much is this watch?" },
     "soundsLike": {
       "fil": { "word": "toyo", "part": "to", "en": "soy sauce" },
       "en": { "word": "toe", "part": "to" }
@@ -187,6 +207,7 @@
     "id": "h-na", "char": "な", "script": "hiragana", "stage": 1, "row": "na", "romaji": "na",
     "tip": null,
     "word": { "kana": "なつ", "kanji": "夏", "romaji": "natsu", "en": "summer" },
+    "sentence": { "kana": "なつは あついです。", "kanji": "夏は暑いです。", "romaji": "Natsu wa atsui desu.", "en": "Summer is hot." },
     "soundsLike": {
       "fil": { "word": "nanay", "part": "na", "en": "mother" },
       "en": { "word": "nachos", "part": "na" }
@@ -196,6 +217,7 @@
     "id": "h-ni", "char": "に", "script": "hiragana", "stage": 1, "row": "na", "romaji": "ni",
     "tip": null,
     "word": { "kana": "にく", "kanji": "肉", "romaji": "niku", "en": "meat" },
+    "sentence": { "kana": "にくが すきです。", "kanji": "肉が好きです。", "romaji": "Niku ga suki desu.", "en": "I like meat." },
     "soundsLike": {
       "fil": { "word": "nipa", "part": "ni", "en": "nipa palm" },
       "en": { "word": "knee", "part": "knee" }
@@ -205,6 +227,7 @@
     "id": "h-nu", "char": "ぬ", "script": "hiragana", "stage": 1, "row": "na", "romaji": "nu",
     "tip": null,
     "word": { "kana": "ぬいぐるみ", "kanji": null, "romaji": "nuigurumi", "en": "stuffed toy" },
+    "sentence": { "kana": "ぬいぐるみを かいました。", "kanji": "ぬいぐるみを買いました。", "romaji": "Nuigurumi o kaimashita.", "en": "I bought a stuffed toy." },
     "soundsLike": {
       "fil": { "word": "numero", "part": "nu", "en": "number" },
       "en": { "word": "noodle", "part": "noo" }
@@ -214,6 +237,7 @@
     "id": "h-ne", "char": "ね", "script": "hiragana", "stage": 1, "row": "na", "romaji": "ne",
     "tip": null,
     "word": { "kana": "ねこ", "kanji": "猫", "romaji": "neko", "en": "cat" },
+    "sentence": { "kana": "ねこが ねて います。", "kanji": "猫が寝ています。", "romaji": "Neko ga nete imasu.", "en": "The cat is sleeping." },
     "soundsLike": {
       "fil": { "word": "negosyo", "part": "ne", "en": "business" },
       "en": { "word": "net", "part": "ne" }
@@ -223,6 +247,7 @@
     "id": "h-no", "char": "の", "script": "hiragana", "stage": 1, "row": "na", "romaji": "no",
     "tip": null,
     "word": { "kana": "のみもの", "kanji": "飲み物", "romaji": "nomimono", "en": "drink" },
+    "sentence": { "kana": "のみものは なにが いいですか。", "kanji": "飲み物は何がいいですか。", "romaji": "Nomimono wa nani ga ii desu ka.", "en": "What would you like to drink?" },
     "soundsLike": {
       "fil": { "word": "nobyo", "part": "no", "en": "boyfriend" },
       "en": { "word": "note", "part": "no" }
@@ -233,6 +258,7 @@
     "id": "h-ha", "char": "は", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "ha",
     "tip": "When は is used as a grammar particle it is read 'wa'.",
     "word": { "kana": "はし", "kanji": "箸", "romaji": "hashi", "en": "chopsticks" },
+    "sentence": { "kana": "はしで たべます。", "kanji": "箸で食べます。", "romaji": "Hashi de tabemasu.", "en": "I eat with chopsticks." },
     "soundsLike": {
       "fil": { "word": "hapon", "part": "ha", "en": "afternoon; also 'Japan'" },
       "en": { "word": "haha", "part": "ha" }
@@ -242,6 +268,7 @@
     "id": "h-hi", "char": "ひ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "hi",
     "tip": "A little breathier than English 'he'.",
     "word": { "kana": "ひだり", "kanji": "左", "romaji": "hidari", "en": "left (direction)" },
+    "sentence": { "kana": "ひだりに まがって ください。", "kanji": "左に曲がってください。", "romaji": "Hidari ni magatte kudasai.", "en": "Please turn left." },
     "soundsLike": {
       "fil": { "word": "hipon", "part": "hi", "en": "shrimp" },
       "en": { "word": "heat", "part": "hea" }
@@ -251,6 +278,7 @@
     "id": "h-fu", "char": "ふ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "fu",
     "tip": "Between 'f' and 'h': blow softly through the lips, teeth do not touch the lip.",
     "word": { "kana": "ふね", "kanji": "船", "romaji": "fune", "en": "boat, ship" },
+    "sentence": { "kana": "ふねで しまへ いきます。", "kanji": "船で島へ行きます。", "romaji": "Fune de shima e ikimasu.", "en": "I'm going to the island by boat." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "food", "part": "foo" }
@@ -260,6 +288,7 @@
     "id": "h-he", "char": "へ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "he",
     "tip": "When へ is used as a grammar particle ('to', a direction) it is read 'e'.",
     "word": { "kana": "へや", "kanji": "部屋", "romaji": "heya", "en": "room" },
+    "sentence": { "kana": "へやは なんがいですか。", "kanji": "部屋は何階ですか。", "romaji": "Heya wa nangai desu ka.", "en": "Which floor is the room on?" },
     "soundsLike": {
       "fil": { "word": "heto", "part": "he", "en": "here it is" },
       "en": { "word": "help", "part": "he" }
@@ -269,6 +298,7 @@
     "id": "h-ho", "char": "ほ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "ho",
     "tip": null,
     "word": { "kana": "ほん", "kanji": "本", "romaji": "hon", "en": "book" },
+    "sentence": { "kana": "ほんを よみます。", "kanji": "本を読みます。", "romaji": "Hon o yomimasu.", "en": "I read books." },
     "soundsLike": {
       "fil": { "word": "hoy", "part": "ho", "en": "hey!" },
       "en": { "word": "hope", "part": "ho" }
@@ -279,6 +309,7 @@
     "id": "h-ma", "char": "ま", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "ma",
     "tip": null,
     "word": { "kana": "まど", "kanji": "窓", "romaji": "mado", "en": "window" },
+    "sentence": { "kana": "まどを あけて ください。", "kanji": "窓を開けてください。", "romaji": "Mado o akete kudasai.", "en": "Please open the window." },
     "soundsLike": {
       "fil": { "word": "mata", "part": "ma", "en": "eye" },
       "en": { "word": "mama", "part": "ma" }
@@ -288,6 +319,7 @@
     "id": "h-mi", "char": "み", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "mi",
     "tip": null,
     "word": { "kana": "みず", "kanji": "水", "romaji": "mizu", "en": "water" },
+    "sentence": { "kana": "みずを ください。", "kanji": "水をください。", "romaji": "Mizu o kudasai.", "en": "Water, please." },
     "soundsLike": {
       "fil": { "word": "minsan", "part": "mi", "en": "sometimes" },
       "en": { "word": "meet", "part": "mee" }
@@ -297,6 +329,7 @@
     "id": "h-mu", "char": "む", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "mu",
     "tip": null,
     "word": { "kana": "むし", "kanji": "虫", "romaji": "mushi", "en": "insect, bug" },
+    "sentence": { "kana": "むしが こわいです。", "kanji": "虫が怖いです。", "romaji": "Mushi ga kowai desu.", "en": "I'm scared of bugs." },
     "soundsLike": {
       "fil": { "word": "mukha", "part": "mu", "en": "face" },
       "en": { "word": "moon", "part": "moo" }
@@ -306,6 +339,7 @@
     "id": "h-me", "char": "め", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "me",
     "tip": null,
     "word": { "kana": "めがね", "kanji": "眼鏡", "romaji": "megane", "en": "glasses (eyeglasses)" },
+    "sentence": { "kana": "めがねを かけて います。", "kanji": "眼鏡をかけています。", "romaji": "Megane o kakete imasu.", "en": "I wear glasses." },
     "soundsLike": {
       "fil": { "word": "mesa", "part": "me", "en": "table" },
       "en": { "word": "met", "part": "me" }
@@ -315,6 +349,7 @@
     "id": "h-mo", "char": "も", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "mo",
     "tip": null,
     "word": { "kana": "もも", "kanji": "桃", "romaji": "momo", "en": "peach" },
+    "sentence": { "kana": "ももが あまいです。", "kanji": "桃が甘いです。", "romaji": "Momo ga amai desu.", "en": "The peach is sweet." },
     "soundsLike": {
       "fil": { "word": "motor", "part": "mo", "en": "motorcycle" },
       "en": { "word": "motor", "part": "mo" }
@@ -325,6 +360,7 @@
     "id": "h-ya", "char": "や", "script": "hiragana", "stage": 1, "row": "ya", "romaji": "ya",
     "tip": null,
     "word": { "kana": "やま", "kanji": "山", "romaji": "yama", "en": "mountain" },
+    "sentence": { "kana": "ふじさんは たかい やまです。", "kanji": "富士山は高い山です。", "romaji": "Fujisan wa takai yama desu.", "en": "Mt. Fuji is a tall mountain." },
     "soundsLike": {
       "fil": { "word": "yaman", "part": "ya", "en": "wealth" },
       "en": { "word": "yacht", "part": "ya" }
@@ -334,6 +370,7 @@
     "id": "h-yu", "char": "ゆ", "script": "hiragana", "stage": 1, "row": "ya", "romaji": "yu",
     "tip": null,
     "word": { "kana": "ゆき", "kanji": "雪", "romaji": "yuki", "en": "snow" },
+    "sentence": { "kana": "ゆきが ふって います。", "kanji": "雪が降っています。", "romaji": "Yuki ga futte imasu.", "en": "It is snowing." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "you", "part": "you" }
@@ -343,6 +380,7 @@
     "id": "h-yo", "char": "よ", "script": "hiragana", "stage": 1, "row": "ya", "romaji": "yo",
     "tip": null,
     "word": { "kana": "よる", "kanji": "夜", "romaji": "yoru", "en": "night" },
+    "sentence": { "kana": "よるは さむいです。", "kanji": "夜は寒いです。", "romaji": "Yoru wa samui desu.", "en": "It's cold at night." },
     "soundsLike": {
       "fil": { "word": "yoyo", "part": "yo", "en": "yo-yo" },
       "en": { "word": "yoga", "part": "yo" }
@@ -353,6 +391,7 @@
     "id": "h-ra", "char": "ら", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ra",
     "tip": "Japanese 'r' is a light tap of the tongue, close to the Tagalog 'r' in 'araw'.",
     "word": { "kana": "らいねん", "kanji": "来年", "romaji": "rainen", "en": "next year" },
+    "sentence": { "kana": "らいねん にほんへ いきます。", "kanji": "来年日本へ行きます。", "romaji": "Rainen Nihon e ikimasu.", "en": "I'm going to Japan next year." },
     "soundsLike": {
       "fil": { "word": "radyo", "part": "ra", "en": "radio" },
       "en": null
@@ -362,6 +401,7 @@
     "id": "h-ri", "char": "り", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ri",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "りんご", "kanji": "林檎", "romaji": "ringo", "en": "apple" },
+    "sentence": { "kana": "りんごを みっつ ください。", "kanji": "りんごを三つください。", "romaji": "Ringo o mittsu kudasai.", "en": "Three apples, please." },
     "soundsLike": {
       "fil": { "word": "rito", "part": "ri", "en": "here" },
       "en": null
@@ -371,6 +411,7 @@
     "id": "h-ru", "char": "る", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ru",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "はる", "kanji": "春", "romaji": "haru", "en": "spring (season)" },
+    "sentence": { "kana": "はるは あたたかいです。", "kanji": "春は暖かいです。", "romaji": "Haru wa atatakai desu.", "en": "Spring is warm." },
     "soundsLike": {
       "fil": { "word": "ruta", "part": "ru", "en": "route" },
       "en": null
@@ -380,6 +421,7 @@
     "id": "h-re", "char": "れ", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "re",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "れきし", "kanji": "歴史", "romaji": "rekishi", "en": "history" },
+    "sentence": { "kana": "にほんの れきしが すきです。", "kanji": "日本の歴史が好きです。", "romaji": "Nihon no rekishi ga suki desu.", "en": "I like Japanese history." },
     "soundsLike": {
       "fil": { "word": "relo", "part": "re", "en": "watch (clock)" },
       "en": null
@@ -389,6 +431,7 @@
     "id": "h-ro", "char": "ろ", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ro",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "ろく", "kanji": "六", "romaji": "roku", "en": "six" },
+    "sentence": { "kana": "ろくじに おきます。", "kanji": "六時に起きます。", "romaji": "Rokuji ni okimasu.", "en": "I get up at six o'clock." },
     "soundsLike": {
       "fil": { "word": "rosas", "part": "ro", "en": "rose" },
       "en": null
@@ -399,6 +442,7 @@
     "id": "h-wa", "char": "わ", "script": "hiragana", "stage": 1, "row": "wa", "romaji": "wa",
     "tip": null,
     "word": { "kana": "わたし", "kanji": "私", "romaji": "watashi", "en": "I, me" },
+    "sentence": { "kana": "わたしは フィリピンじんです。", "kanji": "私はフィリピン人です。", "romaji": "Watashi wa Firipinjin desu.", "en": "I am Filipino." },
     "soundsLike": {
       "fil": { "word": "wala", "part": "wa", "en": "none, nothing" },
       "en": { "word": "watt", "part": "wa" }
@@ -408,6 +452,7 @@
     "id": "h-wo", "char": "を", "script": "hiragana", "stage": 1, "row": "wa", "romaji": "o",
     "tip": "Sounds the same as お (o); sometimes written 'wo'. Only used as a grammar particle that marks the object of a verb.",
     "word": { "kana": "みずをのむ", "kanji": "水を飲む", "romaji": "mizu o nomu", "en": "to drink water" },
+    "sentence": { "kana": "まいにち みずを のむ ことが たいせつです。", "kanji": "毎日水を飲むことが大切です。", "romaji": "Mainichi mizu o nomu koto ga taisetsu desu.", "en": "Drinking water every day is important." },
     "soundsLike": {
       "fil": { "word": "oras", "part": "o", "en": "time, hour" },
       "en": { "word": "go", "part": "o" }
@@ -418,6 +463,7 @@
     "id": "h-n", "char": "ん", "script": "hiragana", "stage": 1, "row": "n", "romaji": "n",
     "tip": "A nasal sound on its own beat. Before k or g it sounds like Tagalog 'ng'.",
     "word": { "kana": "にほん", "kanji": "日本", "romaji": "Nihon", "en": "Japan" },
+    "sentence": { "kana": "にほんが だいすきです。", "kanji": "日本が大好きです。", "romaji": "Nihon ga daisuki desu.", "en": "I love Japan." },
     "soundsLike": {
       "fil": { "word": "hindi", "part": "n", "en": "no, not" },
       "en": { "word": "pen", "part": "n" }
@@ -428,6 +474,7 @@
     "id": "h-ga", "char": "が", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "ga",
     "tip": "The two small marks (dakuten) turn か into が: k becomes g.",
     "word": { "kana": "がっこう", "kanji": "学校", "romaji": "gakkō", "en": "school" },
+    "sentence": { "kana": "こどもは がっこうへ いきます。", "kanji": "子供は学校へ行きます。", "romaji": "Kodomo wa gakkō e ikimasu.", "en": "The children go to school." },
     "soundsLike": {
       "fil": { "word": "gatas", "part": "ga", "en": "milk" },
       "en": { "word": "gala", "part": "ga" }
@@ -437,6 +484,7 @@
     "id": "h-gi", "char": "ぎ", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "gi",
     "tip": null,
     "word": { "kana": "ぎんこう", "kanji": "銀行", "romaji": "ginkō", "en": "bank" },
+    "sentence": { "kana": "ぎんこうは なんじまでですか。", "kanji": "銀行は何時までですか。", "romaji": "Ginkō wa nanji made desu ka.", "en": "Until what time is the bank open?" },
     "soundsLike": {
       "fil": { "word": "gising", "part": "gi", "en": "awake" },
       "en": { "word": "geese", "part": "gee" }
@@ -446,6 +494,7 @@
     "id": "h-gu", "char": "ぐ", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "gu",
     "tip": null,
     "word": { "kana": "ぐあい", "kanji": "具合", "romaji": "guai", "en": "condition (how you feel)" },
+    "sentence": { "kana": "ぐあいが わるいです。", "kanji": "具合が悪いです。", "romaji": "Guai ga warui desu.", "en": "I feel sick." },
     "soundsLike": {
       "fil": { "word": "gulay", "part": "gu", "en": "vegetables" },
       "en": { "word": "goose", "part": "goo" }
@@ -455,6 +504,7 @@
     "id": "h-ge", "char": "げ", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "ge",
     "tip": null,
     "word": { "kana": "げんき", "kanji": "元気", "romaji": "genki", "en": "healthy, energetic" },
+    "sentence": { "kana": "おげんきですか。", "kanji": "お元気ですか。", "romaji": "Ogenki desu ka.", "en": "How are you?" },
     "soundsLike": {
       "fil": { "word": "gera", "part": "ge", "en": "war" },
       "en": { "word": "get", "part": "ge" }
@@ -464,6 +514,7 @@
     "id": "h-go", "char": "ご", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "go",
     "tip": null,
     "word": { "kana": "ごはん", "kanji": "ご飯", "romaji": "gohan", "en": "cooked rice; meal" },
+    "sentence": { "kana": "ごはんを たべましょう。", "kanji": "ご飯を食べましょう。", "romaji": "Gohan o tabemashō.", "en": "Let's eat." },
     "soundsLike": {
       "fil": { "word": "gobyerno", "part": "go", "en": "government" },
       "en": { "word": "go", "part": "go" }
@@ -474,6 +525,7 @@
     "id": "h-za", "char": "ざ", "script": "hiragana", "stage": 2, "row": "za", "romaji": "za",
     "tip": "The dakuten turns さ into ざ: s becomes z. Keep it buzzing like English 'zoo', not 's'.",
     "word": { "kana": "ざっし", "kanji": "雑誌", "romaji": "zasshi", "en": "magazine" },
+    "sentence": { "kana": "ざっしを よみます。", "kanji": "雑誌を読みます。", "romaji": "Zasshi o yomimasu.", "en": "I read magazines." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "bazaar", "part": "za" }
@@ -483,6 +535,7 @@
     "id": "h-ji", "char": "じ", "script": "hiragana", "stage": 2, "row": "za", "romaji": "ji",
     "tip": "Like the 'j' in English 'jeep'. Sounds the same as ぢ.",
     "word": { "kana": "じかん", "kanji": "時間", "romaji": "jikan", "en": "time" },
+    "sentence": { "kana": "じかんが ありません。", "kanji": "時間がありません。", "romaji": "Jikan ga arimasen.", "en": "I don't have time." },
     "soundsLike": {
       "fil": { "word": "dyip", "part": "dyi", "en": "jeepney" },
       "en": { "word": "jeep", "part": "jee" }
@@ -492,6 +545,7 @@
     "id": "h-zu", "char": "ず", "script": "hiragana", "stage": 2, "row": "za", "romaji": "zu",
     "tip": "Sounds the same as づ.",
     "word": { "kana": "ずつう", "kanji": "頭痛", "romaji": "zutsū", "en": "headache" },
+    "sentence": { "kana": "ずつうが します。", "kanji": "頭痛がします。", "romaji": "Zutsū ga shimasu.", "en": "I have a headache." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "zoo", "part": "zoo" }
@@ -501,6 +555,7 @@
     "id": "h-ze", "char": "ぜ", "script": "hiragana", "stage": 2, "row": "za", "romaji": "ze",
     "tip": null,
     "word": { "kana": "ぜんぶ", "kanji": "全部", "romaji": "zenbu", "en": "all, everything" },
+    "sentence": { "kana": "ぜんぶで いくらですか。", "kanji": "全部でいくらですか。", "romaji": "Zenbu de ikura desu ka.", "en": "How much is it all together?" },
     "soundsLike": {
       "fil": null,
       "en": { "word": "zest", "part": "ze" }
@@ -510,6 +565,7 @@
     "id": "h-zo", "char": "ぞ", "script": "hiragana", "stage": 2, "row": "za", "romaji": "zo",
     "tip": null,
     "word": { "kana": "ぞう", "kanji": "象", "romaji": "zō", "en": "elephant" },
+    "sentence": { "kana": "ぞうは おおきいです。", "kanji": "象は大きいです。", "romaji": "Zō wa ōkii desu.", "en": "Elephants are big." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "zone", "part": "zo" }
@@ -520,6 +576,7 @@
     "id": "h-da", "char": "だ", "script": "hiragana", "stage": 2, "row": "da", "romaji": "da",
     "tip": "The dakuten turns た into だ: t becomes d.",
     "word": { "kana": "だいがく", "kanji": "大学", "romaji": "daigaku", "en": "university" },
+    "sentence": { "kana": "だいがくで にほんごを べんきょう します。", "kanji": "大学で日本語を勉強します。", "romaji": "Daigaku de Nihongo o benkyō shimasu.", "en": "I study Japanese at university." },
     "soundsLike": {
       "fil": { "word": "daga", "part": "da", "en": "rat, mouse" },
       "en": { "word": "dada", "part": "da" }
@@ -529,6 +586,7 @@
     "id": "h-di", "char": "ぢ", "script": "hiragana", "stage": 2, "row": "da", "romaji": "ji",
     "tip": "Sounds the same as じ (ji) and is rarely used. You mostly see it when ち becomes voiced, as in はな + ち → はなぢ.",
     "word": { "kana": "はなぢ", "kanji": "鼻血", "romaji": "hanaji", "en": "nosebleed" },
+    "sentence": { "kana": "はなぢが でました。", "kanji": "鼻血が出ました。", "romaji": "Hanaji ga demashita.", "en": "I got a nosebleed." },
     "soundsLike": {
       "fil": { "word": "dyip", "part": "dyi", "en": "jeepney" },
       "en": { "word": "jeep", "part": "jee" }
@@ -538,6 +596,7 @@
     "id": "h-du", "char": "づ", "script": "hiragana", "stage": 2, "row": "da", "romaji": "zu",
     "tip": "Sounds the same as ず (zu) and is rarely used. You mostly see it when つ becomes voiced, as in つづく.",
     "word": { "kana": "つづく", "kanji": "続く", "romaji": "tsuzuku", "en": "to continue" },
+    "sentence": { "kana": "あめが つづく でしょう。", "kanji": "雨が続くでしょう。", "romaji": "Ame ga tsuzuku deshō.", "en": "The rain will probably continue." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "zoo", "part": "zoo" }
@@ -547,6 +606,7 @@
     "id": "h-de", "char": "で", "script": "hiragana", "stage": 2, "row": "da", "romaji": "de",
     "tip": null,
     "word": { "kana": "でぐち", "kanji": "出口", "romaji": "deguchi", "en": "exit" },
+    "sentence": { "kana": "でぐちは どこですか。", "kanji": "出口はどこですか。", "romaji": "Deguchi wa doko desu ka.", "en": "Where is the exit?" },
     "soundsLike": {
       "fil": { "word": "dentista", "part": "de", "en": "dentist" },
       "en": { "word": "desk", "part": "de" }
@@ -556,6 +616,7 @@
     "id": "h-do", "char": "ど", "script": "hiragana", "stage": 2, "row": "da", "romaji": "do",
     "tip": null,
     "word": { "kana": "どこ", "kanji": null, "romaji": "doko", "en": "where" },
+    "sentence": { "kana": "トイレは どこですか。", "kanji": "トイレはどこですか。", "romaji": "Toire wa doko desu ka.", "en": "Where is the toilet?" },
     "soundsLike": {
       "fil": { "word": "doktor", "part": "do", "en": "doctor" },
       "en": { "word": "dome", "part": "do" }
@@ -566,6 +627,7 @@
     "id": "h-ba", "char": "ば", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "ba",
     "tip": "The dakuten turns は into ば: h becomes b.",
     "word": { "kana": "ばしょ", "kanji": "場所", "romaji": "basho", "en": "place" },
+    "sentence": { "kana": "ばしょを おしえて ください。", "kanji": "場所を教えてください。", "romaji": "Basho o oshiete kudasai.", "en": "Please tell me where it is." },
     "soundsLike": {
       "fil": { "word": "bata", "part": "ba", "en": "child" },
       "en": { "word": "bar", "part": "ba" }
@@ -575,6 +637,7 @@
     "id": "h-bi", "char": "び", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "bi",
     "tip": null,
     "word": { "kana": "びん", "kanji": "瓶", "romaji": "bin", "en": "bottle" },
+    "sentence": { "kana": "びんを あけて ください。", "kanji": "瓶を開けてください。", "romaji": "Bin o akete kudasai.", "en": "Please open the bottle." },
     "soundsLike": {
       "fil": { "word": "bigas", "part": "bi", "en": "uncooked rice" },
       "en": { "word": "bee", "part": "bee" }
@@ -584,6 +647,7 @@
     "id": "h-bu", "char": "ぶ", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "bu",
     "tip": null,
     "word": { "kana": "ぶた", "kanji": "豚", "romaji": "buta", "en": "pig; pork" },
+    "sentence": { "kana": "ぶたにくが すきです。", "kanji": "豚肉が好きです。", "romaji": "Butaniku ga suki desu.", "en": "I like pork." },
     "soundsLike": {
       "fil": { "word": "buhok", "part": "bu", "en": "hair" },
       "en": { "word": "boot", "part": "boo" }
@@ -593,6 +657,7 @@
     "id": "h-be", "char": "べ", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "be",
     "tip": null,
     "word": { "kana": "べんとう", "kanji": "弁当", "romaji": "bentō", "en": "boxed lunch (bento)" },
+    "sentence": { "kana": "えきで べんとうを かいました。", "kanji": "駅で弁当を買いました。", "romaji": "Eki de bentō o kaimashita.", "en": "I bought a bento at the station." },
     "soundsLike": {
       "fil": { "word": "berde", "part": "be", "en": "green" },
       "en": { "word": "bed", "part": "be" }
@@ -602,6 +667,7 @@
     "id": "h-bo", "char": "ぼ", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "bo",
     "tip": null,
     "word": { "kana": "ぼうし", "kanji": "帽子", "romaji": "bōshi", "en": "hat, cap" },
+    "sentence": { "kana": "ぼうしを かぶります。", "kanji": "帽子をかぶります。", "romaji": "Bōshi o kaburimasu.", "en": "I put on a hat." },
     "soundsLike": {
       "fil": { "word": "bola", "part": "bo", "en": "ball" },
       "en": { "word": "boat", "part": "bo" }
@@ -612,6 +678,7 @@
     "id": "h-pa", "char": "ぱ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "pa",
     "tip": "The small circle (handakuten) turns は into ぱ: h becomes p.",
     "word": { "kana": "かんぱい", "kanji": "乾杯", "romaji": "kanpai", "en": "cheers! (a toast)" },
+    "sentence": { "kana": "みんなで かんぱい しましょう。", "kanji": "みんなで乾杯しましょう。", "romaji": "Minna de kanpai shimashō.", "en": "Let's all make a toast." },
     "soundsLike": {
       "fil": { "word": "pagkain", "part": "pa", "en": "food" },
       "en": { "word": "pasta", "part": "pa" }
@@ -621,6 +688,7 @@
     "id": "h-pi", "char": "ぴ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "pi",
     "tip": null,
     "word": { "kana": "えんぴつ", "kanji": "鉛筆", "romaji": "enpitsu", "en": "pencil" },
+    "sentence": { "kana": "えんぴつを かして ください。", "kanji": "鉛筆を貸してください。", "romaji": "Enpitsu o kashite kudasai.", "en": "Please lend me a pencil." },
     "soundsLike": {
       "fil": { "word": "pito", "part": "pi", "en": "seven; whistle" },
       "en": { "word": "peace", "part": "pea" }
@@ -630,6 +698,7 @@
     "id": "h-pu", "char": "ぷ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "pu",
     "tip": null,
     "word": { "kana": "てんぷら", "kanji": "天ぷら", "romaji": "tenpura", "en": "tempura (battered, fried food)" },
+    "sentence": { "kana": "てんぷらは おいしいです。", "kanji": "天ぷらはおいしいです。", "romaji": "Tenpura wa oishii desu.", "en": "Tempura is delicious." },
     "soundsLike": {
       "fil": { "word": "puso", "part": "pu", "en": "heart" },
       "en": { "word": "pool", "part": "poo" }
@@ -639,6 +708,7 @@
     "id": "h-pe", "char": "ぺ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "pe",
     "tip": null,
     "word": { "kana": "ぺこぺこ", "kanji": null, "romaji": "pekopeko", "en": "starving, very hungry" },
+    "sentence": { "kana": "おなかが ぺこぺこです。", "kanji": "お腹がぺこぺこです。", "romaji": "Onaka ga pekopeko desu.", "en": "I'm starving." },
     "soundsLike": {
       "fil": { "word": "pera", "part": "pe", "en": "money" },
       "en": { "word": "pet", "part": "pe" }
@@ -648,6 +718,7 @@
     "id": "h-po", "char": "ぽ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "po",
     "tip": null,
     "word": { "kana": "さんぽ", "kanji": "散歩", "romaji": "sanpo", "en": "a walk, stroll" },
+    "sentence": { "kana": "こうえんを さんぽ します。", "kanji": "公園を散歩します。", "romaji": "Kōen o sanpo shimasu.", "en": "I take a walk in the park." },
     "soundsLike": {
       "fil": { "word": "pogi", "part": "po", "en": "handsome" },
       "en": { "word": "post", "part": "po" }
@@ -658,6 +729,7 @@
     "id": "h-kya", "char": "きゃ", "script": "hiragana", "stage": 3, "row": "kya", "romaji": "kya",
     "tip": "The small ゃ joins the first kana into one beat: say it as one sound, not two. き + ゃ = kya, not ki-ya.",
     "word": { "kana": "きゃく", "kanji": "客", "romaji": "kyaku", "en": "guest, customer" },
+    "sentence": { "kana": "みせに きゃくが おおいです。", "kanji": "店に客が多いです。", "romaji": "Mise ni kyaku ga ōi desu.", "en": "The shop has many customers." },
     "soundsLike": {
       "fil": { "word": "pakyaw", "part": "kya", "en": "buying in bulk" },
       "en": null,
@@ -668,6 +740,7 @@
     "id": "h-kyu", "char": "きゅ", "script": "hiragana", "stage": 3, "row": "kya", "romaji": "kyu",
     "tip": null,
     "word": { "kana": "きゅうり", "kanji": "胡瓜", "romaji": "kyūri", "en": "cucumber" },
+    "sentence": { "kana": "きゅうりを きります。", "kanji": "きゅうりを切ります。", "romaji": "Kyūri o kirimasu.", "en": "I cut the cucumber." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "cute", "part": "cu" },
@@ -678,6 +751,7 @@
     "id": "h-kyo", "char": "きょ", "script": "hiragana", "stage": 3, "row": "kya", "romaji": "kyo",
     "tip": null,
     "word": { "kana": "きょう", "kanji": "今日", "romaji": "kyō", "en": "today" },
+    "sentence": { "kana": "きょうは いい てんきです。", "kanji": "今日はいい天気です。", "romaji": "Kyō wa ii tenki desu.", "en": "The weather is nice today." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "Tokyo", "part": "kyo" },
@@ -689,6 +763,7 @@
     "id": "h-sha", "char": "しゃ", "script": "hiragana", "stage": 3, "row": "sha", "romaji": "sha",
     "tip": "Like Tagalog 'siya' said fast, as 'sha'.",
     "word": { "kana": "しゃしん", "kanji": "写真", "romaji": "shashin", "en": "photo" },
+    "sentence": { "kana": "しゃしんを とっても いいですか。", "kanji": "写真を撮ってもいいですか。", "romaji": "Shashin o totte mo ii desu ka.", "en": "May I take a photo?" },
     "soundsLike": {
       "fil": null,
       "en": { "word": "shark", "part": "sha" },
@@ -699,6 +774,7 @@
     "id": "h-shu", "char": "しゅ", "script": "hiragana", "stage": 3, "row": "sha", "romaji": "shu",
     "tip": null,
     "word": { "kana": "しゅくだい", "kanji": "宿題", "romaji": "shukudai", "en": "homework" },
+    "sentence": { "kana": "しゅくだいが おおいです。", "kanji": "宿題が多いです。", "romaji": "Shukudai ga ōi desu.", "en": "There's a lot of homework." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "shoe", "part": "shoe" },
@@ -709,6 +785,7 @@
     "id": "h-sho", "char": "しょ", "script": "hiragana", "stage": 3, "row": "sha", "romaji": "sho",
     "tip": null,
     "word": { "kana": "しょうゆ", "kanji": "醤油", "romaji": "shōyu", "en": "soy sauce" },
+    "sentence": { "kana": "しょうゆを とって ください。", "kanji": "醤油を取ってください。", "romaji": "Shōyu o totte kudasai.", "en": "Please pass the soy sauce." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "show", "part": "sho" },
@@ -720,6 +797,7 @@
     "id": "h-cha", "char": "ちゃ", "script": "hiragana", "stage": 3, "row": "cha", "romaji": "cha",
     "tip": "Like 'cha' in English 'chat'.",
     "word": { "kana": "ちゃわん", "kanji": "茶碗", "romaji": "chawan", "en": "rice bowl" },
+    "sentence": { "kana": "ちゃわんに ごはんを いれます。", "kanji": "茶碗にご飯を入れます。", "romaji": "Chawan ni gohan o iremasu.", "en": "I put rice in the bowl." },
     "soundsLike": {
       "fil": { "word": "tsaa", "part": "tsa", "en": "tea" },
       "en": { "word": "cha-cha", "part": "cha" },
@@ -730,6 +808,7 @@
     "id": "h-chu", "char": "ちゅ", "script": "hiragana", "stage": 3, "row": "cha", "romaji": "chu",
     "tip": null,
     "word": { "kana": "ちゅうい", "kanji": "注意", "romaji": "chūi", "en": "caution, attention (seen on signs)" },
+    "sentence": { "kana": "くるまに ちゅうい して ください。", "kanji": "車に注意してください。", "romaji": "Kuruma ni chūi shite kudasai.", "en": "Please watch out for cars." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "choose", "part": "choo" },
@@ -740,6 +819,7 @@
     "id": "h-cho", "char": "ちょ", "script": "hiragana", "stage": 3, "row": "cha", "romaji": "cho",
     "tip": null,
     "word": { "kana": "ちょっと", "kanji": null, "romaji": "chotto", "en": "a little; just a moment" },
+    "sentence": { "kana": "ちょっと まって ください。", "kanji": "ちょっと待ってください。", "romaji": "Chotto matte kudasai.", "en": "Please wait a moment." },
     "soundsLike": {
       "fil": { "word": "tsokolate", "part": "tso", "en": "chocolate" },
       "en": { "word": "choke", "part": "cho" },
@@ -751,6 +831,7 @@
     "id": "h-nya", "char": "にゃ", "script": "hiragana", "stage": 3, "row": "nya", "romaji": "nya",
     "tip": "Like the 'ña' in the name 'Niña': n + ya in one beat.",
     "word": { "kana": "こんにゃく", "kanji": "蒟蒻", "romaji": "konnyaku", "en": "konnyaku (konjac, a firm jelly food)" },
+    "sentence": { "kana": "おでんの こんにゃくが すきです。", "kanji": "おでんのこんにゃくが好きです。", "romaji": "Oden no konnyaku ga suki desu.", "en": "I like the konnyaku in oden." },
     "soundsLike": {
       "fil": { "word": "kanya", "part": "nya", "en": "his, hers" },
       "en": null,
@@ -761,6 +842,7 @@
     "id": "h-nyu", "char": "にゅ", "script": "hiragana", "stage": 3, "row": "nya", "romaji": "nyu",
     "tip": null,
     "word": { "kana": "にゅういん", "kanji": "入院", "romaji": "nyūin", "en": "being admitted to hospital" },
+    "sentence": { "kana": "ともだちが にゅういん しました。", "kanji": "友達が入院しました。", "romaji": "Tomodachi ga nyūin shimashita.", "en": "My friend was admitted to the hospital." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "menu", "part": "nu" },
@@ -771,6 +853,7 @@
     "id": "h-nyo", "char": "にょ", "script": "hiragana", "stage": 3, "row": "nya", "romaji": "nyo",
     "tip": null,
     "word": { "kana": "にょろにょろ", "kanji": null, "romaji": "nyoronyoro", "en": "wriggling (like a snake)" },
+    "sentence": { "kana": "へびが にょろにょろ うごきます。", "kanji": "蛇がにょろにょろ動きます。", "romaji": "Hebi ga nyoronyoro ugokimasu.", "en": "The snake wriggles along." },
     "soundsLike": {
       "fil": { "word": "niyog", "part": "niyo", "en": "coconut" },
       "en": null,
@@ -782,6 +865,7 @@
     "id": "h-hya", "char": "ひゃ", "script": "hiragana", "stage": 3, "row": "hya", "romaji": "hya",
     "tip": null,
     "word": { "kana": "ひゃく", "kanji": "百", "romaji": "hyaku", "en": "one hundred" },
+    "sentence": { "kana": "これは ひゃくえんです。", "kanji": "これは百円です。", "romaji": "Kore wa hyaku en desu.", "en": "This is 100 yen." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -792,6 +876,7 @@
     "id": "h-hyu", "char": "ひゅ", "script": "hiragana", "stage": 3, "row": "hya", "romaji": "hyu",
     "tip": null,
     "word": { "kana": "ひゅうひゅう", "kanji": null, "romaji": "hyūhyū", "en": "whoosh (sound of strong wind)" },
+    "sentence": { "kana": "かぜが ひゅうひゅう ふいて います。", "kanji": "風がひゅうひゅう吹いています。", "romaji": "Kaze ga hyūhyū fuite imasu.", "en": "The wind is whooshing." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "huge", "part": "hu" },
@@ -802,6 +887,7 @@
     "id": "h-hyo", "char": "ひょ", "script": "hiragana", "stage": 3, "row": "hya", "romaji": "hyo",
     "tip": null,
     "word": { "kana": "ひょうしき", "kanji": "標識", "romaji": "hyōshiki", "en": "sign (road sign, signpost)" },
+    "sentence": { "kana": "ひょうしきを みて ください。", "kanji": "標識を見てください。", "romaji": "Hyōshiki o mite kudasai.", "en": "Please look at the sign." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -813,6 +899,7 @@
     "id": "h-mya", "char": "みゃ", "script": "hiragana", "stage": 3, "row": "mya", "romaji": "mya",
     "tip": null,
     "word": { "kana": "みゃく", "kanji": "脈", "romaji": "myaku", "en": "pulse" },
+    "sentence": { "kana": "みゃくが はやいです。", "kanji": "脈が速いです。", "romaji": "Myaku ga hayai desu.", "en": "My pulse is fast." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "Myanmar", "part": "Mya" },
@@ -823,6 +910,7 @@
     "id": "h-myu", "char": "みゅ", "script": "hiragana", "stage": 3, "row": "mya", "romaji": "myu",
     "tip": null,
     "word": { "kana": "ミュージック", "kanji": null, "romaji": "myūjikku", "en": "music" },
+    "sentence": { "kana": "ポップ ミュージックが すきです。", "kanji": "ポップミュージックが好きです。", "romaji": "Poppu myūjikku ga suki desu.", "en": "I like pop music." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "music", "part": "mu" },
@@ -833,6 +921,7 @@
     "id": "h-myo", "char": "みょ", "script": "hiragana", "stage": 3, "row": "mya", "romaji": "myo",
     "tip": null,
     "word": { "kana": "みょうじ", "kanji": "名字", "romaji": "myōji", "en": "family name, surname" },
+    "sentence": { "kana": "みょうじを かいて ください。", "kanji": "名字を書いてください。", "romaji": "Myōji o kaite kudasai.", "en": "Please write your family name." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -844,6 +933,7 @@
     "id": "h-rya", "char": "りゃ", "script": "hiragana", "stage": 3, "row": "rya", "romaji": "rya",
     "tip": "Light tapped 'r' (like Tagalog 'r') + 'ya', in one beat.",
     "word": { "kana": "りゃく", "kanji": "略", "romaji": "ryaku", "en": "abbreviation" },
+    "sentence": { "kana": "これは なんの りゃくですか。", "kanji": "これは何の略ですか。", "romaji": "Kore wa nan no ryaku desu ka.", "en": "What is this short for?" },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -854,6 +944,7 @@
     "id": "h-ryu", "char": "りゅ", "script": "hiragana", "stage": 3, "row": "rya", "romaji": "ryu",
     "tip": null,
     "word": { "kana": "りゅう", "kanji": "竜", "romaji": "ryū", "en": "dragon" },
+    "sentence": { "kana": "りゅうの えが あります。", "kanji": "竜の絵があります。", "romaji": "Ryū no e ga arimasu.", "en": "There is a picture of a dragon." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -864,6 +955,7 @@
     "id": "h-ryo", "char": "りょ", "script": "hiragana", "stage": 3, "row": "rya", "romaji": "ryo",
     "tip": null,
     "word": { "kana": "りょこう", "kanji": "旅行", "romaji": "ryokō", "en": "travel, trip" },
+    "sentence": { "kana": "にほんを りょこう します。", "kanji": "日本を旅行します。", "romaji": "Nihon o ryokō shimasu.", "en": "I'm traveling around Japan." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -875,6 +967,7 @@
     "id": "h-gya", "char": "ぎゃ", "script": "hiragana", "stage": 3, "row": "gya", "romaji": "gya",
     "tip": null,
     "word": { "kana": "ぎゃく", "kanji": "逆", "romaji": "gyaku", "en": "opposite, reverse" },
+    "sentence": { "kana": "えきは ぎゃくの ほうこうです。", "kanji": "駅は逆の方向です。", "romaji": "Eki wa gyaku no hōkō desu.", "en": "The station is in the opposite direction." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -885,6 +978,7 @@
     "id": "h-gyu", "char": "ぎゅ", "script": "hiragana", "stage": 3, "row": "gya", "romaji": "gyu",
     "tip": null,
     "word": { "kana": "ぎゅうどん", "kanji": "牛丼", "romaji": "gyūdon", "en": "beef rice bowl" },
+    "sentence": { "kana": "ぎゅうどんを ひとつ ください。", "kanji": "牛丼を一つください。", "romaji": "Gyūdon o hitotsu kudasai.", "en": "One beef bowl, please." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -895,6 +989,7 @@
     "id": "h-gyo", "char": "ぎょ", "script": "hiragana", "stage": 3, "row": "gya", "romaji": "gyo",
     "tip": null,
     "word": { "kana": "ぎょうざ", "kanji": "餃子", "romaji": "gyōza", "en": "gyoza (dumplings)" },
+    "sentence": { "kana": "おおさかの ぎょうざは おいしいです。", "kanji": "大阪の餃子はおいしいです。", "romaji": "Ōsaka no gyōza wa oishii desu.", "en": "Osaka gyoza is delicious." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -906,6 +1001,7 @@
     "id": "h-ja", "char": "じゃ", "script": "hiragana", "stage": 3, "row": "ja", "romaji": "ja",
     "tip": "Like 'ja' in English 'jam'.",
     "word": { "kana": "じゃがいも", "kanji": null, "romaji": "jagaimo", "en": "potato" },
+    "sentence": { "kana": "じゃがいもを ゆでます。", "kanji": "じゃがいもを茹でます。", "romaji": "Jagaimo o yudemasu.", "en": "I boil potatoes." },
     "soundsLike": {
       "fil": { "word": "dyaket", "part": "dya", "en": "jacket" },
       "en": { "word": "jar", "part": "ja" },
@@ -916,6 +1012,7 @@
     "id": "h-ju", "char": "じゅ", "script": "hiragana", "stage": 3, "row": "ja", "romaji": "ju",
     "tip": null,
     "word": { "kana": "じゅうしょ", "kanji": "住所", "romaji": "jūsho", "en": "address" },
+    "sentence": { "kana": "じゅうしょを かいて ください。", "kanji": "住所を書いてください。", "romaji": "Jūsho o kaite kudasai.", "en": "Please write your address." },
     "soundsLike": {
       "fil": { "word": "dyus", "part": "dyu", "en": "juice" },
       "en": { "word": "juice", "part": "ju" },
@@ -926,6 +1023,7 @@
     "id": "h-jo", "char": "じょ", "script": "hiragana", "stage": 3, "row": "ja", "romaji": "jo",
     "tip": null,
     "word": { "kana": "じょうず", "kanji": "上手", "romaji": "jōzu", "en": "skillful, good at" },
+    "sentence": { "kana": "にほんごが じょうずですね。", "kanji": "日本語が上手ですね。", "romaji": "Nihongo ga jōzu desu ne.", "en": "Your Japanese is good!" },
     "soundsLike": {
       "fil": { "word": "dyosa", "part": "dyo", "en": "goddess" },
       "en": { "word": "joke", "part": "jo" },
@@ -937,6 +1035,7 @@
     "id": "h-bya", "char": "びゃ", "script": "hiragana", "stage": 3, "row": "bya", "romaji": "bya",
     "tip": null,
     "word": { "kana": "さんびゃく", "kanji": "三百", "romaji": "sanbyaku", "en": "three hundred" },
+    "sentence": { "kana": "さんびゃくえんです。", "kanji": "三百円です。", "romaji": "Sanbyaku en desu.", "en": "It's 300 yen." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -947,6 +1046,7 @@
     "id": "h-byu", "char": "びゅ", "script": "hiragana", "stage": 3, "row": "bya", "romaji": "byu",
     "tip": null,
     "word": { "kana": "ビュッフェ", "kanji": null, "romaji": "byuffe", "en": "buffet" },
+    "sentence": { "kana": "ホテルの ビュッフェで あさごはんを たべます。", "kanji": "ホテルのビュッフェで朝ご飯を食べます。", "romaji": "Hoteru no byuffe de asagohan o tabemasu.", "en": "I eat breakfast at the hotel buffet." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "beauty", "part": "beau" },
@@ -957,6 +1057,7 @@
     "id": "h-byo", "char": "びょ", "script": "hiragana", "stage": 3, "row": "bya", "romaji": "byo",
     "tip": null,
     "word": { "kana": "びょういん", "kanji": "病院", "romaji": "byōin", "en": "hospital" },
+    "sentence": { "kana": "びょういんは どこですか。", "kanji": "病院はどこですか。", "romaji": "Byōin wa doko desu ka.", "en": "Where is the hospital?" },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -968,6 +1069,7 @@
     "id": "h-pya", "char": "ぴゃ", "script": "hiragana", "stage": 3, "row": "pya", "romaji": "pya",
     "tip": null,
     "word": { "kana": "はっぴゃく", "kanji": "八百", "romaji": "happyaku", "en": "eight hundred" },
+    "sentence": { "kana": "これは はっぴゃくえんです。", "kanji": "これは八百円です。", "romaji": "Kore wa happyaku en desu.", "en": "This is 800 yen." },
     "soundsLike": {
       "fil": { "word": "pyano", "part": "pya", "en": "piano" },
       "en": null,
@@ -978,6 +1080,7 @@
     "id": "h-pyu", "char": "ぴゅ", "script": "hiragana", "stage": 3, "row": "pya", "romaji": "pyu",
     "tip": null,
     "word": { "kana": "コンピューター", "kanji": null, "romaji": "konpyūtā", "en": "computer" },
+    "sentence": { "kana": "コンピューターを つかいます。", "kanji": "コンピューターを使います。", "romaji": "Konpyūtā o tsukaimasu.", "en": "I use a computer." },
     "soundsLike": {
       "fil": { "word": "kompyuter", "part": "pyu", "en": "computer" },
       "en": { "word": "computer", "part": "pu" },
@@ -988,6 +1091,7 @@
     "id": "h-pyo", "char": "ぴょ", "script": "hiragana", "stage": 3, "row": "pya", "romaji": "pyo",
     "tip": null,
     "word": { "kana": "ぴょんぴょん", "kanji": null, "romaji": "pyonpyon", "en": "hopping, boing boing" },
+    "sentence": { "kana": "うさぎが ぴょんぴょん はねます。", "kanji": "うさぎがぴょんぴょん跳ねます。", "romaji": "Usagi ga pyonpyon hanemasu.", "en": "The rabbit hops along." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -999,6 +1103,7 @@
     "id": "k-a", "char": "ア", "script": "katakana", "stage": 1, "row": "a", "romaji": "a",
     "tip": "Like the 'a' in Tagalog 'aso'.",
     "word": { "kana": "アイス", "kanji": null, "romaji": "aisu", "en": "ice cream" },
+    "sentence": { "kana": "アイスを たべたいです。", "kanji": "アイスを食べたいです。", "romaji": "Aisu o tabetai desu.", "en": "I want to eat ice cream." },
     "soundsLike": {
       "fil": { "word": "aso", "part": "a", "en": "dog" },
       "en": { "word": "father", "part": "a" }
@@ -1008,6 +1113,7 @@
     "id": "k-i", "char": "イ", "script": "katakana", "stage": 1, "row": "a", "romaji": "i",
     "tip": "Like the 'i' in Tagalog 'ilog'.",
     "word": { "kana": "イヤホン", "kanji": null, "romaji": "iyahon", "en": "earphones" },
+    "sentence": { "kana": "イヤホンを わすれました。", "kanji": "イヤホンを忘れました。", "romaji": "Iyahon o wasuremashita.", "en": "I forgot my earphones." },
     "soundsLike": {
       "fil": { "word": "isda", "part": "i", "en": "fish" },
       "en": { "word": "see", "part": "ee" }
@@ -1017,6 +1123,7 @@
     "id": "k-u", "char": "ウ", "script": "katakana", "stage": 1, "row": "a", "romaji": "u",
     "tip": "Softer than Tagalog 'u': keep the lips relaxed, not rounded.",
     "word": { "kana": "ウイスキー", "kanji": null, "romaji": "uisukī", "en": "whisky" },
+    "sentence": { "kana": "ウイスキーを いっぱい ください。", "kanji": "ウイスキーを一杯ください。", "romaji": "Uisukī o ippai kudasai.", "en": "One whisky, please." },
     "soundsLike": {
       "fil": { "word": "ulo", "part": "u", "en": "head" },
       "en": { "word": "food", "part": "oo" }
@@ -1026,6 +1133,7 @@
     "id": "k-e", "char": "エ", "script": "katakana", "stage": 1, "row": "a", "romaji": "e",
     "tip": "The dash ー makes the vowel before it long: ベー = bē.",
     "word": { "kana": "エレベーター", "kanji": null, "romaji": "erebētā", "en": "elevator" },
+    "sentence": { "kana": "エレベーターは どこですか。", "kanji": "エレベーターはどこですか。", "romaji": "Erebētā wa doko desu ka.", "en": "Where is the elevator?" },
     "soundsLike": {
       "fil": { "word": "eroplano", "part": "e", "en": "airplane" },
       "en": { "word": "egg", "part": "e" }
@@ -1035,6 +1143,7 @@
     "id": "k-o", "char": "オ", "script": "katakana", "stage": 1, "row": "a", "romaji": "o",
     "tip": "Like the 'o' in Tagalog 'oo' (yes).",
     "word": { "kana": "オレンジ", "kanji": null, "romaji": "orenji", "en": "orange" },
+    "sentence": { "kana": "オレンジジュースを ください。", "kanji": "オレンジジュースをください。", "romaji": "Orenji jūsu o kudasai.", "en": "Orange juice, please." },
     "soundsLike": {
       "fil": { "word": "oras", "part": "o", "en": "time, hour" },
       "en": { "word": "go", "part": "o" }
@@ -1045,6 +1154,7 @@
     "id": "k-ka", "char": "カ", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ka",
     "tip": null,
     "word": { "kana": "カメラ", "kanji": null, "romaji": "kamera", "en": "camera" },
+    "sentence": { "kana": "あたらしい カメラを かいました。", "kanji": "新しいカメラを買いました。", "romaji": "Atarashii kamera o kaimashita.", "en": "I bought a new camera." },
     "soundsLike": {
       "fil": { "word": "kain", "part": "ka", "en": "to eat" },
       "en": { "word": "car", "part": "ca" }
@@ -1054,6 +1164,7 @@
     "id": "k-ki", "char": "キ", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ki",
     "tip": null,
     "word": { "kana": "キッチン", "kanji": null, "romaji": "kitchin", "en": "kitchen" },
+    "sentence": { "kana": "ホテルの へやに キッチンが あります。", "kanji": "ホテルの部屋にキッチンがあります。", "romaji": "Hoteru no heya ni kitchin ga arimasu.", "en": "The hotel room has a kitchen." },
     "soundsLike": {
       "fil": { "word": "kilay", "part": "ki", "en": "eyebrow" },
       "en": { "word": "key", "part": "key" }
@@ -1063,6 +1174,7 @@
     "id": "k-ku", "char": "ク", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ku",
     "tip": null,
     "word": { "kana": "クッキー", "kanji": null, "romaji": "kukkī", "en": "cookie" },
+    "sentence": { "kana": "クッキーを ひとつ どうぞ。", "kanji": "クッキーを一つどうぞ。", "romaji": "Kukkī o hitotsu dōzo.", "en": "Please have a cookie." },
     "soundsLike": {
       "fil": { "word": "kulay", "part": "ku", "en": "color" },
       "en": { "word": "cool", "part": "coo" }
@@ -1072,6 +1184,7 @@
     "id": "k-ke", "char": "ケ", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ke",
     "tip": null,
     "word": { "kana": "ケーキ", "kanji": null, "romaji": "kēki", "en": "cake" },
+    "sentence": { "kana": "この ケーキは おいしいです。", "kanji": "このケーキはおいしいです。", "romaji": "Kono kēki wa oishii desu.", "en": "This cake is delicious." },
     "soundsLike": {
       "fil": { "word": "keso", "part": "ke", "en": "cheese" },
       "en": { "word": "kept", "part": "ke" }
@@ -1081,6 +1194,7 @@
     "id": "k-ko", "char": "コ", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ko",
     "tip": null,
     "word": { "kana": "コーヒー", "kanji": null, "romaji": "kōhī", "en": "coffee" },
+    "sentence": { "kana": "コーヒーを ふたつ ください。", "kanji": "コーヒーを二つください。", "romaji": "Kōhī o futatsu kudasai.", "en": "Two coffees, please." },
     "soundsLike": {
       "fil": { "word": "kotse", "part": "ko", "en": "car" },
       "en": { "word": "coat", "part": "co" }
@@ -1091,6 +1205,7 @@
     "id": "k-sa", "char": "サ", "script": "katakana", "stage": 1, "row": "sa", "romaji": "sa",
     "tip": null,
     "word": { "kana": "サラダ", "kanji": null, "romaji": "sarada", "en": "salad" },
+    "sentence": { "kana": "サラダを ください。", "kanji": "サラダをください。", "romaji": "Sarada o kudasai.", "en": "A salad, please." },
     "soundsLike": {
       "fil": { "word": "saging", "part": "sa", "en": "banana" },
       "en": { "word": "salsa", "part": "sa" }
@@ -1100,6 +1215,7 @@
     "id": "k-shi", "char": "シ", "script": "katakana", "stage": 1, "row": "sa", "romaji": "shi",
     "tip": "Said 'shi', not 'si'. Don't mix up シ (shi) and ツ (tsu): シ's dots sit side by side and its long stroke sweeps up from the bottom.",
     "word": { "kana": "シーフード", "kanji": null, "romaji": "shīfūdo", "en": "seafood" },
+    "sentence": { "kana": "シーフードが すきです。", "kanji": "シーフードが好きです。", "romaji": "Shīfūdo ga suki desu.", "en": "I like seafood." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "she", "part": "she" }
@@ -1109,6 +1225,7 @@
     "id": "k-su", "char": "ス", "script": "katakana", "stage": 1, "row": "sa", "romaji": "su",
     "tip": null,
     "word": { "kana": "スーパー", "kanji": null, "romaji": "sūpā", "en": "supermarket" },
+    "sentence": { "kana": "ちかくに スーパーは ありますか。", "kanji": "近くにスーパーはありますか。", "romaji": "Chikaku ni sūpā wa arimasu ka.", "en": "Is there a supermarket nearby?" },
     "soundsLike": {
       "fil": { "word": "susi", "part": "su", "en": "key" },
       "en": { "word": "soup", "part": "sou" }
@@ -1118,6 +1235,7 @@
     "id": "k-se", "char": "セ", "script": "katakana", "stage": 1, "row": "sa", "romaji": "se",
     "tip": null,
     "word": { "kana": "セーター", "kanji": null, "romaji": "sētā", "en": "sweater" },
+    "sentence": { "kana": "セーターを きます。", "kanji": "セーターを着ます。", "romaji": "Sētā o kimasu.", "en": "I put on a sweater." },
     "soundsLike": {
       "fil": { "word": "sepilyo", "part": "se", "en": "toothbrush" },
       "en": { "word": "set", "part": "se" }
@@ -1127,6 +1245,7 @@
     "id": "k-so", "char": "ソ", "script": "katakana", "stage": 1, "row": "sa", "romaji": "so",
     "tip": null,
     "word": { "kana": "ソース", "kanji": null, "romaji": "sōsu", "en": "sauce" },
+    "sentence": { "kana": "たこやきに ソースを かけます。", "kanji": "たこ焼きにソースをかけます。", "romaji": "Takoyaki ni sōsu o kakemasu.", "en": "I put sauce on takoyaki." },
     "soundsLike": {
       "fil": { "word": "sobre", "part": "so", "en": "envelope" },
       "en": { "word": "soap", "part": "so" }
@@ -1137,6 +1256,7 @@
     "id": "k-ta", "char": "タ", "script": "katakana", "stage": 1, "row": "ta", "romaji": "ta",
     "tip": null,
     "word": { "kana": "タクシー", "kanji": null, "romaji": "takushī", "en": "taxi" },
+    "sentence": { "kana": "タクシーを よんで ください。", "kanji": "タクシーを呼んでください。", "romaji": "Takushī o yonde kudasai.", "en": "Please call a taxi." },
     "soundsLike": {
       "fil": { "word": "tao", "part": "ta", "en": "person" },
       "en": { "word": "taco", "part": "ta" }
@@ -1146,6 +1266,7 @@
     "id": "k-chi", "char": "チ", "script": "katakana", "stage": 1, "row": "ta", "romaji": "chi",
     "tip": "Said 'chi' like the start of English 'cheese', not 'ti'.",
     "word": { "kana": "チケット", "kanji": null, "romaji": "chiketto", "en": "ticket" },
+    "sentence": { "kana": "チケットを にまい ください。", "kanji": "チケットを二枚ください。", "romaji": "Chiketto o nimai kudasai.", "en": "Two tickets, please." },
     "soundsLike": {
       "fil": { "word": "tsinelas", "part": "tsi", "en": "slippers" },
       "en": { "word": "cheese", "part": "chee" }
@@ -1155,6 +1276,7 @@
     "id": "k-tsu", "char": "ツ", "script": "katakana", "stage": 1, "row": "ta", "romaji": "tsu",
     "tip": "'ts' as in 'cats', then a soft 'u'. Don't mix up ツ (tsu) and シ (shi): ツ's dots sit on top and its long stroke comes down from the top right.",
     "word": { "kana": "ツアー", "kanji": null, "romaji": "tsuā", "en": "tour" },
+    "sentence": { "kana": "ツアーは なんじに はじまりますか。", "kanji": "ツアーは何時に始まりますか。", "romaji": "Tsuā wa nanji ni hajimarimasu ka.", "en": "What time does the tour start?" },
     "soundsLike": {
       "fil": null,
       "en": { "word": "tsunami", "part": "tsu" }
@@ -1164,6 +1286,7 @@
     "id": "k-te", "char": "テ", "script": "katakana", "stage": 1, "row": "ta", "romaji": "te",
     "tip": null,
     "word": { "kana": "テレビ", "kanji": null, "romaji": "terebi", "en": "TV" },
+    "sentence": { "kana": "テレビを みます。", "kanji": "テレビを見ます。", "romaji": "Terebi o mimasu.", "en": "I watch TV." },
     "soundsLike": {
       "fil": { "word": "tela", "part": "te", "en": "cloth" },
       "en": { "word": "ten", "part": "te" }
@@ -1173,6 +1296,7 @@
     "id": "k-to", "char": "ト", "script": "katakana", "stage": 1, "row": "ta", "romaji": "to",
     "tip": null,
     "word": { "kana": "トイレ", "kanji": null, "romaji": "toire", "en": "toilet, restroom" },
+    "sentence": { "kana": "トイレを かりても いいですか。", "kanji": "トイレを借りてもいいですか。", "romaji": "Toire o karite mo ii desu ka.", "en": "May I use the restroom?" },
     "soundsLike": {
       "fil": { "word": "toyo", "part": "to", "en": "soy sauce" },
       "en": { "word": "toe", "part": "to" }
@@ -1183,6 +1307,7 @@
     "id": "k-na", "char": "ナ", "script": "katakana", "stage": 1, "row": "na", "romaji": "na",
     "tip": null,
     "word": { "kana": "ナイフ", "kanji": null, "romaji": "naifu", "en": "knife" },
+    "sentence": { "kana": "ナイフと フォークを ください。", "kanji": "ナイフとフォークをください。", "romaji": "Naifu to fōku o kudasai.", "en": "A knife and fork, please." },
     "soundsLike": {
       "fil": { "word": "nanay", "part": "na", "en": "mother" },
       "en": { "word": "nachos", "part": "na" }
@@ -1192,6 +1317,7 @@
     "id": "k-ni", "char": "ニ", "script": "katakana", "stage": 1, "row": "na", "romaji": "ni",
     "tip": null,
     "word": { "kana": "ニックネーム", "kanji": null, "romaji": "nikkunēmu", "en": "nickname" },
+    "sentence": { "kana": "わたしの ニックネームは マークです。", "kanji": "私のニックネームはマークです。", "romaji": "Watashi no nikkunēmu wa Māku desu.", "en": "My nickname is Mark." },
     "soundsLike": {
       "fil": { "word": "nipa", "part": "ni", "en": "nipa palm" },
       "en": { "word": "knee", "part": "knee" }
@@ -1201,6 +1327,7 @@
     "id": "k-nu", "char": "ヌ", "script": "katakana", "stage": 1, "row": "na", "romaji": "nu",
     "tip": null,
     "word": { "kana": "ヌードル", "kanji": null, "romaji": "nūdoru", "en": "noodles" },
+    "sentence": { "kana": "カップヌードルを かいます。", "kanji": "カップヌードルを買います。", "romaji": "Kappu nūdoru o kaimasu.", "en": "I'll buy a cup of instant noodles." },
     "soundsLike": {
       "fil": { "word": "numero", "part": "nu", "en": "number" },
       "en": { "word": "noodle", "part": "noo" }
@@ -1210,6 +1337,7 @@
     "id": "k-ne", "char": "ネ", "script": "katakana", "stage": 1, "row": "na", "romaji": "ne",
     "tip": null,
     "word": { "kana": "ネクタイ", "kanji": null, "romaji": "nekutai", "en": "necktie" },
+    "sentence": { "kana": "ネクタイを します。", "kanji": "ネクタイをします。", "romaji": "Nekutai o shimasu.", "en": "I wear a tie." },
     "soundsLike": {
       "fil": { "word": "negosyo", "part": "ne", "en": "business" },
       "en": { "word": "net", "part": "ne" }
@@ -1219,6 +1347,7 @@
     "id": "k-no", "char": "ノ", "script": "katakana", "stage": 1, "row": "na", "romaji": "no",
     "tip": null,
     "word": { "kana": "ノート", "kanji": null, "romaji": "nōto", "en": "notebook" },
+    "sentence": { "kana": "ノートに かきます。", "kanji": "ノートに書きます。", "romaji": "Nōto ni kakimasu.", "en": "I write in my notebook." },
     "soundsLike": {
       "fil": { "word": "nobyo", "part": "no", "en": "boyfriend" },
       "en": { "word": "note", "part": "no" }
@@ -1229,6 +1358,7 @@
     "id": "k-ha", "char": "ハ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "ha",
     "tip": null,
     "word": { "kana": "ハンバーガー", "kanji": null, "romaji": "hanbāgā", "en": "hamburger" },
+    "sentence": { "kana": "ハンバーガーを ひとつ ください。", "kanji": "ハンバーガーを一つください。", "romaji": "Hanbāgā o hitotsu kudasai.", "en": "One hamburger, please." },
     "soundsLike": {
       "fil": { "word": "hapon", "part": "ha", "en": "afternoon; also 'Japan'" },
       "en": { "word": "haha", "part": "ha" }
@@ -1238,6 +1368,7 @@
     "id": "k-hi", "char": "ヒ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "hi",
     "tip": "A little breathier than English 'he'.",
     "word": { "kana": "ヒーター", "kanji": null, "romaji": "hītā", "en": "heater" },
+    "sentence": { "kana": "ヒーターを つけて ください。", "kanji": "ヒーターをつけてください。", "romaji": "Hītā o tsukete kudasai.", "en": "Please turn on the heater." },
     "soundsLike": {
       "fil": { "word": "hipon", "part": "hi", "en": "shrimp" },
       "en": { "word": "heat", "part": "hea" }
@@ -1247,6 +1378,7 @@
     "id": "k-fu", "char": "フ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "fu",
     "tip": "Between 'f' and 'h': blow softly through the lips, teeth do not touch the lip.",
     "word": { "kana": "フルーツ", "kanji": null, "romaji": "furūtsu", "en": "fruit" },
+    "sentence": { "kana": "フルーツが すきです。", "kanji": "フルーツが好きです。", "romaji": "Furūtsu ga suki desu.", "en": "I like fruit." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "food", "part": "foo" }
@@ -1256,6 +1388,7 @@
     "id": "k-he", "char": "ヘ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "he",
     "tip": "Looks almost the same as hiragana へ.",
     "word": { "kana": "ヘリコプター", "kanji": null, "romaji": "herikoputā", "en": "helicopter" },
+    "sentence": { "kana": "ヘリコプターが とんで います。", "kanji": "ヘリコプターが飛んでいます。", "romaji": "Herikoputā ga tonde imasu.", "en": "A helicopter is flying." },
     "soundsLike": {
       "fil": { "word": "heto", "part": "he", "en": "here it is" },
       "en": { "word": "help", "part": "he" }
@@ -1265,6 +1398,7 @@
     "id": "k-ho", "char": "ホ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "ho",
     "tip": null,
     "word": { "kana": "ホテル", "kanji": null, "romaji": "hoteru", "en": "hotel" },
+    "sentence": { "kana": "ホテルは えきの ちかくです。", "kanji": "ホテルは駅の近くです。", "romaji": "Hoteru wa eki no chikaku desu.", "en": "The hotel is near the station." },
     "soundsLike": {
       "fil": { "word": "hoy", "part": "ho", "en": "hey!" },
       "en": { "word": "hope", "part": "ho" }
@@ -1275,6 +1409,7 @@
     "id": "k-ma", "char": "マ", "script": "katakana", "stage": 1, "row": "ma", "romaji": "ma",
     "tip": null,
     "word": { "kana": "マスク", "kanji": null, "romaji": "masuku", "en": "face mask" },
+    "sentence": { "kana": "マスクを して ください。", "kanji": "マスクをしてください。", "romaji": "Masuku o shite kudasai.", "en": "Please wear a mask." },
     "soundsLike": {
       "fil": { "word": "mata", "part": "ma", "en": "eye" },
       "en": { "word": "mama", "part": "ma" }
@@ -1284,6 +1419,7 @@
     "id": "k-mi", "char": "ミ", "script": "katakana", "stage": 1, "row": "ma", "romaji": "mi",
     "tip": null,
     "word": { "kana": "ミルク", "kanji": null, "romaji": "miruku", "en": "milk" },
+    "sentence": { "kana": "コーヒーに ミルクを いれます。", "kanji": "コーヒーにミルクを入れます。", "romaji": "Kōhī ni miruku o iremasu.", "en": "I put milk in my coffee." },
     "soundsLike": {
       "fil": { "word": "minsan", "part": "mi", "en": "sometimes" },
       "en": { "word": "meet", "part": "mee" }
@@ -1293,6 +1429,7 @@
     "id": "k-mu", "char": "ム", "script": "katakana", "stage": 1, "row": "ma", "romaji": "mu",
     "tip": null,
     "word": { "kana": "ムード", "kanji": null, "romaji": "mūdo", "en": "mood, atmosphere" },
+    "sentence": { "kana": "いい ムードですね。", "kanji": "いいムードですね。", "romaji": "Ii mūdo desu ne.", "en": "Nice atmosphere, isn't it?" },
     "soundsLike": {
       "fil": { "word": "mukha", "part": "mu", "en": "face" },
       "en": { "word": "moon", "part": "moo" }
@@ -1302,6 +1439,7 @@
     "id": "k-me", "char": "メ", "script": "katakana", "stage": 1, "row": "ma", "romaji": "me",
     "tip": null,
     "word": { "kana": "メニュー", "kanji": null, "romaji": "menyū", "en": "menu" },
+    "sentence": { "kana": "メニューを ください。", "kanji": "メニューをください。", "romaji": "Menyū o kudasai.", "en": "The menu, please." },
     "soundsLike": {
       "fil": { "word": "mesa", "part": "me", "en": "table" },
       "en": { "word": "met", "part": "me" }
@@ -1311,6 +1449,7 @@
     "id": "k-mo", "char": "モ", "script": "katakana", "stage": 1, "row": "ma", "romaji": "mo",
     "tip": null,
     "word": { "kana": "モノレール", "kanji": null, "romaji": "monorēru", "en": "monorail" },
+    "sentence": { "kana": "モノレールで くうこうへ いきます。", "kanji": "モノレールで空港へ行きます。", "romaji": "Monorēru de kūkō e ikimasu.", "en": "I'll go to the airport by monorail." },
     "soundsLike": {
       "fil": { "word": "motor", "part": "mo", "en": "motorcycle" },
       "en": { "word": "motor", "part": "mo" }
@@ -1321,6 +1460,7 @@
     "id": "k-ya", "char": "ヤ", "script": "katakana", "stage": 1, "row": "ya", "romaji": "ya",
     "tip": null,
     "word": { "kana": "タイヤ", "kanji": null, "romaji": "taiya", "en": "tire (of a car)" },
+    "sentence": { "kana": "くるまの タイヤが パンク しました。", "kanji": "車のタイヤがパンクしました。", "romaji": "Kuruma no taiya ga panku shimashita.", "en": "The car has a flat tire." },
     "soundsLike": {
       "fil": { "word": "yaman", "part": "ya", "en": "wealth" },
       "en": { "word": "yacht", "part": "ya" }
@@ -1330,6 +1470,7 @@
     "id": "k-yu", "char": "ユ", "script": "katakana", "stage": 1, "row": "ya", "romaji": "yu",
     "tip": null,
     "word": { "kana": "ユーロ", "kanji": null, "romaji": "yūro", "en": "euro (money)" },
+    "sentence": { "kana": "ユーロを えんに かえたいです。", "kanji": "ユーロを円に替えたいです。", "romaji": "Yūro o en ni kaetai desu.", "en": "I want to change euros into yen." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "you", "part": "you" }
@@ -1339,6 +1480,7 @@
     "id": "k-yo", "char": "ヨ", "script": "katakana", "stage": 1, "row": "ya", "romaji": "yo",
     "tip": null,
     "word": { "kana": "ヨーグルト", "kanji": null, "romaji": "yōguruto", "en": "yogurt" },
+    "sentence": { "kana": "あさ ヨーグルトを たべます。", "kanji": "朝ヨーグルトを食べます。", "romaji": "Asa yōguruto o tabemasu.", "en": "I eat yogurt in the morning." },
     "soundsLike": {
       "fil": { "word": "yoyo", "part": "yo", "en": "yo-yo" },
       "en": { "word": "yoga", "part": "yo" }
@@ -1349,6 +1491,7 @@
     "id": "k-ra", "char": "ラ", "script": "katakana", "stage": 1, "row": "ra", "romaji": "ra",
     "tip": "Japanese 'r' is a light tap of the tongue, close to the Tagalog 'r' in 'araw'.",
     "word": { "kana": "ラーメン", "kanji": null, "romaji": "rāmen", "en": "ramen" },
+    "sentence": { "kana": "ラーメンを たべに いきましょう。", "kanji": "ラーメンを食べに行きましょう。", "romaji": "Rāmen o tabe ni ikimashō.", "en": "Let's go eat ramen." },
     "soundsLike": {
       "fil": { "word": "radyo", "part": "ra", "en": "radio" },
       "en": null
@@ -1358,6 +1501,7 @@
     "id": "k-ri", "char": "リ", "script": "katakana", "stage": 1, "row": "ra", "romaji": "ri",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "リモコン", "kanji": null, "romaji": "rimokon", "en": "remote control" },
+    "sentence": { "kana": "リモコンは どこですか。", "kanji": "リモコンはどこですか。", "romaji": "Rimokon wa doko desu ka.", "en": "Where is the remote control?" },
     "soundsLike": {
       "fil": { "word": "rito", "part": "ri", "en": "here" },
       "en": null
@@ -1367,6 +1511,7 @@
     "id": "k-ru", "char": "ル", "script": "katakana", "stage": 1, "row": "ra", "romaji": "ru",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "ルール", "kanji": null, "romaji": "rūru", "en": "rule" },
+    "sentence": { "kana": "ルールを まもって ください。", "kanji": "ルールを守ってください。", "romaji": "Rūru o mamotte kudasai.", "en": "Please follow the rules." },
     "soundsLike": {
       "fil": { "word": "ruta", "part": "ru", "en": "route" },
       "en": null
@@ -1376,6 +1521,7 @@
     "id": "k-re", "char": "レ", "script": "katakana", "stage": 1, "row": "ra", "romaji": "re",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "レストラン", "kanji": null, "romaji": "resutoran", "en": "restaurant" },
+    "sentence": { "kana": "いい レストランを しって いますか。", "kanji": "いいレストランを知っていますか。", "romaji": "Ii resutoran o shitte imasu ka.", "en": "Do you know a good restaurant?" },
     "soundsLike": {
       "fil": { "word": "relo", "part": "re", "en": "watch (clock)" },
       "en": null
@@ -1385,6 +1531,7 @@
     "id": "k-ro", "char": "ロ", "script": "katakana", "stage": 1, "row": "ra", "romaji": "ro",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "ロビー", "kanji": null, "romaji": "robī", "en": "lobby" },
+    "sentence": { "kana": "ロビーで まって います。", "kanji": "ロビーで待っています。", "romaji": "Robī de matte imasu.", "en": "I'll be waiting in the lobby." },
     "soundsLike": {
       "fil": { "word": "rosas", "part": "ro", "en": "rose" },
       "en": null
@@ -1395,6 +1542,7 @@
     "id": "k-wa", "char": "ワ", "script": "katakana", "stage": 1, "row": "wa", "romaji": "wa",
     "tip": null,
     "word": { "kana": "ワイン", "kanji": null, "romaji": "wain", "en": "wine" },
+    "sentence": { "kana": "あかワインを ください。", "kanji": "赤ワインをください。", "romaji": "Aka wain o kudasai.", "en": "Red wine, please." },
     "soundsLike": {
       "fil": { "word": "wala", "part": "wa", "en": "none, nothing" },
       "en": { "word": "watt", "part": "wa" }
@@ -1404,6 +1552,7 @@
     "id": "k-wo", "char": "ヲ", "script": "katakana", "stage": 1, "row": "wa", "romaji": "o",
     "tip": "Sounds 'o', like を. Almost never used in katakana, so the example uses hiragana を.",
     "word": { "kana": "みずをのむ", "kanji": "水を飲む", "romaji": "mizu o nomu", "en": "to drink water" },
+    "sentence": { "kana": "ここで みずを のむ ことが できます。", "kanji": "ここで水を飲むことができます。", "romaji": "Koko de mizu o nomu koto ga dekimasu.", "en": "You can drink water here." },
     "soundsLike": {
       "fil": { "word": "oras", "part": "o", "en": "time, hour" },
       "en": { "word": "go", "part": "o" }
@@ -1414,6 +1563,7 @@
     "id": "k-n", "char": "ン", "script": "katakana", "stage": 1, "row": "n", "romaji": "n",
     "tip": "A nasal 'n' on its own beat. Don't mix up ン (n) and ソ (so): ン's short stroke is flatter and its long stroke sweeps up from the bottom.",
     "word": { "kana": "コンビニ", "kanji": null, "romaji": "konbini", "en": "convenience store" },
+    "sentence": { "kana": "コンビニで おにぎりを かいます。", "kanji": "コンビニでおにぎりを買います。", "romaji": "Konbini de onigiri o kaimasu.", "en": "I buy rice balls at the convenience store." },
     "soundsLike": {
       "fil": { "word": "hindi", "part": "n", "en": "no, not" },
       "en": { "word": "pen", "part": "n" }
@@ -1424,6 +1574,7 @@
     "id": "k-ga", "char": "ガ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "ga",
     "tip": "The dakuten turns カ into ガ: k becomes g.",
     "word": { "kana": "ガイド", "kanji": null, "romaji": "gaido", "en": "guide (tour guide)" },
+    "sentence": { "kana": "ガイドさんと いっしょに あるきます。", "kanji": "ガイドさんと一緒に歩きます。", "romaji": "Gaido-san to issho ni arukimasu.", "en": "I walk with the guide." },
     "soundsLike": {
       "fil": { "word": "gatas", "part": "ga", "en": "milk" },
       "en": { "word": "gala", "part": "ga" }
@@ -1433,6 +1584,7 @@
     "id": "k-gi", "char": "ギ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "gi",
     "tip": null,
     "word": { "kana": "ギター", "kanji": null, "romaji": "gitā", "en": "guitar" },
+    "sentence": { "kana": "ギターを ひきます。", "kanji": "ギターを弾きます。", "romaji": "Gitā o hikimasu.", "en": "I play the guitar." },
     "soundsLike": {
       "fil": { "word": "gising", "part": "gi", "en": "awake" },
       "en": { "word": "geese", "part": "gee" }
@@ -1442,6 +1594,7 @@
     "id": "k-gu", "char": "グ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "gu",
     "tip": null,
     "word": { "kana": "グラス", "kanji": null, "romaji": "gurasu", "en": "glass (for drinking)" },
+    "sentence": { "kana": "グラスを ふたつ ください。", "kanji": "グラスを二つください。", "romaji": "Gurasu o futatsu kudasai.", "en": "Two glasses, please." },
     "soundsLike": {
       "fil": { "word": "gulay", "part": "gu", "en": "vegetables" },
       "en": { "word": "goose", "part": "goo" }
@@ -1451,6 +1604,7 @@
     "id": "k-ge", "char": "ゲ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "ge",
     "tip": null,
     "word": { "kana": "ゲーム", "kanji": null, "romaji": "gēmu", "en": "game" },
+    "sentence": { "kana": "ゲームを しましょう。", "kanji": "ゲームをしましょう。", "romaji": "Gēmu o shimashō.", "en": "Let's play a game." },
     "soundsLike": {
       "fil": { "word": "gera", "part": "ge", "en": "war" },
       "en": { "word": "get", "part": "ge" }
@@ -1460,6 +1614,7 @@
     "id": "k-go", "char": "ゴ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "go",
     "tip": null,
     "word": { "kana": "ゴルフ", "kanji": null, "romaji": "gorufu", "en": "golf" },
+    "sentence": { "kana": "ちちは ゴルフが すきです。", "kanji": "父はゴルフが好きです。", "romaji": "Chichi wa gorufu ga suki desu.", "en": "My father likes golf." },
     "soundsLike": {
       "fil": { "word": "gobyerno", "part": "go", "en": "government" },
       "en": { "word": "go", "part": "go" }
@@ -1470,6 +1625,7 @@
     "id": "k-za", "char": "ザ", "script": "katakana", "stage": 2, "row": "za", "romaji": "za",
     "tip": "Keep it buzzing like English 'zoo', not 's'.",
     "word": { "kana": "デザート", "kanji": null, "romaji": "dezāto", "en": "dessert" },
+    "sentence": { "kana": "デザートは なにが ありますか。", "kanji": "デザートは何がありますか。", "romaji": "Dezāto wa nani ga arimasu ka.", "en": "What desserts do you have?" },
     "soundsLike": {
       "fil": null,
       "en": { "word": "bazaar", "part": "za" }
@@ -1479,6 +1635,7 @@
     "id": "k-ji", "char": "ジ", "script": "katakana", "stage": 2, "row": "za", "romaji": "ji",
     "tip": "Like the 'j' in English 'jeep'.",
     "word": { "kana": "ジーンズ", "kanji": null, "romaji": "jīnzu", "en": "jeans" },
+    "sentence": { "kana": "ジーンズを はきます。", "kanji": "ジーンズをはきます。", "romaji": "Jīnzu o hakimasu.", "en": "I wear jeans." },
     "soundsLike": {
       "fil": { "word": "dyip", "part": "dyi", "en": "jeepney" },
       "en": { "word": "jeep", "part": "jee" }
@@ -1488,6 +1645,7 @@
     "id": "k-zu", "char": "ズ", "script": "katakana", "stage": 2, "row": "za", "romaji": "zu",
     "tip": null,
     "word": { "kana": "ズボン", "kanji": null, "romaji": "zubon", "en": "trousers, pants" },
+    "sentence": { "kana": "この ズボンは ながいです。", "kanji": "このズボンは長いです。", "romaji": "Kono zubon wa nagai desu.", "en": "These trousers are long." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "zoo", "part": "zoo" }
@@ -1497,6 +1655,7 @@
     "id": "k-ze", "char": "ゼ", "script": "katakana", "stage": 2, "row": "za", "romaji": "ze",
     "tip": null,
     "word": { "kana": "ゼロ", "kanji": null, "romaji": "zero", "en": "zero" },
+    "sentence": { "kana": "ゼロから はじめます。", "kanji": "ゼロから始めます。", "romaji": "Zero kara hajimemasu.", "en": "I'm starting from zero." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "zest", "part": "ze" }
@@ -1506,6 +1665,7 @@
     "id": "k-zo", "char": "ゾ", "script": "katakana", "stage": 2, "row": "za", "romaji": "zo",
     "tip": null,
     "word": { "kana": "ゾーン", "kanji": null, "romaji": "zōn", "en": "zone" },
+    "sentence": { "kana": "ここは きんえん ゾーンです。", "kanji": "ここは禁煙ゾーンです。", "romaji": "Koko wa kin'en zōn desu.", "en": "This is a no-smoking zone." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "zone", "part": "zo" }
@@ -1516,6 +1676,7 @@
     "id": "k-da", "char": "ダ", "script": "katakana", "stage": 2, "row": "da", "romaji": "da",
     "tip": null,
     "word": { "kana": "ダンス", "kanji": null, "romaji": "dansu", "en": "dance" },
+    "sentence": { "kana": "ダンスが じょうずですね。", "kanji": "ダンスが上手ですね。", "romaji": "Dansu ga jōzu desu ne.", "en": "You're a good dancer!" },
     "soundsLike": {
       "fil": { "word": "daga", "part": "da", "en": "rat, mouse" },
       "en": { "word": "dada", "part": "da" }
@@ -1525,6 +1686,7 @@
     "id": "k-di", "char": "ヂ", "script": "katakana", "stage": 2, "row": "da", "romaji": "ji",
     "tip": "Sounds the same as ジ (ji). Almost never used in katakana, so the example uses hiragana ぢ.",
     "word": { "kana": "はなぢ", "kanji": "鼻血", "romaji": "hanaji", "en": "nosebleed" },
+    "sentence": { "kana": "はなぢが とまりません。", "kanji": "鼻血が止まりません。", "romaji": "Hanaji ga tomarimasen.", "en": "My nosebleed won't stop." },
     "soundsLike": {
       "fil": { "word": "dyip", "part": "dyi", "en": "jeepney" },
       "en": { "word": "jeep", "part": "jee" }
@@ -1534,6 +1696,7 @@
     "id": "k-du", "char": "ヅ", "script": "katakana", "stage": 2, "row": "da", "romaji": "zu",
     "tip": "Sounds the same as ズ (zu). Almost never used in katakana, so the example uses hiragana づ.",
     "word": { "kana": "つづく", "kanji": "続く", "romaji": "tsuzuku", "en": "to continue" },
+    "sentence": { "kana": "いい てんきが つづく でしょう。", "kanji": "いい天気が続くでしょう。", "romaji": "Ii tenki ga tsuzuku deshō.", "en": "The good weather will probably continue." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "zoo", "part": "zoo" }
@@ -1543,6 +1706,7 @@
     "id": "k-de", "char": "デ", "script": "katakana", "stage": 2, "row": "da", "romaji": "de",
     "tip": null,
     "word": { "kana": "デパート", "kanji": null, "romaji": "depāto", "en": "department store" },
+    "sentence": { "kana": "デパートで かいものを します。", "kanji": "デパートで買い物をします。", "romaji": "Depāto de kaimono o shimasu.", "en": "I go shopping at the department store." },
     "soundsLike": {
       "fil": { "word": "dentista", "part": "de", "en": "dentist" },
       "en": { "word": "desk", "part": "de" }
@@ -1552,6 +1716,7 @@
     "id": "k-do", "char": "ド", "script": "katakana", "stage": 2, "row": "da", "romaji": "do",
     "tip": null,
     "word": { "kana": "ドア", "kanji": null, "romaji": "doa", "en": "door" },
+    "sentence": { "kana": "ドアを しめて ください。", "kanji": "ドアを閉めてください。", "romaji": "Doa o shimete kudasai.", "en": "Please close the door." },
     "soundsLike": {
       "fil": { "word": "doktor", "part": "do", "en": "doctor" },
       "en": { "word": "dome", "part": "do" }
@@ -1562,6 +1727,7 @@
     "id": "k-ba", "char": "バ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "ba",
     "tip": null,
     "word": { "kana": "バス", "kanji": null, "romaji": "basu", "en": "bus" },
+    "sentence": { "kana": "バスで いきます。", "kanji": "バスで行きます。", "romaji": "Basu de ikimasu.", "en": "I'll go by bus." },
     "soundsLike": {
       "fil": { "word": "bata", "part": "ba", "en": "child" },
       "en": { "word": "bar", "part": "ba" }
@@ -1571,6 +1737,7 @@
     "id": "k-bi", "char": "ビ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "bi",
     "tip": null,
     "word": { "kana": "ビール", "kanji": null, "romaji": "bīru", "en": "beer" },
+    "sentence": { "kana": "ビールを いっぽん ください。", "kanji": "ビールを一本ください。", "romaji": "Bīru o ippon kudasai.", "en": "One bottle of beer, please." },
     "soundsLike": {
       "fil": { "word": "bigas", "part": "bi", "en": "uncooked rice" },
       "en": { "word": "bee", "part": "bee" }
@@ -1580,6 +1747,7 @@
     "id": "k-bu", "char": "ブ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "bu",
     "tip": null,
     "word": { "kana": "ブーツ", "kanji": null, "romaji": "būtsu", "en": "boots" },
+    "sentence": { "kana": "ブーツを はきます。", "kanji": "ブーツを履きます。", "romaji": "Būtsu o hakimasu.", "en": "I put on boots." },
     "soundsLike": {
       "fil": { "word": "buhok", "part": "bu", "en": "hair" },
       "en": { "word": "boot", "part": "boo" }
@@ -1589,6 +1757,7 @@
     "id": "k-be", "char": "ベ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "be",
     "tip": null,
     "word": { "kana": "ベッド", "kanji": null, "romaji": "beddo", "en": "bed" },
+    "sentence": { "kana": "ベッドが ふたつ ある へやは ありますか。", "kanji": "ベッドが二つある部屋はありますか。", "romaji": "Beddo ga futatsu aru heya wa arimasu ka.", "en": "Do you have a room with two beds?" },
     "soundsLike": {
       "fil": { "word": "berde", "part": "be", "en": "green" },
       "en": { "word": "bed", "part": "be" }
@@ -1598,6 +1767,7 @@
     "id": "k-bo", "char": "ボ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "bo",
     "tip": null,
     "word": { "kana": "ボタン", "kanji": null, "romaji": "botan", "en": "button" },
+    "sentence": { "kana": "この ボタンを おして ください。", "kanji": "このボタンを押してください。", "romaji": "Kono botan o oshite kudasai.", "en": "Please press this button." },
     "soundsLike": {
       "fil": { "word": "bola", "part": "bo", "en": "ball" },
       "en": { "word": "boat", "part": "bo" }
@@ -1608,6 +1778,7 @@
     "id": "k-pa", "char": "パ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "pa",
     "tip": "Same as Tagalog 'pan' (bread) — this word came to Japanese from Portuguese.",
     "word": { "kana": "パン", "kanji": null, "romaji": "pan", "en": "bread" },
+    "sentence": { "kana": "あさごはんに パンを たべます。", "kanji": "朝ご飯にパンを食べます。", "romaji": "Asagohan ni pan o tabemasu.", "en": "I eat bread for breakfast." },
     "soundsLike": {
       "fil": { "word": "pagkain", "part": "pa", "en": "food" },
       "en": { "word": "pasta", "part": "pa" }
@@ -1617,6 +1788,7 @@
     "id": "k-pi", "char": "ピ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "pi",
     "tip": null,
     "word": { "kana": "ピザ", "kanji": null, "romaji": "piza", "en": "pizza" },
+    "sentence": { "kana": "ピザを たのみましょう。", "kanji": "ピザを頼みましょう。", "romaji": "Piza o tanomimashō.", "en": "Let's order pizza." },
     "soundsLike": {
       "fil": { "word": "pito", "part": "pi", "en": "seven; whistle" },
       "en": { "word": "peace", "part": "pea" }
@@ -1626,6 +1798,7 @@
     "id": "k-pu", "char": "プ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "pu",
     "tip": null,
     "word": { "kana": "プール", "kanji": null, "romaji": "pūru", "en": "swimming pool" },
+    "sentence": { "kana": "ホテルに プールは ありますか。", "kanji": "ホテルにプールはありますか。", "romaji": "Hoteru ni pūru wa arimasu ka.", "en": "Does the hotel have a pool?" },
     "soundsLike": {
       "fil": { "word": "puso", "part": "pu", "en": "heart" },
       "en": { "word": "pool", "part": "poo" }
@@ -1635,6 +1808,7 @@
     "id": "k-pe", "char": "ペ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "pe",
     "tip": null,
     "word": { "kana": "ペン", "kanji": null, "romaji": "pen", "en": "pen" },
+    "sentence": { "kana": "ペンを かして ください。", "kanji": "ペンを貸してください。", "romaji": "Pen o kashite kudasai.", "en": "Could you lend me a pen?" },
     "soundsLike": {
       "fil": { "word": "pera", "part": "pe", "en": "money" },
       "en": { "word": "pet", "part": "pe" }
@@ -1644,6 +1818,7 @@
     "id": "k-po", "char": "ポ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "po",
     "tip": null,
     "word": { "kana": "ポスト", "kanji": null, "romaji": "posuto", "en": "mailbox, postbox" },
+    "sentence": { "kana": "ポストは どこですか。", "kanji": "ポストはどこですか。", "romaji": "Posuto wa doko desu ka.", "en": "Where is the mailbox?" },
     "soundsLike": {
       "fil": { "word": "pogi", "part": "po", "en": "handsome" },
       "en": { "word": "post", "part": "po" }
@@ -1654,6 +1829,7 @@
     "id": "k-kya", "char": "キャ", "script": "katakana", "stage": 3, "row": "kya", "romaji": "kya",
     "tip": "One beat: kya, not ki-ya.",
     "word": { "kana": "キャンプ", "kanji": null, "romaji": "kyanpu", "en": "camping, camp" },
+    "sentence": { "kana": "やまで キャンプを します。", "kanji": "山でキャンプをします。", "romaji": "Yama de kyanpu o shimasu.", "en": "I go camping in the mountains." },
     "soundsLike": {
       "fil": { "word": "pakyaw", "part": "kya", "en": "buying in bulk" },
       "en": null,
@@ -1664,6 +1840,7 @@
     "id": "k-kyu", "char": "キュ", "script": "katakana", "stage": 3, "row": "kya", "romaji": "kyu",
     "tip": null,
     "word": { "kana": "バーベキュー", "kanji": null, "romaji": "bābekyū", "en": "barbecue" },
+    "sentence": { "kana": "こうえんで バーベキューを します。", "kanji": "公園でバーベキューをします。", "romaji": "Kōen de bābekyū o shimasu.", "en": "We have a barbecue in the park." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "cute", "part": "cu" },
@@ -1674,6 +1851,7 @@
     "id": "k-kyo", "char": "キョ", "script": "katakana", "stage": 3, "row": "kya", "romaji": "kyo",
     "tip": null,
     "word": { "kana": "トーキョー", "kanji": "東京", "romaji": "Tōkyō", "en": "Tokyo (usually written in kanji)" },
+    "sentence": { "kana": "トーキョーは ひとが おおいです。", "kanji": "東京は人が多いです。", "romaji": "Tōkyō wa hito ga ōi desu.", "en": "Tokyo has a lot of people." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "Tokyo", "part": "kyo" },
@@ -1685,6 +1863,7 @@
     "id": "k-sha", "char": "シャ", "script": "katakana", "stage": 3, "row": "sha", "romaji": "sha",
     "tip": "Like Tagalog 'siya' said fast, as 'sha'.",
     "word": { "kana": "シャワー", "kanji": null, "romaji": "shawā", "en": "shower" },
+    "sentence": { "kana": "シャワーを あびます。", "kanji": "シャワーを浴びます。", "romaji": "Shawā o abimasu.", "en": "I take a shower." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "shark", "part": "sha" },
@@ -1695,6 +1874,7 @@
     "id": "k-shu", "char": "シュ", "script": "katakana", "stage": 3, "row": "sha", "romaji": "shu",
     "tip": null,
     "word": { "kana": "シューズ", "kanji": null, "romaji": "shūzu", "en": "shoes (sports shoes)" },
+    "sentence": { "kana": "ランニングシューズを かいました。", "kanji": "ランニングシューズを買いました。", "romaji": "Ranningu shūzu o kaimashita.", "en": "I bought running shoes." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "shoe", "part": "shoe" },
@@ -1705,6 +1885,7 @@
     "id": "k-sho", "char": "ショ", "script": "katakana", "stage": 3, "row": "sha", "romaji": "sho",
     "tip": null,
     "word": { "kana": "ショッピング", "kanji": null, "romaji": "shoppingu", "en": "shopping" },
+    "sentence": { "kana": "しんさいばしで ショッピングを します。", "kanji": "心斎橋でショッピングをします。", "romaji": "Shinsaibashi de shoppingu o shimasu.", "en": "I go shopping in Shinsaibashi." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "show", "part": "sho" },
@@ -1716,6 +1897,7 @@
     "id": "k-cha", "char": "チャ", "script": "katakana", "stage": 3, "row": "cha", "romaji": "cha",
     "tip": null,
     "word": { "kana": "チャーハン", "kanji": null, "romaji": "chāhan", "en": "fried rice" },
+    "sentence": { "kana": "チャーハンを ひとつ ください。", "kanji": "チャーハンを一つください。", "romaji": "Chāhan o hitotsu kudasai.", "en": "One fried rice, please." },
     "soundsLike": {
       "fil": { "word": "tsaa", "part": "tsa", "en": "tea" },
       "en": { "word": "cha-cha", "part": "cha" },
@@ -1726,6 +1908,7 @@
     "id": "k-chu", "char": "チュ", "script": "katakana", "stage": 3, "row": "cha", "romaji": "chu",
     "tip": null,
     "word": { "kana": "チューリップ", "kanji": null, "romaji": "chūrippu", "en": "tulip" },
+    "sentence": { "kana": "チューリップが さいて います。", "kanji": "チューリップが咲いています。", "romaji": "Chūrippu ga saite imasu.", "en": "The tulips are blooming." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "choose", "part": "choo" },
@@ -1736,6 +1919,7 @@
     "id": "k-cho", "char": "チョ", "script": "katakana", "stage": 3, "row": "cha", "romaji": "cho",
     "tip": null,
     "word": { "kana": "チョコレート", "kanji": null, "romaji": "chokorēto", "en": "chocolate" },
+    "sentence": { "kana": "チョコレートが だいすきです。", "kanji": "チョコレートが大好きです。", "romaji": "Chokorēto ga daisuki desu.", "en": "I love chocolate." },
     "soundsLike": {
       "fil": { "word": "tsokolate", "part": "tso", "en": "chocolate" },
       "en": { "word": "choke", "part": "cho" },
@@ -1747,6 +1931,7 @@
     "id": "k-nya", "char": "ニャ", "script": "katakana", "stage": 3, "row": "nya", "romaji": "nya",
     "tip": null,
     "word": { "kana": "ニャー", "kanji": null, "romaji": "nyā", "en": "meow" },
+    "sentence": { "kana": "ねこが 「ニャー」と なきました。", "kanji": "猫が「ニャー」と鳴きました。", "romaji": "Neko ga \"nyā\" to nakimashita.", "en": "The cat went \"meow\"." },
     "soundsLike": {
       "fil": { "word": "kanya", "part": "nya", "en": "his, hers" },
       "en": null,
@@ -1757,6 +1942,7 @@
     "id": "k-nyu", "char": "ニュ", "script": "katakana", "stage": 3, "row": "nya", "romaji": "nyu",
     "tip": null,
     "word": { "kana": "ニュース", "kanji": null, "romaji": "nyūsu", "en": "news" },
+    "sentence": { "kana": "ニュースを みます。", "kanji": "ニュースを見ます。", "romaji": "Nyūsu o mimasu.", "en": "I watch the news." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "menu", "part": "nu" },
@@ -1767,6 +1953,7 @@
     "id": "k-nyo", "char": "ニョ", "script": "katakana", "stage": 3, "row": "nya", "romaji": "nyo",
     "tip": null,
     "word": { "kana": "ニョッキ", "kanji": null, "romaji": "nyokki", "en": "gnocchi (Italian dumplings)" },
+    "sentence": { "kana": "この みせの ニョッキは おいしいです。", "kanji": "この店のニョッキはおいしいです。", "romaji": "Kono mise no nyokki wa oishii desu.", "en": "This restaurant's gnocchi is delicious." },
     "soundsLike": {
       "fil": { "word": "niyog", "part": "niyo", "en": "coconut" },
       "en": null,
@@ -1778,6 +1965,7 @@
     "id": "k-hya", "char": "ヒャ", "script": "katakana", "stage": 3, "row": "hya", "romaji": "hya",
     "tip": "Almost never used in katakana, so the example uses hiragana ひゃ.",
     "word": { "kana": "ひゃく", "kanji": "百", "romaji": "hyaku", "en": "one hundred" },
+    "sentence": { "kana": "ひゃくえん ショップで かいました。", "kanji": "百円ショップで買いました。", "romaji": "Hyaku en shoppu de kaimashita.", "en": "I bought it at a 100-yen shop." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1788,6 +1976,7 @@
     "id": "k-hyu", "char": "ヒュ", "script": "katakana", "stage": 3, "row": "hya", "romaji": "hyu",
     "tip": null,
     "word": { "kana": "ヒューズ", "kanji": null, "romaji": "hyūzu", "en": "fuse (electrical)" },
+    "sentence": { "kana": "ヒューズが とびました。", "kanji": "ヒューズが飛びました。", "romaji": "Hyūzu ga tobimashita.", "en": "The fuse blew." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "huge", "part": "hu" },
@@ -1798,6 +1987,7 @@
     "id": "k-hyo", "char": "ヒョ", "script": "katakana", "stage": 3, "row": "hya", "romaji": "hyo",
     "tip": null,
     "word": { "kana": "ヒョウ", "kanji": "豹", "romaji": "hyō", "en": "leopard (animal names are often written in katakana)" },
+    "sentence": { "kana": "どうぶつえんで ヒョウを みました。", "kanji": "動物園でヒョウを見ました。", "romaji": "Dōbutsuen de hyō o mimashita.", "en": "I saw a leopard at the zoo." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1809,6 +1999,7 @@
     "id": "k-mya", "char": "ミャ", "script": "katakana", "stage": 3, "row": "mya", "romaji": "mya",
     "tip": null,
     "word": { "kana": "ミャンマー", "kanji": null, "romaji": "Myanmā", "en": "Myanmar" },
+    "sentence": { "kana": "ともだちは ミャンマーから きました。", "kanji": "友達はミャンマーから来ました。", "romaji": "Tomodachi wa Myanmā kara kimashita.", "en": "My friend came from Myanmar." },
     "soundsLike": {
       "fil": null,
       "en": { "word": "Myanmar", "part": "Mya" },
@@ -1819,6 +2010,7 @@
     "id": "k-myu", "char": "ミュ", "script": "katakana", "stage": 3, "row": "mya", "romaji": "myu",
     "tip": null,
     "word": { "kana": "ミュージアム", "kanji": null, "romaji": "myūjiamu", "en": "museum" },
+    "sentence": { "kana": "ミュージアムは なんじに あきますか。", "kanji": "ミュージアムは何時に開きますか。", "romaji": "Myūjiamu wa nanji ni akimasu ka.", "en": "What time does the museum open?" },
     "soundsLike": {
       "fil": null,
       "en": { "word": "music", "part": "mu" },
@@ -1829,6 +2021,7 @@
     "id": "k-myo", "char": "ミョ", "script": "katakana", "stage": 3, "row": "mya", "romaji": "myo",
     "tip": "Almost never used in katakana, so the example uses hiragana みょ.",
     "word": { "kana": "みょうじ", "kanji": "名字", "romaji": "myōji", "en": "family name, surname" },
+    "sentence": { "kana": "みょうじと なまえを かいて ください。", "kanji": "名字と名前を書いてください。", "romaji": "Myōji to namae o kaite kudasai.", "en": "Please write your family name and first name." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1840,6 +2033,7 @@
     "id": "k-rya", "char": "リャ", "script": "katakana", "stage": 3, "row": "rya", "romaji": "rya",
     "tip": "Almost never used in katakana, so the example uses hiragana りゃ.",
     "word": { "kana": "りゃく", "kanji": "略", "romaji": "ryaku", "en": "abbreviation" },
+    "sentence": { "kana": "「コンビニ」は 「コンビニエンス ストア」の りゃくです。", "kanji": "「コンビニ」は「コンビニエンスストア」の略です。", "romaji": "\"Konbini\" wa \"konbiniensu sutoa\" no ryaku desu.", "en": "\"Konbini\" is short for \"convenience store\"." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1850,6 +2044,7 @@
     "id": "k-ryu", "char": "リュ", "script": "katakana", "stage": 3, "row": "rya", "romaji": "ryu",
     "tip": null,
     "word": { "kana": "リュック", "kanji": null, "romaji": "ryukku", "en": "backpack" },
+    "sentence": { "kana": "リュックを せおって あるきます。", "kanji": "リュックを背負って歩きます。", "romaji": "Ryukku o seotte arukimasu.", "en": "I walk with a backpack on." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1860,6 +2055,7 @@
     "id": "k-ryo", "char": "リョ", "script": "katakana", "stage": 3, "row": "rya", "romaji": "ryo",
     "tip": "Almost never used in katakana, so the example uses hiragana りょ.",
     "word": { "kana": "りょこう", "kanji": "旅行", "romaji": "ryokō", "en": "travel, trip" },
+    "sentence": { "kana": "りょこうは たのしいです。", "kanji": "旅行は楽しいです。", "romaji": "Ryokō wa tanoshii desu.", "en": "Traveling is fun." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1871,6 +2067,7 @@
     "id": "k-gya", "char": "ギャ", "script": "katakana", "stage": 3, "row": "gya", "romaji": "gya",
     "tip": null,
     "word": { "kana": "ギャラリー", "kanji": null, "romaji": "gyararī", "en": "gallery" },
+    "sentence": { "kana": "ギャラリーで えを みます。", "kanji": "ギャラリーで絵を見ます。", "romaji": "Gyararī de e o mimasu.", "en": "I look at paintings in the gallery." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1881,6 +2078,7 @@
     "id": "k-gyu", "char": "ギュ", "script": "katakana", "stage": 3, "row": "gya", "romaji": "gyu",
     "tip": "Rare in katakana, so the example uses hiragana ぎゅ.",
     "word": { "kana": "ぎゅうどん", "kanji": "牛丼", "romaji": "gyūdon", "en": "beef rice bowl" },
+    "sentence": { "kana": "ぎゅうどんは やすくて おいしいです。", "kanji": "牛丼は安くておいしいです。", "romaji": "Gyūdon wa yasukute oishii desu.", "en": "Beef bowls are cheap and tasty." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1891,6 +2089,7 @@
     "id": "k-gyo", "char": "ギョ", "script": "katakana", "stage": 3, "row": "gya", "romaji": "gyo",
     "tip": null,
     "word": { "kana": "ギョーザ", "kanji": "餃子", "romaji": "gyōza", "en": "gyoza (dumplings; often written in katakana on menus)" },
+    "sentence": { "kana": "ギョーザと ビールを ください。", "kanji": "ギョーザとビールをください。", "romaji": "Gyōza to bīru o kudasai.", "en": "Gyoza and a beer, please." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1902,6 +2101,7 @@
     "id": "k-ja", "char": "ジャ", "script": "katakana", "stage": 3, "row": "ja", "romaji": "ja",
     "tip": null,
     "word": { "kana": "ジャケット", "kanji": null, "romaji": "jaketto", "en": "jacket" },
+    "sentence": { "kana": "ジャケットを わすれないで ください。", "kanji": "ジャケットを忘れないでください。", "romaji": "Jaketto o wasurenaide kudasai.", "en": "Don't forget your jacket." },
     "soundsLike": {
       "fil": { "word": "dyaket", "part": "dya", "en": "jacket" },
       "en": { "word": "jar", "part": "ja" },
@@ -1912,6 +2112,7 @@
     "id": "k-ju", "char": "ジュ", "script": "katakana", "stage": 3, "row": "ja", "romaji": "ju",
     "tip": null,
     "word": { "kana": "ジュース", "kanji": null, "romaji": "jūsu", "en": "juice" },
+    "sentence": { "kana": "りんごジュースを ください。", "kanji": "りんごジュースをください。", "romaji": "Ringo jūsu o kudasai.", "en": "Apple juice, please." },
     "soundsLike": {
       "fil": { "word": "dyus", "part": "dyu", "en": "juice" },
       "en": { "word": "juice", "part": "ju" },
@@ -1922,6 +2123,7 @@
     "id": "k-jo", "char": "ジョ", "script": "katakana", "stage": 3, "row": "ja", "romaji": "jo",
     "tip": null,
     "word": { "kana": "ジョギング", "kanji": null, "romaji": "jogingu", "en": "jogging" },
+    "sentence": { "kana": "まいあさ ジョギングを します。", "kanji": "毎朝ジョギングをします。", "romaji": "Maiasa jogingu o shimasu.", "en": "I go jogging every morning." },
     "soundsLike": {
       "fil": { "word": "dyosa", "part": "dyo", "en": "goddess" },
       "en": { "word": "joke", "part": "jo" },
@@ -1933,6 +2135,7 @@
     "id": "k-bya", "char": "ビャ", "script": "katakana", "stage": 3, "row": "bya", "romaji": "bya",
     "tip": "Almost never used in katakana, so the example uses hiragana びゃ.",
     "word": { "kana": "さんびゃく", "kanji": "三百", "romaji": "sanbyaku", "en": "three hundred" },
+    "sentence": { "kana": "この ジュースは さんびゃくえんです。", "kanji": "このジュースは三百円です。", "romaji": "Kono jūsu wa sanbyaku en desu.", "en": "This juice is 300 yen." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1943,6 +2146,7 @@
     "id": "k-byu", "char": "ビュ", "script": "katakana", "stage": 3, "row": "bya", "romaji": "byu",
     "tip": null,
     "word": { "kana": "ビュッフェ", "kanji": null, "romaji": "byuffe", "en": "buffet" },
+    "sentence": { "kana": "ビュッフェは なんじまでですか。", "kanji": "ビュッフェは何時までですか。", "romaji": "Byuffe wa nanji made desu ka.", "en": "Until what time is the buffet open?" },
     "soundsLike": {
       "fil": null,
       "en": { "word": "beauty", "part": "beau" },
@@ -1953,6 +2157,7 @@
     "id": "k-byo", "char": "ビョ", "script": "katakana", "stage": 3, "row": "bya", "romaji": "byo",
     "tip": "Almost never used in katakana, so the example uses hiragana びょ.",
     "word": { "kana": "びょういん", "kanji": "病院", "romaji": "byōin", "en": "hospital" },
+    "sentence": { "kana": "びょういんへ つれて いって ください。", "kanji": "病院へ連れて行ってください。", "romaji": "Byōin e tsurete itte kudasai.", "en": "Please take me to the hospital." },
     "soundsLike": {
       "fil": null,
       "en": null,
@@ -1964,6 +2169,7 @@
     "id": "k-pya", "char": "ピャ", "script": "katakana", "stage": 3, "row": "pya", "romaji": "pya",
     "tip": "Almost never used in katakana, so the example uses hiragana ぴゃ.",
     "word": { "kana": "はっぴゃく", "kanji": "八百", "romaji": "happyaku", "en": "eight hundred" },
+    "sentence": { "kana": "はっぴゃくえんの おつりです。", "kanji": "八百円のお釣りです。", "romaji": "Happyaku en no otsuri desu.", "en": "Here is 800 yen in change." },
     "soundsLike": {
       "fil": { "word": "pyano", "part": "pya", "en": "piano" },
       "en": null,
@@ -1974,6 +2180,7 @@
     "id": "k-pyu", "char": "ピュ", "script": "katakana", "stage": 3, "row": "pya", "romaji": "pyu",
     "tip": null,
     "word": { "kana": "コンピューター", "kanji": null, "romaji": "konpyūtā", "en": "computer" },
+    "sentence": { "kana": "この コンピューターは あたらしいです。", "kanji": "このコンピューターは新しいです。", "romaji": "Kono konpyūtā wa atarashii desu.", "en": "This computer is new." },
     "soundsLike": {
       "fil": { "word": "kompyuter", "part": "pyu", "en": "computer" },
       "en": { "word": "computer", "part": "pu" },
@@ -1984,6 +2191,7 @@
     "id": "k-pyo", "char": "ピョ", "script": "katakana", "stage": 3, "row": "pya", "romaji": "pyo",
     "tip": "Rare in katakana, so the example uses hiragana ぴょ.",
     "word": { "kana": "ぴょんぴょん", "kanji": null, "romaji": "pyonpyon", "en": "hopping, boing boing" },
+    "sentence": { "kana": "こどもが ぴょんぴょん とんで います。", "kanji": "子供がぴょんぴょん跳んでいます。", "romaji": "Kodomo ga pyonpyon tonde imasu.", "en": "The child is hopping up and down." },
     "soundsLike": {
       "fil": null,
       "en": null,

@@ -10,22 +10,31 @@ export const DEFAULT_FILTERS = {
   reviewOnly: false, // only cards last rated "Still learning"
 };
 
-export async function loadCards() {
-  const response = await fetch("data/kana.json");
+// Travel words and phrases: no script/stage/row filters.
+export const DEFAULT_VOCAB_FILTERS = {
+  order: "chart", // "chart" (list order) or "shuffle"
+  reviewOnly: false,
+  front: "ja", // what the card front shows: "ja" (Japanese) or "en" (English)
+};
+
+// Load one data file, e.g. "data/kana.json".
+export async function loadCards(file) {
+  const response = await fetch(file);
   if (!response.ok) {
-    throw new Error(`Could not load card data (HTTP ${response.status})`);
+    throw new Error(`Could not load ${file} (HTTP ${response.status})`);
   }
   return response.json();
 }
 
 // Return the cards that match the filters, in the chosen order.
 // `progress` maps card id -> Leitner box (0 to 4); unrated cards are missing.
+// Filters a deck doesn't have (e.g. scripts for travel words) are skipped.
 export function buildDeck(cards, filters, progress = {}) {
   const deck = cards.filter(
     (card) =>
-      filters.scripts.includes(card.script) &&
-      filters.stages.includes(card.stage) &&
-      (filters.rows.length === 0 || filters.rows.includes(card.row)) &&
+      (!filters.scripts || filters.scripts.includes(card.script)) &&
+      (!filters.stages || filters.stages.includes(card.stage)) &&
+      (!filters.rows?.length || filters.rows.includes(card.row)) &&
       (!filters.reviewOnly || progress[card.id] === 0)
   );
   return filters.order === "shuffle" ? weightedShuffle(deck, progress) : deck;

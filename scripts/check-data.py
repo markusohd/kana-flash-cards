@@ -1,4 +1,4 @@
-"""Check data/kana.json for mistakes.
+"""Check data/kana.json, data/words.json and data/phrases.json for mistakes.
 
 Run from the project folder:
     python scripts/check-data.py
@@ -13,6 +13,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data" / "kana.json"
+WORDS_FILE = ROOT / "data" / "words.json"
+PHRASES_FILE = ROOT / "data" / "phrases.json"
+VOCAB_COUNT = 50  # travel words and travel phrases each
 
 # How many cards each (script, stage) should have when complete.
 # Stage 1 = basic gojuon, 2 = dakuten/handakuten, 3 = yoon combinations.
@@ -65,6 +68,51 @@ def check_sounds_like(label, sounds, errors):
         errors.append(f"{label}: soundsLike has no Filipino word, English word or blend")
 
 
+SENTENCE_END = ("。", "？", "！")
+
+
+def check_sentence(label, sentence, word_kana, errors):
+    """Each kana card has an example sentence that contains its sample word."""
+    if not isinstance(sentence, dict):
+        errors.append(f"{label}: missing 'sentence'")
+        return
+    for field in ("kana", "kanji", "romaji", "en"):
+        if not sentence.get(field):
+            errors.append(f"{label}: sentence is missing '{field}'")
+    kana = sentence.get("kana") or ""
+    # Spaces separate words in the kana version, so ignore them when searching.
+    if word_kana and word_kana.replace(" ", "") not in kana.replace(" ", ""):
+        errors.append(f"{label}: sentence '{kana}' does not contain the sample word '{word_kana}'")
+    if kana and not kana.endswith(SENTENCE_END):
+        errors.append(f"{label}: sentence '{kana}' should end with 。 ？ or ！")
+
+
+def check_vocab_file(path, prefix, is_phrase, other_ids, errors):
+    """Travel words / phrases: 50 entries, unique ids, required fields. Returns the count."""
+    try:
+        entries = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        errors.append(f"could not read {path.name}: {e}")
+        return 0
+    if len(entries) != VOCAB_COUNT:
+        errors.append(f"{path.name}: has {len(entries)} entries, expected {VOCAB_COUNT}")
+    seen = set()
+    for i, entry in enumerate(entries):
+        label = f"{path.name} {entry.get('id', f'entry #{i}')}"
+        for field in ("id", "kana", "romaji", "en", "category"):
+            if not entry.get(field):
+                errors.append(f"{label}: missing '{field}'")
+        entry_id = entry.get("id", "")
+        if not entry_id.startswith(prefix):
+            errors.append(f"{label}: id should start with '{prefix}'")
+        if entry_id in seen or entry_id in other_ids:
+            errors.append(f"{label}: duplicate id")
+        seen.add(entry_id)
+        if is_phrase and not entry.get("kana", "").endswith(SENTENCE_END):
+            errors.append(f"{label}: phrase should end with 。 ？ or ！")
+    return len(entries)
+
+
 def main():
     errors = []
     warnings = []
@@ -95,6 +143,7 @@ def main():
             errors.append(f"{label}: unknown script '{card.get('script')}'")
         if isinstance(card.get("soundsLike"), dict):
             check_sounds_like(label, card["soundsLike"], errors)
+        check_sentence(label, card.get("sentence"), word.get("kana"), errors)
 
     # --- No duplicate ids or characters ---
     for key in ("id", "char"):
@@ -102,6 +151,12 @@ def main():
         for value, n in counts.items():
             if n > 1:
                 errors.append(f"duplicate {key} '{value}' appears {n} times")
+
+    # --- Travel words and phrases ---
+    all_ids = {card.get("id") for card in cards}
+    vocab_counts = {}
+    for path, prefix, is_phrase in ((WORDS_FILE, "w-", False), (PHRASES_FILE, "p-", True)):
+        vocab_counts[path.name] = check_vocab_file(path, prefix, is_phrase, all_ids, errors)
 
     # --- Counts per script and stage ---
     actual = Counter((card.get("script"), card.get("stage")) for card in cards)
@@ -119,6 +174,8 @@ def main():
     print(f"Checked {len(cards)} cards in {DATA_FILE.relative_to(ROOT)}")
     for (script, stage), n in sorted(actual.items()):
         print(f"  {script} stage {stage}: {n}")
+    for name, n in vocab_counts.items():
+        print(f"Checked {n} entries in data/{name}")
     for w in warnings:
         print(f"WARNING: {w}")
     for e in errors:

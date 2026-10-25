@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Kana Flash Cards</title>
-  <meta name="description" content="Flash cards for learning hiragana and katakana.">
+  <meta name="description" content="Flash cards for learning hiragana, katakana and travel Japanese.">
   <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12151c" media="(prefers-color-scheme: dark)">
 
@@ -27,10 +27,11 @@
 </head>
 <body>
   <header class="topbar">
-    <button type="button" class="icon-btn" id="go-home" aria-label="Back to home" hidden>
+    <button type="button" class="icon-btn" id="go-back" aria-label="Back" hidden>
       <span aria-hidden="true">‹</span>
     </button>
-    <h1 class="title">Kana <span lang="ja">かな</span></h1>
+    <!-- Title changes per screen (filled by app.js) -->
+    <h1 class="title" id="page-title">Kana <span lang="ja">かな</span></h1>
     <span class="counter" id="counter" hidden></span>
     <button type="button" class="icon-btn" id="theme-toggle" aria-label="Switch to dark mode">
       <span aria-hidden="true">◐</span>
@@ -42,11 +43,18 @@
 
   <p class="load-error" id="load-error" hidden></p>
 
-  <!-- ================= HOME SCREEN ================= -->
-  <main class="home" id="home-screen">
+  <!-- ================= LANDING: choose what to learn ================= -->
+  <main class="home" id="landing-screen" hidden>
+    <p class="intro">What would you like to practice?</p>
+    <!-- One tile per section, filled by app.js -->
+    <nav class="tiles" id="tiles" aria-label="Sections"></nav>
+  </main>
+
+  <!-- ================= SECTION HOME: progress, Start, Settings ================= -->
+  <main class="home" id="home-screen" hidden>
     <section class="panel" aria-labelledby="progress-title">
       <h2 id="progress-title">Your progress</h2>
-      <!-- Filled by app.js: one row per script -->
+      <!-- Filled by app.js -->
       <div class="progress-list" id="progress-list"></div>
     </section>
 
@@ -64,38 +72,63 @@
     <div class="card" id="card">
       <div class="card-inner">
 
-        <!-- FRONT: the character only -->
+        <!-- FRONT -->
         <section class="face front" id="face-front" aria-label="Card front">
-          <span class="script-label" id="front-script"></span>
+          <span class="script-label" id="front-label"></span>
+          <!-- Kana cards: the character only -->
           <span class="big-char" lang="ja" id="front-char"></span>
+          <!-- Travel words / phrases: Japanese or English (see Settings) -->
+          <p class="vocab-main" id="vocab-front" hidden></p>
           <span class="flip-hint">Tap to flip</span>
         </section>
 
-        <!-- BACK: reading, words that sound alike, sample word, tip -->
+        <!-- BACK -->
         <section class="face back" id="face-back" aria-label="Card back" inert>
-          <div class="reading">
-            <span class="small-char" lang="ja" id="back-char"></span>
-            <span class="romaji" id="back-romaji"></span>
+
+          <!-- Kana cards: reading, sounds like, sample word + sentence, tip -->
+          <div class="back-content" id="back-kana">
+            <div class="reading">
+              <span class="small-char" lang="ja" id="back-char"></span>
+              <span class="romaji" id="back-romaji"></span>
+            </div>
+
+            <!-- Filipino and English words with a similar sound (filled by card.js) -->
+            <div class="sounds">
+              <span class="section-label">Sounds like</span>
+              <dl class="sounds-list" id="sounds-list"></dl>
+            </div>
+
+            <div class="word">
+              <span class="section-label">Example</span>
+              <div class="word-kana" lang="ja" id="word-kana"></div>
+              <div class="word-kanji" lang="ja" id="word-kanji"></div>
+              <div class="word-romaji" id="word-romaji"></div>
+              <div class="word-en" id="word-en"></div>
+
+              <!-- A full sentence using the sample word -->
+              <div class="sentence">
+                <div class="sentence-kana" lang="ja" id="sentence-kana"></div>
+                <div class="sentence-kanji" lang="ja" id="sentence-kanji"></div>
+                <div class="sentence-romaji" id="sentence-romaji"></div>
+                <div class="sentence-en" id="sentence-en"></div>
+              </div>
+            </div>
+
+            <p class="tip" id="tip"></p>
+
+            <!-- Version 2: stroke order animation will go here -->
+            <div class="stroke-order" id="stroke-order" hidden></div>
           </div>
 
-          <!-- Filipino and English words with a similar sound (filled by card.js) -->
-          <div class="sounds">
-            <span class="section-label">Sounds like</span>
-            <dl class="sounds-list" id="sounds-list"></dl>
+          <!-- Travel words / phrases -->
+          <div class="back-content" id="back-vocab" hidden>
+            <span class="section-label" id="vb-category"></span>
+            <div class="vocab-back-kana" lang="ja" id="vb-kana"></div>
+            <div class="word-kanji" lang="ja" id="vb-kanji"></div>
+            <div class="vocab-back-romaji" id="vb-romaji"></div>
+            <div class="vocab-back-en" id="vb-en"></div>
+            <p class="tip" id="vb-note"></p>
           </div>
-
-          <div class="word">
-            <span class="section-label">Example</span>
-            <div class="word-kana" lang="ja" id="word-kana"></div>
-            <div class="word-kanji" lang="ja" id="word-kanji"></div>
-            <div class="word-romaji" id="word-romaji"></div>
-            <div class="word-en" id="word-en"></div>
-          </div>
-
-          <p class="tip" id="tip"></p>
-
-          <!-- Version 2: stroke order animation will go here -->
-          <div class="stroke-order" id="stroke-order" hidden></div>
         </section>
 
       </div>
@@ -123,7 +156,7 @@
   <!-- Screen reader announcements (flip state, card changes) -->
   <p class="sr-only" id="announcer" aria-live="polite"></p>
 
-  <!-- ================= SETTINGS ================= -->
+  <!-- ================= SETTINGS (for the current section) ================= -->
   <dialog class="sheet" id="settings" aria-labelledby="settings-title">
     <form method="dialog" class="sheet-body">
       <div class="sheet-head">
@@ -131,7 +164,8 @@
         <button type="submit" class="big-btn primary done-btn">Done</button>
       </div>
 
-      <fieldset>
+      <!-- Kana only -->
+      <fieldset data-for="kana">
         <legend>Script</legend>
         <div class="choices">
           <label class="chip"><input type="checkbox" name="script" value="hiragana"> Hiragana <span lang="ja">あ</span></label>
@@ -139,7 +173,7 @@
         </div>
       </fieldset>
 
-      <fieldset>
+      <fieldset data-for="kana">
         <legend>Stages</legend>
         <div class="choices">
           <label class="chip"><input type="checkbox" name="stage" value="1"> 1 · Basic <span lang="ja">あ</span></label>
@@ -148,7 +182,7 @@
         </div>
       </fieldset>
 
-      <fieldset>
+      <fieldset data-for="kana">
         <legend>Rows</legend>
         <p class="hint">None selected = all rows.</p>
         <!-- Filled by app.js from the data, for the chosen scripts and stages -->
@@ -156,10 +190,21 @@
         <button type="button" class="link-btn" id="all-rows">Clear (use all rows)</button>
       </fieldset>
 
+      <!-- Travel words / phrases only -->
+      <fieldset data-for="vocab">
+        <legend>Card front</legend>
+        <div class="choices">
+          <label class="chip"><input type="radio" name="front" value="ja"> Japanese <span lang="ja">あ</span></label>
+          <label class="chip"><input type="radio" name="front" value="en"> English</label>
+        </div>
+        <p class="hint">Japanese first: practice reading. English first: practice saying it yourself.</p>
+      </fieldset>
+
+      <!-- All sections -->
       <fieldset>
         <legend>Order</legend>
         <div class="choices">
-          <label class="chip"><input type="radio" name="order" value="chart"> Chart order</label>
+          <label class="chip"><input type="radio" name="order" value="chart"> <span id="order-label">Chart order</span></label>
           <label class="chip"><input type="radio" name="order" value="shuffle"> Shuffled</label>
         </div>
         <label class="switch"><input type="checkbox" id="review-only"> Review only: cards marked “Still learning”</label>
@@ -174,7 +219,7 @@
 
       <section class="about" aria-labelledby="about-title">
         <h3 id="about-title">About</h3>
-        <p>Flash cards for learning hiragana and katakana.</p>
+        <p>Flash cards for learning hiragana, katakana and travel Japanese.</p>
         <p>
           “Sounds like” words are a guide only. Filipino spelling matches Japanese sounds
           closely; English vowels differ, so English examples are approximate.

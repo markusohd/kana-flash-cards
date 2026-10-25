@@ -142,11 +142,16 @@ kbd {
   margin: 0 auto;
 }
 
+/* One line only: on narrow phones a long title is cut with "…" */
 .title {
+  flex: 1;
+  min-width: 0;
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0;
-  margin-right: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .title span {
@@ -155,9 +160,11 @@ kbd {
 }
 
 .counter {
+  flex: none;
   color: var(--muted);
   font-size: 0.9rem;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .icon-btn {
@@ -207,6 +214,73 @@ kbd {
   max-width: 520px;
   margin: 0 auto;
   padding: 8px 16px 24px;
+}
+
+/* Landing page: one tile per section */
+
+.intro {
+  margin: 4px 4px 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
+}
+
+.tile:hover {
+  border-color: var(--accent);
+}
+
+.tile-char {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.tile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.tile-text strong {
+  font-size: 1.15rem;
+}
+
+.tile-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.tile-progress {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--known);
 }
 
 .panel {
@@ -574,6 +648,29 @@ progress::-moz-progress-bar {
   font-size: clamp(5rem, 30vmin, 10rem);
 }
 
+/* Travel word / phrase on the card front */
+.vocab-main {
+  margin: 0;
+  padding: 0 4px;
+  text-align: center;
+  font-size: clamp(2.5rem, 13vw, 4rem);
+  line-height: 1.35;
+  font-weight: 500;
+  /* Japanese: break lines only at the spaces between words */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.vocab-main.phrase {
+  font-size: clamp(1.6rem, 8vw, 2.4rem);
+}
+
+.vocab-main.english {
+  font-size: clamp(1.5rem, 7vw, 2.1rem);
+  font-weight: 600;
+  word-break: normal;
+}
+
 .flip-hint {
   position: absolute;
   bottom: 16px;
@@ -592,6 +689,70 @@ progress::-moz-progress-bar {
   cursor: pointer;
 }
 
+/* Each kind of card back stacks its parts with the same spacing */
+.back-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Example sentence under the sample word */
+.sentence {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+}
+
+.sentence-kana {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.sentence-kana mark {
+  background: var(--mark-bg);
+  color: var(--mark-ink);
+  border-radius: 4px;
+  padding: 0 1px;
+}
+
+.sentence-kanji {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.sentence-romaji {
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.sentence-en {
+  color: var(--muted);
+}
+
+/* Travel word / phrase on the card back */
+.vocab-back-kana {
+  font-size: clamp(2rem, 10vw, 2.8rem);
+  line-height: 1.35;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.vocab-back-kana.phrase {
+  font-size: clamp(1.5rem, 7vw, 2rem);
+}
+
+.vocab-back-romaji {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.vocab-back-en {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
 .reading {
   display: flex;
   align-items: center;
@@ -599,7 +760,7 @@ progress::-moz-progress-bar {
 }
 
 .small-char {
-  font-size: 4rem;
+  font-size: 3.4rem;
   line-height: 1;
   font-weight: 500;
 }
@@ -662,7 +823,7 @@ progress::-moz-progress-bar {
 /* The word stays on one line: long words (コンピューター) get a smaller font.
    --chars is set from JavaScript; ~90px is the page and card padding. */
 .word-kana {
-  font-size: max(1.25rem, min(2.5rem, calc((100vw - 90px) / var(--chars, 4))));
+  font-size: max(1.25rem, min(2.1rem, calc((100vw - 90px) / var(--chars, 4))));
   line-height: 1.3;
   white-space: nowrap;
 }

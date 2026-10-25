@@ -55,7 +55,14 @@ export function markSeen(id) {
   }
 }
 
-export function resetProgress() {
-  save("progress", {});
-  save("seen", []);
+// Forget progress for the given card ids only (one section of the app).
+export function resetProgress(ids) {
+  const progress = getProgress();
+  const seen = getSeen();
+  for (const id of ids) {
+    delete progress[id];
+    seen.delete(id);
+  }
+  save("progress", progress);
+  save("seen", [...seen]);
 }

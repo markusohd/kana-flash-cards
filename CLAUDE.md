@@ -16,15 +16,18 @@ sounds to Tagalog where it helps (Japanese vowels a, i, u, e, o are close to Tag
 ## Scope
 
 ### Version 1 (build this)
+- A landing page with three sections: **Kana**, **Travel words** (50) and **Travel phrases** (50)
 - Flash cards for hiragana and katakana
 - "Sounds like" hints for each character (see below)
+- An example sentence on every kana card (see "Example sentences")
+- Travel word and phrase cards (see "Travel words and phrases"); added at Mark's request on 2026-10-25
 - Study modes and filters (see below)
 - Simple progress tracking saved on the device
 - Works offline and can be installed on a phone's home screen (PWA)
 
 ### Not in version 1 (do not build yet)
 - Stroke order animations or writing/tracing practice (planned for version 2, likely using KanjiVG data)
-- Kanji, vocabulary decks, grammar
+- Kanji study, grammar lessons, vocabulary beyond the two travel decks
 - User accounts, login, or any server or database
 - Quizzes that require typing
 - Audio or voice playback of any kind. Kokoro (female jf_alpha, male jm_kumo) and VOICEVOX
@@ -51,6 +54,8 @@ Keep the code organized so writing practice can be added later without a rewrite
   - the word in kana, with the target character highlighted
   - romaji of the word
   - English meaning
+- A full example sentence using the sample word (kana with the word highlighted, kanji version
+  small, romaji, English)
 - A short pronunciation tip when useful (for example: "う (u) is softer than Tagalog u, lips not rounded")
 
 **Interaction**
@@ -98,9 +103,28 @@ Each character needs one sample word. Rules:
 - Double-check every word's meaning and reading. Accuracy matters more than cleverness.
   Flag any word you are unsure of in a `REVIEW.md` list instead of guessing.
 
+## Example sentences
+
+Every kana card has one sentence that uses its sample word.
+- Short, simple, polite (です/ます) sentences a beginner can read; travel themes where natural.
+- `kana`: hiragana/katakana with **spaces between words** (particles stay attached:
+  `あめが ふって います。`), ending in 。 or ？. It must contain the sample word.
+- `kanji`: the normal written form, shown small. `romaji`: Hepburn, particles written
+  wa / o / e. `en`: natural English.
+
+## Travel words and phrases
+
+`data/words.json` and `data/phrases.json`, 50 entries each:
+`{ "id": "w-eki", "kana": "えき", "kanji": "駅", "romaji": "eki", "en": "train station",
+"category": "Getting around", "note": null }` (phrase ids start with `p-`).
+- Practical for a trip to Osaka: getting around, hotel, food, shopping, emergencies, basics.
+- Phrases are polite (です/ます). Kana with spaces between words, like the example sentences.
+- `kanji` is `null` when the word is normally written in kana. `note` gives a short usage tip.
+- Cards show Japanese (kana) on the front by default; a setting puts English on the front.
+
 ## Data
 
-All card content lives in one file: `data/kana.json`. One entry per character:
+Kana card content lives in `data/kana.json`. One entry per character:
 
 ```json
 {
@@ -117,6 +141,12 @@ All card content lives in one file: `data/kana.json`. One entry per character:
     "romaji": "ame",
     "en": "rain"
   },
+  "sentence": {
+    "kana": "あめが ふって います。",
+    "kanji": "雨が降っています。",
+    "romaji": "Ame ga futte imasu.",
+    "en": "It is raining."
+  },
   "soundsLike": {
     "fil": { "word": "aso", "part": "a", "en": "dog" },
     "en": { "word": "father", "part": "a" }
@@ -132,6 +162,8 @@ Write a small check script (`scripts/check-data.js` or `.py`) that asserts:
 - no duplicate ids
 - every entry has romaji and a sample word
 - every "sounds like" word contains its highlighted part, and every card has at least one hint
+- every kana card has a sentence that contains its sample word
+- words.json and phrases.json have 50 entries each, unique ids and all required fields
 
 ## "Sounds like" hints
 
@@ -177,7 +209,9 @@ Goal: help Mark hear each kana in his head using words he already knows.
 │   ├── card.js            # card rendering and flip
 │   └── storage.js         # localStorage helpers
 ├── data/
-│   └── kana.json
+│   ├── kana.json
+│   ├── words.json         # 50 travel words
+│   └── phrases.json       # 50 travel phrases
 ├── icons/                 # PWA icons
 ├── scripts/
 │   └── check-data.(js|py)

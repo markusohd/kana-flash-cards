@@ -1,13 +1,29 @@
 // Drawing a card on screen and flipping it.
+// Two kinds of card share the same flip card:
+//   "kana"  – a character with its sounds-like hints, sample word and sentence
+//   "vocab" – a travel word or phrase (Japanese or English on the front)
 
 const $ = (id) => document.getElementById(id);
 
-// Fill the front and back of the card with one entry from kana.json.
-export function renderCard(card) {
-  const scriptName = card.script === "katakana" ? "Katakana" : "Hiragana";
+// Fill the card with one entry. `type` is "kana" or "vocab";
+// `front` ("ja" or "en") chooses what a vocab card shows first.
+export function renderCard(card, { type, front = "ja", label = "" }) {
+  const isKana = type === "kana";
+  $("front-char").hidden = !isKana;
+  $("vocab-front").hidden = isKana;
+  $("back-kana").hidden = !isKana;
+  $("back-vocab").hidden = isKana;
 
+  if (isKana) renderKana(card);
+  else renderVocab(card, front, label);
+
+  // Show the card's front again. "instant" stops it spinning back.
+  setFlipped(false, { instant: true });
+}
+
+function renderKana(card) {
   // Front
-  $("front-script").textContent = scriptName;
+  $("front-label").textContent = card.script === "katakana" ? "Katakana" : "Hiragana";
   $("front-char").textContent = card.char;
   $("front-char").classList.toggle("two", card.char.length > 1);
 
@@ -26,12 +42,38 @@ export function renderCard(card) {
   $("word-romaji").textContent = card.word.romaji;
   $("word-en").textContent = card.word.en;
 
+  // Back: a full sentence, with the sample word highlighted
+  $("sentence-kana").replaceChildren(...highlightIgnoringSpaces(card.sentence.kana, card.word.kana));
+  $("sentence-kanji").textContent = card.sentence.kanji;
+  $("sentence-romaji").textContent = card.sentence.romaji;
+  $("sentence-en").textContent = card.sentence.en;
+
   // Back: pronunciation tip (only some cards have one)
   $("tip").textContent = card.tip ?? "";
   $("tip").hidden = !card.tip;
+}
 
-  // Show the card's front again. "instant" stops it spinning back.
-  setFlipped(false, { instant: true });
+function renderVocab(card, front, label) {
+  const isPhrase = card.id.startsWith("p-");
+
+  // Front: the Japanese (kana) or the English, depending on the setting
+  const main = $("vocab-front");
+  main.textContent = front === "en" ? card.en : card.kana;
+  main.lang = front === "en" ? "en" : "ja";
+  main.classList.toggle("phrase", isPhrase);
+  main.classList.toggle("english", front === "en");
+  $("front-label").textContent = front === "en" ? `${label} · Say it in Japanese` : label;
+
+  // Back: everything
+  $("vb-category").textContent = card.category;
+  $("vb-kana").textContent = card.kana;
+  $("vb-kana").classList.toggle("phrase", isPhrase);
+  $("vb-kanji").textContent = card.kanji ?? "";
+  $("vb-kanji").hidden = !card.kanji;
+  $("vb-romaji").textContent = card.romaji;
+  $("vb-en").textContent = card.en;
+  $("vb-note").textContent = card.note ?? "";
+  $("vb-note").hidden = !card.note;
 }
 
 // Build the "Sounds like" rows as <dt>label</dt><dd>content</dd> pairs, e.g.
@@ -76,9 +118,34 @@ function highlight(word, char) {
     i = word.indexOf(target);
   }
   if (i === -1) return [word];
-  const mark = document.createElement("mark");
-  mark.textContent = target;
-  return [word.slice(0, i), mark, word.slice(i + target.length)];
+  return [word.slice(0, i), mark(target), word.slice(i + target.length)];
+}
+
+// Like highlight(), but the sentence has spaces between words and the target
+// may not (みずをのむ inside "みずを のむ"), so spaces are skipped while matching.
+function highlightIgnoringSpaces(sentence, target) {
+  // Remember where each non-space character sits in the original sentence.
+  const positions = [];
+  let compact = "";
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] !== " ") {
+      positions.push(i);
+      compact += sentence[i];
+    }
+  }
+  const wanted = target.replaceAll(" ", "");
+  const start = compact.indexOf(wanted);
+  if (start === -1) return [sentence];
+
+  const from = positions[start];
+  const to = positions[start + wanted.length - 1] + 1;
+  return [sentence.slice(0, from), mark(sentence.slice(from, to)), sentence.slice(to)];
+}
+
+function mark(text) {
+  const el = document.createElement("mark");
+  el.textContent = text;
+  return el;
 }
 
 // Swap hiragana <-> katakana. They sit 0x60 apart in Unicode (あ U+3042, ア U+30A2).

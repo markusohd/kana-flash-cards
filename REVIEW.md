@@ -79,3 +79,30 @@ that each Filipino word and meaning is right and natural to you.
       niyog (nyo, said "nyog"), nipa (ni), hoy (ho), heto (he).
 - [ ] **English picks to double-check**: Myanmar (mya), menu (nyu), huge (hyu), beauty (byu),
       Tokyo (kyo), cute (kyu), tsunami (tsu), bazaar (za).
+
+## Example sentences (kana cards)
+
+All 208 sentences are short and polite (です/ます). A few to look at:
+
+- [ ] **Sentences that don't fit Mark exactly**: こどもが ふたり います ("I have two children"),
+      だいがくで にほんごを べんきょう します ("I study Japanese at university"),
+      わたしの ニックネームは マークです ("My nickname is Mark"). Change them to suit you.
+- [ ] **Sound-word sentences**: にょろにょろ (snake wriggling), ひゅうひゅう (wind whooshing),
+      ぴょんぴょん (hopping). Natural, but these words are less useful than everyday words.
+- [ ] **つづく / はなぢ** (ぢ, づ, ヂ, ヅ cards): sentences use つづく でしょう and はなぢが でました /
+      とまりません. Correct; listed because these cards are unusual.
+- [ ] **ここは きんえん ゾーンです** (ゾ card): 禁煙ゾーン is used, but 禁煙エリア / 禁煙席 are more common.
+- [ ] **ユーロを えんに かえたいです** (ユ card): "change euros into yen". For Mark, pesos would be
+      more useful, but the card's sample word is ユーロ.
+
+## Travel words and phrases
+
+- [ ] **からい (karai)**: "spicy"; in some regions it also means "salty". Both noted on the card.
+- [ ] **おおきに (ōkini)**: Osaka-dialect "thank you". Friendly and common in Osaka shops; in
+      formal situations ありがとう ございます is safer.
+- [ ] **だいじょうぶです** as "no thank you": very common, but it can be ambiguous; staff may
+      ask again. Shaking your head or saying いいえ, けっこうです also works.
+- [ ] **Place names in phrases**: おおさかじょう (Osaka Castle) and うめだ (Umeda) are examples;
+      the notes say to swap in other places.
+- [ ] **Kanji left out on purpose** for phrases normally written in kana (こんにちは, ありがとう,
+      すみません, いただきます, ごちそうさまでした).
