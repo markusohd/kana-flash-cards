@@ -433,6 +433,16 @@ async function start() {
     route();
   });
   route();
+  registerServiceWorker();
+}
+
+// Offline support: sw.js keeps a copy of the app on the device.
+// Browsers only allow this on https:// sites and on localhost.
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+  navigator.serviceWorker.register("sw.js").catch((err) => {
+    console.warn("Offline support unavailable:", err);
+  });
 }
 
 start();

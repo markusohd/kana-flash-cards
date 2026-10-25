@@ -5,7 +5,17 @@ Flash cards for learning **hiragana and katakana**. Works on phone and desktop.
 Each card shows a **"sounds like"** hint: a Filipino word and an English word that share
 the kana's sound, for example か (ka): Filipino **ka**in, English **ca**r.
 
-## Run it
+## Use it on your phone
+
+Open **https://markusohd.github.io/kana-flash-cards/** and install it:
+
+- **Android (Chrome):** menu ⋮ → **Install app** (or "Add to Home screen")
+- **iPhone (Safari):** Share → **Add to Home Screen**
+
+After the first visit it works offline. Updates arrive the next time you open it online
+(close and reopen the app once to see them).
+
+## Run it on your computer
 
 Serve the folder with any static server, then open it in a browser:
 
