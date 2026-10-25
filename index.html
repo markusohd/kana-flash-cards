@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Kana Flash Cards</title>
-  <meta name="description" content="Flash cards for learning hiragana and katakana, with audio.">
+  <meta name="description" content="Flash cards for learning hiragana and katakana.">
   <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12151c" media="(prefers-color-scheme: dark)">
 
@@ -62,27 +62,23 @@
           <span class="flip-hint">Tap to flip</span>
         </section>
 
-        <!-- BACK: reading, sample word, tip -->
+        <!-- BACK: reading, words that sound alike, sample word, tip -->
         <section class="face back" id="face-back" aria-label="Card back" inert>
           <div class="reading">
             <span class="small-char" lang="ja" id="back-char"></span>
             <span class="romaji" id="back-romaji"></span>
-            <button type="button" class="play-btn" id="play-char" aria-label="Play character sound">
-              <span aria-hidden="true">▶</span>
-            </button>
+          </div>
+
+          <!-- Filipino and English words with a similar sound (filled by card.js) -->
+          <div class="sounds">
+            <span class="section-label">Sounds like</span>
+            <dl class="sounds-list" id="sounds-list"></dl>
           </div>
 
           <div class="word">
             <span class="section-label">Example</span>
-            <div class="word-row">
-              <div>
-                <div class="word-kana" lang="ja" id="word-kana"></div>
-                <div class="word-kanji" lang="ja" id="word-kanji"></div>
-              </div>
-              <button type="button" class="play-btn" id="play-word" aria-label="Play sample word">
-                <span aria-hidden="true">▶</span>
-              </button>
-            </div>
+            <div class="word-kana" lang="ja" id="word-kana"></div>
+            <div class="word-kanji" lang="ja" id="word-kanji"></div>
             <div class="word-romaji" id="word-romaji"></div>
             <div class="word-en" id="word-en"></div>
           </div>
@@ -91,8 +87,6 @@
 
           <!-- Version 2: stroke order animation will go here -->
           <div class="stroke-order" id="stroke-order" hidden></div>
-
-          <p class="audio-note" id="audio-note" hidden>Audio isn't available on this device.</p>
         </section>
 
       </div>
@@ -165,15 +159,6 @@
       <p class="match-count" id="match-count" aria-live="polite"></p>
 
       <fieldset>
-        <legend>Audio</legend>
-        <div class="choices">
-          <label class="chip"><input type="radio" name="voice" value="female"> Female voice</label>
-          <label class="chip"><input type="radio" name="voice" value="male"> Male voice</label>
-        </div>
-        <label class="switch"><input type="checkbox" id="auto-play"> Play the sound when a card is flipped</label>
-      </fieldset>
-
-      <fieldset>
         <legend>Progress</legend>
         <button type="button" class="big-btn danger" id="reset-progress">Reset progress</button>
       </fieldset>
@@ -182,11 +167,8 @@
         <h3 id="about-title">About</h3>
         <p>Flash cards for learning hiragana and katakana.</p>
         <p>
-          Audio was generated with <a href="https://github.com/hexgrad/kokoro">Kokoro-82M</a>
-          (Apache License 2.0), voices <code>jf_alpha</code> (female) and <code>jm_kumo</code> (male),
-          which Kokoro lists as CC BY. Some Japanese voices were trained on text from the
-          <a href="https://github.com/koniwa/koniwa">koniwa</a> project.
-          See <a href="audio/LICENSE.md">audio/LICENSE.md</a>.
+          “Sounds like” words are a guide only. Filipino spelling matches Japanese sounds
+          closely; English vowels differ, so English examples are approximate.
         </p>
         <p>Font: <a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP">Noto Sans JP</a> (SIL Open Font License).</p>
       </section>
@@ -199,8 +181,6 @@
     <dl>
       <dt><kbd>Space</kbd></dt><dd>Flip card</dd>
       <dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Previous / next card</dd>
-      <dt><kbd>P</kbd></dt><dd>Play character</dd>
-      <dt><kbd>W</kbd></dt><dd>Play sample word</dd>
       <dt><kbd>1</kbd></dt><dd>Still learning</dd>
       <dt><kbd>2</kbd></dt><dd>I know it</dd>
       <dt><kbd>?</kbd></dt><dd>Show / hide this help</dd>

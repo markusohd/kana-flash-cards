@@ -3,7 +3,6 @@
 
 import { loadCards, buildDeck, availableRows, DEFAULT_FILTERS } from "./deck.js";
 import { renderCard, setFlipped } from "./card.js";
-import { play, setVoice } from "./audio.js";
 import * as storage from "./storage.js";
 
 const $ = (id) => document.getElementById(id);
@@ -14,7 +13,6 @@ const STAGE_NAMES = { 1: "Basic", 2: "Voiced", 3: "Combinations" };
 const state = {
   cards: [], // every card in kana.json
   filters: { ...DEFAULT_FILTERS },
-  settings: storage.getSettings(),
   deck: [], // cards currently being studied
   index: 0, // position in the deck
   flipped: false,
@@ -128,13 +126,10 @@ const form = () => $("settings").querySelector("form");
 
 function openSettings() {
   const f = state.filters;
-  const s = state.settings;
   for (const box of form().querySelectorAll('[name="script"]')) box.checked = f.scripts.includes(box.value);
   for (const box of form().querySelectorAll('[name="stage"]')) box.checked = f.stages.includes(Number(box.value));
   for (const radio of form().querySelectorAll('[name="order"]')) radio.checked = radio.value === f.order;
-  for (const radio of form().querySelectorAll('[name="voice"]')) radio.checked = radio.value === s.voice;
   $("review-only").checked = f.reviewOnly;
-  $("auto-play").checked = s.autoPlay;
   renderRowChoices();
   updateMatchCount();
   $("settings").showModal();
@@ -168,7 +163,7 @@ function updateMatchCount() {
   $("match-count").classList.toggle("warn", n === 0);
 }
 
-// Read every control back into state.filters / state.settings and save.
+// Read every control back into state.filters and save.
 function onSettingsChange(event) {
   const target = event.target;
   const checkedValues = (name) =>
@@ -186,15 +181,9 @@ function onSettingsChange(event) {
     order: checkedValues("order")[0] ?? "chart",
     reviewOnly: $("review-only").checked,
   };
-  state.settings = {
-    voice: checkedValues("voice")[0] ?? "female",
-    autoPlay: $("auto-play").checked,
-  };
 
   if (target.name === "script" || target.name === "stage") renderRowChoices();
   storage.save("filters", state.filters);
-  storage.saveSettings(state.settings);
-  setVoice(state.settings.voice);
   updateMatchCount();
 }
 
@@ -247,10 +236,7 @@ function flip() {
   state.flipped = !state.flipped;
   setFlipped(state.flipped);
   const card = currentCard();
-  if (state.flipped) {
-    storage.markSeen(card.id);
-    if (state.settings.autoPlay) playSound("char");
-  }
+  if (state.flipped) storage.markSeen(card.id);
   announce(
     state.flipped
       ? `Back of card: ${card.romaji}. Example: ${card.word.romaji}, ${card.word.en}.`
@@ -270,20 +256,6 @@ function rate(known) {
   if (!state.flipped) return;
   storage.rateCard(currentCard().id, known);
   go(1);
-}
-
-async function playSound(kind) {
-  const card = currentCard();
-  const ok =
-    kind === "char"
-      ? await play(card.audio.char, card.char)
-      : await play(card.audio.word, card.word.kana);
-  if (!ok) {
-    // No audio file and no Japanese voice: hide the play buttons, show a note.
-    $("play-char").hidden = true;
-    $("play-word").hidden = true;
-    $("audio-note").hidden = false;
-  }
 }
 
 // ---------- Theme (light / dark) ----------
@@ -391,14 +363,6 @@ function setUpKeyboard() {
       case "ArrowLeft":
         go(-1);
         break;
-      case "p":
-      case "P":
-        if (state.flipped) playSound("char");
-        break;
-      case "w":
-      case "W":
-        if (state.flipped) playSound("word");
-        break;
       case "1":
         rate(false);
         break;
@@ -423,7 +387,6 @@ function setUpKeyboard() {
 
 async function start() {
   applyTheme(storage.load("theme", "system"));
-  setVoice(state.settings.voice);
 
   $("theme-toggle").addEventListener("click", toggleTheme);
   $("help-open").addEventListener("click", toggleHelp);
@@ -464,8 +427,6 @@ async function start() {
   $("next").addEventListener("click", () => go(1));
   $("rate-learning").addEventListener("click", () => rate(false));
   $("rate-known").addEventListener("click", () => rate(true));
-  $("play-char").addEventListener("click", () => playSound("char"));
-  $("play-word").addEventListener("click", () => playSound("word"));
 
   window.addEventListener("hashchange", () => {
     if (location.hash !== "#study") state.openedStudyFromHome = false;

@@ -1,8 +1,7 @@
 """Check data/kana.json for mistakes.
 
 Run from the project folder:
-    python scripts/check-data.py              # full check
-    python scripts/check-data.py --no-audio   # skip audio file checks (before audio is generated)
+    python scripts/check-data.py
 
 Exits with code 1 if any error is found.
 """
@@ -26,7 +25,7 @@ EXPECTED_COUNTS = {
     ("katakana", 3): 33,
 }
 
-REQUIRED_FIELDS = ["id", "char", "script", "stage", "row", "romaji", "word", "audio"]
+REQUIRED_FIELDS = ["id", "char", "script", "stage", "row", "romaji", "word", "soundsLike"]
 REQUIRED_WORD_FIELDS = ["kana", "romaji", "en"]
 
 # Hiragana and katakana sit 0x60 apart in Unicode (あ U+3042, ア U+30A2).
@@ -46,8 +45,27 @@ def other_script(text):
     return "".join(out)
 
 
+def check_sounds_like(label, sounds, errors):
+    """Each "sounds like" word must contain its highlighted part; every card needs
+    at least one hint (a Filipino word, an English word, or a blend for combinations)."""
+    for lang in ("fil", "en"):
+        if lang not in sounds:
+            errors.append(f"{label}: soundsLike is missing '{lang}' (use null if there is no good word)")
+            continue
+        entry = sounds[lang]
+        if entry is None:
+            continue
+        if not entry.get("word") or not entry.get("part"):
+            errors.append(f"{label}: soundsLike.{lang} needs 'word' and 'part'")
+        elif entry["part"] not in entry["word"]:
+            errors.append(f"{label}: soundsLike.{lang} part '{entry['part']}' is not in '{entry['word']}'")
+        if lang == "fil" and not entry.get("en"):
+            errors.append(f"{label}: soundsLike.fil needs an English meaning ('en')")
+    if not (sounds.get("fil") or sounds.get("en") or sounds.get("blend")):
+        errors.append(f"{label}: soundsLike has no Filipino word, English word or blend")
+
+
 def main():
-    check_audio = "--no-audio" not in sys.argv
     errors = []
     warnings = []
 
@@ -75,6 +93,8 @@ def main():
             errors.append(f"{label}: word '{kana}' does not contain '{char}'")
         if card.get("script") not in ("hiragana", "katakana"):
             errors.append(f"{label}: unknown script '{card.get('script')}'")
+        if isinstance(card.get("soundsLike"), dict):
+            check_sounds_like(label, card["soundsLike"], errors)
 
     # --- No duplicate ids or characters ---
     for key in ("id", "char"):
@@ -94,17 +114,6 @@ def main():
     for key in actual:
         if key not in EXPECTED_COUNTS:
             errors.append(f"unexpected script/stage {key}")
-
-    # --- Audio files exist, for both voices ---
-    # Female files use the paths in kana.json; male files mirror them under audio/male/.
-    if check_audio:
-        for card in cards:
-            for kind, path in (card.get("audio") or {}).items():
-                for voice_path in (path, path.replace("audio/", "audio/male/", 1)):
-                    if not (ROOT / voice_path).is_file():
-                        errors.append(f"{card.get('id')}: {kind} audio file not found: {voice_path}")
-    else:
-        warnings.append("audio file check skipped (--no-audio)")
 
     # --- Report ---
     print(f"Checked {len(cards)} cards in {DATA_FILE.relative_to(ROOT)}")

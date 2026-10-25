@@ -2,7 +2,8 @@
 
 ## What this project is
 
-A flash card web app for learning **hiragana and katakana**, with audio pronunciation.
+A flash card web app for learning **hiragana and katakana**, with "sounds like" hints:
+a Filipino word and an English word that share each kana's sound. The app has **no audio**.
 It is for one learner (Mark) who is starting Japanese from zero. His long-term goal is to
 **speak, read and write** Japanese. This app is step one: recognize every kana on sight and
 know how it sounds.
@@ -16,7 +17,7 @@ sounds to Tagalog where it helps (Japanese vowels a, i, u, e, o are close to Tag
 
 ### Version 1 (build this)
 - Flash cards for hiragana and katakana
-- Audio for each character and each sample word
+- "Sounds like" hints for each character (see below)
 - Study modes and filters (see below)
 - Simple progress tracking saved on the device
 - Works offline and can be installed on a phone's home screen (PWA)
@@ -26,6 +27,9 @@ sounds to Tagalog where it helps (Japanese vowels a, i, u, e, o are close to Tag
 - Kanji, vocabulary decks, grammar
 - User accounts, login, or any server or database
 - Quizzes that require typing
+- Audio or voice playback of any kind. Kokoro (female jf_alpha, male jm_kumo) and VOICEVOX
+  male voices were tried; Mark found them unnatural, so all audio was removed on 2026-10-25.
+  Do not add audio back unless Mark asks.
 
 Keep the code organized so writing practice can be added later without a rewrite
 (for example, keep card data separate from UI, and leave room on the card back for a
@@ -40,20 +44,19 @@ Keep the code organized so writing practice can be added later without a rewrite
 **Back (after flipping)**
 - The character again (smaller than the front, still clearly visible)
 - Romaji in Hepburn style (for example `a`, `shi`, `tsu`)
-- A ▶ play button for the character's sound
+- "Sounds like": a Filipino word and an English word with the matching letters highlighted
+  (for example か: Filipino **ka**in "to eat", English **ca**r). Combinations also show how
+  they are built (ひ (hi) + や (ya), said as one beat).
 - A sample word:
   - the word in kana, with the target character highlighted
   - romaji of the word
   - English meaning
-  - its own ▶ play button
 - A short pronunciation tip when useful (for example: "う (u) is softer than Tagalog u, lips not rounded")
 
 **Interaction**
 - Flip: tap or click the card, or press Space
 - Next / previous: swipe left/right on mobile, arrow keys on desktop, plus visible buttons
-- Play sound: tap the ▶ buttons, or press `P` (character) and `W` (sample word) on desktop
 - Rating after flip: "Still learning" and "I know it" buttons (keys `1` and `2`)
-- Optional setting: auto-play the character sound when the card is flipped
 
 ## Character sets
 
@@ -114,58 +117,37 @@ All card content lives in one file: `data/kana.json`. One entry per character:
     "romaji": "ame",
     "en": "rain"
   },
-  "audio": {
-    "char": "audio/char/h-a.mp3",
-    "word": "audio/word/h-a.mp3"
+  "soundsLike": {
+    "fil": { "word": "aso", "part": "a", "en": "dog" },
+    "en": { "word": "father", "part": "a" }
   }
 }
 ```
+
+`soundsLike.fil` or `soundsLike.en` is `null` when there is no good word. Combination cards
+(stage 3) also have `"blend": "ひ (hi) + や (ya)"`.
 
 Write a small check script (`scripts/check-data.js` or `.py`) that asserts:
 - correct counts per script and stage (46 basic per script, etc.)
 - no duplicate ids
 - every entry has romaji and a sample word
-- every audio path points to a file that exists
+- every "sounds like" word contains its highlighted part, and every card has at least one hint
 
-## Audio
+## "Sounds like" hints
 
-Goal: correct, natural Japanese pronunciation, free and open-source, working offline.
+Goal: help Mark hear each kana in his head using words he already knows.
 
-### Plan
-1. **Pre-generate audio files once** with an open-source Japanese text-to-speech model and
-   ship them as small static files in `audio/`. The app does not run a voice model at runtime.
-2. First choice of model: **Kokoro** (Apache 2.0 license, github.com/hexgrad/kokoro), which has
-   Japanese voices. Japanese support needs extra packages (check the Kokoro README for the
-   current install, for example `misaki[ja]`). Verify voice names and install steps from the
-   repo; do not assume.
-3. If Kokoro's Japanese output sounds wrong, try alternatives and report back before
-   switching: VOICEVOX (free, but check each voice's credit/terms) or Open JTalk.
-4. **Fallback in the app**: if an audio file is missing or fails to load, use the browser's
-   Web Speech API with a `ja-JP` voice, also slowed down (`rate` 0.85) to match the
-   generated files. If no Japanese voice is available, hide the
-   play button and show a small note rather than an error.
-
-### Generation script
-`scripts/generate_audio.py`:
-- Reads `data/kana.json`
-- Generates one file per character and one per sample word
-- Output: mp3 (or ogg + mp3 if needed for Safari compatibility), mono, trimmed silence,
-  normalized volume, kept small (target under 30 KB each)
-- Speaks a little slower for clarity: generate at **0.85x speed** using Kokoro's own `speed` setting
-  (not by stretching the audio afterwards, which sounds robotic). Keep the speed in one
-  constant so it is easy to change after Mark listens to the test batch.
-- Skips files that already exist unless `--force` is passed
-- Can generate a test batch only (`--sample`) so quality can be checked first
-
-### Important: test before generating everything
-Single characters said on their own can sound odd from a voice model (clipped, wrong
-pitch, or read as a letter name). Before generating the full set:
-1. Generate about 10 test files: あ, し, つ, ふ, ん, を, が, きゃ, ア, and one sample word.
-2. Stop and ask Mark to listen and approve.
-3. If single kana sound bad, try workarounds (for example, add a short pause or say it
-   slowly) and test again.
-
-Write the license of the voice model used into `audio/LICENSE.md` and the app's About section.
+- **Filipino word** (`soundsLike.fil`): a common Filipino/Tagalog word containing the same
+  sound, with its English meaning. Filipino spelling matches Japanese sounds closely (same
+  five vowels, tapped r), so this is the main guide. Filipino spelling "ts" is often said
+  "ch" (tsinelas, tsaa) and "dy" is said "j" (dyip); those may be used for ch/j sounds.
+- **English word** (`soundsLike.en`): an English word with a similar sound. English vowels
+  differ, so these are approximate. Use `null` for the r row (English r is a different
+  sound) and wherever no honest match exists.
+- `part` is the letters that make the sound; the app highlights them. It must appear in the word.
+- Combinations (stage 3) also get a `blend`: the two kana they are built from.
+- Never force a match. If no common word fits, use `null` and rely on the blend or tip.
+  List questionable choices in `REVIEW.md`.
 
 ## Tech stack
 
@@ -175,10 +157,10 @@ Write the license of the voice model used into `audio/LICENSE.md` and the app's 
   Make sure kana render correctly on Android, iPhone, Windows and Mac.
 - Save progress and settings in `localStorage`. Wrap every read and write in `try/catch`
   so the app still works if storage is blocked.
-- PWA: `manifest.json` and a service worker that caches the app, data, fonts and all audio
+- PWA: `manifest.json` and a service worker that caches the app, data and fonts
   for offline use.
 - Hosting: GitHub Pages (static files only).
-- Python is only used for the audio generation script, not by the app itself.
+- Python is only used for the data check script, not by the app itself.
 
 ## Suggested file structure
 
@@ -193,17 +175,11 @@ Write the license of the voice model used into `audio/LICENSE.md` and the app's 
 │   ├── app.js             # startup, routing between screens
 │   ├── deck.js            # filtering, ordering, review logic
 │   ├── card.js            # card rendering and flip
-│   ├── audio.js           # play files, Web Speech fallback
 │   └── storage.js         # localStorage helpers
 ├── data/
 │   └── kana.json
-├── audio/
-│   ├── char/
-│   ├── word/
-│   └── LICENSE.md
 ├── icons/                 # PWA icons
 ├── scripts/
-│   ├── generate_audio.py
 │   └── check-data.(js|py)
 ├── REVIEW.md              # words or readings that need a human check
 └── README.md
@@ -246,8 +222,8 @@ Keep it simple (Leitner-style boxes):
 - Build in this order and check each step works before moving on:
   1. Data file for **Stage 1 hiragana** only, plus the check script
   2. Card UI with flip, next/previous, on mobile and desktop
-  3. Audio test batch, then pause for Mark to listen and approve
-  4. Full audio generation and audio playback in the app
+  3. ~~Audio test batch~~ (removed; see "Not in version 1")
+  4. "Sounds like" hints (replaced audio generation and playback)
   5. Remaining stages and katakana data
   6. Filters, settings, progress tracking
   7. PWA offline support
@@ -258,12 +234,11 @@ Keep it simple (Leitner-style boxes):
 
 ## Done checklist (before calling a version finished)
 
-- [ ] `check-data` script passes (counts, ids, words, audio paths)
-- [ ] Every card shows correct kana, romaji and sample word
-- [ ] Every play button plays the right sound; fallback works when a file is missing
+- [ ] `check-data` script passes (counts, ids, words, "sounds like" hints)
+- [ ] Every card shows correct kana, romaji, sample word and "sounds like" hints
 - [ ] Tested at phone width (360 px) and desktop width; no horizontal scroll
 - [ ] Swipe, tap, and keyboard controls all work
 - [ ] Progress survives a page reload
-- [ ] App loads and plays audio with the network turned off (after first visit)
+- [ ] App loads with the network turned off (after first visit)
 - [ ] Light and dark mode both readable
-- [ ] Audio license recorded in `audio/LICENSE.md` and the About section
+- [ ] Font license noted in the About section

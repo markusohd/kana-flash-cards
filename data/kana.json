@@ -3,1301 +3,1991 @@
     "id": "h-a", "char": "あ", "script": "hiragana", "stage": 1, "row": "a", "romaji": "a",
     "tip": "Like the 'a' in Tagalog 'aso'.",
     "word": { "kana": "あめ", "kanji": "雨", "romaji": "ame", "en": "rain" },
-    "audio": { "char": "audio/char/h-a.mp3", "word": "audio/word/h-a.mp3" }
+    "soundsLike": {
+      "fil": { "word": "aso", "part": "a", "en": "dog" },
+      "en": { "word": "father", "part": "a" }
+    }
   },
   {
     "id": "h-i", "char": "い", "script": "hiragana", "stage": 1, "row": "a", "romaji": "i",
     "tip": "Like the 'i' in Tagalog 'ilog'.",
     "word": { "kana": "いぬ", "kanji": "犬", "romaji": "inu", "en": "dog" },
-    "audio": { "char": "audio/char/h-i.mp3", "word": "audio/word/h-i.mp3" }
+    "soundsLike": {
+      "fil": { "word": "isda", "part": "i", "en": "fish" },
+      "en": { "word": "see", "part": "ee" }
+    }
   },
   {
     "id": "h-u", "char": "う", "script": "hiragana", "stage": 1, "row": "a", "romaji": "u",
     "tip": "Softer than Tagalog 'u': keep the lips relaxed, not rounded.",
     "word": { "kana": "うみ", "kanji": "海", "romaji": "umi", "en": "sea" },
-    "audio": { "char": "audio/char/h-u.mp3", "word": "audio/word/h-u.mp3" }
+    "soundsLike": {
+      "fil": { "word": "ulo", "part": "u", "en": "head" },
+      "en": { "word": "food", "part": "oo" }
+    }
   },
   {
     "id": "h-e", "char": "え", "script": "hiragana", "stage": 1, "row": "a", "romaji": "e",
     "tip": "Like the 'e' in Tagalog 'eroplano'.",
     "word": { "kana": "えき", "kanji": "駅", "romaji": "eki", "en": "train station" },
-    "audio": { "char": "audio/char/h-e.mp3", "word": "audio/word/h-e.mp3" }
+    "soundsLike": {
+      "fil": { "word": "eroplano", "part": "e", "en": "airplane" },
+      "en": { "word": "egg", "part": "e" }
+    }
   },
   {
     "id": "h-o", "char": "お", "script": "hiragana", "stage": 1, "row": "a", "romaji": "o",
     "tip": "Like the 'o' in Tagalog 'oo' (yes).",
     "word": { "kana": "おちゃ", "kanji": "お茶", "romaji": "ocha", "en": "tea (green tea)" },
-    "audio": { "char": "audio/char/h-o.mp3", "word": "audio/word/h-o.mp3" }
+    "soundsLike": {
+      "fil": { "word": "oras", "part": "o", "en": "time, hour" },
+      "en": { "word": "go", "part": "o" }
+    }
   },
 
   {
     "id": "h-ka", "char": "か", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ka",
     "tip": null,
     "word": { "kana": "かさ", "kanji": "傘", "romaji": "kasa", "en": "umbrella" },
-    "audio": { "char": "audio/char/h-ka.mp3", "word": "audio/word/h-ka.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kain", "part": "ka", "en": "to eat" },
+      "en": { "word": "car", "part": "ca" }
+    }
   },
   {
     "id": "h-ki", "char": "き", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ki",
     "tip": null,
     "word": { "kana": "きっぷ", "kanji": "切符", "romaji": "kippu", "en": "ticket" },
-    "audio": { "char": "audio/char/h-ki.mp3", "word": "audio/word/h-ki.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kilay", "part": "ki", "en": "eyebrow" },
+      "en": { "word": "key", "part": "key" }
+    }
   },
   {
     "id": "h-ku", "char": "く", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ku",
     "tip": null,
     "word": { "kana": "くるま", "kanji": "車", "romaji": "kuruma", "en": "car" },
-    "audio": { "char": "audio/char/h-ku.mp3", "word": "audio/word/h-ku.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kulay", "part": "ku", "en": "color" },
+      "en": { "word": "cool", "part": "coo" }
+    }
   },
   {
     "id": "h-ke", "char": "け", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ke",
     "tip": null,
     "word": { "kana": "けいたい", "kanji": "携帯", "romaji": "keitai", "en": "mobile phone" },
-    "audio": { "char": "audio/char/h-ke.mp3", "word": "audio/word/h-ke.mp3" }
+    "soundsLike": {
+      "fil": { "word": "keso", "part": "ke", "en": "cheese" },
+      "en": { "word": "kept", "part": "ke" }
+    }
   },
   {
     "id": "h-ko", "char": "こ", "script": "hiragana", "stage": 1, "row": "ka", "romaji": "ko",
     "tip": null,
     "word": { "kana": "こども", "kanji": "子供", "romaji": "kodomo", "en": "child" },
-    "audio": { "char": "audio/char/h-ko.mp3", "word": "audio/word/h-ko.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kotse", "part": "ko", "en": "car" },
+      "en": { "word": "coat", "part": "co" }
+    }
   },
 
   {
     "id": "h-sa", "char": "さ", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "sa",
     "tip": null,
     "word": { "kana": "さくら", "kanji": "桜", "romaji": "sakura", "en": "cherry blossom" },
-    "audio": { "char": "audio/char/h-sa.mp3", "word": "audio/word/h-sa.mp3" }
+    "soundsLike": {
+      "fil": { "word": "saging", "part": "sa", "en": "banana" },
+      "en": { "word": "salsa", "part": "sa" }
+    }
   },
   {
     "id": "h-shi", "char": "し", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "shi",
     "tip": "Said 'shi' like English 'she', not 'si'.",
     "word": { "kana": "しお", "kanji": "塩", "romaji": "shio", "en": "salt" },
-    "audio": { "char": "audio/char/h-shi.mp3", "word": "audio/word/h-shi.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "she", "part": "she" }
+    }
   },
   {
     "id": "h-su", "char": "す", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "su",
     "tip": "The 'u' is often very soft, so it can sound almost like just 's'.",
     "word": { "kana": "すし", "kanji": "寿司", "romaji": "sushi", "en": "sushi" },
-    "audio": { "char": "audio/char/h-su.mp3", "word": "audio/word/h-su.mp3" }
+    "soundsLike": {
+      "fil": { "word": "susi", "part": "su", "en": "key" },
+      "en": { "word": "soup", "part": "sou" }
+    }
   },
   {
     "id": "h-se", "char": "せ", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "se",
     "tip": null,
     "word": { "kana": "せんせい", "kanji": "先生", "romaji": "sensei", "en": "teacher" },
-    "audio": { "char": "audio/char/h-se.mp3", "word": "audio/word/h-se.mp3" }
+    "soundsLike": {
+      "fil": { "word": "sepilyo", "part": "se", "en": "toothbrush" },
+      "en": { "word": "set", "part": "se" }
+    }
   },
   {
     "id": "h-so", "char": "そ", "script": "hiragana", "stage": 1, "row": "sa", "romaji": "so",
     "tip": null,
     "word": { "kana": "そら", "kanji": "空", "romaji": "sora", "en": "sky" },
-    "audio": { "char": "audio/char/h-so.mp3", "word": "audio/word/h-so.mp3" }
+    "soundsLike": {
+      "fil": { "word": "sobre", "part": "so", "en": "envelope" },
+      "en": { "word": "soap", "part": "so" }
+    }
   },
 
   {
     "id": "h-ta", "char": "た", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "ta",
     "tip": null,
     "word": { "kana": "たまご", "kanji": "卵", "romaji": "tamago", "en": "egg" },
-    "audio": { "char": "audio/char/h-ta.mp3", "word": "audio/word/h-ta.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tao", "part": "ta", "en": "person" },
+      "en": { "word": "taco", "part": "ta" }
+    }
   },
   {
     "id": "h-chi", "char": "ち", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "chi",
     "tip": "Said 'chi' like the start of English 'cheese', not 'ti'.",
     "word": { "kana": "ちず", "kanji": "地図", "romaji": "chizu", "en": "map" },
-    "audio": { "char": "audio/char/h-chi.mp3", "word": "audio/word/h-chi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tsinelas", "part": "tsi", "en": "slippers" },
+      "en": { "word": "cheese", "part": "chee" }
+    }
   },
   {
     "id": "h-tsu", "char": "つ", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "tsu",
     "tip": "Starts with 'ts' as in English 'cats', then a soft 'u'. Not 'tu'.",
     "word": { "kana": "つくえ", "kanji": "机", "romaji": "tsukue", "en": "desk" },
-    "audio": { "char": "audio/char/h-tsu.mp3", "word": "audio/word/h-tsu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "tsunami", "part": "tsu" }
+    }
   },
   {
     "id": "h-te", "char": "て", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "te",
     "tip": null,
     "word": { "kana": "てら", "kanji": "寺", "romaji": "tera", "en": "temple (Buddhist)" },
-    "audio": { "char": "audio/char/h-te.mp3", "word": "audio/word/h-te.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tela", "part": "te", "en": "cloth" },
+      "en": { "word": "ten", "part": "te" }
+    }
   },
   {
     "id": "h-to", "char": "と", "script": "hiragana", "stage": 1, "row": "ta", "romaji": "to",
     "tip": null,
     "word": { "kana": "とけい", "kanji": "時計", "romaji": "tokei", "en": "clock, watch" },
-    "audio": { "char": "audio/char/h-to.mp3", "word": "audio/word/h-to.mp3" }
+    "soundsLike": {
+      "fil": { "word": "toyo", "part": "to", "en": "soy sauce" },
+      "en": { "word": "toe", "part": "to" }
+    }
   },
 
   {
     "id": "h-na", "char": "な", "script": "hiragana", "stage": 1, "row": "na", "romaji": "na",
     "tip": null,
     "word": { "kana": "なつ", "kanji": "夏", "romaji": "natsu", "en": "summer" },
-    "audio": { "char": "audio/char/h-na.mp3", "word": "audio/word/h-na.mp3" }
+    "soundsLike": {
+      "fil": { "word": "nanay", "part": "na", "en": "mother" },
+      "en": { "word": "nachos", "part": "na" }
+    }
   },
   {
     "id": "h-ni", "char": "に", "script": "hiragana", "stage": 1, "row": "na", "romaji": "ni",
     "tip": null,
     "word": { "kana": "にく", "kanji": "肉", "romaji": "niku", "en": "meat" },
-    "audio": { "char": "audio/char/h-ni.mp3", "word": "audio/word/h-ni.mp3" }
+    "soundsLike": {
+      "fil": { "word": "nipa", "part": "ni", "en": "nipa palm" },
+      "en": { "word": "knee", "part": "knee" }
+    }
   },
   {
     "id": "h-nu", "char": "ぬ", "script": "hiragana", "stage": 1, "row": "na", "romaji": "nu",
     "tip": null,
     "word": { "kana": "ぬいぐるみ", "kanji": null, "romaji": "nuigurumi", "en": "stuffed toy" },
-    "audio": { "char": "audio/char/h-nu.mp3", "word": "audio/word/h-nu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "numero", "part": "nu", "en": "number" },
+      "en": { "word": "noodle", "part": "noo" }
+    }
   },
   {
     "id": "h-ne", "char": "ね", "script": "hiragana", "stage": 1, "row": "na", "romaji": "ne",
     "tip": null,
     "word": { "kana": "ねこ", "kanji": "猫", "romaji": "neko", "en": "cat" },
-    "audio": { "char": "audio/char/h-ne.mp3", "word": "audio/word/h-ne.mp3" }
+    "soundsLike": {
+      "fil": { "word": "negosyo", "part": "ne", "en": "business" },
+      "en": { "word": "net", "part": "ne" }
+    }
   },
   {
     "id": "h-no", "char": "の", "script": "hiragana", "stage": 1, "row": "na", "romaji": "no",
     "tip": null,
     "word": { "kana": "のみもの", "kanji": "飲み物", "romaji": "nomimono", "en": "drink" },
-    "audio": { "char": "audio/char/h-no.mp3", "word": "audio/word/h-no.mp3" }
+    "soundsLike": {
+      "fil": { "word": "nobyo", "part": "no", "en": "boyfriend" },
+      "en": { "word": "note", "part": "no" }
+    }
   },
 
   {
     "id": "h-ha", "char": "は", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "ha",
     "tip": "When は is used as a grammar particle it is read 'wa'.",
     "word": { "kana": "はし", "kanji": "箸", "romaji": "hashi", "en": "chopsticks" },
-    "audio": { "char": "audio/char/h-ha.mp3", "word": "audio/word/h-ha.mp3" }
+    "soundsLike": {
+      "fil": { "word": "hapon", "part": "ha", "en": "afternoon; also 'Japan'" },
+      "en": { "word": "haha", "part": "ha" }
+    }
   },
   {
     "id": "h-hi", "char": "ひ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "hi",
     "tip": "A little breathier than English 'he'.",
     "word": { "kana": "ひだり", "kanji": "左", "romaji": "hidari", "en": "left (direction)" },
-    "audio": { "char": "audio/char/h-hi.mp3", "word": "audio/word/h-hi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "hipon", "part": "hi", "en": "shrimp" },
+      "en": { "word": "heat", "part": "hea" }
+    }
   },
   {
     "id": "h-fu", "char": "ふ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "fu",
     "tip": "Between 'f' and 'h': blow softly through the lips, teeth do not touch the lip.",
     "word": { "kana": "ふね", "kanji": "船", "romaji": "fune", "en": "boat, ship" },
-    "audio": { "char": "audio/char/h-fu.mp3", "word": "audio/word/h-fu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "food", "part": "foo" }
+    }
   },
   {
     "id": "h-he", "char": "へ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "he",
     "tip": "When へ is used as a grammar particle ('to', a direction) it is read 'e'.",
     "word": { "kana": "へや", "kanji": "部屋", "romaji": "heya", "en": "room" },
-    "audio": { "char": "audio/char/h-he.mp3", "word": "audio/word/h-he.mp3" }
+    "soundsLike": {
+      "fil": { "word": "heto", "part": "he", "en": "here it is" },
+      "en": { "word": "help", "part": "he" }
+    }
   },
   {
     "id": "h-ho", "char": "ほ", "script": "hiragana", "stage": 1, "row": "ha", "romaji": "ho",
     "tip": null,
     "word": { "kana": "ほん", "kanji": "本", "romaji": "hon", "en": "book" },
-    "audio": { "char": "audio/char/h-ho.mp3", "word": "audio/word/h-ho.mp3" }
+    "soundsLike": {
+      "fil": { "word": "hoy", "part": "ho", "en": "hey!" },
+      "en": { "word": "hope", "part": "ho" }
+    }
   },
 
   {
     "id": "h-ma", "char": "ま", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "ma",
     "tip": null,
     "word": { "kana": "まど", "kanji": "窓", "romaji": "mado", "en": "window" },
-    "audio": { "char": "audio/char/h-ma.mp3", "word": "audio/word/h-ma.mp3" }
+    "soundsLike": {
+      "fil": { "word": "mata", "part": "ma", "en": "eye" },
+      "en": { "word": "mama", "part": "ma" }
+    }
   },
   {
     "id": "h-mi", "char": "み", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "mi",
     "tip": null,
     "word": { "kana": "みず", "kanji": "水", "romaji": "mizu", "en": "water" },
-    "audio": { "char": "audio/char/h-mi.mp3", "word": "audio/word/h-mi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "minsan", "part": "mi", "en": "sometimes" },
+      "en": { "word": "meet", "part": "mee" }
+    }
   },
   {
     "id": "h-mu", "char": "む", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "mu",
     "tip": null,
     "word": { "kana": "むし", "kanji": "虫", "romaji": "mushi", "en": "insect, bug" },
-    "audio": { "char": "audio/char/h-mu.mp3", "word": "audio/word/h-mu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "mukha", "part": "mu", "en": "face" },
+      "en": { "word": "moon", "part": "moo" }
+    }
   },
   {
     "id": "h-me", "char": "め", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "me",
     "tip": null,
     "word": { "kana": "めがね", "kanji": "眼鏡", "romaji": "megane", "en": "glasses (eyeglasses)" },
-    "audio": { "char": "audio/char/h-me.mp3", "word": "audio/word/h-me.mp3" }
+    "soundsLike": {
+      "fil": { "word": "mesa", "part": "me", "en": "table" },
+      "en": { "word": "met", "part": "me" }
+    }
   },
   {
     "id": "h-mo", "char": "も", "script": "hiragana", "stage": 1, "row": "ma", "romaji": "mo",
     "tip": null,
     "word": { "kana": "もも", "kanji": "桃", "romaji": "momo", "en": "peach" },
-    "audio": { "char": "audio/char/h-mo.mp3", "word": "audio/word/h-mo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "motor", "part": "mo", "en": "motorcycle" },
+      "en": { "word": "motor", "part": "mo" }
+    }
   },
 
   {
     "id": "h-ya", "char": "や", "script": "hiragana", "stage": 1, "row": "ya", "romaji": "ya",
     "tip": null,
     "word": { "kana": "やま", "kanji": "山", "romaji": "yama", "en": "mountain" },
-    "audio": { "char": "audio/char/h-ya.mp3", "word": "audio/word/h-ya.mp3" }
+    "soundsLike": {
+      "fil": { "word": "yaman", "part": "ya", "en": "wealth" },
+      "en": { "word": "yacht", "part": "ya" }
+    }
   },
   {
     "id": "h-yu", "char": "ゆ", "script": "hiragana", "stage": 1, "row": "ya", "romaji": "yu",
     "tip": null,
     "word": { "kana": "ゆき", "kanji": "雪", "romaji": "yuki", "en": "snow" },
-    "audio": { "char": "audio/char/h-yu.mp3", "word": "audio/word/h-yu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "you", "part": "you" }
+    }
   },
   {
     "id": "h-yo", "char": "よ", "script": "hiragana", "stage": 1, "row": "ya", "romaji": "yo",
     "tip": null,
     "word": { "kana": "よる", "kanji": "夜", "romaji": "yoru", "en": "night" },
-    "audio": { "char": "audio/char/h-yo.mp3", "word": "audio/word/h-yo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "yoyo", "part": "yo", "en": "yo-yo" },
+      "en": { "word": "yoga", "part": "yo" }
+    }
   },
 
   {
     "id": "h-ra", "char": "ら", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ra",
     "tip": "Japanese 'r' is a light tap of the tongue, close to the Tagalog 'r' in 'araw'.",
     "word": { "kana": "らいねん", "kanji": "来年", "romaji": "rainen", "en": "next year" },
-    "audio": { "char": "audio/char/h-ra.mp3", "word": "audio/word/h-ra.mp3" }
+    "soundsLike": {
+      "fil": { "word": "radyo", "part": "ra", "en": "radio" },
+      "en": null
+    }
   },
   {
     "id": "h-ri", "char": "り", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ri",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "りんご", "kanji": "林檎", "romaji": "ringo", "en": "apple" },
-    "audio": { "char": "audio/char/h-ri.mp3", "word": "audio/word/h-ri.mp3" }
+    "soundsLike": {
+      "fil": { "word": "rito", "part": "ri", "en": "here" },
+      "en": null
+    }
   },
   {
     "id": "h-ru", "char": "る", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ru",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "はる", "kanji": "春", "romaji": "haru", "en": "spring (season)" },
-    "audio": { "char": "audio/char/h-ru.mp3", "word": "audio/word/h-ru.mp3" }
+    "soundsLike": {
+      "fil": { "word": "ruta", "part": "ru", "en": "route" },
+      "en": null
+    }
   },
   {
     "id": "h-re", "char": "れ", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "re",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "れきし", "kanji": "歴史", "romaji": "rekishi", "en": "history" },
-    "audio": { "char": "audio/char/h-re.mp3", "word": "audio/word/h-re.mp3" }
+    "soundsLike": {
+      "fil": { "word": "relo", "part": "re", "en": "watch (clock)" },
+      "en": null
+    }
   },
   {
     "id": "h-ro", "char": "ろ", "script": "hiragana", "stage": 1, "row": "ra", "romaji": "ro",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "ろく", "kanji": "六", "romaji": "roku", "en": "six" },
-    "audio": { "char": "audio/char/h-ro.mp3", "word": "audio/word/h-ro.mp3" }
+    "soundsLike": {
+      "fil": { "word": "rosas", "part": "ro", "en": "rose" },
+      "en": null
+    }
   },
 
   {
     "id": "h-wa", "char": "わ", "script": "hiragana", "stage": 1, "row": "wa", "romaji": "wa",
     "tip": null,
     "word": { "kana": "わたし", "kanji": "私", "romaji": "watashi", "en": "I, me" },
-    "audio": { "char": "audio/char/h-wa.mp3", "word": "audio/word/h-wa.mp3" }
+    "soundsLike": {
+      "fil": { "word": "wala", "part": "wa", "en": "none, nothing" },
+      "en": { "word": "watt", "part": "wa" }
+    }
   },
   {
     "id": "h-wo", "char": "を", "script": "hiragana", "stage": 1, "row": "wa", "romaji": "o",
     "tip": "Sounds the same as お (o); sometimes written 'wo'. Only used as a grammar particle that marks the object of a verb.",
     "word": { "kana": "みずをのむ", "kanji": "水を飲む", "romaji": "mizu o nomu", "en": "to drink water" },
-    "audio": { "char": "audio/char/h-wo.mp3", "word": "audio/word/h-wo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "oras", "part": "o", "en": "time, hour" },
+      "en": { "word": "go", "part": "o" }
+    }
   },
 
   {
     "id": "h-n", "char": "ん", "script": "hiragana", "stage": 1, "row": "n", "romaji": "n",
     "tip": "A nasal sound on its own beat. Before k or g it sounds like Tagalog 'ng'.",
     "word": { "kana": "にほん", "kanji": "日本", "romaji": "Nihon", "en": "Japan" },
-    "audio": { "char": "audio/char/h-n.mp3", "word": "audio/word/h-n.mp3" }
+    "soundsLike": {
+      "fil": { "word": "hindi", "part": "n", "en": "no, not" },
+      "en": { "word": "pen", "part": "n" }
+    }
   },
 
   {
     "id": "h-ga", "char": "が", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "ga",
     "tip": "The two small marks (dakuten) turn か into が: k becomes g.",
     "word": { "kana": "がっこう", "kanji": "学校", "romaji": "gakkō", "en": "school" },
-    "audio": { "char": "audio/char/h-ga.mp3", "word": "audio/word/h-ga.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gatas", "part": "ga", "en": "milk" },
+      "en": { "word": "gala", "part": "ga" }
+    }
   },
   {
     "id": "h-gi", "char": "ぎ", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "gi",
     "tip": null,
     "word": { "kana": "ぎんこう", "kanji": "銀行", "romaji": "ginkō", "en": "bank" },
-    "audio": { "char": "audio/char/h-gi.mp3", "word": "audio/word/h-gi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gising", "part": "gi", "en": "awake" },
+      "en": { "word": "geese", "part": "gee" }
+    }
   },
   {
     "id": "h-gu", "char": "ぐ", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "gu",
     "tip": null,
     "word": { "kana": "ぐあい", "kanji": "具合", "romaji": "guai", "en": "condition (how you feel)" },
-    "audio": { "char": "audio/char/h-gu.mp3", "word": "audio/word/h-gu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gulay", "part": "gu", "en": "vegetables" },
+      "en": { "word": "goose", "part": "goo" }
+    }
   },
   {
     "id": "h-ge", "char": "げ", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "ge",
     "tip": null,
     "word": { "kana": "げんき", "kanji": "元気", "romaji": "genki", "en": "healthy, energetic" },
-    "audio": { "char": "audio/char/h-ge.mp3", "word": "audio/word/h-ge.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gera", "part": "ge", "en": "war" },
+      "en": { "word": "get", "part": "ge" }
+    }
   },
   {
     "id": "h-go", "char": "ご", "script": "hiragana", "stage": 2, "row": "ga", "romaji": "go",
     "tip": null,
     "word": { "kana": "ごはん", "kanji": "ご飯", "romaji": "gohan", "en": "cooked rice; meal" },
-    "audio": { "char": "audio/char/h-go.mp3", "word": "audio/word/h-go.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gobyerno", "part": "go", "en": "government" },
+      "en": { "word": "go", "part": "go" }
+    }
   },
 
   {
     "id": "h-za", "char": "ざ", "script": "hiragana", "stage": 2, "row": "za", "romaji": "za",
     "tip": "The dakuten turns さ into ざ: s becomes z. Keep it buzzing like English 'zoo', not 's'.",
     "word": { "kana": "ざっし", "kanji": "雑誌", "romaji": "zasshi", "en": "magazine" },
-    "audio": { "char": "audio/char/h-za.mp3", "word": "audio/word/h-za.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "bazaar", "part": "za" }
+    }
   },
   {
     "id": "h-ji", "char": "じ", "script": "hiragana", "stage": 2, "row": "za", "romaji": "ji",
     "tip": "Like the 'j' in English 'jeep'. Sounds the same as ぢ.",
     "word": { "kana": "じかん", "kanji": "時間", "romaji": "jikan", "en": "time" },
-    "audio": { "char": "audio/char/h-ji.mp3", "word": "audio/word/h-ji.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyip", "part": "dyi", "en": "jeepney" },
+      "en": { "word": "jeep", "part": "jee" }
+    }
   },
   {
     "id": "h-zu", "char": "ず", "script": "hiragana", "stage": 2, "row": "za", "romaji": "zu",
     "tip": "Sounds the same as づ.",
     "word": { "kana": "ずつう", "kanji": "頭痛", "romaji": "zutsū", "en": "headache" },
-    "audio": { "char": "audio/char/h-zu.mp3", "word": "audio/word/h-zu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "zoo", "part": "zoo" }
+    }
   },
   {
     "id": "h-ze", "char": "ぜ", "script": "hiragana", "stage": 2, "row": "za", "romaji": "ze",
     "tip": null,
     "word": { "kana": "ぜんぶ", "kanji": "全部", "romaji": "zenbu", "en": "all, everything" },
-    "audio": { "char": "audio/char/h-ze.mp3", "word": "audio/word/h-ze.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "zest", "part": "ze" }
+    }
   },
   {
     "id": "h-zo", "char": "ぞ", "script": "hiragana", "stage": 2, "row": "za", "romaji": "zo",
     "tip": null,
     "word": { "kana": "ぞう", "kanji": "象", "romaji": "zō", "en": "elephant" },
-    "audio": { "char": "audio/char/h-zo.mp3", "word": "audio/word/h-zo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "zone", "part": "zo" }
+    }
   },
 
   {
     "id": "h-da", "char": "だ", "script": "hiragana", "stage": 2, "row": "da", "romaji": "da",
     "tip": "The dakuten turns た into だ: t becomes d.",
     "word": { "kana": "だいがく", "kanji": "大学", "romaji": "daigaku", "en": "university" },
-    "audio": { "char": "audio/char/h-da.mp3", "word": "audio/word/h-da.mp3" }
+    "soundsLike": {
+      "fil": { "word": "daga", "part": "da", "en": "rat, mouse" },
+      "en": { "word": "dada", "part": "da" }
+    }
   },
   {
     "id": "h-di", "char": "ぢ", "script": "hiragana", "stage": 2, "row": "da", "romaji": "ji",
     "tip": "Sounds the same as じ (ji) and is rarely used. You mostly see it when ち becomes voiced, as in はな + ち → はなぢ.",
     "word": { "kana": "はなぢ", "kanji": "鼻血", "romaji": "hanaji", "en": "nosebleed" },
-    "audio": { "char": "audio/char/h-di.mp3", "word": "audio/word/h-di.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyip", "part": "dyi", "en": "jeepney" },
+      "en": { "word": "jeep", "part": "jee" }
+    }
   },
   {
     "id": "h-du", "char": "づ", "script": "hiragana", "stage": 2, "row": "da", "romaji": "zu",
     "tip": "Sounds the same as ず (zu) and is rarely used. You mostly see it when つ becomes voiced, as in つづく.",
     "word": { "kana": "つづく", "kanji": "続く", "romaji": "tsuzuku", "en": "to continue" },
-    "audio": { "char": "audio/char/h-du.mp3", "word": "audio/word/h-du.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "zoo", "part": "zoo" }
+    }
   },
   {
     "id": "h-de", "char": "で", "script": "hiragana", "stage": 2, "row": "da", "romaji": "de",
     "tip": null,
     "word": { "kana": "でぐち", "kanji": "出口", "romaji": "deguchi", "en": "exit" },
-    "audio": { "char": "audio/char/h-de.mp3", "word": "audio/word/h-de.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dentista", "part": "de", "en": "dentist" },
+      "en": { "word": "desk", "part": "de" }
+    }
   },
   {
     "id": "h-do", "char": "ど", "script": "hiragana", "stage": 2, "row": "da", "romaji": "do",
     "tip": null,
     "word": { "kana": "どこ", "kanji": null, "romaji": "doko", "en": "where" },
-    "audio": { "char": "audio/char/h-do.mp3", "word": "audio/word/h-do.mp3" }
+    "soundsLike": {
+      "fil": { "word": "doktor", "part": "do", "en": "doctor" },
+      "en": { "word": "dome", "part": "do" }
+    }
   },
 
   {
     "id": "h-ba", "char": "ば", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "ba",
     "tip": "The dakuten turns は into ば: h becomes b.",
     "word": { "kana": "ばしょ", "kanji": "場所", "romaji": "basho", "en": "place" },
-    "audio": { "char": "audio/char/h-ba.mp3", "word": "audio/word/h-ba.mp3" }
+    "soundsLike": {
+      "fil": { "word": "bata", "part": "ba", "en": "child" },
+      "en": { "word": "bar", "part": "ba" }
+    }
   },
   {
     "id": "h-bi", "char": "び", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "bi",
     "tip": null,
     "word": { "kana": "びん", "kanji": "瓶", "romaji": "bin", "en": "bottle" },
-    "audio": { "char": "audio/char/h-bi.mp3", "word": "audio/word/h-bi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "bigas", "part": "bi", "en": "uncooked rice" },
+      "en": { "word": "bee", "part": "bee" }
+    }
   },
   {
     "id": "h-bu", "char": "ぶ", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "bu",
     "tip": null,
     "word": { "kana": "ぶた", "kanji": "豚", "romaji": "buta", "en": "pig; pork" },
-    "audio": { "char": "audio/char/h-bu.mp3", "word": "audio/word/h-bu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "buhok", "part": "bu", "en": "hair" },
+      "en": { "word": "boot", "part": "boo" }
+    }
   },
   {
     "id": "h-be", "char": "べ", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "be",
     "tip": null,
     "word": { "kana": "べんとう", "kanji": "弁当", "romaji": "bentō", "en": "boxed lunch (bento)" },
-    "audio": { "char": "audio/char/h-be.mp3", "word": "audio/word/h-be.mp3" }
+    "soundsLike": {
+      "fil": { "word": "berde", "part": "be", "en": "green" },
+      "en": { "word": "bed", "part": "be" }
+    }
   },
   {
     "id": "h-bo", "char": "ぼ", "script": "hiragana", "stage": 2, "row": "ba", "romaji": "bo",
     "tip": null,
     "word": { "kana": "ぼうし", "kanji": "帽子", "romaji": "bōshi", "en": "hat, cap" },
-    "audio": { "char": "audio/char/h-bo.mp3", "word": "audio/word/h-bo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "bola", "part": "bo", "en": "ball" },
+      "en": { "word": "boat", "part": "bo" }
+    }
   },
 
   {
     "id": "h-pa", "char": "ぱ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "pa",
     "tip": "The small circle (handakuten) turns は into ぱ: h becomes p.",
     "word": { "kana": "かんぱい", "kanji": "乾杯", "romaji": "kanpai", "en": "cheers! (a toast)" },
-    "audio": { "char": "audio/char/h-pa.mp3", "word": "audio/word/h-pa.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pagkain", "part": "pa", "en": "food" },
+      "en": { "word": "pasta", "part": "pa" }
+    }
   },
   {
     "id": "h-pi", "char": "ぴ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "pi",
     "tip": null,
     "word": { "kana": "えんぴつ", "kanji": "鉛筆", "romaji": "enpitsu", "en": "pencil" },
-    "audio": { "char": "audio/char/h-pi.mp3", "word": "audio/word/h-pi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pito", "part": "pi", "en": "seven; whistle" },
+      "en": { "word": "peace", "part": "pea" }
+    }
   },
   {
     "id": "h-pu", "char": "ぷ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "pu",
     "tip": null,
     "word": { "kana": "てんぷら", "kanji": "天ぷら", "romaji": "tenpura", "en": "tempura (battered, fried food)" },
-    "audio": { "char": "audio/char/h-pu.mp3", "word": "audio/word/h-pu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "puso", "part": "pu", "en": "heart" },
+      "en": { "word": "pool", "part": "poo" }
+    }
   },
   {
     "id": "h-pe", "char": "ぺ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "pe",
     "tip": null,
     "word": { "kana": "ぺこぺこ", "kanji": null, "romaji": "pekopeko", "en": "starving, very hungry" },
-    "audio": { "char": "audio/char/h-pe.mp3", "word": "audio/word/h-pe.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pera", "part": "pe", "en": "money" },
+      "en": { "word": "pet", "part": "pe" }
+    }
   },
   {
     "id": "h-po", "char": "ぽ", "script": "hiragana", "stage": 2, "row": "pa", "romaji": "po",
     "tip": null,
     "word": { "kana": "さんぽ", "kanji": "散歩", "romaji": "sanpo", "en": "a walk, stroll" },
-    "audio": { "char": "audio/char/h-po.mp3", "word": "audio/word/h-po.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pogi", "part": "po", "en": "handsome" },
+      "en": { "word": "post", "part": "po" }
+    }
   },
 
   {
     "id": "h-kya", "char": "きゃ", "script": "hiragana", "stage": 3, "row": "kya", "romaji": "kya",
     "tip": "The small ゃ joins the first kana into one beat: say it as one sound, not two. き + ゃ = kya, not ki-ya.",
     "word": { "kana": "きゃく", "kanji": "客", "romaji": "kyaku", "en": "guest, customer" },
-    "audio": { "char": "audio/char/h-kya.mp3", "word": "audio/word/h-kya.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pakyaw", "part": "kya", "en": "buying in bulk" },
+      "en": null,
+      "blend": "き (ki) + や (ya)"
+    }
   },
   {
     "id": "h-kyu", "char": "きゅ", "script": "hiragana", "stage": 3, "row": "kya", "romaji": "kyu",
     "tip": null,
     "word": { "kana": "きゅうり", "kanji": "胡瓜", "romaji": "kyūri", "en": "cucumber" },
-    "audio": { "char": "audio/char/h-kyu.mp3", "word": "audio/word/h-kyu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "cute", "part": "cu" },
+      "blend": "き (ki) + ゆ (yu)"
+    }
   },
   {
     "id": "h-kyo", "char": "きょ", "script": "hiragana", "stage": 3, "row": "kya", "romaji": "kyo",
     "tip": null,
     "word": { "kana": "きょう", "kanji": "今日", "romaji": "kyō", "en": "today" },
-    "audio": { "char": "audio/char/h-kyo.mp3", "word": "audio/word/h-kyo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "Tokyo", "part": "kyo" },
+      "blend": "き (ki) + よ (yo)"
+    }
   },
 
   {
     "id": "h-sha", "char": "しゃ", "script": "hiragana", "stage": 3, "row": "sha", "romaji": "sha",
     "tip": "Like Tagalog 'siya' said fast, as 'sha'.",
     "word": { "kana": "しゃしん", "kanji": "写真", "romaji": "shashin", "en": "photo" },
-    "audio": { "char": "audio/char/h-sha.mp3", "word": "audio/word/h-sha.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "shark", "part": "sha" },
+      "blend": "し (shi) + や (ya)"
+    }
   },
   {
     "id": "h-shu", "char": "しゅ", "script": "hiragana", "stage": 3, "row": "sha", "romaji": "shu",
     "tip": null,
     "word": { "kana": "しゅくだい", "kanji": "宿題", "romaji": "shukudai", "en": "homework" },
-    "audio": { "char": "audio/char/h-shu.mp3", "word": "audio/word/h-shu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "shoe", "part": "shoe" },
+      "blend": "し (shi) + ゆ (yu)"
+    }
   },
   {
     "id": "h-sho", "char": "しょ", "script": "hiragana", "stage": 3, "row": "sha", "romaji": "sho",
     "tip": null,
     "word": { "kana": "しょうゆ", "kanji": "醤油", "romaji": "shōyu", "en": "soy sauce" },
-    "audio": { "char": "audio/char/h-sho.mp3", "word": "audio/word/h-sho.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "show", "part": "sho" },
+      "blend": "し (shi) + よ (yo)"
+    }
   },
 
   {
     "id": "h-cha", "char": "ちゃ", "script": "hiragana", "stage": 3, "row": "cha", "romaji": "cha",
     "tip": "Like 'cha' in English 'chat'.",
     "word": { "kana": "ちゃわん", "kanji": "茶碗", "romaji": "chawan", "en": "rice bowl" },
-    "audio": { "char": "audio/char/h-cha.mp3", "word": "audio/word/h-cha.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tsaa", "part": "tsa", "en": "tea" },
+      "en": { "word": "cha-cha", "part": "cha" },
+      "blend": "ち (chi) + や (ya)"
+    }
   },
   {
     "id": "h-chu", "char": "ちゅ", "script": "hiragana", "stage": 3, "row": "cha", "romaji": "chu",
     "tip": null,
     "word": { "kana": "ちゅうい", "kanji": "注意", "romaji": "chūi", "en": "caution, attention (seen on signs)" },
-    "audio": { "char": "audio/char/h-chu.mp3", "word": "audio/word/h-chu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "choose", "part": "choo" },
+      "blend": "ち (chi) + ゆ (yu)"
+    }
   },
   {
     "id": "h-cho", "char": "ちょ", "script": "hiragana", "stage": 3, "row": "cha", "romaji": "cho",
     "tip": null,
     "word": { "kana": "ちょっと", "kanji": null, "romaji": "chotto", "en": "a little; just a moment" },
-    "audio": { "char": "audio/char/h-cho.mp3", "word": "audio/word/h-cho.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tsokolate", "part": "tso", "en": "chocolate" },
+      "en": { "word": "choke", "part": "cho" },
+      "blend": "ち (chi) + よ (yo)"
+    }
   },
 
   {
     "id": "h-nya", "char": "にゃ", "script": "hiragana", "stage": 3, "row": "nya", "romaji": "nya",
     "tip": "Like the 'ña' in the name 'Niña': n + ya in one beat.",
     "word": { "kana": "こんにゃく", "kanji": "蒟蒻", "romaji": "konnyaku", "en": "konnyaku (konjac, a firm jelly food)" },
-    "audio": { "char": "audio/char/h-nya.mp3", "word": "audio/word/h-nya.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kanya", "part": "nya", "en": "his, hers" },
+      "en": null,
+      "blend": "に (ni) + や (ya)"
+    }
   },
   {
     "id": "h-nyu", "char": "にゅ", "script": "hiragana", "stage": 3, "row": "nya", "romaji": "nyu",
     "tip": null,
     "word": { "kana": "にゅういん", "kanji": "入院", "romaji": "nyūin", "en": "being admitted to hospital" },
-    "audio": { "char": "audio/char/h-nyu.mp3", "word": "audio/word/h-nyu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "menu", "part": "nu" },
+      "blend": "に (ni) + ゆ (yu)"
+    }
   },
   {
     "id": "h-nyo", "char": "にょ", "script": "hiragana", "stage": 3, "row": "nya", "romaji": "nyo",
     "tip": null,
     "word": { "kana": "にょろにょろ", "kanji": null, "romaji": "nyoronyoro", "en": "wriggling (like a snake)" },
-    "audio": { "char": "audio/char/h-nyo.mp3", "word": "audio/word/h-nyo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "niyog", "part": "niyo", "en": "coconut" },
+      "en": null,
+      "blend": "に (ni) + よ (yo)"
+    }
   },
 
   {
     "id": "h-hya", "char": "ひゃ", "script": "hiragana", "stage": 3, "row": "hya", "romaji": "hya",
     "tip": null,
     "word": { "kana": "ひゃく", "kanji": "百", "romaji": "hyaku", "en": "one hundred" },
-    "audio": { "char": "audio/char/h-hya.mp3", "word": "audio/word/h-hya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ひ (hi) + や (ya)"
+    }
   },
   {
     "id": "h-hyu", "char": "ひゅ", "script": "hiragana", "stage": 3, "row": "hya", "romaji": "hyu",
     "tip": null,
     "word": { "kana": "ひゅうひゅう", "kanji": null, "romaji": "hyūhyū", "en": "whoosh (sound of strong wind)" },
-    "audio": { "char": "audio/char/h-hyu.mp3", "word": "audio/word/h-hyu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "huge", "part": "hu" },
+      "blend": "ひ (hi) + ゆ (yu)"
+    }
   },
   {
     "id": "h-hyo", "char": "ひょ", "script": "hiragana", "stage": 3, "row": "hya", "romaji": "hyo",
     "tip": null,
     "word": { "kana": "ひょうしき", "kanji": "標識", "romaji": "hyōshiki", "en": "sign (road sign, signpost)" },
-    "audio": { "char": "audio/char/h-hyo.mp3", "word": "audio/word/h-hyo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ひ (hi) + よ (yo)"
+    }
   },
 
   {
     "id": "h-mya", "char": "みゃ", "script": "hiragana", "stage": 3, "row": "mya", "romaji": "mya",
     "tip": null,
     "word": { "kana": "みゃく", "kanji": "脈", "romaji": "myaku", "en": "pulse" },
-    "audio": { "char": "audio/char/h-mya.mp3", "word": "audio/word/h-mya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "Myanmar", "part": "Mya" },
+      "blend": "み (mi) + や (ya)"
+    }
   },
   {
     "id": "h-myu", "char": "みゅ", "script": "hiragana", "stage": 3, "row": "mya", "romaji": "myu",
     "tip": null,
     "word": { "kana": "ミュージック", "kanji": null, "romaji": "myūjikku", "en": "music" },
-    "audio": { "char": "audio/char/h-myu.mp3", "word": "audio/word/h-myu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "music", "part": "mu" },
+      "blend": "み (mi) + ゆ (yu)"
+    }
   },
   {
     "id": "h-myo", "char": "みょ", "script": "hiragana", "stage": 3, "row": "mya", "romaji": "myo",
     "tip": null,
     "word": { "kana": "みょうじ", "kanji": "名字", "romaji": "myōji", "en": "family name, surname" },
-    "audio": { "char": "audio/char/h-myo.mp3", "word": "audio/word/h-myo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "み (mi) + よ (yo)"
+    }
   },
 
   {
     "id": "h-rya", "char": "りゃ", "script": "hiragana", "stage": 3, "row": "rya", "romaji": "rya",
     "tip": "Light tapped 'r' (like Tagalog 'r') + 'ya', in one beat.",
     "word": { "kana": "りゃく", "kanji": "略", "romaji": "ryaku", "en": "abbreviation" },
-    "audio": { "char": "audio/char/h-rya.mp3", "word": "audio/word/h-rya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "り (ri) + や (ya)"
+    }
   },
   {
     "id": "h-ryu", "char": "りゅ", "script": "hiragana", "stage": 3, "row": "rya", "romaji": "ryu",
     "tip": null,
     "word": { "kana": "りゅう", "kanji": "竜", "romaji": "ryū", "en": "dragon" },
-    "audio": { "char": "audio/char/h-ryu.mp3", "word": "audio/word/h-ryu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "り (ri) + ゆ (yu)"
+    }
   },
   {
     "id": "h-ryo", "char": "りょ", "script": "hiragana", "stage": 3, "row": "rya", "romaji": "ryo",
     "tip": null,
     "word": { "kana": "りょこう", "kanji": "旅行", "romaji": "ryokō", "en": "travel, trip" },
-    "audio": { "char": "audio/char/h-ryo.mp3", "word": "audio/word/h-ryo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "り (ri) + よ (yo)"
+    }
   },
 
   {
     "id": "h-gya", "char": "ぎゃ", "script": "hiragana", "stage": 3, "row": "gya", "romaji": "gya",
     "tip": null,
     "word": { "kana": "ぎゃく", "kanji": "逆", "romaji": "gyaku", "en": "opposite, reverse" },
-    "audio": { "char": "audio/char/h-gya.mp3", "word": "audio/word/h-gya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ぎ (gi) + や (ya)"
+    }
   },
   {
     "id": "h-gyu", "char": "ぎゅ", "script": "hiragana", "stage": 3, "row": "gya", "romaji": "gyu",
     "tip": null,
     "word": { "kana": "ぎゅうどん", "kanji": "牛丼", "romaji": "gyūdon", "en": "beef rice bowl" },
-    "audio": { "char": "audio/char/h-gyu.mp3", "word": "audio/word/h-gyu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ぎ (gi) + ゆ (yu)"
+    }
   },
   {
     "id": "h-gyo", "char": "ぎょ", "script": "hiragana", "stage": 3, "row": "gya", "romaji": "gyo",
     "tip": null,
     "word": { "kana": "ぎょうざ", "kanji": "餃子", "romaji": "gyōza", "en": "gyoza (dumplings)" },
-    "audio": { "char": "audio/char/h-gyo.mp3", "word": "audio/word/h-gyo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ぎ (gi) + よ (yo)"
+    }
   },
 
   {
     "id": "h-ja", "char": "じゃ", "script": "hiragana", "stage": 3, "row": "ja", "romaji": "ja",
     "tip": "Like 'ja' in English 'jam'.",
     "word": { "kana": "じゃがいも", "kanji": null, "romaji": "jagaimo", "en": "potato" },
-    "audio": { "char": "audio/char/h-ja.mp3", "word": "audio/word/h-ja.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyaket", "part": "dya", "en": "jacket" },
+      "en": { "word": "jar", "part": "ja" },
+      "blend": "じ (ji) + や (ya)"
+    }
   },
   {
     "id": "h-ju", "char": "じゅ", "script": "hiragana", "stage": 3, "row": "ja", "romaji": "ju",
     "tip": null,
     "word": { "kana": "じゅうしょ", "kanji": "住所", "romaji": "jūsho", "en": "address" },
-    "audio": { "char": "audio/char/h-ju.mp3", "word": "audio/word/h-ju.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyus", "part": "dyu", "en": "juice" },
+      "en": { "word": "juice", "part": "ju" },
+      "blend": "じ (ji) + ゆ (yu)"
+    }
   },
   {
     "id": "h-jo", "char": "じょ", "script": "hiragana", "stage": 3, "row": "ja", "romaji": "jo",
     "tip": null,
     "word": { "kana": "じょうず", "kanji": "上手", "romaji": "jōzu", "en": "skillful, good at" },
-    "audio": { "char": "audio/char/h-jo.mp3", "word": "audio/word/h-jo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyosa", "part": "dyo", "en": "goddess" },
+      "en": { "word": "joke", "part": "jo" },
+      "blend": "じ (ji) + よ (yo)"
+    }
   },
 
   {
     "id": "h-bya", "char": "びゃ", "script": "hiragana", "stage": 3, "row": "bya", "romaji": "bya",
     "tip": null,
     "word": { "kana": "さんびゃく", "kanji": "三百", "romaji": "sanbyaku", "en": "three hundred" },
-    "audio": { "char": "audio/char/h-bya.mp3", "word": "audio/word/h-bya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "び (bi) + や (ya)"
+    }
   },
   {
     "id": "h-byu", "char": "びゅ", "script": "hiragana", "stage": 3, "row": "bya", "romaji": "byu",
     "tip": null,
     "word": { "kana": "ビュッフェ", "kanji": null, "romaji": "byuffe", "en": "buffet" },
-    "audio": { "char": "audio/char/h-byu.mp3", "word": "audio/word/h-byu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "beauty", "part": "beau" },
+      "blend": "び (bi) + ゆ (yu)"
+    }
   },
   {
     "id": "h-byo", "char": "びょ", "script": "hiragana", "stage": 3, "row": "bya", "romaji": "byo",
     "tip": null,
     "word": { "kana": "びょういん", "kanji": "病院", "romaji": "byōin", "en": "hospital" },
-    "audio": { "char": "audio/char/h-byo.mp3", "word": "audio/word/h-byo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "び (bi) + よ (yo)"
+    }
   },
 
   {
     "id": "h-pya", "char": "ぴゃ", "script": "hiragana", "stage": 3, "row": "pya", "romaji": "pya",
     "tip": null,
     "word": { "kana": "はっぴゃく", "kanji": "八百", "romaji": "happyaku", "en": "eight hundred" },
-    "audio": { "char": "audio/char/h-pya.mp3", "word": "audio/word/h-pya.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pyano", "part": "pya", "en": "piano" },
+      "en": null,
+      "blend": "ぴ (pi) + や (ya)"
+    }
   },
   {
     "id": "h-pyu", "char": "ぴゅ", "script": "hiragana", "stage": 3, "row": "pya", "romaji": "pyu",
     "tip": null,
     "word": { "kana": "コンピューター", "kanji": null, "romaji": "konpyūtā", "en": "computer" },
-    "audio": { "char": "audio/char/h-pyu.mp3", "word": "audio/word/h-pyu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kompyuter", "part": "pyu", "en": "computer" },
+      "en": { "word": "computer", "part": "pu" },
+      "blend": "ぴ (pi) + ゆ (yu)"
+    }
   },
   {
     "id": "h-pyo", "char": "ぴょ", "script": "hiragana", "stage": 3, "row": "pya", "romaji": "pyo",
     "tip": null,
     "word": { "kana": "ぴょんぴょん", "kanji": null, "romaji": "pyonpyon", "en": "hopping, boing boing" },
-    "audio": { "char": "audio/char/h-pyo.mp3", "word": "audio/word/h-pyo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ぴ (pi) + よ (yo)"
+    }
   },
 
   {
     "id": "k-a", "char": "ア", "script": "katakana", "stage": 1, "row": "a", "romaji": "a",
     "tip": "Like the 'a' in Tagalog 'aso'.",
     "word": { "kana": "アイス", "kanji": null, "romaji": "aisu", "en": "ice cream" },
-    "audio": { "char": "audio/char/k-a.mp3", "word": "audio/word/k-a.mp3" }
+    "soundsLike": {
+      "fil": { "word": "aso", "part": "a", "en": "dog" },
+      "en": { "word": "father", "part": "a" }
+    }
   },
   {
     "id": "k-i", "char": "イ", "script": "katakana", "stage": 1, "row": "a", "romaji": "i",
     "tip": "Like the 'i' in Tagalog 'ilog'.",
     "word": { "kana": "イヤホン", "kanji": null, "romaji": "iyahon", "en": "earphones" },
-    "audio": { "char": "audio/char/k-i.mp3", "word": "audio/word/k-i.mp3" }
+    "soundsLike": {
+      "fil": { "word": "isda", "part": "i", "en": "fish" },
+      "en": { "word": "see", "part": "ee" }
+    }
   },
   {
     "id": "k-u", "char": "ウ", "script": "katakana", "stage": 1, "row": "a", "romaji": "u",
     "tip": "Softer than Tagalog 'u': keep the lips relaxed, not rounded.",
     "word": { "kana": "ウイスキー", "kanji": null, "romaji": "uisukī", "en": "whisky" },
-    "audio": { "char": "audio/char/k-u.mp3", "word": "audio/word/k-u.mp3" }
+    "soundsLike": {
+      "fil": { "word": "ulo", "part": "u", "en": "head" },
+      "en": { "word": "food", "part": "oo" }
+    }
   },
   {
     "id": "k-e", "char": "エ", "script": "katakana", "stage": 1, "row": "a", "romaji": "e",
     "tip": "The dash ー makes the vowel before it long: ベー = bē.",
     "word": { "kana": "エレベーター", "kanji": null, "romaji": "erebētā", "en": "elevator" },
-    "audio": { "char": "audio/char/k-e.mp3", "word": "audio/word/k-e.mp3" }
+    "soundsLike": {
+      "fil": { "word": "eroplano", "part": "e", "en": "airplane" },
+      "en": { "word": "egg", "part": "e" }
+    }
   },
   {
     "id": "k-o", "char": "オ", "script": "katakana", "stage": 1, "row": "a", "romaji": "o",
     "tip": "Like the 'o' in Tagalog 'oo' (yes).",
     "word": { "kana": "オレンジ", "kanji": null, "romaji": "orenji", "en": "orange" },
-    "audio": { "char": "audio/char/k-o.mp3", "word": "audio/word/k-o.mp3" }
+    "soundsLike": {
+      "fil": { "word": "oras", "part": "o", "en": "time, hour" },
+      "en": { "word": "go", "part": "o" }
+    }
   },
 
   {
     "id": "k-ka", "char": "カ", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ka",
     "tip": null,
     "word": { "kana": "カメラ", "kanji": null, "romaji": "kamera", "en": "camera" },
-    "audio": { "char": "audio/char/k-ka.mp3", "word": "audio/word/k-ka.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kain", "part": "ka", "en": "to eat" },
+      "en": { "word": "car", "part": "ca" }
+    }
   },
   {
     "id": "k-ki", "char": "キ", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ki",
     "tip": null,
     "word": { "kana": "キッチン", "kanji": null, "romaji": "kitchin", "en": "kitchen" },
-    "audio": { "char": "audio/char/k-ki.mp3", "word": "audio/word/k-ki.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kilay", "part": "ki", "en": "eyebrow" },
+      "en": { "word": "key", "part": "key" }
+    }
   },
   {
     "id": "k-ku", "char": "ク", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ku",
     "tip": null,
     "word": { "kana": "クッキー", "kanji": null, "romaji": "kukkī", "en": "cookie" },
-    "audio": { "char": "audio/char/k-ku.mp3", "word": "audio/word/k-ku.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kulay", "part": "ku", "en": "color" },
+      "en": { "word": "cool", "part": "coo" }
+    }
   },
   {
     "id": "k-ke", "char": "ケ", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ke",
     "tip": null,
     "word": { "kana": "ケーキ", "kanji": null, "romaji": "kēki", "en": "cake" },
-    "audio": { "char": "audio/char/k-ke.mp3", "word": "audio/word/k-ke.mp3" }
+    "soundsLike": {
+      "fil": { "word": "keso", "part": "ke", "en": "cheese" },
+      "en": { "word": "kept", "part": "ke" }
+    }
   },
   {
     "id": "k-ko", "char": "コ", "script": "katakana", "stage": 1, "row": "ka", "romaji": "ko",
     "tip": null,
     "word": { "kana": "コーヒー", "kanji": null, "romaji": "kōhī", "en": "coffee" },
-    "audio": { "char": "audio/char/k-ko.mp3", "word": "audio/word/k-ko.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kotse", "part": "ko", "en": "car" },
+      "en": { "word": "coat", "part": "co" }
+    }
   },
 
   {
     "id": "k-sa", "char": "サ", "script": "katakana", "stage": 1, "row": "sa", "romaji": "sa",
     "tip": null,
     "word": { "kana": "サラダ", "kanji": null, "romaji": "sarada", "en": "salad" },
-    "audio": { "char": "audio/char/k-sa.mp3", "word": "audio/word/k-sa.mp3" }
+    "soundsLike": {
+      "fil": { "word": "saging", "part": "sa", "en": "banana" },
+      "en": { "word": "salsa", "part": "sa" }
+    }
   },
   {
     "id": "k-shi", "char": "シ", "script": "katakana", "stage": 1, "row": "sa", "romaji": "shi",
     "tip": "Said 'shi', not 'si'. Don't mix up シ (shi) and ツ (tsu): シ's dots sit side by side and its long stroke sweeps up from the bottom.",
     "word": { "kana": "シーフード", "kanji": null, "romaji": "shīfūdo", "en": "seafood" },
-    "audio": { "char": "audio/char/k-shi.mp3", "word": "audio/word/k-shi.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "she", "part": "she" }
+    }
   },
   {
     "id": "k-su", "char": "ス", "script": "katakana", "stage": 1, "row": "sa", "romaji": "su",
     "tip": null,
     "word": { "kana": "スーパー", "kanji": null, "romaji": "sūpā", "en": "supermarket" },
-    "audio": { "char": "audio/char/k-su.mp3", "word": "audio/word/k-su.mp3" }
+    "soundsLike": {
+      "fil": { "word": "susi", "part": "su", "en": "key" },
+      "en": { "word": "soup", "part": "sou" }
+    }
   },
   {
     "id": "k-se", "char": "セ", "script": "katakana", "stage": 1, "row": "sa", "romaji": "se",
     "tip": null,
     "word": { "kana": "セーター", "kanji": null, "romaji": "sētā", "en": "sweater" },
-    "audio": { "char": "audio/char/k-se.mp3", "word": "audio/word/k-se.mp3" }
+    "soundsLike": {
+      "fil": { "word": "sepilyo", "part": "se", "en": "toothbrush" },
+      "en": { "word": "set", "part": "se" }
+    }
   },
   {
     "id": "k-so", "char": "ソ", "script": "katakana", "stage": 1, "row": "sa", "romaji": "so",
     "tip": null,
     "word": { "kana": "ソース", "kanji": null, "romaji": "sōsu", "en": "sauce" },
-    "audio": { "char": "audio/char/k-so.mp3", "word": "audio/word/k-so.mp3" }
+    "soundsLike": {
+      "fil": { "word": "sobre", "part": "so", "en": "envelope" },
+      "en": { "word": "soap", "part": "so" }
+    }
   },
 
   {
     "id": "k-ta", "char": "タ", "script": "katakana", "stage": 1, "row": "ta", "romaji": "ta",
     "tip": null,
     "word": { "kana": "タクシー", "kanji": null, "romaji": "takushī", "en": "taxi" },
-    "audio": { "char": "audio/char/k-ta.mp3", "word": "audio/word/k-ta.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tao", "part": "ta", "en": "person" },
+      "en": { "word": "taco", "part": "ta" }
+    }
   },
   {
     "id": "k-chi", "char": "チ", "script": "katakana", "stage": 1, "row": "ta", "romaji": "chi",
     "tip": "Said 'chi' like the start of English 'cheese', not 'ti'.",
     "word": { "kana": "チケット", "kanji": null, "romaji": "chiketto", "en": "ticket" },
-    "audio": { "char": "audio/char/k-chi.mp3", "word": "audio/word/k-chi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tsinelas", "part": "tsi", "en": "slippers" },
+      "en": { "word": "cheese", "part": "chee" }
+    }
   },
   {
     "id": "k-tsu", "char": "ツ", "script": "katakana", "stage": 1, "row": "ta", "romaji": "tsu",
     "tip": "'ts' as in 'cats', then a soft 'u'. Don't mix up ツ (tsu) and シ (shi): ツ's dots sit on top and its long stroke comes down from the top right.",
     "word": { "kana": "ツアー", "kanji": null, "romaji": "tsuā", "en": "tour" },
-    "audio": { "char": "audio/char/k-tsu.mp3", "word": "audio/word/k-tsu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "tsunami", "part": "tsu" }
+    }
   },
   {
     "id": "k-te", "char": "テ", "script": "katakana", "stage": 1, "row": "ta", "romaji": "te",
     "tip": null,
     "word": { "kana": "テレビ", "kanji": null, "romaji": "terebi", "en": "TV" },
-    "audio": { "char": "audio/char/k-te.mp3", "word": "audio/word/k-te.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tela", "part": "te", "en": "cloth" },
+      "en": { "word": "ten", "part": "te" }
+    }
   },
   {
     "id": "k-to", "char": "ト", "script": "katakana", "stage": 1, "row": "ta", "romaji": "to",
     "tip": null,
     "word": { "kana": "トイレ", "kanji": null, "romaji": "toire", "en": "toilet, restroom" },
-    "audio": { "char": "audio/char/k-to.mp3", "word": "audio/word/k-to.mp3" }
+    "soundsLike": {
+      "fil": { "word": "toyo", "part": "to", "en": "soy sauce" },
+      "en": { "word": "toe", "part": "to" }
+    }
   },
 
   {
     "id": "k-na", "char": "ナ", "script": "katakana", "stage": 1, "row": "na", "romaji": "na",
     "tip": null,
     "word": { "kana": "ナイフ", "kanji": null, "romaji": "naifu", "en": "knife" },
-    "audio": { "char": "audio/char/k-na.mp3", "word": "audio/word/k-na.mp3" }
+    "soundsLike": {
+      "fil": { "word": "nanay", "part": "na", "en": "mother" },
+      "en": { "word": "nachos", "part": "na" }
+    }
   },
   {
     "id": "k-ni", "char": "ニ", "script": "katakana", "stage": 1, "row": "na", "romaji": "ni",
     "tip": null,
     "word": { "kana": "ニックネーム", "kanji": null, "romaji": "nikkunēmu", "en": "nickname" },
-    "audio": { "char": "audio/char/k-ni.mp3", "word": "audio/word/k-ni.mp3" }
+    "soundsLike": {
+      "fil": { "word": "nipa", "part": "ni", "en": "nipa palm" },
+      "en": { "word": "knee", "part": "knee" }
+    }
   },
   {
     "id": "k-nu", "char": "ヌ", "script": "katakana", "stage": 1, "row": "na", "romaji": "nu",
     "tip": null,
     "word": { "kana": "ヌードル", "kanji": null, "romaji": "nūdoru", "en": "noodles" },
-    "audio": { "char": "audio/char/k-nu.mp3", "word": "audio/word/k-nu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "numero", "part": "nu", "en": "number" },
+      "en": { "word": "noodle", "part": "noo" }
+    }
   },
   {
     "id": "k-ne", "char": "ネ", "script": "katakana", "stage": 1, "row": "na", "romaji": "ne",
     "tip": null,
     "word": { "kana": "ネクタイ", "kanji": null, "romaji": "nekutai", "en": "necktie" },
-    "audio": { "char": "audio/char/k-ne.mp3", "word": "audio/word/k-ne.mp3" }
+    "soundsLike": {
+      "fil": { "word": "negosyo", "part": "ne", "en": "business" },
+      "en": { "word": "net", "part": "ne" }
+    }
   },
   {
     "id": "k-no", "char": "ノ", "script": "katakana", "stage": 1, "row": "na", "romaji": "no",
     "tip": null,
     "word": { "kana": "ノート", "kanji": null, "romaji": "nōto", "en": "notebook" },
-    "audio": { "char": "audio/char/k-no.mp3", "word": "audio/word/k-no.mp3" }
+    "soundsLike": {
+      "fil": { "word": "nobyo", "part": "no", "en": "boyfriend" },
+      "en": { "word": "note", "part": "no" }
+    }
   },
 
   {
     "id": "k-ha", "char": "ハ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "ha",
     "tip": null,
     "word": { "kana": "ハンバーガー", "kanji": null, "romaji": "hanbāgā", "en": "hamburger" },
-    "audio": { "char": "audio/char/k-ha.mp3", "word": "audio/word/k-ha.mp3" }
+    "soundsLike": {
+      "fil": { "word": "hapon", "part": "ha", "en": "afternoon; also 'Japan'" },
+      "en": { "word": "haha", "part": "ha" }
+    }
   },
   {
     "id": "k-hi", "char": "ヒ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "hi",
     "tip": "A little breathier than English 'he'.",
     "word": { "kana": "ヒーター", "kanji": null, "romaji": "hītā", "en": "heater" },
-    "audio": { "char": "audio/char/k-hi.mp3", "word": "audio/word/k-hi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "hipon", "part": "hi", "en": "shrimp" },
+      "en": { "word": "heat", "part": "hea" }
+    }
   },
   {
     "id": "k-fu", "char": "フ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "fu",
     "tip": "Between 'f' and 'h': blow softly through the lips, teeth do not touch the lip.",
     "word": { "kana": "フルーツ", "kanji": null, "romaji": "furūtsu", "en": "fruit" },
-    "audio": { "char": "audio/char/k-fu.mp3", "word": "audio/word/k-fu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "food", "part": "foo" }
+    }
   },
   {
     "id": "k-he", "char": "ヘ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "he",
     "tip": "Looks almost the same as hiragana へ.",
     "word": { "kana": "ヘリコプター", "kanji": null, "romaji": "herikoputā", "en": "helicopter" },
-    "audio": { "char": "audio/char/k-he.mp3", "word": "audio/word/k-he.mp3" }
+    "soundsLike": {
+      "fil": { "word": "heto", "part": "he", "en": "here it is" },
+      "en": { "word": "help", "part": "he" }
+    }
   },
   {
     "id": "k-ho", "char": "ホ", "script": "katakana", "stage": 1, "row": "ha", "romaji": "ho",
     "tip": null,
     "word": { "kana": "ホテル", "kanji": null, "romaji": "hoteru", "en": "hotel" },
-    "audio": { "char": "audio/char/k-ho.mp3", "word": "audio/word/k-ho.mp3" }
+    "soundsLike": {
+      "fil": { "word": "hoy", "part": "ho", "en": "hey!" },
+      "en": { "word": "hope", "part": "ho" }
+    }
   },
 
   {
     "id": "k-ma", "char": "マ", "script": "katakana", "stage": 1, "row": "ma", "romaji": "ma",
     "tip": null,
     "word": { "kana": "マスク", "kanji": null, "romaji": "masuku", "en": "face mask" },
-    "audio": { "char": "audio/char/k-ma.mp3", "word": "audio/word/k-ma.mp3" }
+    "soundsLike": {
+      "fil": { "word": "mata", "part": "ma", "en": "eye" },
+      "en": { "word": "mama", "part": "ma" }
+    }
   },
   {
     "id": "k-mi", "char": "ミ", "script": "katakana", "stage": 1, "row": "ma", "romaji": "mi",
     "tip": null,
     "word": { "kana": "ミルク", "kanji": null, "romaji": "miruku", "en": "milk" },
-    "audio": { "char": "audio/char/k-mi.mp3", "word": "audio/word/k-mi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "minsan", "part": "mi", "en": "sometimes" },
+      "en": { "word": "meet", "part": "mee" }
+    }
   },
   {
     "id": "k-mu", "char": "ム", "script": "katakana", "stage": 1, "row": "ma", "romaji": "mu",
     "tip": null,
     "word": { "kana": "ムード", "kanji": null, "romaji": "mūdo", "en": "mood, atmosphere" },
-    "audio": { "char": "audio/char/k-mu.mp3", "word": "audio/word/k-mu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "mukha", "part": "mu", "en": "face" },
+      "en": { "word": "moon", "part": "moo" }
+    }
   },
   {
     "id": "k-me", "char": "メ", "script": "katakana", "stage": 1, "row": "ma", "romaji": "me",
     "tip": null,
     "word": { "kana": "メニュー", "kanji": null, "romaji": "menyū", "en": "menu" },
-    "audio": { "char": "audio/char/k-me.mp3", "word": "audio/word/k-me.mp3" }
+    "soundsLike": {
+      "fil": { "word": "mesa", "part": "me", "en": "table" },
+      "en": { "word": "met", "part": "me" }
+    }
   },
   {
     "id": "k-mo", "char": "モ", "script": "katakana", "stage": 1, "row": "ma", "romaji": "mo",
     "tip": null,
     "word": { "kana": "モノレール", "kanji": null, "romaji": "monorēru", "en": "monorail" },
-    "audio": { "char": "audio/char/k-mo.mp3", "word": "audio/word/k-mo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "motor", "part": "mo", "en": "motorcycle" },
+      "en": { "word": "motor", "part": "mo" }
+    }
   },
 
   {
     "id": "k-ya", "char": "ヤ", "script": "katakana", "stage": 1, "row": "ya", "romaji": "ya",
     "tip": null,
     "word": { "kana": "タイヤ", "kanji": null, "romaji": "taiya", "en": "tire (of a car)" },
-    "audio": { "char": "audio/char/k-ya.mp3", "word": "audio/word/k-ya.mp3" }
+    "soundsLike": {
+      "fil": { "word": "yaman", "part": "ya", "en": "wealth" },
+      "en": { "word": "yacht", "part": "ya" }
+    }
   },
   {
     "id": "k-yu", "char": "ユ", "script": "katakana", "stage": 1, "row": "ya", "romaji": "yu",
     "tip": null,
     "word": { "kana": "ユーロ", "kanji": null, "romaji": "yūro", "en": "euro (money)" },
-    "audio": { "char": "audio/char/k-yu.mp3", "word": "audio/word/k-yu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "you", "part": "you" }
+    }
   },
   {
     "id": "k-yo", "char": "ヨ", "script": "katakana", "stage": 1, "row": "ya", "romaji": "yo",
     "tip": null,
     "word": { "kana": "ヨーグルト", "kanji": null, "romaji": "yōguruto", "en": "yogurt" },
-    "audio": { "char": "audio/char/k-yo.mp3", "word": "audio/word/k-yo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "yoyo", "part": "yo", "en": "yo-yo" },
+      "en": { "word": "yoga", "part": "yo" }
+    }
   },
 
   {
     "id": "k-ra", "char": "ラ", "script": "katakana", "stage": 1, "row": "ra", "romaji": "ra",
     "tip": "Japanese 'r' is a light tap of the tongue, close to the Tagalog 'r' in 'araw'.",
     "word": { "kana": "ラーメン", "kanji": null, "romaji": "rāmen", "en": "ramen" },
-    "audio": { "char": "audio/char/k-ra.mp3", "word": "audio/word/k-ra.mp3" }
+    "soundsLike": {
+      "fil": { "word": "radyo", "part": "ra", "en": "radio" },
+      "en": null
+    }
   },
   {
     "id": "k-ri", "char": "リ", "script": "katakana", "stage": 1, "row": "ra", "romaji": "ri",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "リモコン", "kanji": null, "romaji": "rimokon", "en": "remote control" },
-    "audio": { "char": "audio/char/k-ri.mp3", "word": "audio/word/k-ri.mp3" }
+    "soundsLike": {
+      "fil": { "word": "rito", "part": "ri", "en": "here" },
+      "en": null
+    }
   },
   {
     "id": "k-ru", "char": "ル", "script": "katakana", "stage": 1, "row": "ra", "romaji": "ru",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "ルール", "kanji": null, "romaji": "rūru", "en": "rule" },
-    "audio": { "char": "audio/char/k-ru.mp3", "word": "audio/word/k-ru.mp3" }
+    "soundsLike": {
+      "fil": { "word": "ruta", "part": "ru", "en": "route" },
+      "en": null
+    }
   },
   {
     "id": "k-re", "char": "レ", "script": "katakana", "stage": 1, "row": "ra", "romaji": "re",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "レストラン", "kanji": null, "romaji": "resutoran", "en": "restaurant" },
-    "audio": { "char": "audio/char/k-re.mp3", "word": "audio/word/k-re.mp3" }
+    "soundsLike": {
+      "fil": { "word": "relo", "part": "re", "en": "watch (clock)" },
+      "en": null
+    }
   },
   {
     "id": "k-ro", "char": "ロ", "script": "katakana", "stage": 1, "row": "ra", "romaji": "ro",
     "tip": "Light tapped 'r', like Tagalog 'r'.",
     "word": { "kana": "ロビー", "kanji": null, "romaji": "robī", "en": "lobby" },
-    "audio": { "char": "audio/char/k-ro.mp3", "word": "audio/word/k-ro.mp3" }
+    "soundsLike": {
+      "fil": { "word": "rosas", "part": "ro", "en": "rose" },
+      "en": null
+    }
   },
 
   {
     "id": "k-wa", "char": "ワ", "script": "katakana", "stage": 1, "row": "wa", "romaji": "wa",
     "tip": null,
     "word": { "kana": "ワイン", "kanji": null, "romaji": "wain", "en": "wine" },
-    "audio": { "char": "audio/char/k-wa.mp3", "word": "audio/word/k-wa.mp3" }
+    "soundsLike": {
+      "fil": { "word": "wala", "part": "wa", "en": "none, nothing" },
+      "en": { "word": "watt", "part": "wa" }
+    }
   },
   {
     "id": "k-wo", "char": "ヲ", "script": "katakana", "stage": 1, "row": "wa", "romaji": "o",
     "tip": "Sounds 'o', like を. Almost never used in katakana, so the example uses hiragana を.",
     "word": { "kana": "みずをのむ", "kanji": "水を飲む", "romaji": "mizu o nomu", "en": "to drink water" },
-    "audio": { "char": "audio/char/k-wo.mp3", "word": "audio/word/k-wo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "oras", "part": "o", "en": "time, hour" },
+      "en": { "word": "go", "part": "o" }
+    }
   },
 
   {
     "id": "k-n", "char": "ン", "script": "katakana", "stage": 1, "row": "n", "romaji": "n",
     "tip": "A nasal 'n' on its own beat. Don't mix up ン (n) and ソ (so): ン's short stroke is flatter and its long stroke sweeps up from the bottom.",
     "word": { "kana": "コンビニ", "kanji": null, "romaji": "konbini", "en": "convenience store" },
-    "audio": { "char": "audio/char/k-n.mp3", "word": "audio/word/k-n.mp3" }
+    "soundsLike": {
+      "fil": { "word": "hindi", "part": "n", "en": "no, not" },
+      "en": { "word": "pen", "part": "n" }
+    }
   },
 
   {
     "id": "k-ga", "char": "ガ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "ga",
     "tip": "The dakuten turns カ into ガ: k becomes g.",
     "word": { "kana": "ガイド", "kanji": null, "romaji": "gaido", "en": "guide (tour guide)" },
-    "audio": { "char": "audio/char/k-ga.mp3", "word": "audio/word/k-ga.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gatas", "part": "ga", "en": "milk" },
+      "en": { "word": "gala", "part": "ga" }
+    }
   },
   {
     "id": "k-gi", "char": "ギ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "gi",
     "tip": null,
     "word": { "kana": "ギター", "kanji": null, "romaji": "gitā", "en": "guitar" },
-    "audio": { "char": "audio/char/k-gi.mp3", "word": "audio/word/k-gi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gising", "part": "gi", "en": "awake" },
+      "en": { "word": "geese", "part": "gee" }
+    }
   },
   {
     "id": "k-gu", "char": "グ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "gu",
     "tip": null,
     "word": { "kana": "グラス", "kanji": null, "romaji": "gurasu", "en": "glass (for drinking)" },
-    "audio": { "char": "audio/char/k-gu.mp3", "word": "audio/word/k-gu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gulay", "part": "gu", "en": "vegetables" },
+      "en": { "word": "goose", "part": "goo" }
+    }
   },
   {
     "id": "k-ge", "char": "ゲ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "ge",
     "tip": null,
     "word": { "kana": "ゲーム", "kanji": null, "romaji": "gēmu", "en": "game" },
-    "audio": { "char": "audio/char/k-ge.mp3", "word": "audio/word/k-ge.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gera", "part": "ge", "en": "war" },
+      "en": { "word": "get", "part": "ge" }
+    }
   },
   {
     "id": "k-go", "char": "ゴ", "script": "katakana", "stage": 2, "row": "ga", "romaji": "go",
     "tip": null,
     "word": { "kana": "ゴルフ", "kanji": null, "romaji": "gorufu", "en": "golf" },
-    "audio": { "char": "audio/char/k-go.mp3", "word": "audio/word/k-go.mp3" }
+    "soundsLike": {
+      "fil": { "word": "gobyerno", "part": "go", "en": "government" },
+      "en": { "word": "go", "part": "go" }
+    }
   },
 
   {
     "id": "k-za", "char": "ザ", "script": "katakana", "stage": 2, "row": "za", "romaji": "za",
     "tip": "Keep it buzzing like English 'zoo', not 's'.",
     "word": { "kana": "デザート", "kanji": null, "romaji": "dezāto", "en": "dessert" },
-    "audio": { "char": "audio/char/k-za.mp3", "word": "audio/word/k-za.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "bazaar", "part": "za" }
+    }
   },
   {
     "id": "k-ji", "char": "ジ", "script": "katakana", "stage": 2, "row": "za", "romaji": "ji",
     "tip": "Like the 'j' in English 'jeep'.",
     "word": { "kana": "ジーンズ", "kanji": null, "romaji": "jīnzu", "en": "jeans" },
-    "audio": { "char": "audio/char/k-ji.mp3", "word": "audio/word/k-ji.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyip", "part": "dyi", "en": "jeepney" },
+      "en": { "word": "jeep", "part": "jee" }
+    }
   },
   {
     "id": "k-zu", "char": "ズ", "script": "katakana", "stage": 2, "row": "za", "romaji": "zu",
     "tip": null,
     "word": { "kana": "ズボン", "kanji": null, "romaji": "zubon", "en": "trousers, pants" },
-    "audio": { "char": "audio/char/k-zu.mp3", "word": "audio/word/k-zu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "zoo", "part": "zoo" }
+    }
   },
   {
     "id": "k-ze", "char": "ゼ", "script": "katakana", "stage": 2, "row": "za", "romaji": "ze",
     "tip": null,
     "word": { "kana": "ゼロ", "kanji": null, "romaji": "zero", "en": "zero" },
-    "audio": { "char": "audio/char/k-ze.mp3", "word": "audio/word/k-ze.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "zest", "part": "ze" }
+    }
   },
   {
     "id": "k-zo", "char": "ゾ", "script": "katakana", "stage": 2, "row": "za", "romaji": "zo",
     "tip": null,
     "word": { "kana": "ゾーン", "kanji": null, "romaji": "zōn", "en": "zone" },
-    "audio": { "char": "audio/char/k-zo.mp3", "word": "audio/word/k-zo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "zone", "part": "zo" }
+    }
   },
 
   {
     "id": "k-da", "char": "ダ", "script": "katakana", "stage": 2, "row": "da", "romaji": "da",
     "tip": null,
     "word": { "kana": "ダンス", "kanji": null, "romaji": "dansu", "en": "dance" },
-    "audio": { "char": "audio/char/k-da.mp3", "word": "audio/word/k-da.mp3" }
+    "soundsLike": {
+      "fil": { "word": "daga", "part": "da", "en": "rat, mouse" },
+      "en": { "word": "dada", "part": "da" }
+    }
   },
   {
     "id": "k-di", "char": "ヂ", "script": "katakana", "stage": 2, "row": "da", "romaji": "ji",
     "tip": "Sounds the same as ジ (ji). Almost never used in katakana, so the example uses hiragana ぢ.",
     "word": { "kana": "はなぢ", "kanji": "鼻血", "romaji": "hanaji", "en": "nosebleed" },
-    "audio": { "char": "audio/char/k-di.mp3", "word": "audio/word/k-di.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyip", "part": "dyi", "en": "jeepney" },
+      "en": { "word": "jeep", "part": "jee" }
+    }
   },
   {
     "id": "k-du", "char": "ヅ", "script": "katakana", "stage": 2, "row": "da", "romaji": "zu",
     "tip": "Sounds the same as ズ (zu). Almost never used in katakana, so the example uses hiragana づ.",
     "word": { "kana": "つづく", "kanji": "続く", "romaji": "tsuzuku", "en": "to continue" },
-    "audio": { "char": "audio/char/k-du.mp3", "word": "audio/word/k-du.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "zoo", "part": "zoo" }
+    }
   },
   {
     "id": "k-de", "char": "デ", "script": "katakana", "stage": 2, "row": "da", "romaji": "de",
     "tip": null,
     "word": { "kana": "デパート", "kanji": null, "romaji": "depāto", "en": "department store" },
-    "audio": { "char": "audio/char/k-de.mp3", "word": "audio/word/k-de.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dentista", "part": "de", "en": "dentist" },
+      "en": { "word": "desk", "part": "de" }
+    }
   },
   {
     "id": "k-do", "char": "ド", "script": "katakana", "stage": 2, "row": "da", "romaji": "do",
     "tip": null,
     "word": { "kana": "ドア", "kanji": null, "romaji": "doa", "en": "door" },
-    "audio": { "char": "audio/char/k-do.mp3", "word": "audio/word/k-do.mp3" }
+    "soundsLike": {
+      "fil": { "word": "doktor", "part": "do", "en": "doctor" },
+      "en": { "word": "dome", "part": "do" }
+    }
   },
 
   {
     "id": "k-ba", "char": "バ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "ba",
     "tip": null,
     "word": { "kana": "バス", "kanji": null, "romaji": "basu", "en": "bus" },
-    "audio": { "char": "audio/char/k-ba.mp3", "word": "audio/word/k-ba.mp3" }
+    "soundsLike": {
+      "fil": { "word": "bata", "part": "ba", "en": "child" },
+      "en": { "word": "bar", "part": "ba" }
+    }
   },
   {
     "id": "k-bi", "char": "ビ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "bi",
     "tip": null,
     "word": { "kana": "ビール", "kanji": null, "romaji": "bīru", "en": "beer" },
-    "audio": { "char": "audio/char/k-bi.mp3", "word": "audio/word/k-bi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "bigas", "part": "bi", "en": "uncooked rice" },
+      "en": { "word": "bee", "part": "bee" }
+    }
   },
   {
     "id": "k-bu", "char": "ブ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "bu",
     "tip": null,
     "word": { "kana": "ブーツ", "kanji": null, "romaji": "būtsu", "en": "boots" },
-    "audio": { "char": "audio/char/k-bu.mp3", "word": "audio/word/k-bu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "buhok", "part": "bu", "en": "hair" },
+      "en": { "word": "boot", "part": "boo" }
+    }
   },
   {
     "id": "k-be", "char": "ベ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "be",
     "tip": null,
     "word": { "kana": "ベッド", "kanji": null, "romaji": "beddo", "en": "bed" },
-    "audio": { "char": "audio/char/k-be.mp3", "word": "audio/word/k-be.mp3" }
+    "soundsLike": {
+      "fil": { "word": "berde", "part": "be", "en": "green" },
+      "en": { "word": "bed", "part": "be" }
+    }
   },
   {
     "id": "k-bo", "char": "ボ", "script": "katakana", "stage": 2, "row": "ba", "romaji": "bo",
     "tip": null,
     "word": { "kana": "ボタン", "kanji": null, "romaji": "botan", "en": "button" },
-    "audio": { "char": "audio/char/k-bo.mp3", "word": "audio/word/k-bo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "bola", "part": "bo", "en": "ball" },
+      "en": { "word": "boat", "part": "bo" }
+    }
   },
 
   {
     "id": "k-pa", "char": "パ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "pa",
     "tip": "Same as Tagalog 'pan' (bread) — this word came to Japanese from Portuguese.",
     "word": { "kana": "パン", "kanji": null, "romaji": "pan", "en": "bread" },
-    "audio": { "char": "audio/char/k-pa.mp3", "word": "audio/word/k-pa.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pagkain", "part": "pa", "en": "food" },
+      "en": { "word": "pasta", "part": "pa" }
+    }
   },
   {
     "id": "k-pi", "char": "ピ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "pi",
     "tip": null,
     "word": { "kana": "ピザ", "kanji": null, "romaji": "piza", "en": "pizza" },
-    "audio": { "char": "audio/char/k-pi.mp3", "word": "audio/word/k-pi.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pito", "part": "pi", "en": "seven; whistle" },
+      "en": { "word": "peace", "part": "pea" }
+    }
   },
   {
     "id": "k-pu", "char": "プ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "pu",
     "tip": null,
     "word": { "kana": "プール", "kanji": null, "romaji": "pūru", "en": "swimming pool" },
-    "audio": { "char": "audio/char/k-pu.mp3", "word": "audio/word/k-pu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "puso", "part": "pu", "en": "heart" },
+      "en": { "word": "pool", "part": "poo" }
+    }
   },
   {
     "id": "k-pe", "char": "ペ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "pe",
     "tip": null,
     "word": { "kana": "ペン", "kanji": null, "romaji": "pen", "en": "pen" },
-    "audio": { "char": "audio/char/k-pe.mp3", "word": "audio/word/k-pe.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pera", "part": "pe", "en": "money" },
+      "en": { "word": "pet", "part": "pe" }
+    }
   },
   {
     "id": "k-po", "char": "ポ", "script": "katakana", "stage": 2, "row": "pa", "romaji": "po",
     "tip": null,
     "word": { "kana": "ポスト", "kanji": null, "romaji": "posuto", "en": "mailbox, postbox" },
-    "audio": { "char": "audio/char/k-po.mp3", "word": "audio/word/k-po.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pogi", "part": "po", "en": "handsome" },
+      "en": { "word": "post", "part": "po" }
+    }
   },
 
   {
     "id": "k-kya", "char": "キャ", "script": "katakana", "stage": 3, "row": "kya", "romaji": "kya",
     "tip": "One beat: kya, not ki-ya.",
     "word": { "kana": "キャンプ", "kanji": null, "romaji": "kyanpu", "en": "camping, camp" },
-    "audio": { "char": "audio/char/k-kya.mp3", "word": "audio/word/k-kya.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pakyaw", "part": "kya", "en": "buying in bulk" },
+      "en": null,
+      "blend": "キ (ki) + ヤ (ya)"
+    }
   },
   {
     "id": "k-kyu", "char": "キュ", "script": "katakana", "stage": 3, "row": "kya", "romaji": "kyu",
     "tip": null,
     "word": { "kana": "バーベキュー", "kanji": null, "romaji": "bābekyū", "en": "barbecue" },
-    "audio": { "char": "audio/char/k-kyu.mp3", "word": "audio/word/k-kyu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "cute", "part": "cu" },
+      "blend": "キ (ki) + ユ (yu)"
+    }
   },
   {
     "id": "k-kyo", "char": "キョ", "script": "katakana", "stage": 3, "row": "kya", "romaji": "kyo",
     "tip": null,
     "word": { "kana": "トーキョー", "kanji": "東京", "romaji": "Tōkyō", "en": "Tokyo (usually written in kanji)" },
-    "audio": { "char": "audio/char/k-kyo.mp3", "word": "audio/word/k-kyo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "Tokyo", "part": "kyo" },
+      "blend": "キ (ki) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-sha", "char": "シャ", "script": "katakana", "stage": 3, "row": "sha", "romaji": "sha",
     "tip": "Like Tagalog 'siya' said fast, as 'sha'.",
     "word": { "kana": "シャワー", "kanji": null, "romaji": "shawā", "en": "shower" },
-    "audio": { "char": "audio/char/k-sha.mp3", "word": "audio/word/k-sha.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "shark", "part": "sha" },
+      "blend": "シ (shi) + ヤ (ya)"
+    }
   },
   {
     "id": "k-shu", "char": "シュ", "script": "katakana", "stage": 3, "row": "sha", "romaji": "shu",
     "tip": null,
     "word": { "kana": "シューズ", "kanji": null, "romaji": "shūzu", "en": "shoes (sports shoes)" },
-    "audio": { "char": "audio/char/k-shu.mp3", "word": "audio/word/k-shu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "shoe", "part": "shoe" },
+      "blend": "シ (shi) + ユ (yu)"
+    }
   },
   {
     "id": "k-sho", "char": "ショ", "script": "katakana", "stage": 3, "row": "sha", "romaji": "sho",
     "tip": null,
     "word": { "kana": "ショッピング", "kanji": null, "romaji": "shoppingu", "en": "shopping" },
-    "audio": { "char": "audio/char/k-sho.mp3", "word": "audio/word/k-sho.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "show", "part": "sho" },
+      "blend": "シ (shi) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-cha", "char": "チャ", "script": "katakana", "stage": 3, "row": "cha", "romaji": "cha",
     "tip": null,
     "word": { "kana": "チャーハン", "kanji": null, "romaji": "chāhan", "en": "fried rice" },
-    "audio": { "char": "audio/char/k-cha.mp3", "word": "audio/word/k-cha.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tsaa", "part": "tsa", "en": "tea" },
+      "en": { "word": "cha-cha", "part": "cha" },
+      "blend": "チ (chi) + ヤ (ya)"
+    }
   },
   {
     "id": "k-chu", "char": "チュ", "script": "katakana", "stage": 3, "row": "cha", "romaji": "chu",
     "tip": null,
     "word": { "kana": "チューリップ", "kanji": null, "romaji": "chūrippu", "en": "tulip" },
-    "audio": { "char": "audio/char/k-chu.mp3", "word": "audio/word/k-chu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "choose", "part": "choo" },
+      "blend": "チ (chi) + ユ (yu)"
+    }
   },
   {
     "id": "k-cho", "char": "チョ", "script": "katakana", "stage": 3, "row": "cha", "romaji": "cho",
     "tip": null,
     "word": { "kana": "チョコレート", "kanji": null, "romaji": "chokorēto", "en": "chocolate" },
-    "audio": { "char": "audio/char/k-cho.mp3", "word": "audio/word/k-cho.mp3" }
+    "soundsLike": {
+      "fil": { "word": "tsokolate", "part": "tso", "en": "chocolate" },
+      "en": { "word": "choke", "part": "cho" },
+      "blend": "チ (chi) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-nya", "char": "ニャ", "script": "katakana", "stage": 3, "row": "nya", "romaji": "nya",
     "tip": null,
     "word": { "kana": "ニャー", "kanji": null, "romaji": "nyā", "en": "meow" },
-    "audio": { "char": "audio/char/k-nya.mp3", "word": "audio/word/k-nya.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kanya", "part": "nya", "en": "his, hers" },
+      "en": null,
+      "blend": "ニ (ni) + ヤ (ya)"
+    }
   },
   {
     "id": "k-nyu", "char": "ニュ", "script": "katakana", "stage": 3, "row": "nya", "romaji": "nyu",
     "tip": null,
     "word": { "kana": "ニュース", "kanji": null, "romaji": "nyūsu", "en": "news" },
-    "audio": { "char": "audio/char/k-nyu.mp3", "word": "audio/word/k-nyu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "menu", "part": "nu" },
+      "blend": "ニ (ni) + ユ (yu)"
+    }
   },
   {
     "id": "k-nyo", "char": "ニョ", "script": "katakana", "stage": 3, "row": "nya", "romaji": "nyo",
     "tip": null,
     "word": { "kana": "ニョッキ", "kanji": null, "romaji": "nyokki", "en": "gnocchi (Italian dumplings)" },
-    "audio": { "char": "audio/char/k-nyo.mp3", "word": "audio/word/k-nyo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "niyog", "part": "niyo", "en": "coconut" },
+      "en": null,
+      "blend": "ニ (ni) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-hya", "char": "ヒャ", "script": "katakana", "stage": 3, "row": "hya", "romaji": "hya",
     "tip": "Almost never used in katakana, so the example uses hiragana ひゃ.",
     "word": { "kana": "ひゃく", "kanji": "百", "romaji": "hyaku", "en": "one hundred" },
-    "audio": { "char": "audio/char/k-hya.mp3", "word": "audio/word/k-hya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ヒ (hi) + ヤ (ya)"
+    }
   },
   {
     "id": "k-hyu", "char": "ヒュ", "script": "katakana", "stage": 3, "row": "hya", "romaji": "hyu",
     "tip": null,
     "word": { "kana": "ヒューズ", "kanji": null, "romaji": "hyūzu", "en": "fuse (electrical)" },
-    "audio": { "char": "audio/char/k-hyu.mp3", "word": "audio/word/k-hyu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "huge", "part": "hu" },
+      "blend": "ヒ (hi) + ユ (yu)"
+    }
   },
   {
     "id": "k-hyo", "char": "ヒョ", "script": "katakana", "stage": 3, "row": "hya", "romaji": "hyo",
     "tip": null,
     "word": { "kana": "ヒョウ", "kanji": "豹", "romaji": "hyō", "en": "leopard (animal names are often written in katakana)" },
-    "audio": { "char": "audio/char/k-hyo.mp3", "word": "audio/word/k-hyo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ヒ (hi) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-mya", "char": "ミャ", "script": "katakana", "stage": 3, "row": "mya", "romaji": "mya",
     "tip": null,
     "word": { "kana": "ミャンマー", "kanji": null, "romaji": "Myanmā", "en": "Myanmar" },
-    "audio": { "char": "audio/char/k-mya.mp3", "word": "audio/word/k-mya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "Myanmar", "part": "Mya" },
+      "blend": "ミ (mi) + ヤ (ya)"
+    }
   },
   {
     "id": "k-myu", "char": "ミュ", "script": "katakana", "stage": 3, "row": "mya", "romaji": "myu",
     "tip": null,
     "word": { "kana": "ミュージアム", "kanji": null, "romaji": "myūjiamu", "en": "museum" },
-    "audio": { "char": "audio/char/k-myu.mp3", "word": "audio/word/k-myu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "music", "part": "mu" },
+      "blend": "ミ (mi) + ユ (yu)"
+    }
   },
   {
     "id": "k-myo", "char": "ミョ", "script": "katakana", "stage": 3, "row": "mya", "romaji": "myo",
     "tip": "Almost never used in katakana, so the example uses hiragana みょ.",
     "word": { "kana": "みょうじ", "kanji": "名字", "romaji": "myōji", "en": "family name, surname" },
-    "audio": { "char": "audio/char/k-myo.mp3", "word": "audio/word/k-myo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ミ (mi) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-rya", "char": "リャ", "script": "katakana", "stage": 3, "row": "rya", "romaji": "rya",
     "tip": "Almost never used in katakana, so the example uses hiragana りゃ.",
     "word": { "kana": "りゃく", "kanji": "略", "romaji": "ryaku", "en": "abbreviation" },
-    "audio": { "char": "audio/char/k-rya.mp3", "word": "audio/word/k-rya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "リ (ri) + ヤ (ya)"
+    }
   },
   {
     "id": "k-ryu", "char": "リュ", "script": "katakana", "stage": 3, "row": "rya", "romaji": "ryu",
     "tip": null,
     "word": { "kana": "リュック", "kanji": null, "romaji": "ryukku", "en": "backpack" },
-    "audio": { "char": "audio/char/k-ryu.mp3", "word": "audio/word/k-ryu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "リ (ri) + ユ (yu)"
+    }
   },
   {
     "id": "k-ryo", "char": "リョ", "script": "katakana", "stage": 3, "row": "rya", "romaji": "ryo",
     "tip": "Almost never used in katakana, so the example uses hiragana りょ.",
     "word": { "kana": "りょこう", "kanji": "旅行", "romaji": "ryokō", "en": "travel, trip" },
-    "audio": { "char": "audio/char/k-ryo.mp3", "word": "audio/word/k-ryo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "リ (ri) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-gya", "char": "ギャ", "script": "katakana", "stage": 3, "row": "gya", "romaji": "gya",
     "tip": null,
     "word": { "kana": "ギャラリー", "kanji": null, "romaji": "gyararī", "en": "gallery" },
-    "audio": { "char": "audio/char/k-gya.mp3", "word": "audio/word/k-gya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ギ (gi) + ヤ (ya)"
+    }
   },
   {
     "id": "k-gyu", "char": "ギュ", "script": "katakana", "stage": 3, "row": "gya", "romaji": "gyu",
     "tip": "Rare in katakana, so the example uses hiragana ぎゅ.",
     "word": { "kana": "ぎゅうどん", "kanji": "牛丼", "romaji": "gyūdon", "en": "beef rice bowl" },
-    "audio": { "char": "audio/char/k-gyu.mp3", "word": "audio/word/k-gyu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ギ (gi) + ユ (yu)"
+    }
   },
   {
     "id": "k-gyo", "char": "ギョ", "script": "katakana", "stage": 3, "row": "gya", "romaji": "gyo",
     "tip": null,
     "word": { "kana": "ギョーザ", "kanji": "餃子", "romaji": "gyōza", "en": "gyoza (dumplings; often written in katakana on menus)" },
-    "audio": { "char": "audio/char/k-gyo.mp3", "word": "audio/word/k-gyo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ギ (gi) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-ja", "char": "ジャ", "script": "katakana", "stage": 3, "row": "ja", "romaji": "ja",
     "tip": null,
     "word": { "kana": "ジャケット", "kanji": null, "romaji": "jaketto", "en": "jacket" },
-    "audio": { "char": "audio/char/k-ja.mp3", "word": "audio/word/k-ja.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyaket", "part": "dya", "en": "jacket" },
+      "en": { "word": "jar", "part": "ja" },
+      "blend": "ジ (ji) + ヤ (ya)"
+    }
   },
   {
     "id": "k-ju", "char": "ジュ", "script": "katakana", "stage": 3, "row": "ja", "romaji": "ju",
     "tip": null,
     "word": { "kana": "ジュース", "kanji": null, "romaji": "jūsu", "en": "juice" },
-    "audio": { "char": "audio/char/k-ju.mp3", "word": "audio/word/k-ju.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyus", "part": "dyu", "en": "juice" },
+      "en": { "word": "juice", "part": "ju" },
+      "blend": "ジ (ji) + ユ (yu)"
+    }
   },
   {
     "id": "k-jo", "char": "ジョ", "script": "katakana", "stage": 3, "row": "ja", "romaji": "jo",
     "tip": null,
     "word": { "kana": "ジョギング", "kanji": null, "romaji": "jogingu", "en": "jogging" },
-    "audio": { "char": "audio/char/k-jo.mp3", "word": "audio/word/k-jo.mp3" }
+    "soundsLike": {
+      "fil": { "word": "dyosa", "part": "dyo", "en": "goddess" },
+      "en": { "word": "joke", "part": "jo" },
+      "blend": "ジ (ji) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-bya", "char": "ビャ", "script": "katakana", "stage": 3, "row": "bya", "romaji": "bya",
     "tip": "Almost never used in katakana, so the example uses hiragana びゃ.",
     "word": { "kana": "さんびゃく", "kanji": "三百", "romaji": "sanbyaku", "en": "three hundred" },
-    "audio": { "char": "audio/char/k-bya.mp3", "word": "audio/word/k-bya.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ビ (bi) + ヤ (ya)"
+    }
   },
   {
     "id": "k-byu", "char": "ビュ", "script": "katakana", "stage": 3, "row": "bya", "romaji": "byu",
     "tip": null,
     "word": { "kana": "ビュッフェ", "kanji": null, "romaji": "byuffe", "en": "buffet" },
-    "audio": { "char": "audio/char/k-byu.mp3", "word": "audio/word/k-byu.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": { "word": "beauty", "part": "beau" },
+      "blend": "ビ (bi) + ユ (yu)"
+    }
   },
   {
     "id": "k-byo", "char": "ビョ", "script": "katakana", "stage": 3, "row": "bya", "romaji": "byo",
     "tip": "Almost never used in katakana, so the example uses hiragana びょ.",
     "word": { "kana": "びょういん", "kanji": "病院", "romaji": "byōin", "en": "hospital" },
-    "audio": { "char": "audio/char/k-byo.mp3", "word": "audio/word/k-byo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ビ (bi) + ヨ (yo)"
+    }
   },
 
   {
     "id": "k-pya", "char": "ピャ", "script": "katakana", "stage": 3, "row": "pya", "romaji": "pya",
     "tip": "Almost never used in katakana, so the example uses hiragana ぴゃ.",
     "word": { "kana": "はっぴゃく", "kanji": "八百", "romaji": "happyaku", "en": "eight hundred" },
-    "audio": { "char": "audio/char/k-pya.mp3", "word": "audio/word/k-pya.mp3" }
+    "soundsLike": {
+      "fil": { "word": "pyano", "part": "pya", "en": "piano" },
+      "en": null,
+      "blend": "ピ (pi) + ヤ (ya)"
+    }
   },
   {
     "id": "k-pyu", "char": "ピュ", "script": "katakana", "stage": 3, "row": "pya", "romaji": "pyu",
     "tip": null,
     "word": { "kana": "コンピューター", "kanji": null, "romaji": "konpyūtā", "en": "computer" },
-    "audio": { "char": "audio/char/k-pyu.mp3", "word": "audio/word/k-pyu.mp3" }
+    "soundsLike": {
+      "fil": { "word": "kompyuter", "part": "pyu", "en": "computer" },
+      "en": { "word": "computer", "part": "pu" },
+      "blend": "ピ (pi) + ユ (yu)"
+    }
   },
   {
     "id": "k-pyo", "char": "ピョ", "script": "katakana", "stage": 3, "row": "pya", "romaji": "pyo",
     "tip": "Rare in katakana, so the example uses hiragana ぴょ.",
     "word": { "kana": "ぴょんぴょん", "kanji": null, "romaji": "pyonpyon", "en": "hopping, boing boing" },
-    "audio": { "char": "audio/char/k-pyo.mp3", "word": "audio/word/k-pyo.mp3" }
+    "soundsLike": {
+      "fil": null,
+      "en": null,
+      "blend": "ピ (pi) + ヨ (yo)"
+    }
   }
 ]

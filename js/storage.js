@@ -59,18 +59,3 @@ export function resetProgress() {
   save("progress", {});
   save("seen", []);
 }
-
-// ---------- Settings ----------
-
-export const DEFAULT_SETTINGS = {
-  voice: "female", // "female" or "male"
-  autoPlay: false, // play the character sound when a card is flipped
-};
-
-export function getSettings() {
-  return { ...DEFAULT_SETTINGS, ...load("settings", {}) };
-}
-
-export function saveSettings(settings) {
-  save("settings", settings);
-}

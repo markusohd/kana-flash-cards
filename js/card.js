@@ -14,7 +14,9 @@ export function renderCard(card) {
   // Back: reading
   $("back-char").textContent = card.char;
   $("back-romaji").textContent = card.romaji;
-  $("play-char").setAttribute("aria-label", `Play sound of ${card.char}, ${card.romaji}`);
+
+  // Back: Filipino / English words with a similar sound
+  $("sounds-list").replaceChildren(...soundsLikeRows(card.soundsLike));
 
   // Back: sample word, with the target character highlighted
   $("word-kana").replaceChildren(...highlight(card.word.kana, card.char));
@@ -23,7 +25,6 @@ export function renderCard(card) {
   $("word-kanji").hidden = !card.word.kanji;
   $("word-romaji").textContent = card.word.romaji;
   $("word-en").textContent = card.word.en;
-  $("play-word").setAttribute("aria-label", `Play sample word ${card.word.romaji}`);
 
   // Back: pronunciation tip (only some cards have one)
   $("tip").textContent = card.tip ?? "";
@@ -31,6 +32,37 @@ export function renderCard(card) {
 
   // Show the card's front again. "instant" stops it spinning back.
   setFlipped(false, { instant: true });
+}
+
+// Build the "Sounds like" rows as <dt>label</dt><dd>content</dd> pairs, e.g.
+//   Filipino   kain (to eat)      with "ka" highlighted
+//   English    car                with "ca" highlighted
+//   Built from ひ (hi) + や (ya), said as one beat     (combinations only)
+function soundsLikeRows(sounds) {
+  const rows = [];
+  const addRow = (label, lang, children) => {
+    const dt = document.createElement("dt");
+    dt.textContent = label;
+    const dd = document.createElement("dd");
+    if (lang) dd.lang = lang;
+    dd.append(...children);
+    rows.push(dt, dd);
+  };
+
+  if (sounds.fil) {
+    const meaning = document.createElement("span");
+    meaning.className = "meaning";
+    meaning.lang = "en";
+    meaning.textContent = ` (${sounds.fil.en})`;
+    addRow("Filipino", "fil", [...highlight(sounds.fil.word, sounds.fil.part), meaning]);
+  }
+  if (sounds.en) {
+    addRow("English", "en", highlight(sounds.en.word, sounds.en.part));
+  }
+  if (sounds.blend) {
+    addRow("Built from", null, [`${sounds.blend}, said as one beat`]);
+  }
+  return rows;
 }
 
 // Split the word into [before, <mark>char</mark>, after].

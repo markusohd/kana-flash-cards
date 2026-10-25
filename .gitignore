@@ -1,6 +1,3 @@
-# Python virtual environment for audio generation (large, rebuildable)
+# Python virtual environment (not needed by the app)
 .venv/
 __pycache__/
-
-# Audio test batch (for listening checks only)
-audio/sample/

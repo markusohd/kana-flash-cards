@@ -10,7 +10,7 @@ Words, readings or choices that need a human check. Tick each one once checked.
       phrase みずをのむ mizu o nomu "to drink water" as the sample.
 - [ ] **ん (n)**: no Japanese word starts with ん. Used にほん Nihon "Japan" (also read にっぽん Nippon).
 - [ ] **はし (hashi)**: means "chopsticks" (箸) here. The same kana also means "bridge" (橋); only the pitch
-      differs. Check that the generated audio uses the "chopsticks" pitch (HA-shi, high then low).
+      differs (chopsticks: HA-shi, high then low).
 - [ ] **お (o)**: おちゃ ocha. The お here is the polite prefix お (お茶). Still a natural, very common word.
 
 ## Stage 2 hiragana (voiced)
@@ -56,14 +56,26 @@ Many combinations rarely start a common word, so some samples contain the sound 
       ビョ (びょういん), ピャ (はっぴゃく), ピョ (ぴょんぴょん). These katakana almost never appear in
       real loanwords; the card tip says so and the matching hiragana is highlighted.
 
-## Audio
+## "Sounds like" hints
 
-- [ ] **Male voice**: `jm_kumo` is Kokoro's only Japanese male voice and its lowest-rated one
-      (grade C−, trained on only a few minutes of speech; the female `jf_alpha` is C+). Listen to a
-      few cards in Settings → Male voice and decide whether to keep the option.
+Filipino words were chosen so the highlighted letters make the same sound. Please check
+that each Filipino word and meaning is right and natural to you.
 
-- [ ] **Hand-written phonemes**: the voice model's text reader split some combinations into two beats
-      (for example みょ read as "mi-yo", さんびゃく as "san-bi-ya-ku"). These are now given the correct
-      sounds by hand in `PHONEMES_INSTEAD` in `scripts/generate_audio.py`. Please listen to:
-      は, へ, にゅ, ひゃ/ひゅ/ひょ, みゃ/みゅ/みょ, りゃ/りゅ/りょ, ぎょ, びゃ/びゅ/びょ, ぴゃ/ぴょ,
-      ミョ, リョ, ギョ, and the words りゃく, さんびゃく, はっぴゃく.
+- [ ] **English examples are approximate.** English vowels differ from Japanese: "car",
+      "bar", "shark" have an r that Japanese doesn't; "go", "coat", "toe", "boat" glide
+      ("oh-oo") where Japanese お is short and pure. The Filipino word is the better guide.
+- [ ] **r row (ら り る れ ろ)**: no English word, because English r is a different sound.
+      Filipino radyo, rito, ruta, relo, rosas.
+- [ ] **ch / j sounds use Filipino spelling**: tsinelas (chi), tsaa (cha), tsokolate (cho),
+      dyip (ji), dyaket (ja), dyus (ju), dyosa (jo). In Filipino, "ts" is usually said "ch"
+      and "dy" is said "j"; some speakers say "ts" literally.
+- [ ] **No Filipino word** for し shi, つ tsu, ふ fu, ゆ yu, ざ ず ぜ ぞ (z sounds), and several
+      combinations; those cards show only the English word and/or the "built from" line.
+- [ ] **ん (n)**: Filipino hi**n**di, English pe**n**. ん changes sound before some letters
+      (like Filipino "ng" before k/g); the tip explains this.
+- [ ] **Combinations with no word in either language** (ひゃ ひょ みょ りゃ りゅ りょ ぎゃ ぎゅ
+      ぎょ びゃ びょ ぴょ): only the "built from" line, e.g. ひ (hi) + や (ya), said as one beat.
+- [ ] **Less obvious Filipino picks**: pakyaw (kya, "buying in bulk"), kanya (nya, "his/hers"),
+      niyog (nyo, said "nyog"), nipa (ni), hoy (ho), heto (he).
+- [ ] **English picks to double-check**: Myanmar (mya), menu (nyu), huge (hyu), beauty (byu),
+      Tokyo (kyo), cute (kyu), tsunami (tsu), bazaar (za).
