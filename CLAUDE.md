@@ -276,11 +276,12 @@ Keep it simple (Leitner-style boxes):
 
 ## Done checklist (before calling a version finished)
 
-- [ ] `check-data` script passes (counts, ids, words, "sounds like" hints)
+- [x] `check-data` script passes (counts, ids, words, "sounds like" hints)
 - [ ] Every card shows correct kana, romaji, sample word and "sounds like" hints
-- [ ] Tested at phone width (360 px) and desktop width; no horizontal scroll
-- [ ] Swipe, tap, and keyboard controls all work
-- [ ] Progress survives a page reload
-- [ ] App loads with the network turned off (after first visit)
-- [ ] Light and dark mode both readable
-- [ ] Font license noted in the About section
+      (all 308 cards render fully, checked 2026-10-26; word choices wait on Mark's `REVIEW.md` check)
+- [x] Tested at phone width (360 px) and desktop width; no horizontal scroll
+- [x] Swipe, tap, and keyboard controls all work
+- [x] Progress survives a page reload
+- [x] App loads with the network turned off (after first visit)
+- [x] Light and dark mode both readable (all text colors pass WCAG AA contrast)
+- [x] Font license noted in the About section

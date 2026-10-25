@@ -159,6 +159,14 @@ kbd {
   font-weight: 500;
 }
 
+/* Narrow phones, study screen: the card counter needs the room, so drop the
+   Japanese part of the title ("Travel phrases フレ…" -> "Travel phrases"). */
+@media (max-width: 400px) {
+  .topbar:has(#counter:not([hidden])) .title span {
+    display: none;
+  }
+}
+
 .counter {
   flex: none;
   color: var(--muted);
