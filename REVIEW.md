@@ -82,18 +82,23 @@ that each Filipino word and meaning is right and natural to you.
 
 ## Example sentences (kana cards)
 
-All 208 sentences are short and polite (です/ます). A few to look at:
+All 208 sentences were rewritten (2026-10-25) around travel scenes (convenience stores,
+restaurants, airports, hotels, stations) and describing words, each with a word-by-word
+breakdown, a pattern and a "try it with other words" example. A few to look at:
 
-- [ ] **Sentences that don't fit Mark exactly**: こどもが ふたり います ("I have two children"),
-      だいがくで にほんごを べんきょう します ("I study Japanese at university"),
-      わたしの ニックネームは マークです ("My nickname is Mark"). Change them to suit you.
-- [ ] **Sound-word sentences**: にょろにょろ (snake wriggling), ひゅうひゅう (wind whooshing),
-      ぴょんぴょん (hopping). Natural, but these words are less useful than everyday words.
-- [ ] **つづく / はなぢ** (ぢ, づ, ヂ, ヅ cards): sentences use つづく でしょう and はなぢが でました /
-      とまりません. Correct; listed because these cards are unusual.
-- [ ] **ここは きんえん ゾーンです** (ゾ card): 禁煙ゾーン is used, but 禁煙エリア / 禁煙席 are more common.
-- [ ] **ユーロを えんに かえたいです** (ユ card): "change euros into yen". For Mark, pesos would be
-      more useful, but the card's sample word is ユーロ.
+- [ ] **Word meanings in the breakdowns** are short and simplified for a beginner (e.g. は is
+      shown as "topic: as for…", が as "subject marker"). Good enough to start; a textbook
+      explains the full picture.
+- [ ] **Some sample words are hard to use in travel**, so their sentences are a stretch:
+      にょろにょろ (an eel wriggling), ひゅうひゅう (wind), ぴょんぴょん (hopping), ヒューズ (a fuse
+      blowing), ヘリコプター (a helicopter night view), ゴルフ, ギター.
+- [ ] **きつえん ゾーン** (ゾ card): 喫煙ゾーン is understood, but signs more often say 喫煙所 / 喫煙エリア.
+- [ ] **ユーロも つかえますか** (ユ card): most shops in Japan take only yen; the sentence is about asking.
+- [ ] **Facts in sentences**: Aomori apples, Hokkaido potatoes and snow, Kyoto temples, Tokyo
+      having more people than Osaka, 「マクド」 for McDonald's in Osaka. All well known, but
+      general statements.
+- [ ] **Prices** (100-yen pen, 300-yen coin locker, 800-yen lunch, 200-yen bus) are examples,
+      not real prices.
 
 ## Travel words and phrases
 

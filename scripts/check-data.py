@@ -7,6 +7,7 @@ Exits with code 1 if any error is found.
 """
 
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -69,6 +70,8 @@ def check_sounds_like(label, sounds, errors):
 
 
 SENTENCE_END = ("。", "？", "！")
+# Spaces and punctuation are ignored when checking that the parts add up to the sentence.
+PUNCTUATION = re.compile(r"[ 、。？！「」]")
 
 
 def check_sentence(label, sentence, word_kana, errors):
@@ -85,6 +88,21 @@ def check_sentence(label, sentence, word_kana, errors):
         errors.append(f"{label}: sentence '{kana}' does not contain the sample word '{word_kana}'")
     if kana and not kana.endswith(SENTENCE_END):
         errors.append(f"{label}: sentence '{kana}' should end with 。 ？ or ！")
+
+    # "How it's built": the parts must add up to the sentence exactly.
+    parts = sentence.get("parts") or []
+    if not parts or not all(isinstance(p, list) and len(p) == 2 and p[0] and p[1] for p in parts):
+        errors.append(f"{label}: sentence needs 'parts' as [kana, meaning] pairs")
+    else:
+        joined = PUNCTUATION.sub("", "".join(p[0] for p in parts))
+        if joined != PUNCTUATION.sub("", kana):
+            errors.append(f"{label}: sentence parts '{joined}' don't add up to '{kana}'")
+    for field in ("pattern", "patternEn"):
+        if not sentence.get(field):
+            errors.append(f"{label}: sentence is missing '{field}'")
+    swap = sentence.get("swap") or {}
+    if not swap.get("kana") or not swap.get("en"):
+        errors.append(f"{label}: sentence needs a 'swap' example with 'kana' and 'en'")
 
 
 def check_vocab_file(path, prefix, is_phrase, other_ids, errors):

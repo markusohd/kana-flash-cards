@@ -731,6 +731,89 @@ progress::-moz-progress-bar {
   color: var(--muted);
 }
 
+/* "How it's built": breakdown, pattern, swap example */
+.built {
+  margin-top: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+}
+
+.built summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
+}
+
+.built summary::-webkit-details-marker {
+  display: none;
+}
+
+.built summary::before {
+  content: "▸";
+  margin-right: 8px;
+  transition: transform 0.2s;
+}
+
+.built[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.parts-list {
+  display: grid;
+  /* Japanese column at most 60% wide, so long words wrap instead of overflowing */
+  grid-template-columns: fit-content(60%) 1fr;
+  gap: 4px 12px;
+  margin: 0;
+  padding: 0 12px 10px;
+  align-items: baseline;
+}
+
+.parts-list dt {
+  font-size: 1.1rem;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.parts-list dd {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.pattern,
+.swap {
+  padding: 8px 12px 10px;
+  border-top: 1px dashed var(--line);
+}
+
+.pattern-ja {
+  font-weight: 600;
+}
+
+.pattern-en,
+.swap-en {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.swap-kana {
+  font-size: 1.1rem;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .built summary::before {
+    transition: none;
+  }
+}
+
 /* Travel word / phrase on the card back */
 .vocab-back-kana {
   font-size: clamp(2rem, 10vw, 2.8rem);

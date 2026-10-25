@@ -502,7 +502,8 @@ function setUpCardGestures() {
       ignoreNextClick = false;
       return;
     }
-    if (e.target.closest("button")) return;
+    // Buttons and the "How it's built" section have their own tap actions.
+    if (e.target.closest("button, details")) return;
     flip();
   });
 }
@@ -591,6 +592,9 @@ async function start() {
   $("settings").addEventListener("close", renderHome);
 
   // Study
+  // Remember whether "How it's built" is left open, for every card.
+  $("built").open = storage.load("builtOpen", false);
+  $("built").addEventListener("toggle", () => storage.save("builtOpen", $("built").open));
   setUpCardGestures();
   setUpKeyboard();
   $("flip").addEventListener("click", flip);

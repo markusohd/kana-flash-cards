@@ -105,12 +105,20 @@ Each character needs one sample word. Rules:
 
 ## Example sentences
 
-Every kana card has one sentence that uses its sample word.
-- Short, simple, polite (です/ます) sentences a beginner can read; travel themes where natural.
+Every kana card has one sentence that uses its sample word, and it teaches how Japanese
+sentences are built (Mark asked for this on 2026-10-25).
+- Short, polite (です/ます) sentences Mark can use while traveling: convenience stores,
+  restaurants, airports, hotels, stations. Avoid sentences about a life he doesn't have
+  (children, university, a nickname). Use **describing words** often (big, cold, near, quiet,
+  more ___, the most ___, ___-er than, not ___, was ___, a [thing] that ___).
 - `kana`: hiragana/katakana with **spaces between words** (particles stay attached:
-  `あめが ふって います。`), ending in 。 or ？. It must contain the sample word.
+  `つめたい あめが ふって います。`), ending in 。 or ？. It must contain the sample word.
 - `kanji`: the normal written form, shown small. `romaji`: Hepburn, particles written
   wa / o / e. `en`: natural English.
+- `parts`: `[kana, meaning]` pairs that add up exactly to the sentence (spaces and
+  punctuation ignored), shown as "How it's built" on the card.
+- `pattern` / `patternEn`: the reusable pattern, e.g. `[thing] は とても [describing word] です`
+  / `[thing] is very ___`. `swap`: `{ "kana", "en" }`, the same pattern with other words.
 
 ## Travel words and phrases
 

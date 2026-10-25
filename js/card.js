@@ -48,6 +48,22 @@ function renderKana(card) {
   $("sentence-romaji").textContent = card.sentence.romaji;
   $("sentence-en").textContent = card.sentence.en;
 
+  // "How it's built": each word with its meaning, the pattern, and a swap example
+  $("parts-list").replaceChildren(
+    ...card.sentence.parts.flatMap(([kana, meaning]) => {
+      const dt = document.createElement("dt");
+      dt.lang = "ja";
+      dt.textContent = kana;
+      const dd = document.createElement("dd");
+      dd.textContent = meaning;
+      return [dt, dd];
+    })
+  );
+  $("pattern-ja").textContent = card.sentence.pattern;
+  $("pattern-en").textContent = card.sentence.patternEn;
+  $("swap-kana").textContent = card.sentence.swap.kana;
+  $("swap-en").textContent = card.sentence.swap.en;
+
   // Back: pronunciation tip (only some cards have one)
   $("tip").textContent = card.tip ?? "";
   $("tip").hidden = !card.tip;
