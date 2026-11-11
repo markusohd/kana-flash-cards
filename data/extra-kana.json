@@ -1,0 +1,22 @@
+[
+  {"id": "kx-ti", "char": "ティ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "ti"},
+  {"id": "kx-di", "char": "ディ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "di"},
+  {"id": "kx-tu", "char": "トゥ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "tu"},
+  {"id": "kx-du", "char": "ドゥ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "du"},
+  {"id": "kx-fa", "char": "ファ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "fa"},
+  {"id": "kx-fi", "char": "フィ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "fi"},
+  {"id": "kx-fe", "char": "フェ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "fe"},
+  {"id": "kx-fo", "char": "フォ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "fo"},
+  {"id": "kx-wi", "char": "ウィ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "wi"},
+  {"id": "kx-we", "char": "ウェ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "we"},
+  {"id": "kx-wo", "char": "ウォ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "wo"},
+  {"id": "kx-va", "char": "ヴァ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "va"},
+  {"id": "kx-vi", "char": "ヴィ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "vi"},
+  {"id": "kx-vu", "char": "ヴ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "vu"},
+  {"id": "kx-ve", "char": "ヴェ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "ve"},
+  {"id": "kx-vo", "char": "ヴォ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "vo"},
+  {"id": "kx-she", "char": "シェ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "she"},
+  {"id": "kx-je", "char": "ジェ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "je"},
+  {"id": "kx-che", "char": "チェ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "che"},
+  {"id": "kx-tsa", "char": "ツァ", "script": "katakana", "stage": 4, "row": "extra", "romaji": "tsa"}
+]

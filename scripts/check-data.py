@@ -16,6 +16,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data" / "kana.json"
 WORDS_FILE = ROOT / "data" / "words.json"
 PHRASES_FILE = ROOT / "data" / "phrases.json"
+EXTRA_FILE = ROOT / "data" / "extra-kana.json"  # extended katakana, writing practice only
+STROKES_FILE = ROOT / "data" / "strokes.json"  # KanjiVG stroke paths, writing practice only
+EXTRA_COUNT = 20
 VOCAB_COUNT = 50  # travel words and travel phrases each
 
 # How many cards each (script, stage) should have when complete.
@@ -131,6 +134,41 @@ def check_vocab_file(path, prefix, is_phrase, other_ids, errors):
     return len(entries)
 
 
+def check_writing_data(cards, errors):
+    """Writing practice: extra-kana.json must be valid and every character used by
+    writing (including the small kana inside combinations) must have stroke data.
+    Returns the number of extra entries and of characters with strokes."""
+    try:
+        extra = json.loads(EXTRA_FILE.read_text(encoding="utf-8"))
+        strokes = json.loads(STROKES_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        errors.append(f"could not read writing data: {e}")
+        return 0, 0
+
+    if len(extra) != EXTRA_COUNT:
+        errors.append(f"extra-kana.json: has {len(extra)} entries, expected {EXTRA_COUNT}")
+    kana_ids = {card.get("id") for card in cards}
+    for i, entry in enumerate(extra):
+        label = entry.get("id", f"extra entry #{i}")
+        for field in ("id", "char", "script", "stage", "row", "romaji"):
+            if not entry.get(field):
+                errors.append(f"{label}: missing '{field}'")
+        if entry.get("id") in kana_ids:
+            errors.append(f"{label}: id also used in kana.json")
+        if entry.get("script") != "katakana" or entry.get("stage") != 4:
+            errors.append(f"{label}: extended katakana must be script 'katakana', stage 4")
+    for value, n in Counter(e.get("id") for e in extra).items():
+        if n > 1:
+            errors.append(f"extra-kana.json: duplicate id '{value}'")
+
+    needed = {ch for entry in cards + extra for ch in entry.get("char", "")}
+    for ch in sorted(needed):
+        paths = strokes.get(ch)
+        if not isinstance(paths, list) or not paths or not all(isinstance(p, str) and p for p in paths):
+            errors.append(f"strokes.json: no stroke data for '{ch}'")
+    return len(extra), len(needed)
+
+
 def main():
     errors = []
     warnings = []
@@ -176,6 +214,9 @@ def main():
     for path, prefix, is_phrase in ((WORDS_FILE, "w-", False), (PHRASES_FILE, "p-", True)):
         vocab_counts[path.name] = check_vocab_file(path, prefix, is_phrase, all_ids, errors)
 
+    # --- Writing practice data ---
+    n_extra, n_stroke_chars = check_writing_data(cards, errors)
+
     # --- Counts per script and stage ---
     actual = Counter((card.get("script"), card.get("stage")) for card in cards)
     for (script, stage), expected in EXPECTED_COUNTS.items():
@@ -194,6 +235,7 @@ def main():
         print(f"  {script} stage {stage}: {n}")
     for name, n in vocab_counts.items():
         print(f"Checked {n} entries in data/{name}")
+    print(f"Checked {n_extra} entries in data/extra-kana.json, stroke data for {n_stroke_chars} characters")
     for w in warnings:
         print(f"WARNING: {w}")
     for e in errors:
