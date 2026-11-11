@@ -355,3 +355,30 @@ test("flash cards unaffected", async () => {
   assert.equal(await page.locator("#rating").getAttribute("inert"), null);
   await page.context().close();
 });
+
+// ======================================================================
+// Offline (sw.js)
+// ======================================================================
+
+test("works offline", async () => {
+  const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, hasTouch: true });
+  const page = await context.newPage();
+  page.setDefaultTimeout(15000);
+  await page.goto(`${BASE}/index.html#writing`);
+  await page.evaluate(async () => {
+    await navigator.serviceWorker.ready; // installed: every app file is cached
+    if (!navigator.serviceWorker.controller) {
+      await new Promise((r) => navigator.serviceWorker.addEventListener("controllerchange", r, { once: true }));
+    }
+  });
+  // Only the service worker's own cache may help: empty the browser's HTTP cache.
+  const cdp = await context.newCDPSession(page);
+  await cdp.send("Network.clearBrowserCache");
+  await context.setOffline(true);
+  await page.evaluate(() => (location.hash = "#writing/practice"));
+  await page.reload(); // a real page load, served by the service worker
+  await page.waitForSelector("#writing-screen:not([hidden])");
+  assert.equal(await page.locator("#w-model .w-model-svg path").count(), 3);
+  assert.equal(await page.locator(".w-box").count(), 1);
+  await context.close();
+});

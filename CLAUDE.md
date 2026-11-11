@@ -25,8 +25,13 @@ sounds to Tagalog where it helps (Japanese vowels a, i, u, e, o are close to Tag
 - Simple progress tracking saved on the device
 - Works offline and can be installed on a phone's home screen (PWA)
 
+### Version 2: writing practice (built 2026-11-11, Mark's request)
+- A fourth section, **Writing**: finger writing in a grid box beside a model character, stroke
+  order animation, stroke checking (count, order, direction, shape), a writing quiz and a
+  progress chart. Stroke data from KanjiVG (CC BY-SA 3.0, credited in About and README).
+  Design: `docs/superpowers/specs/2026-11-11-writing-practice-design.md`.
+
 ### Not in version 1 (do not build yet)
-- Stroke order animations or writing/tracing practice (planned for version 2, likely using KanjiVG data)
 - Kanji study, grammar lessons, vocabulary beyond the two travel decks
 - User accounts, login, or any server or database
 - Quizzes that require typing
