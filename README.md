@@ -14,7 +14,9 @@ Four sections, chosen on the start page:
   animates the strokes. **Check** tells you if your stroke count, order and direction are right
   (green = good, red = fix it). **Quiz** shows only the romaji; write from memory, check, then mark
   ✓ or ✗. The Writing home shows a chart of every character coloured by progress; tap one to
-  practise it.
+  practise it. A little chime plays when you get it right and a soft boop when a stroke is off
+  (turn it off with **Sounds on/off** under Prev / Next). Mt. Fuji and sakura sit in the
+  background, in light and dark mode.
 
 ## Use it on your phone
 
@@ -46,8 +48,8 @@ Open http://localhost:8000. (Opening `index.html` directly as a file won't load 
 | Shortcuts help | | `?` |
 
 Writing screen: write in the box with one finger (a resting palm or second finger is ignored),
-then **Check**. **Undo** removes your last stroke, **Clear** empties the box, **Prev / Next** move
-between characters. Combinations like きゃ have two boxes: き, then a small ゃ.
+then **Check**. **Undo** removes your last stroke, **Clear** empties the box, **Prev / Next**
+(under ▶ Stroke order) move between characters. Combinations like きゃ have two boxes: き, then a small ゃ.
 
 ## Settings
 

@@ -183,6 +183,43 @@
     <p class="shortcut-hint">Press <kbd>?</kbd> for keyboard shortcuts</p>
   </main>
 
+  <!-- ================= WRITING SCENERY: Mt. Fuji and sakura (decoration only) ================= -->
+  <div class="scenery" id="scenery" aria-hidden="true" hidden>
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" class="sky-top"/>
+          <stop offset="1" class="sky-bottom"/>
+        </linearGradient>
+        <!-- One sakura flower: five round petals around a small centre -->
+        <symbol id="blossom" viewBox="-20 -20 40 40" width="40" height="40" x="-20" y="-20" overflow="visible">
+          <g>
+            <ellipse rx="7" ry="10" cy="-10"/>
+            <ellipse rx="7" ry="10" cy="-10" transform="rotate(72)"/>
+            <ellipse rx="7" ry="10" cy="-10" transform="rotate(144)"/>
+            <ellipse rx="7" ry="10" cy="-10" transform="rotate(216)"/>
+            <ellipse rx="7" ry="10" cy="-10" transform="rotate(288)"/>
+          </g>
+          <circle r="3.5" style="fill: var(--blossom-centre)"/>
+        </symbol>
+      </defs>
+      <rect width="1200" height="800" fill="url(#sky)"/>
+      <circle class="sun" cx="300" cy="230" r="70"/>
+      <!-- Mt. Fuji with its snowy top -->
+      <path class="fuji" d="M90,800 C320,640 470,455 552,350 Q600,330 648,350 C730,455 880,640 1110,800 Z"/>
+      <path class="snow" d="M552,350 Q600,330 648,350 L702,420 L676,408 L656,436 L632,410 L606,442 L584,412 L560,438 L540,410 L500,424 Z"/>
+      <!-- Hills in front -->
+      <path class="hill" d="M0,800 L0,700 C180,660 360,712 520,728 C720,750 920,688 1200,705 L1200,800 Z"/>
+      <!-- Sakura branch from the top right -->
+      <path class="branch" d="M1210,40 C1100,70 1020,110 940,150 M1060,90 C1020,60 980,50 930,60 M1000,128 C1030,170 1060,200 1110,215 M940,150 C900,165 870,150 830,110"/>
+      <use class="flower" href="#blossom" x="905" y="70" transform="rotate(0 905 70)"/><use class="flower" href="#blossom" x="968" y="118" transform="rotate(25 968 118)"/><use class="flower" href="#blossom" x="1040" y="92" transform="rotate(50 1040 92)"/><use class="flower" href="#blossom" x="1108" y="150" transform="rotate(10 1108 150)"/><use class="flower" href="#blossom" x="1012" y="182" transform="rotate(35 1012 182)"/><use class="flower" href="#blossom" x="1150" y="62" transform="rotate(60 1150 62)"/><use class="flower" href="#blossom" x="870" y="140" transform="rotate(15 870 140)"/><use class="flower" href="#blossom" x="1090" y="232" transform="rotate(40 1090 232)"/><use class="flower" href="#blossom" x="948" y="210" transform="rotate(5 948 210)"/>
+      <circle class="bud" cx="840" cy="100" r="7"/><circle class="bud" cx="1000" cy="140" r="7"/><circle class="bud" cx="1130" cy="200" r="7"/><circle class="bud" cx="925" cy="168" r="7"/>
+    </svg>
+    <!-- Falling petals (they stay still if the device asks for reduced motion) -->
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+    <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+  </div>
+
   <!-- ================= WRITING SCREEN (built by writing.js) ================= -->
   <main class="writing" id="writing-screen" hidden></main>
 

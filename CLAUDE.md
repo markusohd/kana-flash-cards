@@ -30,6 +30,9 @@ sounds to Tagalog where it helps (Japanese vowels a, i, u, e, o are close to Tag
   order animation, stroke checking (count, order, direction, shape), a writing quiz and a
   progress chart. Stroke data from KanjiVG (CC BY-SA 3.0, credited in About and README).
   Design: `docs/superpowers/specs/2026-11-11-writing-practice-design.md`.
+- Writing screens show a Mt. Fuji and sakura scene (light: dawn, dark: night with a moon),
+  with gently falling petals (still under reduced motion). Prev / Next sit under the
+  Stroke order button.
 
 ### Not in version 1 (do not build yet)
 - Kanji study, grammar lessons, vocabulary beyond the two travel decks
@@ -37,7 +40,9 @@ sounds to Tagalog where it helps (Japanese vowels a, i, u, e, o are close to Tag
 - Quizzes that require typing
 - Audio or voice playback of any kind. Kokoro (female jf_alpha, male jm_kumo) and VOICEVOX
   male voices were tried; Mark found them unnatural, so all audio was removed on 2026-10-25.
-  Do not add audio back unless Mark asks.
+  Do not add audio back unless Mark asks. Exception (Mark asked, 2026-11-11): the Writing
+  section plays short synthesised sound effects (a chime when a check passes, a soft boop
+  when a stroke is off), with a Sounds on/off button. No voices.
 
 Keep the code organized so writing practice can be added later without a rewrite
 (for example, keep card data separate from UI, and leave room on the card back for a

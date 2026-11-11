@@ -6,6 +6,7 @@
 import { WritingPad, samplePaths, drawModel, animateModel } from "./writing-pad.js";
 import { checkStrokes } from "./stroke-check.js";
 import * as storage from "./storage.js";
+import { chime, boop, soundsOn, setSoundsOn } from "./sounds.js";
 
 const $ = (id) => document.getElementById(id);
 const SCRIPT_NAMES = { hiragana: "Hiragana", katakana: "Katakana" };
@@ -24,12 +25,20 @@ const state = {
 const currentCard = () => state.deck[state.index];
 
 const MARKUP = `
-  <p class="w-prompt" id="w-prompt"></p>
   <div class="w-sheet">
-    <section class="w-model" id="w-model" aria-label="Model character">
-      <div class="w-model-chars" id="w-model-chars"></div>
-      <p class="w-model-info"><span class="romaji" id="w-romaji"></span> <span class="w-script" id="w-script"></span></p>
-      <button type="button" class="big-btn" id="w-play">▶ Stroke order</button>
+    <!-- Side panel: the model (or the quiz prompt), stroke order, Prev / Next, sounds -->
+    <section class="w-model" id="w-side" aria-label="Model character">
+      <p class="w-prompt" id="w-prompt"></p>
+      <div class="w-model-body" id="w-model">
+        <div class="w-model-chars" id="w-model-chars"></div>
+        <p class="w-model-info"><span class="romaji" id="w-romaji"></span> <span class="w-script" id="w-script"></span></p>
+        <button type="button" class="big-btn" id="w-play">▶ Stroke order</button>
+      </div>
+      <nav class="nav w-nav" aria-label="Character navigation">
+        <button type="button" class="nav-btn" id="w-prev" aria-label="Previous character"><span aria-hidden="true">‹</span> Prev</button>
+        <button type="button" class="nav-btn" id="w-next" aria-label="Next character">Next <span aria-hidden="true">›</span></button>
+      </nav>
+      <button type="button" class="link-btn w-sound" id="w-sound" aria-pressed="true"></button>
     </section>
     <section class="w-write" aria-label="Write here">
       <div class="w-boxes" id="w-boxes"></div>
@@ -44,11 +53,7 @@ const MARKUP = `
         <button type="button" class="rate-btn known" id="w-got">✓ Got it</button>
       </div>
     </section>
-  </div>
-  <nav class="nav" aria-label="Character navigation">
-    <button type="button" class="nav-btn" id="w-prev" aria-label="Previous character"><span aria-hidden="true">‹</span> Prev</button>
-    <button type="button" class="nav-btn" id="w-next" aria-label="Next character">Next <span aria-hidden="true">›</span></button>
-  </nav>`;
+  </div>`;
 
 // Build the screen and wire its buttons (call once at startup).
 export function initWriting({ strokes, announce }) {
@@ -64,6 +69,11 @@ export function initWriting({ strokes, announce }) {
   $("w-next").addEventListener("click", () => go(1));
   $("w-got").addEventListener("click", () => rate(true));
   $("w-missed").addEventListener("click", () => rate(false));
+  showSoundSetting();
+  $("w-sound").addEventListener("click", () => {
+    setSoundsOn(!soundsOn());
+    showSoundSetting();
+  });
 
   // Ink and grid colours follow the theme: redraw when it changes
   // (the ◐ button sets data-theme; the device setting can change too).
@@ -127,6 +137,12 @@ function showCard() {
   state.lastPad = null;
 }
 
+function showSoundSetting() {
+  const on = soundsOn();
+  $("w-sound").textContent = on ? "🔔 Sounds on" : "🔕 Sounds off";
+  $("w-sound").setAttribute("aria-pressed", String(on));
+}
+
 // Writing again after a check hides the old message (practice only; the quiz keeps its answer).
 function onPadChange() {
   if (state.mode === "practice") $("w-message").textContent = "";
@@ -168,6 +184,8 @@ function check() {
   else message = results.map((r, i) => `${chars[i]}: ${r.message}`).join("  ");
   $("w-message").textContent = message;
   state.announce(message);
+  if (allOk) chime();
+  else boop();
 
   if (state.mode === "practice") {
     storage.markSeen(card.id);

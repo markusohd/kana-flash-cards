@@ -154,6 +154,9 @@ function showScreen(name) {
   $("home-screen").hidden = name !== "home";
   $("study-screen").hidden = name !== "study";
   $("writing-screen").hidden = name !== "writing";
+  // Mt. Fuji and sakura behind the Writing section (home, practice and quiz)
+  $("scenery").hidden = name === "landing" || section()?.type !== "writing";
+  document.body.classList.toggle("scenic", !$("scenery").hidden);
   $("go-back").hidden = name === "landing";
   $("counter").hidden = name !== "study" && name !== "writing";
   if (name !== "landing") {

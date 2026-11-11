@@ -414,6 +414,86 @@ test("ink is redrawn when the theme changes", async () => {
   await page.context().close();
 });
 
+test("prev and next sit right under stroke order, also in the quiz", async () => {
+  const page = await appPage("#writing/practice");
+  const play = await page.locator("#w-play").boundingBox();
+  const next = await page.locator("#w-next").boundingBox();
+  assert.equal(await page.locator("#w-side #w-next").count(), 1, "Next is in the side panel");
+  assert.ok(next.y > play.y + play.height - 1 && next.y - (play.y + play.height) < 40, "Next is just below Stroke order");
+  await page.context().close();
+
+  const quiz = await appPage("#writing/quiz", ONLY_N);
+  assert.equal(await quiz.locator("#w-model").isVisible(), false);
+  assert.equal(await quiz.locator("#w-next").isVisible(), true, "Next stays visible in the quiz");
+  assert.equal(await quiz.locator("#w-side #w-prompt").isVisible(), true, "quiz prompt is in the side panel");
+  await quiz.context().close();
+});
+
+test("Mt. Fuji scenery shows on writing screens only", async () => {
+  const page = await appPage("");
+  assert.equal(await page.locator("#scenery").isVisible(), false, "not on the landing page");
+  await page.goto(`${BASE}/index.html#writing`);
+  await page.waitForSelector("#home-screen:not([hidden])");
+  assert.equal(await page.locator("#scenery").isVisible(), true, "on the writing home");
+  await page.locator("#start").click();
+  await page.waitForSelector("#writing-screen:not([hidden])");
+  assert.equal(await page.locator("#scenery").isVisible(), true, "on the practice screen");
+  assert.ok((await page.locator("#scenery .fuji").count()) >= 1 && (await page.locator("#scenery .petal").count()) >= 5);
+  await page.goto(`${BASE}/index.html#kana`);
+  await page.waitForSelector("#home-screen:not([hidden])");
+  assert.equal(await page.locator("#scenery").isVisible(), false, "not on the flash card sections");
+  await page.context().close();
+});
+
+// Record every tone the app plays (frequency at the start of each oscillator).
+async function recordTones(page) {
+  await page.addInitScript(() => {
+    window.__tones = [];
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    const create = Ctx.prototype.createOscillator;
+    Ctx.prototype.createOscillator = function () {
+      const osc = create.call(this);
+      const start = osc.start.bind(osc);
+      osc.start = (...args) => {
+        window.__tones.push(osc.frequency.value);
+        return start(...args);
+      };
+      return osc;
+    };
+  });
+}
+
+test("cute chime when correct, soft boop when a stroke is off, and sounds can be turned off", async () => {
+  const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, hasTouch: true, serviceWorkers: "block" });
+  const page = await context.newPage();
+  page.setDefaultTimeout(8000);
+  await recordTones(page);
+  await page.goto(`${BASE}/index.html#writing/practice`);
+  await page.waitForSelector("#writing-screen:not([hidden])");
+
+  await writeChar(page, "あ");
+  await page.click("#w-check");
+  const chime = await page.evaluate(() => window.__tones.slice());
+  assert.ok(chime.length >= 2 && chime[0] >= 600, `chime tones: ${chime}`);
+
+  await page.click("#w-clear");
+  const r = await page.locator(".w-box").boundingBox();
+  await touchDrag(page, line([r.x + r.width * 0.2, r.y + r.height * 0.8], [r.x + r.width * 0.8, r.y + r.height * 0.8]));
+  await page.click("#w-check");
+  const boop = await page.evaluate((n) => window.__tones.slice(n), chime.length);
+  assert.ok(boop.length >= 1 && boop[0] < 500, `boop tones: ${boop}`);
+
+  await page.click("#w-sound"); // turn sounds off
+  assert.match(await page.locator("#w-sound").textContent(), /off/i);
+  const before = await page.evaluate(() => window.__tones.length);
+  await page.click("#w-check");
+  assert.equal(await page.evaluate(() => window.__tones.length), before, "no sound when turned off");
+  await page.reload();
+  await page.waitForSelector("#writing-screen:not([hidden])");
+  assert.match(await page.locator("#w-sound").textContent(), /off/i, "the choice is remembered");
+  await context.close();
+});
+
 // ======================================================================
 // Offline (sw.js)
 // ======================================================================
