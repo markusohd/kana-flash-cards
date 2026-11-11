@@ -64,6 +64,12 @@ export function initWriting({ strokes, announce }) {
   $("w-next").addEventListener("click", () => go(1));
   $("w-got").addEventListener("click", () => rate(true));
   $("w-missed").addEventListener("click", () => rate(false));
+
+  // Ink and grid colours follow the theme: redraw when it changes
+  // (the ◐ button sets data-theme; the device setting can change too).
+  const redrawAll = () => state.pads.forEach((pad) => pad.redraw());
+  new MutationObserver(redrawAll).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", redrawAll);
 }
 
 // Show the writing screen for `deck`, starting at `startIndex`.
@@ -114,11 +120,10 @@ function showCard() {
     return canvas;
   });
   boxes.replaceChildren(...state.pads);
-  state.pads = state.pads.map((canvas) => {
-    const pad = new WritingPad(canvas, { onChange: onPadChange });
-    canvas.addEventListener("pointerdown", () => (state.lastPad = pad));
-    return pad;
-  });
+  WritingPad.activePointer = null; // a finger left on the old card's box must not block the new one
+  state.pads = state.pads.map(
+    (canvas) => new WritingPad(canvas, { onChange: onPadChange, onStart: (pad) => (state.lastPad = pad) })
+  );
   state.lastPad = null;
 }
 

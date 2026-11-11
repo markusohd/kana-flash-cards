@@ -356,6 +356,64 @@ test("flash cards unaffected", async () => {
   await page.context().close();
 });
 
+test("palm on the other box is ignored", async () => {
+  const page = await appPage("#writing/practice/h-kya", { scripts: ["hiragana"], stages: [3], rows: [], order: "chart", reviewOnly: false });
+  const counts = await page.evaluate(() => {
+    const [box1, box2] = document.querySelectorAll(".w-box");
+    const fire = (el, type, id, bx, by) => {
+      const r = el.getBoundingClientRect();
+      el.dispatchEvent(new PointerEvent(type, {
+        pointerId: id, pointerType: "touch", isPrimary: id === 1, bubbles: true,
+        clientX: r.left + (bx / 109) * r.width, clientY: r.top + (by / 109) * r.height,
+      }));
+    };
+    fire(box1, "pointerdown", 1, 20, 30);
+    fire(box1, "pointermove", 1, 50, 30);
+    fire(box2, "pointerdown", 2, 30, 60); // palm resting on the ゃ box
+    fire(box2, "pointermove", 2, 60, 80);
+    fire(box2, "pointerup", 2, 60, 80);
+    fire(box1, "pointermove", 1, 80, 30);
+    fire(box1, "pointerup", 1, 80, 30);
+    return [...document.querySelectorAll(".w-box")].length;
+  });
+  assert.equal(counts, 2);
+  await page.click("#w-check");
+  const message = await page.locator("#w-message").textContent();
+  assert.ok(!/ゃ: You used 1 stroke/.test(message), `palm drew in the ゃ box: ${message}`);
+  assert.match(message, /ゃ: Write the character first|ゃ: You used 0/);
+  await page.context().close();
+});
+
+test("next card while a finger is down still allows writing", async () => {
+  const page = await appPage("#writing/practice");
+  await page.evaluate(() => {
+    const box = document.querySelector(".w-box");
+    const r = box.getBoundingClientRect();
+    box.dispatchEvent(new PointerEvent("pointerdown", { pointerId: 5, pointerType: "touch", isPrimary: true, bubbles: true, clientX: r.left + 40, clientY: r.top + 40 }));
+  });
+  await page.click("#w-next"); // the finger never lifted on the old card
+  const r = await page.locator(".w-box").boundingBox();
+  await touchDrag(page, line([r.x + r.width * 0.2, r.y + r.height * 0.5], [r.x + r.width * 0.8, r.y + r.height * 0.5]));
+  await page.click("#w-check");
+  assert.notEqual(await page.locator("#w-message").textContent(), "Write the character first.");
+  await page.context().close();
+});
+
+test("ink is redrawn when the theme changes", async () => {
+  const page = await appPage("#writing/practice");
+  const r = await page.locator(".w-box").boundingBox();
+  await touchDrag(page, line([r.x + r.width * 0.2, r.y + r.height * 0.3], [r.x + r.width * 0.8, r.y + r.height * 0.3]));
+  await page.click("#theme-toggle"); // light -> dark
+  await page.waitForTimeout(100);
+  const pixel = await page.evaluate(() => {
+    const c = document.querySelector(".w-box");
+    const [red, g, b] = c.getContext("2d").getImageData(Math.round(c.width / 2), Math.round(c.height * 0.3), 1, 1).data;
+    return red + g + b;
+  });
+  assert.ok(pixel > 400, `ink is still dark in dark mode (rgb sum ${pixel})`);
+  await page.context().close();
+});
+
 // ======================================================================
 // Offline (sw.js)
 // ======================================================================

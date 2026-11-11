@@ -17,13 +17,18 @@ function colour(el, name, fallback) {
 }
 
 export class WritingPad {
-  constructor(canvas, { onChange } = {}) {
+  // The one finger allowed to draw, shared by every box on the screen, so a palm
+  // resting on the second box (e.g. ゃ in きゃ) is ignored too.
+  static activePointer = null;
+
+  constructor(canvas, { onChange, onStart } = {}) {
     this.canvas = canvas;
     this.ctx = canvas.getContext("2d");
     this.onChange = onChange ?? (() => {});
+    this.onStart = onStart ?? (() => {}); // called when this box starts a stroke
     this.strokes = []; // finished strokes, each a list of [x, y] points
     this.current = null; // the stroke being drawn right now
-    this.pointerId = null; // the one finger allowed to draw; others are ignored
+    this.pointerId = null; // the finger drawing in this box right now, if any
     this.result = null; // last check result, used to colour strokes
 
     // Stop the browser from scrolling or zooming while writing.
@@ -50,7 +55,7 @@ export class WritingPad {
   clear() {
     this.strokes = [];
     this.current = null;
-    this.pointerId = null;
+    this.#release();
     this.#edited();
   }
 
@@ -119,10 +124,12 @@ export class WritingPad {
   }
 
   #start(e) {
-    if (this.pointerId !== null) return; // already drawing with another finger
+    if (WritingPad.activePointer !== null) return; // another finger is already writing
     if (e.pointerType === "mouse" && e.button !== 0) return;
     e.preventDefault();
     this.pointerId = e.pointerId;
+    WritingPad.activePointer = e.pointerId;
+    this.onStart(this);
     try {
       this.canvas.setPointerCapture(e.pointerId); // keep getting moves if the finger slides off
     } catch {
@@ -144,11 +151,17 @@ export class WritingPad {
   #end(e) {
     if (e.pointerId !== this.pointerId) return;
     const stroke = this.current;
-    this.pointerId = null;
+    this.#release();
     this.current = null;
     // Very short strokes are accidental taps.
     if (stroke && strokeLength(stroke) >= MIN_STROKE_LENGTH) this.strokes.push(stroke);
     this.#edited();
+  }
+
+  // This box stops drawing; another finger may start.
+  #release() {
+    if (this.pointerId !== null && WritingPad.activePointer === this.pointerId) WritingPad.activePointer = null;
+    this.pointerId = null;
   }
 
   // Any change clears the old check colours.
