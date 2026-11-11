@@ -62,7 +62,21 @@
       <h2 id="deck-title">Studying</h2>
       <p class="deck-summary" id="deck-summary"></p>
       <button type="button" class="big-btn primary" id="start">Start</button>
+      <!-- Writing only -->
+      <button type="button" class="big-btn primary" id="start-quiz" hidden>Start quiz</button>
       <button type="button" class="big-btn" id="open-settings">Settings</button>
+    </section>
+
+    <!-- Writing only: every character, coloured by progress (filled by app.js) -->
+    <section class="panel" id="writing-panel" aria-labelledby="chart-title" hidden>
+      <h2 id="chart-title">Characters</h2>
+      <p class="chart-legend">
+        <span class="chart-key not-started"></span> Not started
+        <span class="chart-key learning"></span> Learning
+        <span class="chart-key can-write"></span> Can write
+      </p>
+      <div class="writing-chart" id="writing-chart"></div>
+      <p class="hint">Tap a character to practise it.</p>
     </section>
   </main>
 
@@ -169,6 +183,9 @@
     <p class="shortcut-hint">Press <kbd>?</kbd> for keyboard shortcuts</p>
   </main>
 
+  <!-- ================= WRITING SCREEN (built by writing.js) ================= -->
+  <main class="writing" id="writing-screen" hidden></main>
+
   <!-- Screen reader announcements (flip state, card changes) -->
   <p class="sr-only" id="announcer" aria-live="polite"></p>
 
@@ -180,8 +197,8 @@
         <button type="submit" class="big-btn primary done-btn">Done</button>
       </div>
 
-      <!-- Kana only -->
-      <fieldset data-for="kana">
+      <!-- Kana and writing -->
+      <fieldset data-for="kana writing">
         <legend>Script</legend>
         <div class="choices">
           <label class="chip"><input type="checkbox" name="script" value="hiragana"> Hiragana <span lang="ja">あ</span></label>
@@ -189,16 +206,17 @@
         </div>
       </fieldset>
 
-      <fieldset data-for="kana">
+      <fieldset data-for="kana writing">
         <legend>Stages</legend>
         <div class="choices">
           <label class="chip"><input type="checkbox" name="stage" value="1"> 1 · Basic <span lang="ja">あ</span></label>
           <label class="chip"><input type="checkbox" name="stage" value="2"> 2 · Voiced <span lang="ja">が</span></label>
           <label class="chip"><input type="checkbox" name="stage" value="3"> 3 · Combinations <span lang="ja">きゃ</span></label>
+          <label class="chip" data-for="writing"><input type="checkbox" name="stage" value="4"> 4 · Extended katakana <span lang="ja">ティ</span></label>
         </div>
       </fieldset>
 
-      <fieldset data-for="kana">
+      <fieldset data-for="kana writing">
         <legend>Rows</legend>
         <p class="hint">None selected = all rows.</p>
         <!-- Filled by app.js from the data, for the chosen scripts and stages -->

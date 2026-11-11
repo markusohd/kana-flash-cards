@@ -8,6 +8,10 @@ including the small kana inside combinations such as ゃ in きゃ), this fetche
 KanjiVG drawing and keeps each stroke's SVG path, in stroke order.
 The paths use KanjiVG's 109 x 109 box.
 
+Small kana (ゃ, ュ, ァ ...) are drawn only slightly smaller than full-size kana in
+KanjiVG; this script shrinks them further toward the bottom of the box so they look
+small next to the full-size character, as when written by hand.
+
 KanjiVG is by Ulrich Apel, licensed CC BY-SA 3.0: https://kanjivg.tagaini.net
 """
 
@@ -26,6 +30,40 @@ URL = "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/{code:05x}
 PATH_TAG = re.compile(r"<path\b[^>]*>")
 STROKE_ID = re.compile(r'id="kvg:[0-9a-f]+-s(\d+)"')
 PATH_D = re.compile(r'\sd="([^"]+)"')
+
+SMALL_KANA = "ぁぃぅぇぉゃゅょァィゥェォャュョ"
+SMALL_SCALE = 0.75  # extra shrink for small kana...
+SMALL_ANCHOR = (54.5, 100.0)  # ...toward this point (bottom centre of the box)
+TOKEN = re.compile(r"[A-Za-z]|-?(?:\d+\.?\d*|\.\d+)(?:e-?\d+)?")
+
+
+def scale_path(d, k, cx, cy):
+    """Scale an SVG path by k around (cx, cy). Handles the commands KanjiVG uses:
+    M L C S (absolute x,y pairs), their lowercase relative forms, H/h, V/v and Z."""
+    out, command, index = [], None, 0
+    for token in TOKEN.findall(d):
+        if token.isalpha():
+            command, index = token, 0
+            out.append(token)
+            continue
+        value = float(token)
+        if command in "MLCS":  # absolute: alternate x, y
+            value = (cx + (value - cx) * k) if index % 2 == 0 else (cy + (value - cy) * k)
+        elif command == "H":
+            value = cx + (value - cx) * k
+        elif command == "V":
+            value = cy + (value - cy) * k
+        else:  # relative commands: just scale
+            value *= k
+        index += 1
+        out.append(f"{value:.2f}".rstrip("0").rstrip("."))
+    # Join, keeping a separator between numbers (a leading "-" also separates).
+    text = ""
+    for token in out:
+        if text and not token.isalpha() and not text[-1].isalpha() and not token.startswith("-"):
+            text += ","
+        text += token
+    return text
 
 
 def characters():
@@ -51,7 +89,10 @@ def fetch_strokes(ch):
             strokes.append((int(number.group(1)), d.group(1)))
     if not strokes:
         raise ValueError("no strokes found")
-    return [d for _, d in sorted(strokes)]
+    paths = [d for _, d in sorted(strokes)]
+    if ch in SMALL_KANA:
+        paths = [scale_path(d, SMALL_SCALE, *SMALL_ANCHOR) for d in paths]
+    return paths
 
 
 def main():

@@ -194,21 +194,40 @@ test("samplePaths", async () => {
 });
 
 // ======================================================================
-// Practice and quiz screens (js/writing.js)
+// Writing section in the app (index.html)
 // ======================================================================
 
-async function screenPage(mode, chars) {
-  const page = await newPage("/scripts/screen-fixture.html");
-  await page.waitForFunction(() => window.screenReady);
-  await page.evaluate(([m, c]) => window.start(m, c), [mode, chars]);
+// Open the app at `hash`, with writing settings `filters` saved beforehand.
+async function appPage(hash, filters = null, viewport) {
+  const context = await browser.newContext({
+    viewport: viewport ?? { width: 1024, height: 768 }, hasTouch: true, serviceWorkers: "block",
+  });
+  if (filters) {
+    await context.addInitScript((f) => {
+      if (!sessionStorage.getItem("seeded")) {
+        localStorage.setItem("kana:writing-filters", JSON.stringify(f));
+        sessionStorage.setItem("seeded", "1");
+      }
+    }, filters);
+  }
+  const page = await context.newPage();
+  page.setDefaultTimeout(8000);
+  page.on("pageerror", (err) => console.error("page error:", err.message));
+  await page.goto(`${BASE}/index.html${hash}`);
+  await page.waitForSelector("#landing-screen:not([hidden]), #home-screen:not([hidden]), #writing-screen:not([hidden]), #study-screen:not([hidden])");
   return page;
 }
 
+const ONLY_N = { scripts: ["hiragana"], stages: [1], rows: ["n"], order: "chart", reviewOnly: false };
+
 // Write a character correctly in box `index` by replaying its reference strokes.
 async function writeChar(page, ch, index = 0) {
-  const refs = await page.evaluate((c) => samplePaths(strokes[c]), ch);
-  const box = page.locator(".w-box").nth(index);
-  const r = await box.boundingBox();
+  const refs = await page.evaluate(async (c) => {
+    const { samplePaths } = await import("/js/writing-pad.js");
+    const strokes = await (await fetch("/data/strokes.json")).json();
+    return samplePaths(strokes[c]);
+  }, ch);
+  const r = await page.locator(".w-box").nth(index).boundingBox();
   for (const stroke of refs) {
     const pts = stroke.filter((_, i) => i % 3 === 0 || i === stroke.length - 1);
     await touchDrag(page, pts.map(([x, y]) => [r.x + (x / 109) * r.width, r.y + (y / 109) * r.height]));
@@ -216,16 +235,16 @@ async function writeChar(page, ch, index = 0) {
 }
 
 test("practice shows model and box", async () => {
-  const page = await screenPage("practice", ["あ"]);
-  assert.equal(await page.locator("#w-model .w-model-svg path").count(), 3);
+  const page = await appPage("#writing/practice");
+  assert.equal(await page.locator("#w-model .w-model-svg path").count(), 3); // あ
   assert.equal(await page.locator(".w-box").count(), 1);
   assert.equal(await page.locator("#w-model").isVisible(), true);
-  assert.match(await page.locator("#counter").textContent(), /1 \/ 1/);
+  assert.match(await page.locator("#counter").textContent(), /1 \/ 46/);
   await page.context().close();
 });
 
 test("check correct strokes passes", async () => {
-  const page = await screenPage("practice", ["あ"]);
+  const page = await appPage("#writing/practice");
   await writeChar(page, "あ");
   await page.click("#w-check");
   assert.match(await page.locator("#w-message").textContent(), /Nice!/);
@@ -235,7 +254,7 @@ test("check correct strokes passes", async () => {
 });
 
 test("check with nothing written", async () => {
-  const page = await screenPage("practice", ["あ"]);
+  const page = await appPage("#writing/practice");
   await page.click("#w-check");
   assert.equal(await page.locator("#w-message").textContent(), "Write the character first.");
   const seen = await page.evaluate(() => localStorage.getItem("kana:seen") || "");
@@ -244,23 +263,95 @@ test("check with nothing written", async () => {
 });
 
 test("combination has two boxes", async () => {
-  const page = await screenPage("practice", ["きゃ"]);
+  const page = await appPage("#writing/practice/h-kya", { scripts: ["hiragana"], stages: [3], rows: [], order: "chart", reviewOnly: false });
   assert.equal(await page.locator(".w-box").count(), 2);
   assert.equal(await page.locator("#w-model .w-model-svg").count(), 2);
   await page.context().close();
 });
 
 test("quiz hides model until check", async () => {
-  const page = await screenPage("quiz", ["あ"]);
+  const page = await appPage("#writing/quiz", ONLY_N);
   assert.equal(await page.locator("#w-model").isVisible(), false);
   assert.equal(await page.locator("#w-prompt").isVisible(), true);
-  assert.match(await page.locator("#w-prompt").textContent(), /a · Hiragana/);
+  assert.match(await page.locator("#w-prompt").textContent(), /n · Hiragana/);
   assert.equal(await page.locator("#w-rate").isVisible(), false);
-  await writeChar(page, "あ");
+  await writeChar(page, "ん");
   await page.click("#w-check");
   assert.equal(await page.locator("#w-model").isVisible(), true);
   await page.click("#w-got");
   const progress = await page.evaluate(() => JSON.parse(localStorage.getItem("kana:progress") || "{}"));
-  assert.equal(progress["wr:h-a"], 1);
+  assert.equal(progress["wr:h-n"], 1);
+  await page.context().close();
+});
+
+test("landing has writing tile", async () => {
+  const page = await appPage("");
+  assert.equal(await page.locator(".tile").count(), 4);
+  assert.equal(await page.locator(".tile strong").last().textContent(), "Writing");
+  await page.context().close();
+});
+
+test("writing home", async () => {
+  const page = await appPage("#writing");
+  assert.equal((await page.locator("#start").textContent()).trim(), "Start practice");
+  assert.equal(await page.locator("#start-quiz").isVisible(), true);
+  assert.equal(await page.locator("#writing-chart button").count(), 46);
+  await page.context().close();
+});
+
+test("chart opens practice", async () => {
+  const page = await appPage("#writing");
+  await page.locator("#writing-chart button", { hasText: "か" }).first().click();
+  await page.waitForFunction(() => location.hash === "#writing/practice/h-ka");
+  assert.equal(await page.locator("#w-model .w-model-svg").getAttribute("aria-label"), "か");
+  await page.context().close();
+});
+
+test("extended katakana stage", async () => {
+  const page = await appPage("#writing");
+  await page.click("#open-settings");
+  const stage4 = page.locator('label:has(input[name="stage"][value="4"])');
+  assert.equal(await stage4.isVisible(), false, "stage 4 hidden while katakana is off");
+  await page.locator('input[name="script"][value="katakana"]').check();
+  assert.equal(await stage4.isVisible(), true);
+  await page.locator('input[name="stage"][value="4"]').check();
+  await page.click(".done-btn");
+  await page.locator("#writing-chart button", { hasText: "ティ" }).waitFor(); // chart re-renders on close
+  assert.equal(await page.locator("#writing-chart button", { hasText: "ティ" }).count(), 1);
+  assert.equal(await page.locator("#writing-chart button").count(), 112); // 46 + 46 + 20
+  await page.context().close();
+});
+
+test("no matches disables buttons", async () => {
+  const page = await appPage("#writing", { scripts: ["hiragana"], stages: [1], rows: [], order: "chart", reviewOnly: true });
+  assert.equal(await page.locator("#start").isDisabled(), true);
+  assert.equal(await page.locator("#start-quiz").isDisabled(), true);
+  assert.match(await page.locator("#deck-summary").textContent(), /No cards/);
+  await page.context().close();
+});
+
+test("progress survives reload", async () => {
+  const page = await appPage("#writing/quiz", ONLY_N);
+  await writeChar(page, "ん");
+  await page.click("#w-check");
+  await page.click("#w-got");
+  await page.goto(`${BASE}/index.html#writing`);
+  await page.reload();
+  const cls = await page.locator("#writing-chart button", { hasText: "ん" }).getAttribute("class");
+  assert.match(cls, /learning/);
+  await page.context().close();
+});
+
+test("phone width", async () => {
+  const page = await appPage("#writing/practice", null, { width: 360, height: 740 });
+  const width = await page.evaluate(() => document.documentElement.scrollWidth);
+  assert.ok(width <= 360, `page is ${width}px wide`);
+  await page.context().close();
+});
+
+test("flash cards unaffected", async () => {
+  const page = await appPage("#kana/study");
+  await page.click("#flip");
+  assert.equal(await page.locator("#rating").getAttribute("inert"), null);
   await page.context().close();
 });

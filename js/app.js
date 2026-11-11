@@ -5,14 +5,17 @@
 //   #kana            a section's home: progress, Start, Settings
 //   #kana/study      flash cards for that section
 // The same goes for #words and #phrases.
+//   #writing/practice[/<kana id>]  writing practice (optionally starting on one character)
+//   #writing/quiz                   writing quiz
 
 import { loadCards, buildDeck, availableRows, DEFAULT_FILTERS, DEFAULT_VOCAB_FILTERS } from "./deck.js";
 import { renderCard, setFlipped } from "./card.js";
 import * as storage from "./storage.js";
+import { initWriting, startWriting } from "./writing.js";
 
 const $ = (id) => document.getElementById(id);
 
-// The three sections of the app.
+// The four sections of the app.
 const SECTIONS = {
   kana: {
     title: "Kana",
@@ -47,10 +50,27 @@ const SECTIONS = {
     defaults: DEFAULT_VOCAB_FILTERS,
     cardLabel: "Travel phrase",
   },
+  writing: {
+    title: "Writing",
+    jp: "書く",
+    tileChar: "書",
+    description: "Write hiragana and katakana with your finger: stroke order, checking and a quiz.",
+    file: null, // built at startup from kana.json + extra-kana.json
+    type: "writing",
+    filtersKey: "writing-filters",
+    defaults: DEFAULT_FILTERS,
+    cardLabel: "",
+  },
 };
 
+// Writing: a character counts as "can write" from this progress box up.
+const CAN_WRITE_BOX = 3;
+
 const SCRIPT_NAMES = { hiragana: "Hiragana", katakana: "Katakana" };
-const STAGE_NAMES = { 1: "Basic", 2: "Voiced", 3: "Combinations" };
+const STAGE_NAMES = { 1: "Basic", 2: "Voiced", 3: "Combinations", 4: "Extended katakana" };
+
+// Sections that use the script / stage / row settings.
+const usesKanaFilters = () => ["kana", "writing"].includes(section().type);
 
 const state = {
   data: {}, // section id -> list of cards
@@ -79,14 +99,16 @@ function announce(message) {
 // ======================================================================
 
 // "#kana/study" -> { sectionId: "kana", screen: "study" }
+// "#writing/practice/h-ka" -> { sectionId: "writing", screen: "practice", startId: "h-ka" }
 function parseHash() {
-  const [id, sub] = location.hash.replace(/^#/, "").split("/");
+  const [id, sub, startId] = location.hash.replace(/^#/, "").split("/");
   if (!SECTIONS[id]) return { sectionId: null, screen: "landing" };
-  return { sectionId: id, screen: sub === "study" ? "study" : "home" };
+  const screens = SECTIONS[id].type === "writing" ? ["practice", "quiz"] : ["study"];
+  return { sectionId: id, screen: screens.includes(sub) ? sub : "home", startId };
 }
 
 function route() {
-  const { sectionId, screen } = parseHash();
+  const { sectionId, screen, startId } = parseHash();
 
   // Back on a screen we came from (‹ or the phone's back button): drop it from the trail.
   if (state.trail.at(-1) === location.hash) state.trail.pop();
@@ -98,6 +120,8 @@ function route() {
     selectSection(sectionId);
     if (screen === "study" && startStudy()) {
       showScreen("study");
+    } else if ((screen === "practice" || screen === "quiz") && startWritingScreen(screen, startId)) {
+      showScreen("writing");
     } else {
       showScreen("home");
       renderHome();
@@ -116,7 +140,7 @@ function navigate(hash) {
 // back button stays in step); otherwise replace this screen with the parent.
 function goBack() {
   const { sectionId, screen } = parseHash();
-  const parent = screen === "study" ? `#${sectionId}` : ""; // "" = landing page
+  const parent = screen === "home" ? "" : `#${sectionId}`; // "" = landing page
   if (state.trail.at(-1) === parent) {
     history.back();
   } else {
@@ -129,10 +153,11 @@ function showScreen(name) {
   $("landing-screen").hidden = name !== "landing";
   $("home-screen").hidden = name !== "home";
   $("study-screen").hidden = name !== "study";
+  $("writing-screen").hidden = name !== "writing";
   $("go-back").hidden = name === "landing";
-  $("counter").hidden = name !== "study";
+  $("counter").hidden = name !== "study" && name !== "writing";
   if (name !== "landing") {
-    $("go-back").setAttribute("aria-label", name === "study" ? `Back to ${section().title}` : "Back to start");
+    $("go-back").setAttribute("aria-label", name === "home" ? "Back to start" : `Back to ${section().title}`);
   }
 
   // Header title: the app on the landing page, otherwise the section name.
@@ -165,7 +190,8 @@ function renderLanding() {
   $("tiles").replaceChildren(
     ...Object.entries(SECTIONS).map(([id, s]) => {
       const cards = state.data[id];
-      const known = cards.filter((c) => (progress[c.id] ?? 0) >= 1).length;
+      const writing = s.type === "writing";
+      const known = cards.filter((c) => (progress[c.id] ?? 0) >= (writing ? CAN_WRITE_BOX : 1)).length;
 
       const tile = document.createElement("a");
       tile.className = "tile";
@@ -180,7 +206,7 @@ function renderLanding() {
       tile.querySelector(".tile-char").textContent = s.tileChar;
       tile.querySelector("strong").textContent = s.title;
       tile.querySelector(".tile-desc").textContent = s.description;
-      tile.querySelector(".tile-progress").textContent = `${known} / ${cards.length} known`;
+      tile.querySelector(".tile-progress").textContent = `${known} / ${cards.length} ${writing ? "can write" : "known"}`;
       tile.addEventListener("click", (e) => {
         e.preventDefault();
         navigate(`#${id}`);
@@ -198,9 +224,10 @@ function renderHome() {
   const progress = storage.getProgress();
   const seen = storage.getSeen();
 
-  // Kana: one progress row per script. Words / phrases: one row.
+  // Kana and writing: one progress row per script. Words / phrases: one row.
+  const writing = section().type === "writing";
   const groups =
-    section().type === "kana"
+    usesKanaFilters()
       ? ["hiragana", "katakana"].map((script) => ({
           name: SCRIPT_NAMES[script],
           cards: sectionCards().filter((c) => c.script === script),
@@ -210,30 +237,39 @@ function renderHome() {
   $("progress-list").replaceChildren(
     ...groups.map(({ name, cards }) => {
       const nSeen = cards.filter((c) => seen.has(c.id)).length;
-      const nKnown = cards.filter((c) => (progress[c.id] ?? 0) >= 1).length;
+      const nKnown = cards.filter((c) => (progress[c.id] ?? 0) >= (writing ? CAN_WRITE_BOX : 1)).length;
 
       const row = document.createElement("div");
       row.className = "progress-row";
       row.innerHTML = `
         <div class="progress-head">
           <strong></strong>
-          <span><span class="seen"></span> seen · <span class="known"></span> known</span>
+          <span><span class="seen"></span> <span class="seen-word">seen</span> · <span class="known"></span> <span class="known-word">known</span></span>
         </div>
         <progress></progress>`;
       row.querySelector("strong").textContent = name;
       row.querySelector(".seen").textContent = `${nSeen} / ${cards.length}`;
       row.querySelector(".known").textContent = nKnown;
+      if (writing) {
+        row.querySelector(".seen-word").textContent = "practised";
+        row.querySelector(".known-word").textContent = "can write";
+      }
       const bar = row.querySelector("progress");
       bar.max = cards.length;
       bar.value = nKnown;
-      bar.setAttribute("aria-label", `${name}: ${nKnown} of ${cards.length} known`);
+      bar.setAttribute("aria-label", `${name}: ${nKnown} of ${cards.length} ${writing ? "can write" : "known"}`);
       return row;
     })
   );
 
   const count = makeDeck().length;
-  $("deck-summary").textContent = `${describeFilters()} · ${plural(count, "card")}`;
+  $("deck-summary").textContent = `${describeFilters()} · ${plural(count, writing ? "character" : "card")}`;
   $("start").disabled = count === 0;
+  $("start").textContent = writing ? "Start practice" : "Start";
+  $("start-quiz").hidden = !writing;
+  $("start-quiz").disabled = count === 0;
+  $("writing-panel").hidden = !writing;
+  if (writing) renderWritingChart(progress, seen);
   if (count === 0 && state.filters.reviewOnly) {
     $("deck-summary").textContent += ". No cards are marked “Still learning” yet.";
   }
@@ -244,7 +280,7 @@ function renderHome() {
 function describeFilters() {
   const f = state.filters;
   const parts = [];
-  if (section().type === "kana") {
+  if (usesKanaFilters()) {
     parts.push(f.scripts.map((s) => SCRIPT_NAMES[s]).join(" + "));
     parts.push(f.stages.map((s) => STAGE_NAMES[s]).join(", "));
     if (f.rows.length > 0) {
@@ -273,16 +309,17 @@ function openSettings() {
   const type = section().type;
 
   // Show only the settings this section has.
-  for (const fieldset of form().querySelectorAll("fieldset[data-for]")) {
-    fieldset.hidden = fieldset.dataset.for !== type;
+  for (const el of form().querySelectorAll("[data-for]")) {
+    el.hidden = !el.dataset.for.split(" ").includes(type);
   }
   $("settings-title").textContent = `${section().title} settings`;
-  $("order-label").textContent = type === "kana" ? "Chart order" : "List order";
+  $("order-label").textContent = usesKanaFilters() ? "Chart order" : "List order";
 
-  if (type === "kana") {
+  if (usesKanaFilters()) {
     for (const box of form().querySelectorAll('[name="script"]')) box.checked = f.scripts.includes(box.value);
     for (const box of form().querySelectorAll('[name="stage"]')) box.checked = f.stages.includes(Number(box.value));
     renderRowChoices();
+    updateStage4Choice();
   } else {
     for (const radio of form().querySelectorAll('[name="front"]')) radio.checked = radio.value === f.front;
   }
@@ -290,6 +327,12 @@ function openSettings() {
   $("review-only").checked = f.reviewOnly;
   updateMatchCount();
   $("settings").showModal();
+}
+
+// Writing: the "Extended katakana" stage only makes sense with katakana on.
+function updateStage4Choice() {
+  const chip = form().querySelector('[name="stage"][value="4"]').closest("label");
+  chip.hidden = section().type !== "writing" || !state.filters.scripts.includes("katakana");
 }
 
 // Row chips depend on which scripts and stages are on (kana only).
@@ -331,18 +374,31 @@ function onSettingsChange(event) {
     reviewOnly: $("review-only").checked,
   };
 
-  if (section().type === "kana") {
+  if (usesKanaFilters()) {
     // Keep at least one script and one stage switched on.
     if ((target.name === "script" || target.name === "stage") && checkedValues(target.name).length === 0) {
       target.checked = true;
     }
+    let stages = checkedValues("stage").map(Number);
+    // Extended katakana (stage 4, writing only) switches off with katakana.
+    if (section().type !== "writing" || !checkedValues("script").includes("katakana")) {
+      stages = stages.filter((s) => s !== 4);
+      form().querySelector('[name="stage"][value="4"]').checked = false;
+      if (stages.length === 0) {
+        stages = [1];
+        form().querySelector('[name="stage"][value="1"]').checked = true;
+      }
+    }
     state.filters = {
       scripts: checkedValues("script"),
-      stages: checkedValues("stage").map(Number),
+      stages,
       rows: checkedValues("row"),
       ...common,
     };
-    if (target.name === "script" || target.name === "stage") renderRowChoices();
+    if (target.name === "script" || target.name === "stage") {
+      renderRowChoices();
+      updateStage4Choice();
+    }
   } else {
     state.filters = { front: checkedValues("front")[0] ?? "ja", ...common };
   }
@@ -373,11 +429,59 @@ function resetProgress() {
 function loadFilters(id) {
   const { defaults, filtersKey, type } = SECTIONS[id];
   const saved = { ...defaults, ...storage.load(filtersKey, {}) };
-  if (type === "kana") {
+  if (type === "kana" || type === "writing") {
     if (!saved.scripts?.length) saved.scripts = [...defaults.scripts];
     if (!saved.stages?.length) saved.stages = [...defaults.stages];
   }
   return saved;
+}
+
+// ======================================================================
+// Writing: character chart on the section home, and the writing screen
+// ======================================================================
+
+// Every character in the current settings, coloured by progress. Tap to practise it.
+function renderWritingChart(progress, seen) {
+  const level = (card) => {
+    if (!seen.has(card.id) && progress[card.id] === undefined) return "not-started";
+    return (progress[card.id] ?? 0) >= CAN_WRITE_BOX ? "can-write" : "learning";
+  };
+  const LEVEL_NAMES = { "not-started": "not started", learning: "learning", "can-write": "can write" };
+  const cards = buildDeck(sectionCards(), { ...state.filters, order: "chart", reviewOnly: false });
+  $("writing-chart").replaceChildren(
+    ...cards.map((card) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.lang = "ja";
+      button.className = `chart-char ${level(card)}`;
+      button.textContent = card.char;
+      button.setAttribute("aria-label", `${card.char} (${card.romaji}), ${LEVEL_NAMES[level(card)]}`);
+      button.addEventListener("click", () => navigate(`#writing/practice/${card.id.replace(/^wr:/, "")}`));
+      return button;
+    })
+  );
+}
+
+// Start practice or quiz. Returns false if no characters match the settings.
+function startWritingScreen(mode, startId) {
+  const progress = storage.getProgress();
+  let deck =
+    mode === "quiz"
+      ? buildDeck(sectionCards(), { ...state.filters, order: "shuffle" }, progress) // weak ones more often
+      : makeDeck();
+  let index = 0;
+  if (mode === "practice" && startId) {
+    index = deck.findIndex((c) => c.id === `wr:${startId}`);
+    if (index === -1) {
+      // Not in the current settings (e.g. an old link): practise just that character.
+      const card = sectionCards().find((c) => c.id === `wr:${startId}`);
+      deck = card ? [card] : deck;
+      index = 0;
+    }
+  }
+  if (deck.length === 0) return false;
+  startWriting(mode, deck, index);
+  return true;
 }
 
 // ======================================================================
@@ -567,9 +671,16 @@ async function start() {
   $("help-open").addEventListener("click", toggleHelp);
 
   try {
-    const ids = Object.keys(SECTIONS);
-    const lists = await Promise.all(ids.map((id) => loadCards(SECTIONS[id].file)));
+    const ids = Object.keys(SECTIONS).filter((id) => SECTIONS[id].file);
+    const [lists, extra, strokes] = await Promise.all([
+      Promise.all(ids.map((id) => loadCards(SECTIONS[id].file))),
+      loadCards("data/extra-kana.json"),
+      loadCards("data/strokes.json"),
+    ]);
     ids.forEach((id, i) => (state.data[id] = lists[i]));
+    // Writing uses every kana plus the extended katakana, with its own progress ids.
+    state.data.writing = [...state.data.kana, ...extra].map((c) => ({ ...c, id: `wr:${c.id}` }));
+    initWriting({ strokes, announce });
   } catch (err) {
     const msg = $("load-error");
     msg.textContent =
@@ -582,7 +693,10 @@ async function start() {
 
   // Header and section home
   $("go-back").addEventListener("click", goBack);
-  $("start").addEventListener("click", () => navigate(`#${state.sectionId}/study`));
+  $("start").addEventListener("click", () =>
+    navigate(`#${state.sectionId}/${section().type === "writing" ? "practice" : "study"}`)
+  );
+  $("start-quiz").addEventListener("click", () => navigate(`#${state.sectionId}/quiz`));
   $("open-settings").addEventListener("click", openSettings);
 
   // Settings

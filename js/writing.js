@@ -28,7 +28,7 @@ const MARKUP = `
   <div class="w-sheet">
     <section class="w-model" id="w-model" aria-label="Model character">
       <div class="w-model-chars" id="w-model-chars"></div>
-      <p class="w-model-info"><span class="romaji" id="w-romaji"></span> <span class="script-label" id="w-script"></span></p>
+      <p class="w-model-info"><span class="romaji" id="w-romaji"></span> <span class="w-script" id="w-script"></span></p>
       <button type="button" class="big-btn" id="w-play">▶ Stroke order</button>
     </section>
     <section class="w-write" aria-label="Write here">
@@ -105,7 +105,7 @@ function showCard() {
 
   // Writing boxes: one per character.
   const boxes = $("w-boxes");
-  boxes.style.setProperty("--n", chars.length);
+  $("writing-screen").style.setProperty("--n", chars.length); // boxes and model size by this
   state.pads = chars.map((ch, i) => {
     const canvas = document.createElement("canvas");
     canvas.className = "w-box";
