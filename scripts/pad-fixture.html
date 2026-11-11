@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- Test page for js/writing-pad.js (used by scripts/test-writing.mjs). Not part of the app. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writing pad test</title>
+  <style>
+    body { margin: 20px; background: #fff; }
+    canvas { width: 400px; aspect-ratio: 1; display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="pad"></canvas>
+  <script type="module">
+    import { WritingPad, samplePaths } from "../js/writing-pad.js";
+    window.pad = new WritingPad(document.getElementById("pad"));
+    window.samplePaths = samplePaths;
+    window.padReady = true;
+  </script>
+</body>
+</html>
