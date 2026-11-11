@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- Test page for js/writing.js (used by scripts/test-writing.mjs until the app routes exist). -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writing screen test</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <span class="counter" id="counter"></span>
+  <main class="writing" id="writing-screen"></main>
+  <script type="module">
+    import { initWriting, startWriting } from "../js/writing.js";
+    import { samplePaths } from "../js/writing-pad.js";
+    const [kana, strokes] = await Promise.all(
+      ["../data/kana.json", "../data/strokes.json"].map((f) => fetch(f).then((r) => r.json()))
+    );
+    const cards = kana.map((c) => ({ ...c, id: "wr:" + c.id }));
+    initWriting({ strokes, announce: () => {} });
+    // Tests call: start("practice", ["あ"])
+    window.start = (mode, chars) => startWriting(mode, chars.map((ch) => cards.find((c) => c.char === ch)));
+    window.strokes = strokes;
+    window.samplePaths = samplePaths;
+    window.screenReady = true;
+  </script>
+</body>
+</html>

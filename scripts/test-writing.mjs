@@ -192,3 +192,75 @@ test("samplePaths", async () => {
   assert.ok(Math.abs(pts.at(-1)[0] - 60) < 0.5 && Math.abs(pts.at(-1)[1] - 10) < 0.5);
   await page.context().close();
 });
+
+// ======================================================================
+// Practice and quiz screens (js/writing.js)
+// ======================================================================
+
+async function screenPage(mode, chars) {
+  const page = await newPage("/scripts/screen-fixture.html");
+  await page.waitForFunction(() => window.screenReady);
+  await page.evaluate(([m, c]) => window.start(m, c), [mode, chars]);
+  return page;
+}
+
+// Write a character correctly in box `index` by replaying its reference strokes.
+async function writeChar(page, ch, index = 0) {
+  const refs = await page.evaluate((c) => samplePaths(strokes[c]), ch);
+  const box = page.locator(".w-box").nth(index);
+  const r = await box.boundingBox();
+  for (const stroke of refs) {
+    const pts = stroke.filter((_, i) => i % 3 === 0 || i === stroke.length - 1);
+    await touchDrag(page, pts.map(([x, y]) => [r.x + (x / 109) * r.width, r.y + (y / 109) * r.height]));
+  }
+}
+
+test("practice shows model and box", async () => {
+  const page = await screenPage("practice", ["あ"]);
+  assert.equal(await page.locator("#w-model .w-model-svg path").count(), 3);
+  assert.equal(await page.locator(".w-box").count(), 1);
+  assert.equal(await page.locator("#w-model").isVisible(), true);
+  assert.match(await page.locator("#counter").textContent(), /1 \/ 1/);
+  await page.context().close();
+});
+
+test("check correct strokes passes", async () => {
+  const page = await screenPage("practice", ["あ"]);
+  await writeChar(page, "あ");
+  await page.click("#w-check");
+  assert.match(await page.locator("#w-message").textContent(), /Nice!/);
+  const seen = await page.evaluate(() => localStorage.getItem("kana:seen") || "");
+  assert.ok(seen.includes("wr:h-a"));
+  await page.context().close();
+});
+
+test("check with nothing written", async () => {
+  const page = await screenPage("practice", ["あ"]);
+  await page.click("#w-check");
+  assert.equal(await page.locator("#w-message").textContent(), "Write the character first.");
+  const seen = await page.evaluate(() => localStorage.getItem("kana:seen") || "");
+  assert.ok(!seen.includes("wr:h-a"));
+  await page.context().close();
+});
+
+test("combination has two boxes", async () => {
+  const page = await screenPage("practice", ["きゃ"]);
+  assert.equal(await page.locator(".w-box").count(), 2);
+  assert.equal(await page.locator("#w-model .w-model-svg").count(), 2);
+  await page.context().close();
+});
+
+test("quiz hides model until check", async () => {
+  const page = await screenPage("quiz", ["あ"]);
+  assert.equal(await page.locator("#w-model").isVisible(), false);
+  assert.equal(await page.locator("#w-prompt").isVisible(), true);
+  assert.match(await page.locator("#w-prompt").textContent(), /a · Hiragana/);
+  assert.equal(await page.locator("#w-rate").isVisible(), false);
+  await writeChar(page, "あ");
+  await page.click("#w-check");
+  assert.equal(await page.locator("#w-model").isVisible(), true);
+  await page.click("#w-got");
+  const progress = await page.evaluate(() => JSON.parse(localStorage.getItem("kana:progress") || "{}"));
+  assert.equal(progress["wr:h-a"], 1);
+  await page.context().close();
+});

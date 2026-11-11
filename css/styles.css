@@ -1073,3 +1073,148 @@ progress::-moz-progress-bar {
     transition: none;
   }
 }
+
+/* ==========================================================================
+   Writing practice
+   Phone: model above the writing box. Tablet / desktop (700 px+): side by side.
+   ========================================================================== */
+
+.writing {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 8px 16px 16px;
+}
+
+.w-prompt {
+  margin: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.w-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.w-model,
+.w-write {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.w-model-chars {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.w-model-svg {
+  width: min(150px, 38vw);
+  aspect-ratio: 1;
+  color: var(--ink);
+}
+
+.stroke-num {
+  fill: var(--learning);
+  font-family: var(--font-ui);
+  font-weight: 700;
+}
+
+.w-model-info {
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.w-model .big-btn {
+  width: 100%;
+  max-width: 260px;
+}
+
+.w-boxes {
+  --n: 1;
+  --gap: 12px;
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+  width: 100%;
+}
+
+.w-box {
+  /* Writing ink and grid colours, read by writing-pad.js */
+  --grid: color-mix(in srgb, var(--muted) 45%, transparent);
+  --good: var(--known);
+  --bad: var(--learning);
+  width: min(420px, calc((100% - (var(--n) - 1) * var(--gap)) / var(--n)), 64vh);
+  aspect-ratio: 1;
+  border: 2px solid color-mix(in srgb, var(--muted) 60%, transparent);
+  border-radius: 6px;
+  background: var(--card);
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.w-message {
+  margin: 0;
+  min-height: 1.5em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.w-tools {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.w-tools .nav-btn {
+  flex: 1;
+}
+
+.w-write .rating {
+  width: 100%;
+  max-width: 440px;
+}
+
+@media (min-width: 700px) {
+  .w-sheet {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .w-model {
+    flex: 0 0 280px;
+    justify-content: center;
+  }
+
+  .w-model-svg {
+    width: min(220px, calc(240px / var(--n, 1)));
+  }
+
+  .w-write {
+    flex: 1;
+  }
+
+  .writing .nav {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
