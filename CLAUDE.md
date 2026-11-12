@@ -251,6 +251,11 @@ Keep it simple (Leitner-style boxes):
 - Clean, calm, easy to read. The character is the hero of the screen.
 - Light Japanese touch, not cluttered: an optional faint seigaiha (wave) pattern or
   Mt. Fuji outline in the background, similar to Mark's earlier "Travel Japanese" PDF.
+- Since 2026-11-12 the look follows Mark's watercolour illustration (two friends studying
+  under cherry blossoms with Mt. Fuji behind), shown as the landing page banner
+  (`images/hero-900.webp`, `images/hero-1600.webp`). Palette: sky blue accent, sakura pink,
+  hydrangea purple and wooden-table brown (one colour per landing tile) on cream paper
+  with a soft sky wash at the top; dark mode is a dusk version. Keep all text at WCAG AA.
 - Light and dark mode (follow system setting, with a manual toggle).
 - Card flip animation (3D flip), with reduced motion respected (`prefers-reduced-motion`).
 

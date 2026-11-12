@@ -73,6 +73,7 @@ Progress and settings are saved in the browser on this device.
 - `scripts/check-data.py`: checks the data (`python scripts/check-data.py`)
 - `scripts/test-stroke-check.mjs`: tests for the stroke checker (`node --test scripts/test-stroke-check.mjs`)
 - `scripts/test-writing.mjs`: browser tests for writing practice (`node scripts/test-writing.mjs`, needs Playwright)
+- `images/hero-*.webp`: the landing page illustration (900 px for phones, 1600 px for tablets)
 - `REVIEW.md`: words and choices waiting for a human check
 
 ## Credits

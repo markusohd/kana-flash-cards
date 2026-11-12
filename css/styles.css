@@ -6,61 +6,80 @@
    ========================================================================== */
 
 :root {
-  --bg: #f6f3ec;          /* washi paper */
-  --card: #fffdf8;
-  --ink: #1f2430;
-  --muted: #5a6170;
-  --line: #e3ded3;
-  --accent: #2f4b7c;      /* indigo */
+  --bg: #f7f1e3;          /* washi paper */
+  --card: #fffdf7;
+  --ink: #23324a;
+  --muted: #5b6475;
+  --line: #e6dccb;
+  --accent: #2f6fb3;      /* indigo */
   --accent-ink: #ffffff;
-  --mark-bg: #f6d9d3;     /* highlighted character in the sample word */
-  --mark-ink: #9b2c22;
-  --learning: #9b2c22;
-  --known: #2c6e49;
-  --shadow: 0 10px 30px rgba(31, 36, 48, 0.12);
+  --mark-bg: #fbdde5;     /* highlighted character in the sample word */
+  --mark-ink: #a3324f;
+  --learning: #b0365a;
+  --known: #2f7346;
+  --shadow: 0 10px 30px rgba(35, 50, 74, 0.12);
   /* Faint seigaiha (wave) pattern */
-  --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cg fill='none' stroke='%232f4b7c' stroke-opacity='.07'%3E%3Cpath d='M0 24a24 24 0 0 1 48 0M8 24a16 16 0 0 1 32 0M16 24a8 8 0 0 1 16 0M-24 12a24 24 0 0 1 48 0M24 12a24 24 0 0 1 48 0'/%3E%3C/g%3E%3C/svg%3E");
+  --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cg fill='none' stroke='%232f6fb3' stroke-opacity='.07'%3E%3Cpath d='M0 24a24 24 0 0 1 48 0M8 24a16 16 0 0 1 32 0M16 24a8 8 0 0 1 16 0M-24 12a24 24 0 0 1 48 0M24 12a24 24 0 0 1 48 0'/%3E%3C/g%3E%3C/svg%3E");
 
   --font-jp: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
     "Yu Gothic UI", "Yu Gothic", "Meiryo", "Noto Sans CJK JP", sans-serif;
   --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, var(--font-jp);
+
+  --sky: #d9ebf8; /* soft blue wash at the top of the page */
+  --tile-ink: #ffffff;
+  --tile-kana: #2f6fb3; /* sky */
+  --tile-words: #b83f63; /* sakura */
+  --tile-phrases: #6a4fa3; /* hydrangea */
+  --tile-writing: #8a5a3b; /* wooden table */
 
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #12151c;
-    --card: #1d212b;
-    --ink: #ece8e0;
-    --muted: #a9afbd;
-    --line: #2e3442;
-    --accent: #9db7ea;
-    --accent-ink: #12151c;
-    --mark-bg: #4a2522;
-    --mark-ink: #ffb3a7;
-    --learning: #ff9e8f;
-    --known: #8fd6a8;
+    --bg: #121a2b;
+    --card: #1c2538;
+    --ink: #f1ece2;
+    --muted: #aab3c5;
+    --line: #2e3850;
+    --accent: #8cc0f2;
+    --accent-ink: #121a2b;
+    --mark-bg: #4b2433;
+    --mark-ink: #ffb6c8;
+    --learning: #ff9fb8;
+    --known: #94d8a8;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.045'%3E%3Cpath d='M0 24a24 24 0 0 1 48 0M8 24a16 16 0 0 1 32 0M16 24a8 8 0 0 1 16 0M-24 12a24 24 0 0 1 48 0M24 12a24 24 0 0 1 48 0'/%3E%3C/g%3E%3C/svg%3E");
+    --sky: #1b2645;
+    --tile-ink: #121a2b;
+    --tile-kana: #8cc0f2;
+    --tile-words: #f4a7bd;
+    --tile-phrases: #c3b0ef;
+    --tile-writing: #e0b48c;
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #12151c;
-  --card: #1d212b;
-  --ink: #ece8e0;
-  --muted: #a9afbd;
-  --line: #2e3442;
-  --accent: #9db7ea;
-  --accent-ink: #12151c;
-  --mark-bg: #4a2522;
-  --mark-ink: #ffb3a7;
-  --learning: #ff9e8f;
-  --known: #8fd6a8;
+  --bg: #121a2b;
+  --card: #1c2538;
+  --ink: #f1ece2;
+  --muted: #aab3c5;
+  --line: #2e3850;
+  --accent: #8cc0f2;
+  --accent-ink: #121a2b;
+  --mark-bg: #4b2433;
+  --mark-ink: #ffb6c8;
+  --learning: #ff9fb8;
+  --known: #94d8a8;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.045'%3E%3Cpath d='M0 24a24 24 0 0 1 48 0M8 24a16 16 0 0 1 32 0M16 24a8 8 0 0 1 16 0M-24 12a24 24 0 0 1 48 0M24 12a24 24 0 0 1 48 0'/%3E%3C/g%3E%3C/svg%3E");
+  --sky: #1b2645;
+  --tile-ink: #121a2b;
+  --tile-kana: #8cc0f2;
+  --tile-words: #f4a7bd;
+  --tile-phrases: #c3b0ef;
+  --tile-writing: #e0b48c;
   color-scheme: dark;
 }
 
@@ -84,7 +103,8 @@ body {
 }
 
 body {
-  background: var(--bg) var(--wave);
+  /* A soft sky at the top fading into paper, like the illustration */
+  background: linear-gradient(to bottom, var(--sky), transparent 420px) no-repeat, var(--wave), var(--bg);
   color: var(--ink);
   font-family: var(--font-ui);
   line-height: 1.5;
@@ -262,8 +282,8 @@ kbd {
   width: 64px;
   height: 64px;
   border-radius: 16px;
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: var(--tile-colour, var(--accent));
+  color: var(--tile-ink);
   font-size: 2.2rem;
   font-weight: 500;
 }
@@ -1287,16 +1307,16 @@ progress::-moz-progress-bar {
 
 /* ==========================================================================
    Writing scenery: Mt. Fuji and sakura behind the Writing section.
-   Light: a soft pink dawn with a pale sun. Dark: a night sky with a moon.
+   Light: a blue spring sky with a pale sun. Dark: a night sky with a moon.
    ========================================================================== */
 
 .scenery {
-  --sky-top: #f9dfe4;
-  --sky-bottom: #f6f3ec;
-  --sun: #fbd3cf;
-  --fuji: #a9bad8;
+  --sky-top: #bcdcf5;
+  --sky-bottom: #f7f1e3;
+  --sun: #fff1c7;
+  --fuji: #8fa9d6;
   --snow: #ffffff;
-  --hill: #c9d6c3;
+  --hill: #b9d3a6;
   --branch: #8a6a5c;
   --blossom: #f4b4c4;
   --blossom-centre: #e07a96;
@@ -1393,3 +1413,83 @@ body.scenic .panel {
   .petal:nth-child(odd) { top: 30%; }
   .petal:nth-child(even) { top: 55%; }
 }
+
+/* ==========================================================================
+   Landing page: storybook banner and coloured tiles
+   ========================================================================== */
+
+.landing {
+  max-width: 1040px;
+}
+
+.hero {
+  position: relative;
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  object-fit: cover;
+}
+
+.hero-text {
+  padding: 14px 20px 18px;
+}
+
+.hero-text h2 {
+  margin: 0;
+  font-size: clamp(1.25rem, 4.5vw, 2rem);
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* On wider screens the title sits on the sky, top left of the picture */
+@media (min-width: 760px) {
+  .hero-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 44%;
+    padding: 14px 20px;
+    border-radius: 18px;
+    background: color-mix(in srgb, var(--card) 82%, transparent);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+}
+
+/* Each section tile takes a colour from the illustration */
+.tile-kana { --tile-colour: var(--tile-kana); }
+.tile-words { --tile-colour: var(--tile-words); }
+.tile-phrases { --tile-colour: var(--tile-phrases); }
+.tile-writing { --tile-colour: var(--tile-writing); }
+
+.tile:hover {
+  border-color: var(--tile-colour, var(--accent));
+}
+
+@media (min-width: 760px) {
+  .landing .tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* The picture is a sunny day: soften it a little at night */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero img { filter: brightness(0.85); }
+}
+:root[data-theme="dark"] .hero img { filter: brightness(0.85); }

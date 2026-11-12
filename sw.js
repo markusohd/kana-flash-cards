@@ -8,7 +8,7 @@
 //
 // When you change the list of files, bump CACHE_VERSION so old caches are cleared.
 
-const CACHE_VERSION = "v6";
+const CACHE_VERSION = "v7";
 const APP_CACHE = `kana-app-${CACHE_VERSION}`;
 const FONT_CACHE = "kana-fonts"; // Google Fonts files, kept across versions
 
@@ -30,6 +30,8 @@ const APP_FILES = [
   "data/phrases.json",
   "data/extra-kana.json",
   "data/strokes.json",
+  "images/hero-900.webp",
+  "images/hero-1600.webp",
   "icons/icon-192.png",
   "icons/icon-512.png",
   "icons/icon-maskable-512.png",

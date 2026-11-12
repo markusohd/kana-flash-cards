@@ -495,6 +495,83 @@ test("cute chime when correct, soft boop when a stroke is off, and sounds can be
 });
 
 // ======================================================================
+// Landing page and theme
+// ======================================================================
+
+test("landing shows the hero picture, also at phone width", async () => {
+  for (const viewport of [{ width: 1024, height: 768 }, { width: 360, height: 740 }]) {
+    const page = await appPage("", null, viewport);
+    const img = page.locator(".hero img");
+    await img.waitFor();
+    assert.equal(await img.isVisible(), true);
+    const info = await img.evaluate(async (el) => {
+      await el.decode();
+      return { natural: el.naturalWidth, alt: el.alt, width: el.getBoundingClientRect().width };
+    });
+    assert.ok(info.natural > 0, "image loaded");
+    assert.ok(info.alt.length > 10, "image has a description");
+    assert.ok(info.width <= viewport.width, "image fits the screen");
+    assert.match(await page.locator(".hero h2").textContent(), /Learn Japanese/);
+    assert.ok((await page.evaluate(() => document.documentElement.scrollWidth)) <= viewport.width, "no sideways scroll");
+    assert.equal(await page.locator(".tile").count(), 4);
+    await page.context().close();
+  }
+});
+
+// WCAG contrast ratio of two CSS colours (read back as rgb() by the browser).
+async function contrastReport(page) {
+  return page.evaluate(() => {
+    const probe = document.createElement("span");
+    document.body.append(probe);
+    const rgb = (value) => {
+      probe.style.color = "";
+      probe.style.color = value;
+      return getComputedStyle(probe).color.match(/[\d.]+/g).slice(0, 3).map(Number);
+    };
+    const lum = (c) => {
+      const [r, g, b] = c.map((v) => {
+        v /= 255;
+        return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+      });
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    };
+    const ratio = (a, b) => {
+      const [x, y] = [lum(rgb(a)), lum(rgb(b))].sort((m, n) => n - m);
+      return (x + 0.05) / (y + 0.05);
+    };
+    const css = getComputedStyle(document.documentElement);
+    const v = (name) => css.getPropertyValue(name).trim();
+    const pairs = [
+      ["--ink", "--bg"], ["--ink", "--card"], ["--muted", "--card"], ["--muted", "--bg"],
+      ["--accent-ink", "--accent"], ["--accent", "--card"], ["--learning", "--card"], ["--known", "--card"],
+      ["--mark-ink", "--mark-bg"],
+    ];
+    const out = pairs.map(([a, b]) => [`${a} on ${b}`, ratio(v(a), v(b))]);
+    // Each landing tile's big character on its own colour.
+    for (const el of document.querySelectorAll(".tile-char")) {
+      const st = getComputedStyle(el);
+      out.push([`tile ${el.textContent}`, ratio(st.color, st.backgroundColor), st.backgroundColor]);
+    }
+    probe.remove();
+    return out;
+  });
+}
+
+test("theme colours are readable in light and dark mode, with one colour per tile", async () => {
+  for (const colorScheme of ["light", "dark"]) {
+    const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, colorScheme, serviceWorkers: "block" });
+    const page = await context.newPage();
+    await page.goto(`${BASE}/index.html`);
+    await page.locator(".tile").first().waitFor();
+    const report = await contrastReport(page);
+    for (const [name, r] of report) assert.ok(r >= 4.5, `${colorScheme}: ${name} contrast ${r.toFixed(2)} < 4.5`);
+    const tileColours = new Set(report.filter((x) => x[0].startsWith("tile")).map((x) => x[2]));
+    assert.equal(tileColours.size, 4, `${colorScheme}: tiles should each have their own colour`);
+    await context.close();
+  }
+});
+
+// ======================================================================
 // Offline (sw.js)
 // ======================================================================
 

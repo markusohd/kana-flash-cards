@@ -197,7 +197,7 @@ function renderLanding() {
       const known = cards.filter((c) => (progress[c.id] ?? 0) >= (writing ? CAN_WRITE_BOX : 1)).length;
 
       const tile = document.createElement("a");
-      tile.className = "tile";
+      tile.className = `tile tile-${id}`; // each section has its own colour
       tile.href = `#${id}`;
       tile.innerHTML = `
         <span class="tile-char" lang="ja" aria-hidden="true"></span>
